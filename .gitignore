@@ -2,3 +2,5 @@ node_modules/
 .idea/
 *.DS_Store
 npm-debug.log
+# Don't need bundle.js for this repo
+bundle.js

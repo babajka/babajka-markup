@@ -3,7 +3,8 @@
   "version": "0.0.1",
   "description": "Markups",
   "scripts": {
-    "lint": "stylelint src/**/*.css"
+    "lint": "stylelint src/**/*.scss",
+    "build": "webpack"
   },
   "repository": {
     "type": "git",
@@ -17,8 +18,13 @@
   "homepage": "https://github.com/babajka/babajka-markup#readme",
   "devDependencies": {
     "bulma": "^0.4.2",
+    "css-loader": "^0.28.4",
+    "extract-text-webpack-plugin": "^2.1.2",
     "font-awesome": "github:fortawesome/Font-Awesome",
+    "node-sass": "^4.5.3",
+    "sass-loader": "^6.0.6",
     "stylelint": "^7.12.0",
-    "stylelint-config-standard": "^16.0.0"
+    "stylelint-config-sass-guidelines": "^2.2.0",
+    "webpack": "^3.0.0"
   }
 }
