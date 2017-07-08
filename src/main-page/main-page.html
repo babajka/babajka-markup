@@ -3,50 +3,56 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Main page</title>
+	<link rel="stylesheet" href="../../node_modules/font-awesome/css/font-awesome.min.css">
+	<!--<link rel="stylesheet" href="../../node_modules/bulma/css/bulma.css">-->
 	<link rel="stylesheet" href="../../dist/bundle.css">
-	<link rel="stylesheet" href="../../dist/assets.min.css">
+	<!--<link rel="stylesheet" href="../../dist/assets.min.css">-->
 </head>
 <body>
 
-<div class="main-container">
-	<div class="navigation-container">
-		<nav class="nav">
-			<div class="nav-left">
-				<a class="nav-item logo">
-					LOGO
-				</a>
+<header class='main-header'>
+	<nav class='main-header__navigation'>
+		<img class='main-header__logo' src="avatar.jpg" alt="">
+		<a class='main-header__link' href="">Глядзець</a>
+		<a class='main-header__link' href="">Чытаць</a>
+		<a class='main-header__link' href="">Гуляць</a>
+		<a class='main-header__link' href="">Ебаць</a>
+		<input class='main-header__input' type="text">
+	</nav>
+</header>
+
+<main class='main-content'>
+	<section class='main-content__section'>
+		<div class='first-block main-content__first-block'>
+			<div class='first-block__left-side'>
+				<article class='first-block__left-side-innerOne'>
+					<h1>Tall tile</h1>
+					<p>	gdhjkfsghjklfdsafjfdhjkfdsafghjkhl</p>
+				</article>
+				<article class='first-block__left-side-innerTwo'>
+					<h1>Tall tile</h1>
+					<p>	gdhjkfsghjklfdl</p>
+				</article>
 			</div>
+			<article class='first-block__right-side'> 
+				<h1>Tall tile</h1>
+				<p>
+				Proin ornare magna eros, eu pellentesque tortor vestibulum ut. 
+				</p>
+			</article>
+		</div>
 
-			<div class="nav-center nav-menu">
-				<a class="nav-item">
-					ГЛЯДЗЕЦЬ
-				</a>
-				<a class="nav-item">
-					ЧЫТАЦЬ
-				</a>
-				<a class="nav-item">
-					ГУЛЯЦЬ
-				</a>
-			</div>
+		<article class='second-block main-content__second-block'>
+			<h1>Tall tile</h1>
+			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ornare magna eros, eu pellentesque tortor vestibulum ut. Maecenas non massa sem. Etiam finibus odio quis feugiat facilisis.</p>
+		</article>
+	</section>
 
-			<div class="nav-right">
-				<div class="field search-field">
-					<p class="control has-icons-left">
-						<input class="input" type="text" placeholder="Пошук">
-						<span class="icon is-small is-left">
-							<i class="fa fa-search"></i>
-    				</span>
-					</p>
-				</div>
-			</div>
-		</nav>
-	</div>
-
-	<div class="content">
-
-	</div>
-
-</div>
+	<aside class='main-content__aside'>
+		<h1>Tall tile</h1>
+		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam semper diam at erat pulvinar, at pulvinar felis blandit. Vestibulum volutpat tellus diam, consequat gravida libero rhoncus ut. Morbi maximus, leo sit amet vehicula eleifend, nunc dui porta orci, quis semper odio felis ut quam.</p>
+	</aside>
+</main>
 
 </body>
 </html>
