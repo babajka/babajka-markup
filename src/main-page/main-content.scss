@@ -1,0 +1,30 @@
+.main-content {
+    display: flex;
+    flex-direction: row;
+    background-color: white;
+    height: 100%;
+
+    &__section {
+        display: flex;
+        flex-direction: column;
+        margin: 20px;
+        margin-right: 0px;
+        flex-grow: 2;
+    }
+
+    &__aside {
+        margin: 20px;
+        padding: 15px;
+        flex-grow: 1;
+        background-color:rgb(6, 210, 89);
+        color: white;
+        border-radius: 5px;
+        align-items: center;
+
+        h1 {
+            margin: 0px;
+            font-size: 32px;
+            font-weight: 300;
+        }
+    }
+}
