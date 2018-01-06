@@ -4,130 +4,106 @@
 <% include ../head/head.ejs %>
 <body>
 
-<% include ../navbar/navbar.ejs %>
-
-<div class="article-page page-container">
-
-    <div class="page-content">
-        <div class="card-image">
-            <figure class="image is-3by1">
-                <img src="<%= imagesPath %>/photo8.jpg" />
+<div class="container">
+    <div class="columns">
+        <div class="column article">
+            <div class="article-top">
+                <h1 class="title is-size-2 has-text-centered article-top__title">
+                    &laquo;Гэта ня тое як склеіць разьбіты кубак...&raquo;
+                </h1>
+                <div class="has-text-centered article-top__sub">
+                    <a class="article-top__author" href="#">Яўген Дадуць</a>
+                    <a class="tag is-white is-size-6 is-uppercase article-top__topic" href="#">Pубрыка</a>
+                </div>
+                <div class="level has-text-centered article-top__details">
+                    <span class="level-item heading article-top__detail">29 кастрычніка 2017</span>
+                    <span class="level-item heading article-top__detail">Прачыталі: 100</span>
+                    <span class="level-item heading article-top__detail">5 хвілін чытання</span>
+                </div>
+                <div class="has-text-centered article-top__tags">
+                    <a class="tag is-lowercase article-top__tag" href="#">#тэг1</a>
+                    <a class="tag is-lowercase article-top__tag" href="#">#тэг1</a>
+                    <a class="tag is-lowercase article-top__tag" href="#">#тэг1</a>
+                </div>
+            </div>
+            <figure class="image article-image">
+                <img src="<%= imagesPath %>/photo8.jpg">
             </figure>
-        </div>
-
-        <div class="card-content">
-            <div class="heading">
-                "Гэта ня тое як склеіць разьбіты кубак..."
+            <div class="is-size-5 article-text">
+                <p>– Вы доўгі час жывяце не ў Беларусі. Як асэнсоўваеце краіну ў новых творах?</p>
+                <p>
+                    – Для мяне Беларусь пашыраецца не ўшыр, а ўглыб. У маёй новай кнізе вершы пабудаваныя вакол вобраза
+                    дрэва, якое расце з крыві, касцей, чалавечыны і нашай зямлі. Дрэва расце ўгару, размаўляе з намі
+                    лісцем шэптам, які нарадзіўся раней за вусны. Мне цікавы шэпт нашых мёртвых, нашых прывідаў. Гэта
+                    Беларусь невербалізаваных жыццяў, якія не хочуць знікнуць і маўчаць, каб мы іх пачулі.
+                </p>
+                <p>– Што здарылася з вашымі кнігамі ў перыяд з 2005 па 2017?</p>
+                <p>
+                    – Паміж 2005 і 2017 у мяне выйшлі кніжкі ў ЗША, Нямеччыне і Швецыі. У «Эпідэміі ружаў» ёсць вершы з
+                    гэтых кніжак, і трэць з іх – новыя. У першую чаргу паэт – гэта вушы і вочы. Я ўважліва сачу за
+                    прывідамі, слухаю сваіх мёртвых. Яны жывуць сярод нас. Іх прысутнасць можна пабачыць на нашых
+                    тварах.
+                </p>
+                <p>– Мёртвыя – гэта продкі або гэта нейкая метафара?</p>
+                <p>
+                    – Я не бачу розніцы паміж рэальнасцю і метафарай. Літаратура змешвае памяць і ўяўленне так, што
+                    немагчыма адрозніць адно ад аднаго. У нашай прыродзе так і ёсць: памяць не можа існаваць без
+                    уяўлення, а ўяўленне не можа існаваць без памяці. Гэтыя два паняцці існуюць разам. Разам яны шукаюць
+                    нейкую форму: літаратурную, музычную, кінематаграфічную. Тут няма розніцы. Наогул паэзію і
+                    літаратуру я бачу як навуку. Біялогія чалавека, анатомія чалавека і літаратурная метафара існуюць
+                    для мяне ў адной прасторы. Метафара – гэта не гуманітарная абстракцыя, а элемент навуковага падыходу
+                    да свету. Гэта жаданне знайсці матэматычную або фізічную формулу, з дапамогай якой мы скажам: «Я –
+                    гэта ты», «Ты – гэта кніга», «Кніга – гэта паліца кніг», «Паліца – гэта дрэва, з якой яна зроблена,
+                    а дрэва – гэта я». Мы ўсе звязаныя адной формулай: розныя рэчы ствараюць асобную прастору, дзе яны
+                    могуць быць адным, застаючыся пры гэтым сабою.
+                </p>
             </div>
-
-            <div class="author">
-                <strong>Аўтар:</strong>
-                <a href="">Яўген Дадуць</a>
+            <div class="has-text-centered article-bottom">
+                <span class="article-bottom__item">Аўтар: <a href="#">Яўген Дадуць</a></span>
+                <span class="article-bottom__item">Рубрыка: <a href="#">Рубрыка</a></span>
             </div>
-
-            <div class="tags">
-                <a href="">#паэзія</a>
-                <a href=""> #морт</a>
-            </div>
-            <hr />
-
-            <div class="text">
-                – Вы доўгі час жывяце не ў Беларусі. Як асэнсоўваеце краіну ў новых творах?
-                – Для мяне Беларусь пашыраецца не ўшыр, а ўглыб. У маёй новай кнізе вершы пабудаваныя вакол вобраза
-                дрэва,
-                якое расце з крыві, касцей, чалавечыны і нашай зямлі. Дрэва расце ўгару, размаўляе з намі лісцем шэптам,
-                які
-                нарадзіўся раней за вусны. Мне цікавы шэпт нашых мёртвых, нашых прывідаў. Гэта Беларусь невербалізаваных
-                жыццяў, якія не хочуць знікнуць і маўчаць, каб мы іх пачулі.
-                – Што здарылася з вашымі кнігамі ў перыяд з 2005 па 2017?
-                – Паміж 2005 і 2017 у мяне выйшлі кніжкі ў ЗША, Нямеччыне і Швецыі. У «Эпідэміі ружаў» ёсць вершы з
-                гэтых
-                кніжак, і трэць з іх – новыя. У першую чаргу паэт – гэта вушы і вочы. Я ўважліва сачу за прывідамі,
-                слухаю
-                сваіх мёртвых. Яны жывуць сярод нас. Іх прысутнасць можна пабачыць на нашых тварах.
-                – Мёртвыя – гэта продкі або гэта нейкая метафара?
-                – Я не бачу розніцы паміж рэальнасцю і метафарай. Літаратура змешвае памяць і ўяўленне так, што
-                немагчыма
-                адрозніць адно ад аднаго. У нашай прыродзе так і ёсць: памяць не можа існаваць без уяўлення, а ўяўленне
-                не
-                можа існаваць без памяці. Гэтыя два паняцці існуюць разам.
-                Разам яны шукаюць нейкую форму: літаратурную, музычную, кінематаграфічную. Тут няма розніцы. Наогул
-                паэзію і
-                літаратуру я бачу як навуку. Біялогія чалавека, анатомія чалавека і літаратурная метафара існуюць для
-                мяне ў
-                адной прасторы.
-                Метафара – гэта не гуманітарная абстракцыя, а элемент навуковага падыходу да свету. Гэта жаданне знайсці
-                матэматычную або фізічную формулу, з дапамогай якой мы скажам: «Я – гэта ты», «Ты – гэта кніга», «Кніга
-                –
-                гэта паліца кніг», «Паліца – гэта дрэва, з якой яна зроблена, а дрэва – гэта я». Мы ўсе звязаныя адной
-                формулай: розныя рэчы ствараюць асобную прастору, дзе яны могуць быць адным, застаючыся пры гэтым сабою.
-                <hr />
+            <hr class="article-line"/>
+            <div class="has-text-centered article-more">
+                <span class="is-uppercase article-more__text">Чытаць таксама:</span>
             </div>
         </div>
-
-        <div class="articles-links">
-            <div class="more-articles-text">Чытайце таксама:</div>
-            <div class="tile is-ancestor">
-
-                <div class="tile is-parent">
-                    <article class="card tile is-child">
-                        <div class="card-image">
-                            <figure class="image is-3by2">
-                                <img src="<%= imagesPath %>/photo5.jpg" />
-                            </figure>
-                        </div>
-                        <div class="card-content">
-                        <span class="title is-spaced">
-                            <a href="../article-page/article-page.html">
-                                Крама "як з крамы"
-                            </a>
+        <div class="article-side column">
+            <ul class="article-side__buttons">
+                <li>
+                    <a
+                            class="button article-side__button article-side__button--bookmark"
+                            title="Адзначце гэты артыкул, каб прачытаць пазней"
+                    >
+                        <span class="icon article-side__icon">
+                            <i class="fa fa-star fa-lg"></i>
                         </span>
-                            <p class="subtitle">Новы альбом: як, дзе і для каго</p>
-                        </div>
-                    </article>
-                </div>
-
-                <div class="tile is-parent">
-                    <article class="card tile is-child">
-                        <div class="card-image">
-                            <figure class="image is-3by2">
-                                <img src="<%= imagesPath %>/photo3.jpg" />
-                            </figure>
-                        </div>
-                        <div class="card-content">
-                        <span class="title is-spaced">
-                            <a href="../article-page/article-page.html">
-                                "Гэта ня тое як склеіць разьбіты кубак..."
-                            </a>
+                    </a>
+                </li>
+                <li>
+                    <a class="button article-side__button" title="Падзяліцца ў Facebook">
+                        <span class="icon article-side__icon">
+                            <i class="fa fa-facebook fa-lg"></i>
                         </span>
-                            <p class="subtitle">Вальжына Морт пра адносіны з сусветам</p>
-                        </div>
-                    </article>
-                </div>
-
-                <div class="tile is-parent">
-                    <article class="card tile is-child">
-                        <div class="card-image">
-                            <figure class="image is-3by2">
-                                <img src="<%= imagesPath %>/photo5.jpg" />
-                            </figure>
-                        </div>
-                        <div class="card-content">
-                        <span class="title is-spaced">
-                            <a href="../article-page/article-page.html">
-                                Некоратка аб Ахматавай
-                            </a>
+                    </a>
+                </li>
+                <li>
+                    <a class="button article-side__button" title="Падзяліцца ў Укантакце">
+                        <span class="icon article-side__icon">
+                            <i class="fa fa-vk fa-lg"></i>
                         </span>
-                            <p class="subtitle">"Настоящую нежность не спутаешь ни с чем..."</p>
-                        </div>
-                    </article>
-                </div>
-            </div>
+                    </a>
+                </li>
+                <li>
+                    <a class="button article-side__button" title="Падзяліцца ў Twitter">
+                        <span class="icon article-side__icon">
+                            <i class="fa fa-twitter fa-lg"></i>
+                        </span>
+                    </a>
+                </li>
+            </ul>
         </div>
     </div>
 </div>
-
-<% include ../footer/footer.ejs %>
 
 </body>
 </html>

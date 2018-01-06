@@ -1,5 +1,7 @@
 // Import the initial variables
 @import '../node_modules/bulma/sass/utilities/initial-variables';
+@import 'https://fonts.googleapis.com/css?family=Roboto&subset=cyrillic-ext,latin';
+@import 'https://fonts.googleapis.com/css?family=Lora&subset=cyrillic-ext,latin';
 
 // Primary pallete
 // https://coolors.co/ae42ff-d1caca-44494d-ff5e42-9a9d9f
@@ -11,8 +13,8 @@ $primary-gray: rgb(242, 242, 242);
 $primary-black: rgb(0, 0, 0);
 
 // Add a serif family
-$family-serif: 'Merriweather', 'Georgia', serif;
-$family-arial: Arial, Helvetica, sans-serif;
+$family-serif: Lora;
+$family-arial: Roboto;
 
 // Set the derived variables
 $success: $primary-heliotrope;

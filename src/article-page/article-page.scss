@@ -1,53 +1,124 @@
 @import '../variables';
 
-.article-page {
-  .page-content {
-    background-color: $white;
+.column.article {
+  padding: 0;
+}
+
+.article {
+  background-color: $white;
+  margin-left: 7rem;
+}
+
+.article-top {
+  padding: 0 3rem;
+
+  &__title {
+    padding-top: 2rem;
   }
 
-  .card-content {
-    padding: 0 4rem 1rem;
+  &__sub {
+    padding-bottom: 1rem;
 
-    .heading {
-      font-family: PT sans-serif;
-      font-size: 2.5rem;
-      font-weight: bold;
-      margin: 3.5rem 0 5.5rem;
-      text-align: center;
-    }
-
-    .author {
-      font-family: PT sans-serif;
-      font-size: 2rem;
-      margin: 1.5rem 0;
-    }
-
-    .tags {
-      font-size: 1.2rem;
-    }
-
-    .text {
-      font-size: 1.5rem;
+    .tag.is-white {
+      color: $primary;
     }
   }
 
-  .articles-links {
-    font-size: 1.4rem;
-    padding: 4rem;
+  &__author {
+    margin: 0 1rem;
+  }
 
-    .more-articles-text {
-      font-size: 2rem;
-      margin-bottom: 1rem;
+  &__topic {
+    border: 1px solid $primary;
+    margin: 0 1rem;
+  }
+
+  .level.has-text-centered {
+    margin-bottom: 1rem;
+  }
+
+  &__details {
+    padding: 0 10rem;
+  }
+
+  &__tags {
+    padding-bottom: 1.5rem;
+
+    .tag {
+      background-color: $picton-blue;
+      color: $white;
+      font-size: 0.85rem;
     }
+  }
 
-    ul {
-      list-style-type: disc;
-      margin-left: 4rem;
-
-      li {
-        padding: 0.5rem;
-      }
-    }
+  &__tag {
+    margin: 0 0.5rem;
   }
 }
 
+.article-image {
+  padding-bottom: 1.5rem;
+}
+
+.article-text {
+  font-family: $family-serif;
+  padding: 0 3rem 1.5rem;
+}
+
+.article-bottom {
+  padding-bottom: 1.5rem;
+
+  &__item {
+    margin: 0 1rem;
+  }
+
+  a {
+    color: $primary;
+  }
+}
+
+.article-line {
+  margin: 0;
+}
+
+.article-more {
+  padding: 1.5rem 3rem;
+
+  &__text {
+    padding-bottom: 1rem;
+  }
+}
+
+.article-side {
+  max-width: 7rem;
+
+  &__buttons {
+    margin-left: 1.5rem;
+    position: fixed;
+    top: 150px;
+  }
+
+  .button {
+    border: 1px solid $primary;
+    border-radius: 1.3rem;
+    box-shadow: 0 0 3px 0 rgba(255, 94, 66, 0.5);
+    height: 2.6rem;
+    width: 2.6rem;
+
+    &:hover {
+      border: 1px solid $primary;
+    }
+  }
+
+  &__button {
+    margin: 0.2rem;
+
+    &--bookmark {
+      margin-bottom: 2.3rem;
+    }
+  }
+
+  &__icon {
+    color: $primary;
+  }
+}
