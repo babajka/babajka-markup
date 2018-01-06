@@ -1,0 +1,46 @@
+@import '../variables';
+
+.app-footer {
+  border-top: 1px solid $primary;
+  padding: 3rem 1.5rem;
+
+  .links {
+    .button {
+      margin: 0.5rem;
+    }
+  }
+
+  .about,
+  .address {
+    margin: 0.5rem 0;
+    text-align: left;
+  }
+
+  .about {
+    font-size: 1.2rem;
+  }
+
+  .logo {
+    display: block;
+    text-align: left;
+  }
+
+  .tags {
+    display: flex;
+    justify-content: center;
+  }
+
+  .mission {
+    font-style: italic;
+    padding: 0 1rem;
+  }
+
+  .copyright {
+    margin-top: 3rem;
+    text-align: left;
+  }
+
+  .email-input {
+    max-width: 16rem;
+  }
+}

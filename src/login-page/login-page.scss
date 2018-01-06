@@ -1,49 +1,72 @@
 @import '../variables';
 
-.login-page {
-  .login-form .control {
-    margin: 1rem 0;
+.container.login {
+  margin-bottom: 3rem;
+  margin-top: 1rem;
+  width: 27.5rem;
+}
+
+.login {
+  background-color: $white;
+  border-radius: 0.3rem;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
+  padding: 2rem 3rem;
+
+  .control {
+    font-size: 1.1rem;
   }
 
-  .social-buttons {
-    display: flex;
-    justify-content: flex-end;
-    margin: 0.5rem;
+  &__socials {
+    padding: 0 2rem;
+  }
 
-    .social-btn {
-      color: $grey;
-      margin-left: 0.5rem;
+  .button {
+    border: 0;
+  }
 
-      i {
-        color: $white;
-      }
+  &__social {
+    &--google {
+      color: #ea4033;
     }
 
-    .facebook {
-      background-color: $wedgewood;
+    &--facebook {
+      color: #395899;
     }
 
-    .twitter {
-      background-color: $picton-blue;
+    &--vk {
+      color: #507299;
     }
 
-    .google {
-      background-color: $punch;
+    &--twitter {
+      color: #55aeee;
     }
 
-    .vk {
-      background-color: $chambray;
-    }
-
-    .form-mode-checkbox {
-      color: $primary-mako;
-      margin: auto;
-      margin-left: 0;
+    &:hover {
+      font-size: 1.3rem;
     }
   }
 
-  .round-btn {
-    border-color: $white;
-    border-radius: 20px;
+  .label {
+    font-size: 0.95rem;
+  }
+
+  &__input-forgot {
+    color: $picton-blue;
+  }
+
+  .input:focus {
+    border-color: $picton-blue;
+    box-shadow: 0 0 0 0.125em rgba(85, 172, 238, 0.25);
+  }
+
+  .field &__button {
+    background-color: $picton-blue;
+    color: $white;
+    padding: 0 1.5rem;
+
+    &:hover {
+      background-color: #4ba2e4;
+      color: $white;
+    }
   }
 }

@@ -1,11 +1,16 @@
 // Import the initial variables
 @import '../node_modules/bulma/sass/utilities/initial-variables';
-@import 'https://fonts.googleapis.com/css?family=Roboto&subset=cyrillic-ext,latin';
-@import 'https://fonts.googleapis.com/css?family=Lora&subset=cyrillic-ext,latin';
+@import 'https://fonts.googleapis.com/css?family=Roboto&subset=cyrillic-ext, latin';
+@import 'https://fonts.googleapis.com/css?family=Lora&subset=cyrillic-ext, latin';
+
+// Fonts.
+@import 'https://fonts.googleapis.com/css?family=Comfortaa|Cormorant|Open+Sans';
+@import 'https://fonts.googleapis.com/css?family=Roboto&subset=cyrillic-ext, latin';
+@import 'https://fonts.googleapis.com/css?family=Lora&subset=cyrillic-ext, latin';
 
 // Primary pallete
 // https://coolors.co/ae42ff-d1caca-44494d-ff5e42-9a9d9f
-$primary: #ff5e42;
+$primary: #1a9582;
 $primary-heliotrope: #82e0dd;
 $primary-mako: #44494d;
 $primary-swiss-coffee: #dfe0da;
@@ -13,16 +18,11 @@ $primary-gray: rgb(242, 242, 242);
 $primary-black: rgb(0, 0, 0);
 
 // Add a serif family
-$family-serif: Lora;
-$family-arial: Roboto;
-
-// Set the derived variables
-$success: $primary-heliotrope;
-$info: $primary-mako;
-// Use the existing orange as the danger color
-$danger: $orange;
-// Use the new serif family
-$family-primary: $family-arial;
+$family-serif: 'Merriweather', 'Georgia', serif;
+$family-arial: Arial, Helvetica, sans-serif;
+$family-navbar: 'Comfortaa', cursive;
+$tile-primary-text: 'Cormorant', serif;
+$tile-secondary-text: 'Open Sans', sans-serif;
 
 // Generated with http://chir.ag/projects/name-that-color
 $punch: #dd4b39;
@@ -30,4 +30,14 @@ $chambray: #3b5998;
 $wedgewood: #4c75a3;
 $picton-blue: #55acee;
 
+// Set the derived variables
+$success: $primary-heliotrope;
+$info: $picton-blue;
+// Use the existing orange as the danger color
+$danger: $orange;
+// Use the new serif family
+$family-primary: $family-arial;
+
 $abbey: rgba(255, 255, 255, 0.9);
+
+$special-color: #032967;

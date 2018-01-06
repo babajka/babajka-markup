@@ -1,20 +1,25 @@
 {
   "name": "babajka-markup",
-  "version": "0.1.1",
+  "version": "0.2.5",
   "description": "Markups",
   "scripts": {
-    "start": "npm run watch",
+    "start": "export PORT=3001 && npm run watch",
     "build": "gulp build",
     "watch": "gulp watch",
     "lint": "gulp lint",
     "deploy": "npm run build && gh-pages -d dist -a",
-    "prerelease": "npm run deploy && npm version patch",
-    "postpublish": "git push && git push --tags",
-    "release": "npm run prerelease && npm run publish && npm run postpublish"
+    "prerelease": "npm version patch",
+    "postrelease": "git push && git push --tags",
+    "release": "npm publish",
+    "precommit": "lint-staged",
+    "semantic-release": "semantic-release"
+  },
+  "lint-staged": {
+    "**/*.scss": "stylelint --syntax=scss"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/babajka/babajka-markup.git"
+    "url": "https://github.com/babajka/babajka-markup.git"
   },
   "author": "babajka team <github.com/babajka>",
   "license": "ISC",
@@ -34,12 +39,15 @@
     "gulp-concat-css": "^2.3.0",
     "gulp-connect": "^5.0.0",
     "gulp-ejs": "^3.0.1",
-    "gulp-htmlhint": "^0.3.1",
+    "gulp-htmlhint": "^1.0.0",
     "gulp-replace": "^0.6.1",
     "gulp-sass": "^3.1.0",
-    "gulp-stylelint": "^4.0.0",
+    "gulp-stylelint": "^6.0.0",
     "gulp-watch": "^4.3.11",
+    "husky": "^0.14.3",
+    "lint-staged": "^6.0.0",
     "stylelint": "^8.0.0",
-    "stylelint-config-sass-guidelines": "^3.1.0"
+    "stylelint-config-sass-guidelines": "^3.1.0",
+    "semantic-release": "^11.0.2"
   }
 }

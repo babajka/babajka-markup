@@ -1,31 +1,61 @@
-<footer class="footer">
+<footer class="app-footer">
     <div class="container">
-    <div class="columns is-mobile" align="center">
-  			<div class="column">
-    			<div class="content"> <h3> Сувязь з намі </h3> </div>
-    				<div class="columns is-mobile" align="center">
-    					<div class="column">
-    						<p> <i class="fa fa-vk" aria-hidden="true"></i> <a href=""> УКантакце </a> </p>
-    						<p> <i class="fa fa-facebook" aria-hidden="true"></i> <a href=""> Facebook </a> </p>
-    					</div>
-    					<div class="column">
-    						<p> <i class="fa fa-twitter" aria-hidden="true"></i> <a href=""> Twitter </a> </p>
-    						<p> <a href=""> Telegram </a> </p>
-    					</div>
-    				</div>
-  			</div>
-  			<div class="column">
-  				<a href=""><img src=""></a>
-    			<p><a href="https://babajka.github.io/babajka-markup">babajka.io</a></p>
-  			</div>
-  			<div class="column">
-    			<div class="content"> <h3> Падпіска </h3> </div>
-    			<p>Каб падпiсацца на новыя матэрыялы, пакiньце тут свой e-mail:</p>
-    			<br>
-    			<form id="">
-    			<input class= "input" type="email" name="" placeholder="example@mail.com">
-    			</form>
-  			</div>
-		</div>
+        <div class="columns is-mobile" align="center">
+            <div class="column">
+                <a class="logo" href=""> <img src="<%= imagesPath %>/logo-transparent.png" width="85" height="75" /></a>
+
+                <div class="about"><a href="">Пра нас</a></div>
+                <div class="address">wir.development@gmail.com</div>
+                <div class="copyright">
+                    <span class="icon is-medium">
+                        <i class="fa fa-copyright"></i>
+                    </span>2018
+                </div>
+            </div>
+            <div class="column">
+                <div class="content"><h4>Мэты</h4></div>
+                <div class="mission">
+                    <%= mission %>
+                </div>
+                <a class="button more is-rounded">
+                    далей
+                </a>
+            </div>
+            <div class="column">
+                <div class="content"><h4>#Тэгі</h4></div>
+                <div class="tags">
+                    <% for(var i = 0; i < JSON.parse(tags).length; i++) { %>
+                    <span class="tag is-primary">
+                            <%= JSON.parse(tags)[i] %>
+                        </span>
+                    <% } %>
+                </div>
+            </div>
+            <div class="column">
+                <div class="content"><h4>Сувязь</h4></div>
+                <div class="links">
+                    <a class="button is-medium is-rounded">
+                        <span class="icon is-medium">
+                            <i class="fa fa-facebook"></i>
+                        </span>
+                    </a>
+                    <a class="button is-medium is-rounded">
+                        <span class="icon is-medium">
+                            <i class="fa fa-vk"></i>
+                        </span>
+                    </a>
+                    <a class="button is-medium is-rounded">
+                        <span class="icon is-medium">
+                            <i class="fa fa-twitter"></i>
+                        </span>
+                    </a>
+                    <a class="button is-medium is-rounded">
+                        <span class="icon is-medium">
+                            <i class="fa fa-telegram"></i>
+                        </span>
+                    </a>
+                </div>
+            </div>
+        </div>
     </div>
 </footer>

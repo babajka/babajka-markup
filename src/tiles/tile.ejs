@@ -1,0 +1,52 @@
+<!-- List of variables used below. This suppresses lint warnings. -->
+<% var authorVar; %>
+<% var authorPhotoVar; %>
+<% var photoClassVar; %>
+<% var photoVar; %>
+<% var specialHeadingHandmadeVar; %>
+<% var specialHeadingNameVar; %>
+<% var specialHeadingPhotoVar; %>
+<% var subtitleVar; %>
+<% var titleVar; %>
+
+<div class="tile is-parent">
+    <article class="card tile is-child">
+        <div class="card-image">
+            <figure class="image <%= photoClassVar %>">
+                <img src="<%= imagesPath %>/<%= photoVar %>" />
+            </figure>
+            <% if (specialHeadingNameVar) { %>
+            <div class="media special-heading is-pulled-right">
+                <div class="media-left">
+                    <% if (specialHeadingHandmadeVar) { %>
+                    <div class="media-left">
+                        <div class="handmade"><%= specialHeadingHandmadeVar %></div>
+                    </div>
+                    <% } else { %>
+                    <figure class="image is-32x32">
+                        <img src="<%= imagesPath %>/<%= specialHeadingPhotoVar %>" />
+                    </figure>
+                    <% } %>
+                </div>
+                <div class="media-content">
+                    <span class="subtitle is-6"><%= specialHeadingNameVar %></span>
+                </div>
+            </div>
+            <% } %>
+        </div>
+        <div class="card-content">
+            <span class="title is-spaced">
+                <a href="../article-page/article-page.html"><%= titleVar %></a>
+            </span>
+            <p class="subtitle"><%= subtitleVar %></p>
+            <% if (authorVar) { %>
+            <div class="subtitle author">
+                <img src="<%= imagesPath %>/<%= authorPhotoVar %>" />
+                <div class="name">
+                    <span><%= authorVar %></span>
+                </div>
+            </div>
+            <% } %>
+        </div>
+    </article>
+</div>

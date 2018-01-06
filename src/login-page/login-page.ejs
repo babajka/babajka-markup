@@ -5,95 +5,93 @@
 <body>
 <% include ../navbar/navbar.ejs %>
 
-<div class="login-page page-container">
-    <section class="hero is-fullheight">
-        <div class="hero-body">
-            <div class="container">
-                <div class="column is-4 is-offset-4">
-                    <div class="social-buttons">
-                        <span class="form-mode-checkbox field">
-                            <span class="control">
-                                <label class="checkbox">
-                                    <input type="checkbox" /> Я тут першы раз
-                                </label>
-                            </span>
-                        </span>
-
-                        <a class="social-btn round-btn vk button">
-                            <span class="icon"><i class="fa fa-vk"></i></span>
-                        </a>
-
-                        <a class="social-btn round-btn facebook button">
-                            <span class="icon"><i class="fa fa-facebook"></i></span>
-                        </a>
-
-                        <a class="social-btn round-btn twitter button">
-                            <span class="icon"><i class="fa fa-twitter"></i></span>
-                        </a>
-
-                        <a class="social-btn round-btn google button">
-                            <span class="icon"><i class="fa fa-google"></i></span>
-                        </a>
-                    </div>
-
-                    <div class="login-form">
-                        <p class="control has-icon has-icon-right">
-                            <input class="input email-input" type="text" placeholder="Імя" />
-                            <span class="icon user"><i class="fa fa-user"></i></span>
-                        </p>
-
-                        <p class="control has-icon has-icon-right">
-                            <input class="input email-input" type="text" placeholder="Пошта" />
-                            <span class="icon user"><i class="fa fa-envelope-o"></i></span>
-                        </p>
-
-                        <p class="control has-icon has-icon-right">
-                            <input class="input password-input" type="password" placeholder="Пароль" />
-                            <span class="icon user"><i class="fa fa-lock"></i></span>
-                        </p>
-
-                        <!--LOADING-->
-                        <!--need to hide 'has-icon' and 'has-icon-right' classes and icon itself-->
-                        <!--<p class="control is-loading">-->
-                        <!--<input class="input password-input" type="password" placeholder="Пароль"/>-->
-                        <!--</p>-->
-
-                        <!--WARNING-->
-                        <!--need to hide usual icon and show the warning one and warning message as well-->
-                        <!--<p class="control has-icon has-icon-right">-->
-                        <!--<input class="input password-input is-danger" type="password" placeholder="Пошта"/>-->
-                        <!--<span class="icon is-right"><i class="fa fa-warning"></i></span>-->
-                        <!--<span class="help is-danger">З поштай нешта не так</span>-->
-                        <!--</p>-->
-
-                        <!--SUCCESS-->
-                        <!--need to hide usual icon and show the success one and success message as well-->
-                        <!--<p class="control has-icon has-icon-right">-->
-                        <!--<input class="input password-input is-success" type="password" placeholder="Пароль"/>-->
-                        <!--<span class="icon is-right"><i class="fa fa-check"></i></span>-->
-                        <!--<span class="help is-success">Пароль падцверджаны!</span>-->
-                        <!--</p>-->
-
-                        <p class="control">
-                            <input class="input password-input" type="password" placeholder="Падцвердзіце пароль" />
-                        </p>
-
-                        <p class="control login">
-                            <button class="button is-success is-outlined is-large is-fullwidth">Паехалі</button>
-                        </p>
-
-                        <div class="section forgot-password">
-                            <p class="has-text-centered">
-                                <a href="#">Забылі пароль?</a>
-                                <a href="#">Дапамога</a>
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
+<div class="container login">
+    <h1 class="title is-size-5 has-text-centered">
+        Увайсці ў Вір
+    </h1>
+    <div class="field">
+        <div class="control has-text-centered">
+            <label class="checkbox">
+                <input type="checkbox"/>
+                У мяне яшчэ няма акаўнта
+            </label>
         </div>
-    </section>
+    </div>
+    <div class="level has-text-centered login__socials">
+        <a class="level-item button" title="Увайсці праз Google">
+            <span class="icon login__social login__social--google">
+                <i class="fa fa-google fa-lg"></i>
+            </span>
+        </a>
+        <a class="level-item button" title="Увайсці праз Facebook">
+            <span class="icon login__social login__social--facebook">
+                <i class="fa fa-facebook fa-lg"></i>
+            </span>
+        </a>
+        <a class="level-item button" title="Увайсці праз Укантакце">
+            <span class="icon login__social login__social--vk">
+                <i class="fa fa-vk fa-lg"></i>
+            </span>
+        </a>
+        <a class="level-item button" title="Увайсці праз Twitter">
+            <span class="icon login__social login__social--twitter">
+                <i class="fa fa-twitter fa-lg"></i>
+            </span>
+        </a>
+    </div>
+    <div class="field">
+        <label class="label login__input-text">Імя карыстальніка</label>
+        <div class="control has-icons-left has-icons-right">
+            <input class="input" type="text"/>
+            <span class="icon is-small">
+                <i class="fa fa-user"></i>
+            </span>
+        </div>
+        <p class="help is-info">Гэта імя карыстальніка даступна</p>
+    </div>
+    <div class="field">
+        <label class="label login__input-text">Пошта</label>
+        <div class="control has-icons-left has-icons-right">
+            <input class="input" type="email"/>
+            <span class="icon is-small">
+                <i class="fa fa-envelope"></i>
+            </span>
+        </div>
+        <p class="help is-danger">Гэта пошта з'яўляецца несапраўднай</p>
+    </div>
+    <div class="field">
+        <label class="label is-left login__input-text">
+            Пароль
+            <a class="is-pulled-right has-text-weight-normal login__input-forgot" href="#">Забыліся на пароль?</a>
+        </label>
+        <div class="control has-icons-left has-icons-right">
+            <input class="input" type="password"/>
+            <span class="icon is-small">
+                <i class="fa fa-unlock-alt"></i>
+            </span>
+        </div>
+        <p class="help is-danger">Пароль занадта кароткі (мінімум 7 знакаў)</p>
+    </div>
+    <div class="field">
+        <label class="label login__input-text">Пацвердзіць пароль</label>
+        <div class="control has-icons-left has-icons-right">
+            <input class="input" type="password"/>
+            <span class="icon is-small">
+                <i class="fa fa-unlock-alt"></i>
+            </span>
+        </div>
+        <p class="help is-info">Паролі супалі</p>
+    </div>
+    <div class="field">
+        <div class="control has-text-centered">
+            <button class="button is-uppercase login__button">
+                Go!
+            </button>
+        </div>
+    </div>
 </div>
+
 <% include ../footer/footer.ejs %>
+
 </body>
 </html>

@@ -1,6 +1,13 @@
 .idea/
+.github/
 src/
+dist/*
+!dist/fonts
+!dist/images
+!dist/styles
 .eslintrc
 .stylelintrc
 gulpfile.js
 *.DS_Store
+.travis.yml
+.htmlhintrc

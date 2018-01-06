@@ -7,8 +7,48 @@
 }
 
 .main-page {
-  .diary {
-    font-style: italic;
+  .diary-article {
+    .diary {
+      font-style: italic;
+      margin-right: 1rem;
+    }
+
+    .title {
+      margin-bottom: 0.5rem;
+    }
+
+    .arrow {
+      opacity: 0.3;
+      position: absolute;
+      top: 50%;
+
+      &:hover {
+        opacity: 0.7;
+      }
+    }
+
+    .arrow-left {
+      left: 0.8rem;
+    }
+
+    .arrow-right {
+      right: 0.8rem;
+    }
+
+    .diary,
+    .title,
+    .subtitle {
+      margin-left: 1.4rem;
+    }
+
+    .date span {
+      float: right;
+      margin-bottom: 0.5rem;
+    }
+  }
+
+  .load-more {
+    margin-top: 40px;
   }
 }
 
