@@ -5,21 +5,29 @@
 
 // Fonts.
 @import 'https://fonts.googleapis.com/css?family=Comfortaa|Cormorant|Open+Sans';
-@import 'https://fonts.googleapis.com/css?family=Roboto&subset=cyrillic-ext, latin';
+@import 'https://fonts.googleapis.com/css?family=Roboto+Condensed&subset=cyrillic-ext, latin';
 @import 'https://fonts.googleapis.com/css?family=Lora&subset=cyrillic-ext, latin';
 
 // Primary pallete
 // https://coolors.co/ae42ff-d1caca-44494d-ff5e42-9a9d9f
 $primary: #1a9582;
+$primary-bright: #06c5df;
+$primary-gray: #b8b8b8;
+$primary-black: #000;
 $primary-heliotrope: #82e0dd;
 $primary-mako: #44494d;
 $primary-swiss-coffee: #dfe0da;
-$primary-gray: rgb(242, 242, 242);
-$primary-black: rgb(0, 0, 0);
+
+// colors of social networks
+$facebook: #3b5998;
+$vk: #45668e;
+$twitter: #1da1f2;
+
+$bookmarked: #decb76;
 
 // Add a serif family
 $family-serif: 'Merriweather', 'Georgia', serif;
-$family-arial: Arial, Helvetica, sans-serif;
+$family-arial: 'Roboto Condensed', sans-serif;
 $family-navbar: 'Comfortaa', cursive;
 $tile-primary-text: 'Cormorant', serif;
 $tile-secondary-text: 'Open Sans', sans-serif;
