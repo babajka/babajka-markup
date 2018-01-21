@@ -1,60 +1,45 @@
 <footer class="app-footer">
-    <div class="container">
-        <div class="columns is-mobile" align="center">
-            <div class="column">
-                <a class="logo" href=""> <img src="<%= imagesPath %>/logo-turq-transparent.png" width="85" height="75" /></a>
-
-                <div class="about"><a href="">Пра нас</a></div>
-                <div class="address">wir.development@gmail.com</div>
-                <div class="copyright">
+    <div class="columns">
+        <div class="column general-info">
+            Wir.by - Адукацыйная платформа <i class="fa fa-copyright"></i> 2018
+            <br />
+            Прасоўваем беларускую культуру.
+            <br />
+            Чытайце больш пра нас і пра праект <a href="../about/about.html">тут</a>.
+        </div>
+        <div class="column social">
+            <div>Сачыце за намі ў сацыяльных сетках:</div>
+            <div class="links">
+                <a class="button is-medium is-rounded facebook" href="https://facebook.com/wir_by">
                     <span class="icon is-medium">
-                        <i class="fa fa-copyright"></i>
-                    </span>2018
-                </div>
-            </div>
-            <div class="column">
-                <div class="content"><h4>Мэты</h4></div>
-                <div class="mission">
-                    <%= mission %>
-                </div>
-                <a class="button more is-rounded">
-                    далей
+                        <i class="fa fa-facebook"></i>
+                    </span>
                 </a>
-            </div>
-            <div class="column">
-                <div class="content"><h4>#Тэгі</h4></div>
-                <div class="tags">
-                    <% for(var i = 0; i < JSON.parse(tags).length; i++) { %>
-                    <span class="tag is-primary">
-                            <%= JSON.parse(tags)[i] %>
-                        </span>
-                    <% } %>
-                </div>
-            </div>
-            <div class="column">
-                <div class="content"><h4>Сувязь</h4></div>
-                <div class="links">
-                    <a class="button is-medium is-rounded">
-                        <span class="icon is-medium">
-                            <i class="fa fa-facebook"></i>
-                        </span>
-                    </a>
-                    <a class="button is-medium is-rounded">
-                        <span class="icon is-medium">
-                            <i class="fa fa-vk"></i>
-                        </span>
-                    </a>
-                    <a class="button is-medium is-rounded">
-                        <span class="icon is-medium">
-                            <i class="fa fa-twitter"></i>
-                        </span>
-                    </a>
-                    <a class="button is-medium is-rounded">
-                        <span class="icon is-medium">
-                            <i class="fa fa-telegram"></i>
-                        </span>
-                    </a>
-                </div>
+                <a class="button is-medium is-rounded vk" href="https://vk.com/wir_by">
+                    <span class="icon is-medium">
+                        <i class="fa fa-vk"></i>
+                    </span>
+                </a>
+                <a class="button is-medium is-rounded twitter" href="https://twitter.com/wir_by">
+                    <span class="icon is-medium">
+                        <i class="fa fa-twitter"></i>
+                    </span>
+                </a>
+                <a class="button is-medium is-rounded telegram" href="https://t.me/wir_by">
+                    <span class="icon is-medium">
+                        <i class="fa fa-telegram"></i>
+                    </span>
+                </a>
+                <a class="button is-medium is-rounded youtube" href="https://youtube.com/wir_by">
+                    <span class="icon is-medium">
+                        <i class="fa fa-youtube"></i>
+                    </span>
+                </a>
+                <a class="button is-medium is-rounded instagram" href="https://instagram.com/wir_by">
+                    <span class="icon is-medium">
+                        <i class="fa fa-instagram"></i>
+                    </span>
+                </a>
             </div>
         </div>
     </div>

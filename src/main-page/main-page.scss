@@ -1,11 +1,5 @@
 @import '../variables';
 
-@mixin social-button($color) {
-  i {
-    color: $color;
-  }
-}
-
 .main-page {
   .diary-article {
     .diary {
@@ -49,36 +43,5 @@
 
   .load-more {
     margin-top: 40px;
-  }
-}
-
-.social-buttons {
-  display: flex;
-  justify-content: flex-end;
-  margin: 0.5rem;
-
-  .social-btn {
-    color: $grey;
-    margin-left: 0.5rem;
-  }
-
-  .facebook {
-    @include social-button($wedgewood);
-  }
-
-  .twitter {
-    @include social-button($picton-blue);
-  }
-
-  .google {
-    @include social-button($punch);
-  }
-
-  .vk {
-    @include social-button($chambray);
-  }
-
-  .round-btn {
-    border-radius: 20px;
   }
 }

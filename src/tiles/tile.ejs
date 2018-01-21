@@ -10,7 +10,7 @@
 <% var titleVar; %>
 
 <div class="tile is-parent">
-    <article class="card tile is-child">
+    <article class="card tile is-child is-flex">
         <div class="card-image">
             <figure class="image <%= photoClassVar %>">
                 <img src="<%= imagesPath %>/<%= photoVar %>" />
@@ -35,12 +35,14 @@
             <% } %>
         </div>
         <div class="card-content">
-            <span class="title is-spaced">
+            <span class="title">
                 <a href="../article-page/article-page.html"><%= titleVar %></a>
             </span>
-            <p class="subtitle"><%= subtitleVar %></p>
+            <p class="subtitle">
+                <%= subtitleVar %>
+            </p>
             <% if (authorVar) { %>
-            <div class="subtitle author">
+            <div class="author">
                 <img src="<%= imagesPath %>/<%= authorPhotoVar %>" />
                 <div class="name">
                     <span><%= authorVar %></span>

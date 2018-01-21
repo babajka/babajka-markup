@@ -1,12 +1,10 @@
 // Import the initial variables
 @import '../node_modules/bulma/sass/utilities/initial-variables';
-@import 'https://fonts.googleapis.com/css?family=Roboto&subset=cyrillic-ext, latin';
-@import 'https://fonts.googleapis.com/css?family=Lora&subset=cyrillic-ext, latin';
+@import '../node_modules/bulma/sass/utilities/mixins';
 
 // Fonts.
 @import 'https://fonts.googleapis.com/css?family=Comfortaa|Cormorant|Open+Sans';
-@import 'https://fonts.googleapis.com/css?family=Roboto+Condensed&subset=cyrillic-ext, latin';
-@import 'https://fonts.googleapis.com/css?family=Lora&subset=cyrillic-ext, latin';
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400&subset=cyrillic');
 
 // Primary pallete
 // https://coolors.co/ae42ff-d1caca-44494d-ff5e42-9a9d9f
@@ -28,7 +26,7 @@ $bookmarked: #decb76;
 // Add a serif family
 $family-serif: 'Merriweather', 'Georgia', serif;
 $family-arial: 'Roboto Condensed', sans-serif;
-$family-navbar: 'Comfortaa', cursive;
+$family-navbar: 'Open Sans', sans-serif;
 $tile-primary-text: 'Cormorant', serif;
 $tile-secondary-text: 'Open Sans', sans-serif;
 
@@ -49,3 +47,12 @@ $family-primary: $family-arial;
 $abbey: rgba(255, 255, 255, 0.9);
 
 $special-color: #032967;
+
+// Social networks official colors
+$facebook-color: #3b5998;
+$google-plus-color: #d34836;
+$instagram-color: #517fa4;
+$telegram-color: #08c;
+$twitter-color: #0084b4;
+$vk-color: #45668e;
+$youtube-color: #b00;

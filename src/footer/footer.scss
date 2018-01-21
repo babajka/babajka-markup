@@ -1,46 +1,53 @@
 @import '../variables';
 
 .app-footer {
-  border-top: 1px solid $primary;
-  padding: 3rem 1.5rem;
+  background-color: $primary;
+  color: #fff;
+  font-family: $family-navbar;
+  font-weight: 600;
+  padding: 1.5rem 2rem;
+  text-align: center;
 
-  .links {
-    .button {
-      margin: 0.5rem;
+  .general-info {
+    a {
+      color: #fff;
+      text-decoration: underline;
     }
   }
 
-  .about,
-  .address {
-    margin: 0.5rem 0;
-    text-align: left;
-  }
+  .social {
+    .button {
+      margin: 0.4rem;
+    }
 
-  .about {
-    font-size: 1.2rem;
-  }
+    .facebook:hover {
+      background-color: $facebook-color;
+      color: #fff;
+    }
 
-  .logo {
-    display: block;
-    text-align: left;
-  }
+    .vk:hover {
+      background-color: $vk-color;
+      color: #fff;
+    }
 
-  .tags {
-    display: flex;
-    justify-content: center;
-  }
+    .twitter:hover {
+      background-color: $twitter-color;
+      color: #fff;
+    }
 
-  .mission {
-    font-style: italic;
-    padding: 0 1rem;
-  }
+    .telegram:hover {
+      background-color: $telegram-color;
+      color: #fff;
+    }
 
-  .copyright {
-    margin-top: 3rem;
-    text-align: left;
-  }
+    .youtube:hover {
+      background-color: $youtube-color;
+      color: #fff;
+    }
 
-  .email-input {
-    max-width: 16rem;
+    .instagram:hover {
+      background-color: $instagram-color;
+      color: #fff;
+    }
   }
 }
