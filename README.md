@@ -6,7 +6,7 @@
 [![semantic-release](https://img.shields.io/badge/%20%20%F0%9F%93%A6%F0%9F%9A%80-semantic--release-e10079.svg)](https://github.com/semantic-release/semantic-release)
 
 
-Styles &amp; Markup for babajka team project
+Styles &amp; Markup for Babajka team project
 
 ## How to use
 
@@ -17,6 +17,17 @@ Styles &amp; Markup for babajka team project
     * `../node_modules/babajka-markup/dist/fonts`
 
 ## Development
+
+### proper commit naming
+
+We have autopublishing to npm registry and package autoversioning set up. In order to introduce a new package version one should follow the conventions:
+
+* `fix(<scope>): <subject>` - increases **patch** version: 1.0.0 -> 1.0.1
+* `feat(<scope>): <subject>` - increases **minor** version: 1.0.0 -> 1.1.0
+* `perf(<scope>): <subject>` - increases **major** version: 1.0.0 -> 2.0.0
+
+Autopushing is performed by Travis and only triggered when pushing (single commit or PR) into `master` branch.
+When pushing a PR it is enough to have **one** commit named with the conventions above.
 
 ### scripts
 
