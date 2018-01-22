@@ -4,8 +4,14 @@
 <% include ../head/head.ejs %>
 <body>
 
-<div class="container">
+<%- include('../navbar/navbar.ejs', {
+    addContainerVar: 'container',
+    forArticleVar: 'navbar-article',
+});%>
+
+<div class="container article-content">
     <div class="columns">
+        <div class="article-side column"></div>
         <div class="column article">
             <div class="article-top">
                 <h1 class="title is-size-2 has-text-centered article-top__title">
@@ -84,156 +90,28 @@
             <div class="has-text-centered article-more">
                 <span class="is-uppercase article-more__text">Чытаць таксама:</span>
                 <div class="columns">
-                    <div class="column article-card">
-                        <figure class="image is-3by2">
-                            <img
-                                class="article-card__image"
-                                src="<%= imagesPath %>/photo8.jpg"
-                                alt="Тут павінны быць малюнак да артыкулу"
-                            />
-                        </figure>
-                        <div class="article-card__description">
-                            <span class="has-text-weight-bold article-card__title">
-                                &laquo;Гэта ня тое як склеіць разьбіты кубак...&raquo;
-                            </span>
-                            <div class="article-card__details">
-                                <div class="article-card__group">
-                                    <span class="heading article-card__detail">Прачыталі: 100</span>
-                                    <span class="heading article-card__detail">5 хвілін чытання</span>
-                                </div>
-                                <a
-                                    class="button"
-                                    title="Адзначце гэты артыкул, каб прачытаць пазней"
-                                >
-                                    <span class="icon">
-                                        <i class="fa fa-star fa-2x"></i>
-                                    </span>
-                                </a>
-                            </div>
-                            <div class="media">
-                                <figure class="media-left">
-                                    <p class="image is-48x48">
-                                        <img
-                                            class="article-card__photo"
-                                            src="https://bulma.io/images/placeholders/128x128.png"
-                                            alt="Тут павінна быць фота аўтара артыкула"
-                                        />
-                                    </p>
-                                </figure>
-                                <div class="media-content">
-                                    <div class="content article-card__author-topic">
-                                        <a class="" href="#">Яўген Дадуць</a>
-                                        <a
-                                            class="tag is-white is-uppercase article-card__topic"
-                                            href="#"
-                                        >
-                                            Pубрыка
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="column article-card">
-                        <figure class="image is-3by2">
-                            <img
-                                class="article-card__image"
-                                src="<%= imagesPath %>/photo8.jpg"
-                                alt="Тут павінны быць малюнак да артыкулу"
-                            />
-                        </figure>
-                        <div class="article-card__description">
-                            <span class="has-text-weight-bold article-card__title">
-                                &laquo;Гэта ня тое як склеіць разьбіты кубак...&raquo;
-                            </span>
-                            <div class="article-card__details">
-                                <div class="article-card__group">
-                                    <span class="heading article-card__detail">Прачыталі: 100</span>
-                                    <span class="heading article-card__detail">5 хвілін чытання</span>
-                                </div>
-                                <a
-                                    class="button"
-                                    title="Адзначце гэты артыкул, каб прачытаць пазней"
-                                >
-                                    <span class="icon">
-                                        <i class="fa fa-star fa-2x"></i>
-                                    </span>
-                                </a>
-                            </div>
-                            <div class="media">
-                                <figure class="media-left">
-                                    <p class="image is-48x48">
-                                        <img
-                                            class="article-card__photo"
-                                            src="https://bulma.io/images/placeholders/128x128.png"
-                                            alt="Тут павінна быць фота аўтара артыкула"
-                                        />
-                                    </p>
-                                </figure>
-                                <div class="media-content">
-                                    <div class="content article-card__author-topic">
-                                        <a class="" href="#">Яўген Дадуць</a>
-                                        <a
-                                            class="tag is-white is-uppercase article-card__topic"
-                                            href="#"
-                                        >
-                                            Pубрыка
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="column article-card">
-                        <figure class="image is-3by2">
-                            <img
-                                class="article-card__image"
-                                src="<%= imagesPath %>/photo8.jpg"
-                                alt="Тут павінны быць малюнак да артыкулу"
-                            />
-                        </figure>
-                        <div class="article-card__description">
-                            <span class="has-text-weight-bold article-card__title">
-                                &laquo;Гэта ня тое як склеіць разьбіты кубак...&raquo;
-                            </span>
-                            <div class="article-card__details">
-                                <div class="article-card__group">
-                                    <span class="heading article-card__detail">Прачыталі: 100</span>
-                                    <span class="heading article-card__detail">5 хвілін чытання</span>
-                                </div>
-                                <a
-                                    class="button"
-                                    title="Адзначце гэты артыкул, каб прачытаць пазней"
-                                >
-                                    <span class="icon">
-                                        <i class="fa fa-star fa-2x"></i>
-                                    </span>
-                                </a>
-                            </div>
-                            <div class="media">
-                                <figure class="media-left">
-                                    <p class="image is-48x48">
-                                        <img
-                                            class="article-card__photo"
-                                            src="https://bulma.io/images/placeholders/128x128.png"
-                                            alt="Тут павінна быць фота аўтара артыкула"
-                                        />
-                                    </p>
-                                </figure>
-                                <div class="media-content">
-                                    <div class="content article-card__author-topic">
-                                        <a class="" href="#">Яўген Дадуць</a>
-                                        <a
-                                            class="tag is-white is-uppercase article-card__topic"
-                                            href="#"
-                                        >
-                                            Pубрыка
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                    <%- include('article-card/article-card.ejs', {
+                        imageVar: 'photo2.jpg',
+                        titleVar: 'Крама «як з крамы»',
+                        bookmarkedVar: 'article-card__bookmarked',
+                        bookmarkIconVar: 'fa-bookmark',
+                        authorPhotoVar: 'vajc.jpg',
+                        authorNameVar: 'Змітр Корнеў',
+                    }); %>
+                    <%- include('article-card/article-card.ejs', {
+                        imageVar: 'photo3.jpg',
+                        titleVar: '«Гэта ня тое як склеіць разьбіты кубак...»',
+                        bookmarkIconVar: 'fa-bookmark-o',
+                        authorPhotoVar: 'mort.jpg',
+                        authorNameVar: 'Вальжына Морт',
+                    }); %>
+                    <%- include('article-card/article-card.ejs', {
+                        imageVar: 'photo5.jpg',
+                        titleVar: 'Некоратка аб Ахматавай',
+                        bookmarkIconVar: 'fa-bookmark-o',
+                        authorPhotoVar: 'volski.jpg',
+                        authorNameVar: 'Лявон Вольскі',
+                    }); %>
                 </div>
             </div>
         </div>
@@ -245,7 +123,7 @@
                         title="Адзначце гэты артыкул, каб прачытаць пазней"
                     >
                         <span class="icon article-side__icon--bookmark">
-                            <i class="fa fa-star fa-lg"></i>
+                            <i class="fa fa-bookmark-o fa-lg"></i>
                         </span>
                     </a>
                 </li>
@@ -274,6 +152,8 @@
         </div>
     </div>
 </div>
+
+<% include ../footer/footer.ejs %>
 
 </body>
 </html>

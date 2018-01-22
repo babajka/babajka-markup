@@ -5,51 +5,56 @@ function collapse() {
 }
 </script>
 
-<div class="navbar">
-    <div class="navbar-brand">
-        <a class="navbar-item" href="../main-page/main-page.html">
-            <img class="logo-image" src="<%= imagesPath %>/logo-turq-transparent.png" />
-        </a>
+<% var addContainerVar; %>
+<% var forArticleVar; %>
 
-        <div id="navburger" class="button navbar-burger" onclick="collapse()">
-            <span></span>
-            <span></span>
-            <span></span>
-        </div>
-    </div>
-    <div id="navmenu" class="navbar-menu">
-        <div class="navbar-start">
+<div class="<%= addContainerVar %>">
+    <div class="navbar <%= forArticleVar %>">
+        <div class="navbar-brand">
             <a class="navbar-item" href="../main-page/main-page.html">
-                <span class="rubric">АРТЫКУЛЫ</span>
+                <img class="logo-image" src="<%= imagesPath %>/logo-turq-transparent.png" />
             </a>
-            <a class="navbar-item" href="">
-                <span class="rubric">КАЛЕКЦЫІ</span>
-            </a>
-            <a class="navbar-item" href="">
-                <span class="rubric">ПАРТНЁРЫ</span>
-            </a>
-        </div>
 
-        <div class="navbar-end">
-            <div class="navbar-item">
-                <div class="user">
-                    <span>Марыя Бадзей</span>
-                    <div>
-                        <a class="logout" href="../login-page/login-page.html">Выйсці</a>
-                    </div>
-                    <div>
-                        <div class="dropdown is-right is-hoverable">
-                            <div class="dropdown-trigger">
-                                <span class="current-lang">беларуская</span>
-                            </div>
-                            <div class="dropdown-menu" role="menu">
-                                <div class="dropdown-content">
-                                    <a class="dropdown-item lang">
-                                        русский
-                                    </a>
-                                    <a class="dropdown-item lang">
-                                        English
-                                    </a>
+            <div id="navburger" class="button navbar-burger" onclick="collapse()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+        <div id="navmenu" class="navbar-menu">
+            <div class="navbar-start">
+                <a class="navbar-item" href="../main-page/main-page.html">
+                    <span class="rubric">АРТЫКУЛЫ</span>
+                </a>
+                <a class="navbar-item" href="">
+                    <span class="rubric">КАЛЕКЦЫІ</span>
+                </a>
+                <a class="navbar-item" href="">
+                    <span class="rubric">ПАРТНЁРЫ</span>
+                </a>
+            </div>
+
+            <div class="navbar-end">
+                <div class="navbar-item">
+                    <div class="user">
+                        <span>Марыя Бадзей</span>
+                        <div>
+                            <a class="logout" href="../login-page/login-page.html">Выйсці</a>
+                        </div>
+                        <div>
+                            <div class="dropdown is-right is-hoverable">
+                                <div class="dropdown-trigger">
+                                    <span class="current-lang">беларуская</span>
+                                </div>
+                                <div class="dropdown-menu" role="menu">
+                                    <div class="dropdown-content">
+                                        <a class="dropdown-item lang">
+                                            русский
+                                        </a>
+                                        <a class="dropdown-item lang">
+                                            English
+                                        </a>
+                                    </div>
                                 </div>
                             </div>
                         </div>

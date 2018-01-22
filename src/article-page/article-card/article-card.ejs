@@ -1,0 +1,59 @@
+<% var imageVar; %>
+<% var titleVar; %>
+<% var bookmarkedVar; %>
+<% var bookmarkIconVar; %>
+<% var authorPhotoVar; %>
+<% var authorNameVar; %>
+
+<div class="column article-card">
+    <figure class="image is-3by2">
+        <img
+            class="article-card__image"
+            src="<%= imagesPath %>/<%= imageVar %>"
+            alt="Тут павінны быць малюнак да артыкулу"
+        />
+    </figure>
+    <div class="article-card__description">
+        <span class="has-text-weight-bold article-card__title">
+            <%= titleVar %>
+        </span>
+        <div>
+            <div class="article-card__details">
+                <div class="article-card__group">
+                    <span class="heading article-card__detail">Прачыталі: 150</span>
+                    <span class="heading article-card__detail">10 хвілін чытання</span>
+                </div>
+                <a
+                    class="button <%= bookmarkedVar %>"
+                    title="Адзначце гэты артыкул, каб прачытаць пазней"
+                >
+                    <span class="icon">
+                        <i class="fa <%= bookmarkIconVar %> fa-lg"></i>
+                    </span>
+                </a>
+            </div>
+            <div class="media">
+                <figure class="media-left">
+                    <p class="image is-48x48">
+                        <img
+                                class="article-card__photo"
+                                src="<%= imagesPath %>/<%= authorPhotoVar %>"
+                                alt="Тут павінна быць фота аўтара артыкула"
+                        />
+                    </p>
+                </figure>
+                <div class="media-content">
+                    <div class="content article-card__author-topic">
+                        <a class="article-card__author" href="#"><%= authorNameVar %></a>
+                        <a
+                                class="tag is-white is-uppercase article-card__topic"
+                                href="#"
+                        >
+                            Pубрыка
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

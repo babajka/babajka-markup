@@ -1,7 +1,13 @@
 @import '../variables';
 
+.navbar.navbar-article {
+  margin: 0.5rem 6.25rem 0;
+  padding: 0 1.25rem;
+}
+
 .navbar {
   font-family: $family-navbar;
+  z-index: 1;
 
   @include desktop {
     padding: 1rem 3rem 0;
