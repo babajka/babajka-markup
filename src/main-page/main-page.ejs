@@ -57,74 +57,80 @@
                 <!--FIRST LINE END-->
                 <!--SECOND LINE-->
 
-                <div class="second-line tile is-ancestor">
-                    <div class="tile is-vertical is-8">
+                <div class="second-line">
 
-                        <div class="tile">
+                    <div class="tile is-ancestor">
 
-                            <%- include('../tiles/tile.ejs', {
-                            photoClassVar: 'is-3by2',
-                            photoVar: 'photo3.jpg',
-                            specialHeadingHandmadeVar: '(не)',
-                            specialHeadingNameVar: 'расстраляная паэзія',
-                            subtitleVar: 'Лекцыі з Ганнай Севярынец',
-                            titleVar: 'Ад біяграфія да творчасці: Алесь Дудар',
-                            }); %>
+                        <%- include('../tiles/tile.ejs', {
+                        photoClassVar: 'is-3by2',
+                        photoVar: 'photo3.jpg',
+                        specialHeadingHandmadeVar: '(не)',
+                        specialHeadingNameVar: 'расстраляная паэзія',
+                        subtitleVar: 'Лекцыі з Ганнай Севярынец',
+                        titleVar: 'Ад біяграфія да творчасці: Алесь Дудар',
+                        }); %>
 
-                            <%- include('../tiles/tile.ejs', {
-                            authorVar: 'Змітр Корнеў',
-                            authorPhotoVar: 'vajc.jpg',
-                            photoClassVar: 'is-16by9',
-                            photoVar: 'photo2.jpg',
-                            subtitleVar: 'Новы альбом: як, дзе і для каго. Учора Крама прадставіла новы альбом, а мы вам пра яго распавядзем. Назва новага альбома - "Крама". Яго...',
-                            titleVar: 'Крама "як з крамы"',
-                            }); %>
+                        <%- include('../tiles/tile.ejs', {
+                        authorVar: 'Змітр Корнеў',
+                        authorPhotoVar: 'vajc.jpg',
+                        photoClassVar: 'is-3by2',
+                        photoVar: 'photo2.jpg',
+                        subtitleVar: 'Новы альбом: як, дзе і для каго. Учора Крама прадставіла новы альбом, а мы вам пра яго распавядзем. Назва новага альбома - "Крама". Яго...',
+                        titleVar: 'Крама "як з крамы"',
+                        }); %>
 
-                        </div>
-
-                        <div class="tile">
-
-                            <%- include('../tiles/tile.ejs', {
-                            authorVar: 'Наталля Ламека',
-                            authorPhotoVar: 'vajc.jpg',
-                            photoClassVar: 'is-3by1',
-                            photoVar: 'photo6.jpg',
-                            subtitleVar: 'Наталля Ламека. Серыя лекцый',
-                            titleVar: 'Eўрапейскі мадэрнізм',
-                            }); %>
-
-                            <%- include('../tiles/tile.ejs', {
-                            photoClassVar: 'is-3by2',
-                            photoVar: 'photo3.jpg',
-                            specialHeadingNameVar: 'Мінск',
-                            specialHeadingPhotoVar: '15_icon.png',
-                            subtitleVar: 'Выкладчык з ЕГУ распавядзе пра складаны лёс выкладчыка з ЕГУ. Хацеў бы ён выкладаць у БДУ замест таго!..',
-                            titleVar: 'Культура і псіхалогія',
-                            }); %>
-
+                        <div class="tile diary-tile">
+                            <div class="diary-article tile is-parent">
+                                <article class="card tile is-child notification">
+                                    <h1 class="title">Дзённік дня</h1>
+                                    <div class="date">
+                                        <div class="is-pulled-right">27.10.2017</div>
+                                    </div>
+                                    <span class="icon is-small arrow arrow-left">
+                                        <i class="fa fa-chevron-left"></i>
+                                    </span>
+                                    <span class="icon is-small arrow arrow-right">
+                                        <i class="fa fa-chevron-right"></i>
+                                    </span>
+                                    <div class="content diary">
+                                        <%= diaryText %>
+                                    </div>
+                                    <p class="subtitle">Іосіф Бродскі</p>
+                                </article>
+                            </div>
                         </div>
 
                     </div>
 
-                    <div class="tile is-vertical">
-                        <div class="diary-article tile is-parent">
-                            <article class="card tile is-child notification">
-                                <h1 class="title">Дзённік дня</h1>
-                                <div class="date">
-                                    <span>27.10.2017</span>
-                                </div>
-                                <span class="icon is-small arrow arrow-left">
-                                    <i class="fa fa-chevron-left"></i>
-                                </span>
-                                <span class="icon is-small arrow arrow-right">
-                                    <i class="fa fa-chevron-right"></i>
-                                </span>
-                                <div class="content diary">
-                                    <%= diaryText %>
-                                </div>
-                                <p class="subtitle">Іосіф Бродскі</p>
-                            </article>
-                        </div>
+                    <div class="tile is-ancestor">
+
+                        <%- include('../tiles/tile.ejs', {
+                        authorVar: 'Наталля Ламека',
+                        authorPhotoVar: 'vajc.jpg',
+                        photoClassVar: 'is-3by1',
+                        photoVar: 'photo6.jpg',
+                        subtitleVar: 'Наталля Ламека. Серыя лекцый',
+                        titleVar: 'Eўрапейскі мадэрнізм',
+                        }); %>
+
+                        <%- include('../tiles/tile.ejs', {
+                        photoClassVar: 'is-3by2',
+                        photoVar: 'photo3.jpg',
+                        specialHeadingNameVar: 'Мінск',
+                        specialHeadingPhotoVar: '15_icon.png',
+                        subtitleVar: 'Выкладчык з ЕГУ распавядзе пра складаны лёс выкладчыка з ЕГУ. Хацеў бы ён выкладаць у БДУ замест таго!..',
+                        titleVar: 'Культура і псіхалогія',
+                        }); %>
+
+                        <%- include('../tiles/tile.ejs', {
+                        photoClassVar: 'is-3by2',
+                        photoVar: 'photo3.jpg',
+                        specialHeadingNameVar: 'Мінск',
+                        specialHeadingPhotoVar: '15_icon.png',
+                        subtitleVar: 'Выкладчык з ЕГУ распавядзе пра складаны лёс выкладчыка з ЕГУ. Хацеў бы ён выкладаць у БДУ замест таго!..',
+                        titleVar: 'Культура і псіхалогія',
+                        }); %>
+
                     </div>
 
                 </div>
