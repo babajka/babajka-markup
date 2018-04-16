@@ -39,6 +39,15 @@
       display: inline-block;
       width: 100%;
     }
+
+    .control {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .read-btn {
+      margin-left: 1.5rem;
+    }
   }
 
   .load-more {
