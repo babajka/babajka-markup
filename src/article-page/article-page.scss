@@ -1,57 +1,144 @@
 @import '../variables';
 
 .article-page {
-  .page-content {
-    background-color: $white;
-  }
+  // .admin-tools {
+  //   align-items: baseline;
+  //   border: 1px solid $primary-gray;
+  //   border-radius: 3px;
+  //   display: flex;
+  //   flex-direction: row;
+  //   margin: 1rem 0;
+  //   padding: 0.5rem;
+  //
+  //   .action {
+  //     border-color: $danger;
+  //     margin: 0 1rem;
+  //   }
+  //
+  //   .action:hover {
+  //     background-color: $danger;
+  //     color: $white;
+  //   }
+  // }
 
-  .card-content {
-    padding: 0 4rem 1rem;
+  .article-folder {
+    display: inline-block;
+    // TODO(uladbohdan): to figure out the proper approach here.
+    height: 550px;
+    position: relative;
+    width: 100%;
 
-    .heading {
-      font-family: PT sans-serif;
-      font-size: 2.5rem;
-      font-weight: bold;
-      margin: 3.5rem 0 5.5rem;
-      text-align: center;
-    }
+    .folder-image {
+      margin-left: 10rem;
+      margin-top: 5rem;
+      position: absolute;
+      z-index: 0;
 
-    .author {
-      font-family: PT sans-serif;
-      font-size: 2rem;
-      margin: 1.5rem 0;
-    }
-
-    .tags {
-      font-size: 1.2rem;
-    }
-
-    .text {
-      font-size: 1.5rem;
-    }
-  }
-
-  .articles-links {
-    font-size: 1.4rem;
-    padding: 4rem;
-
-    .more-articles-text {
-      font-size: 2rem;
-      margin-bottom: 1rem;
-    }
-
-    // A temporary overriding.
-    .card-content {
-      padding: 0;
-    }
-
-    ul {
-      list-style-type: disc;
-      margin-left: 4rem;
-
-      li {
-        padding: 0.5rem;
+      img {
+        opacity: 0.5;
       }
     }
+
+    .article-title {
+      background-color: $primary;
+      color: $white;
+      font-family: $tile-primary-text;
+      font-size: 3.5rem;
+      left: 0;
+      max-width: 80%;
+      padding: 0.3rem;
+      position: absolute;
+      top: 0;
+      width: max-content;
+      z-index: 1;
+    }
+  }
+
+  .article-info {
+    font-size: 1rem;
+    text-align: center;
+  }
+
+  .article-properties {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin: 2rem 0;
+
+    // .extra-space {
+    //   flex-grow: 1;
+    // }
+
+    .panelx {
+      border: 2px solid $black;
+      border-radius: 7px;
+      margin: 0 0.5rem;
+      padding: 0.5rem;
+      text-align: center;
+
+      .subtext-up {
+        font-size: 0.7rem;
+      }
+
+      .subtext-bottom {
+        font-size: 0.7rem;
+      }
+
+      .essential {
+        font-size: 1.6rem;
+        font-weight: 600;
+      }
+    }
+
+    .panelx:hover {
+      background: $primary;
+      border-color: $primary;
+      color: $white;
+    }
+
+    .panel-danger {
+      border-color: $danger;
+      color: $danger;
+    }
+
+    .panel-danger:hover {
+      background-color: $danger;
+      border-color: $danger;
+      color: $white;
+    }
+  }
+
+  .article-text {
+    font-size: 1.1rem;
+    margin: 2rem 8rem;
+  }
+
+  .article-author {
+    align-items: center;
+    border-bottom: 4px dotted $primary;
+    border-top: 4px dotted $primary;
+    display: flex;
+    flex-direction: column;
+    margin: 2rem 15rem;
+    padding: 3rem 0;
+
+    .author-photo {
+      border-radius: 50%;
+      width: 10rem;
+    }
+
+    .author-name {
+      font-size: 1.5rem;
+      font-weight: 600;
+    }
+
+    .author-bio {
+      font-size: 0.8rem;
+      text-align: center;
+    }
+  }
+
+  .article-links {
+    margin-top: 2rem;
   }
 }
