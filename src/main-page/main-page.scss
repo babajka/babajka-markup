@@ -16,7 +16,7 @@
       left: 0;
 
       &:hover {
-        box-shadow: inset 10px 0 10px 0 $primary-gray;
+        box-shadow: inset -15px 0 25px 0 $primary-gray;
       }
     }
 
@@ -24,13 +24,14 @@
       right: 0;
 
       &:hover {
-        box-shadow: inset -10px 0 10px 0 $primary-gray;
+        box-shadow: inset 15px 0 25px 0 $primary-gray;
       }
     }
   }
 
   .diary-article {
     display: flex;
+    margin: 0 2rem;
     padding: 1rem 1.3rem;
 
     &:hover {
@@ -40,7 +41,7 @@
     .text {
       font-style: italic;
       margin-right: 1rem;
-      max-height: 35ch;
+      max-height: 30ch;
       overflow-y: hidden;
     }
 
@@ -54,16 +55,14 @@
       margin-bottom: 0.5rem;
     }
 
-    .content,
-    .title,
-    .subtitle {
-      margin: 0 1.4rem;
-    }
-
     .date {
       display: inline-block;
       padding-bottom: 0.5rem;
       width: 100%;
+    }
+
+    .author {
+      word-break: normal;
     }
 
     .no-content {
