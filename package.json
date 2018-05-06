@@ -3,11 +3,11 @@
   "version": "0.2.5",
   "description": "Markups",
   "scripts": {
-    "start": "export PORT=3001 && npm run watch",
+    "start": "cross-env PORT=3001 npm run watch",
     "build": "gulp build",
     "watch": "gulp watch",
     "lint": "gulp lint",
-    "deploy": "(export BABAJKA_PREFIX='babajka-markup' && npm run build) && gh-pages -d dist -a",
+    "deploy": "cross-env BABAJKA_PREFIX='babajka-markup' npm run build && gh-pages -d dist -a",
     "prerelease": "npm version patch",
     "postrelease": "git push && git push --tags",
     "release": "npm publish",
@@ -32,6 +32,7 @@
     "font-awesome": "^4.7.0"
   },
   "devDependencies": {
+    "cross-env": "^5.1.4",
     "gh-pages": "^1.0.0",
     "gulp": "^3.9.1",
     "gulp-autoprefixer": "^4.0.0",
@@ -46,8 +47,8 @@
     "gulp-watch": "^4.3.11",
     "husky": "^0.14.3",
     "lint-staged": "^6.0.0",
+    "semantic-release": "^11.0.2",
     "stylelint": "^8.0.0",
-    "stylelint-config-sass-guidelines": "^3.1.0",
-    "semantic-release": "^11.0.2"
+    "stylelint-config-sass-guidelines": "^3.1.0"
   }
 }
