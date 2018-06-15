@@ -70,6 +70,8 @@
 }
 
 .article {
+  min-width: 0;
+
   &__top {
     padding: 2rem 2rem 1rem;
   }
