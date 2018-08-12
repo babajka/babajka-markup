@@ -43,11 +43,7 @@
 
     &:hover {
       box-shadow: none;
-      color: $primary-gray;
-
-      .title {
-        color: $primary-gray;
-      }
+      color: $primary-darkgray;
 
       .hover-read-more {
         opacity: 1;
