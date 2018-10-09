@@ -1,8 +1,8 @@
-# @andemerie and @tyndria responsible for the design and markup
+# @andemerie and @tyndria responsible for the styles and markup
 *.ejs @andemerie @tyndria
 *.scss @andemerie @tyndria
 
-# @drapegnik responsible for developing support, 
+# @drapegnik responsible for developing support,
 * build stuff, deploying and etc.
 .eslintrc @drapegnik
 .htmlhintrc @drapegnik
