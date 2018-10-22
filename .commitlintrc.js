@@ -16,6 +16,7 @@ module.exports = {
         'main',
         'login',
         'tools',
+        'stubs',
       ],
     ],
     'scope-empty': [2, 'never'],

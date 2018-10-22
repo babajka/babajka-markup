@@ -1,8 +1,8 @@
 @import '../variables';
 
-.error-page {
+.stub-page {
   font-family: 'Open Sans', sans-serif;
-  padding: 7rem 1rem;
+  padding: 4rem 1rem;
   text-align: center;
 
   a:link,
@@ -78,6 +78,79 @@
 
     .instagram:hover {
       color: $instagram-color;
+    }
+  }
+}
+
+.in-development-stub {
+  .highlight {
+    font-size: 1.2rem;
+    margin: 0 30%;
+
+    @include touch {
+      margin: 0 1rem;
+    }
+  }
+
+  .social-weekend {
+    border: 2px solid $socialweekend-color;
+    border-radius: 10px;
+    margin: auto;
+    overflow: hidden;
+    text-align: left;
+    width: 50%;
+
+    @include touch {
+      width: 90%;
+    }
+
+    .sent {
+      background-color: $socialweekend-color;
+      border-radius: 10px;
+      color: $primary-white;
+      cursor: pointer;
+      display: inline-block;
+      font-weight: bold;
+      margin-top: 0.5rem;
+      padding: 0.15rem 0.6rem;
+    }
+
+    img {
+      float: left;
+      height: 7rem;
+      margin: 0.5rem;
+      margin-right: 1rem;
+
+      @include touch {
+        float: none;
+        margin: 0.5rem;
+      }
+    }
+
+    .text {
+      margin: 0.5rem 0;
+
+      @include touch {
+        margin: 0.5rem;
+      }
+    }
+  }
+
+  .project-description {
+    margin: 4rem 15% 0;
+    text-align: left;
+
+    @include touch {
+      margin: 2rem 1rem;
+    }
+
+    h1 {
+      font-size: 1.7rem;
+      margin: 1rem 0 0.5rem;
+    }
+
+    ul {
+      list-style-type: disc;
     }
   }
 }

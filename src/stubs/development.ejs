@@ -1,26 +1,163 @@
 <!DOCTYPE html>
 <html lang="be">
 
-<%- include('../head/head.ejs', { title: 'Wir.by - Адукацыйная платформа' }) %>
+<head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-117143376-2"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'UA-117143376-2');
+    </script>
+
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#1a9582" />
+    <meta name="yandex-verification" content="971725770dd3b2a0" />
+    <title>Wir.by - Асветніцкая пляцоўка</title>
+    <link rel="stylesheet" href="<%= bundlePath %>" />
+    <link rel="stylesheet" href="<%= assetsPath %>" />
+    <link rel="icon" type="image/png" href="<%= imagesPath %>/logo/favicon-colored.png" />
+</head>
+
+<!-- The <head> is copied rather than linked to head/head.ejs due to Google Analytics code
+which we do not want to embed to every markdown page.
+TODO: to disable Google Analytics in development *completely*. -->
 
 <body>
 
-<div class="error-page">
+<div class="stub-page in-development-stub">
 
     <img class="logo" src="<%= imagesPath %>/logo/turq-transparent.png" />
+
     <div class="title">
-        Wir.by - Адукацыйная платформа
+        Асветніцкая пляцоўка Wir.by
     </div>
+
     <br />
+
+    <div class="highlight">
+        Вір — асветніцкая пляцоўка пра беларускую і сусветную культуру з артыкуламі, лекцыямі даследчыкаў, гульнямі і спецпраектамі.
+    </div>
+
+    <br />
+
+    <div class="social-weekend">
+        <a href="http://www.socialweekend.by/sw12" target="_blank">
+            <img src="<%= imagesPath %>/references/social-weekend-logo.svg" />
+        </a>
+
+        <div class="text">
+            <b>Мы прайшлі ў чвэрцьфінал!</b> <br />
+            Мы ўдзячныя вам за дапамогу і прапануем спампаваць нашыя крутыя стыкеры<br />
+
+            <a class="sent" href="https://t.me/addstickers/skarynawirby" target="_blank">
+                Усталяваць стыкеры
+            </a>
+        </div>
+    </div>
+
+    <br />
+
     <div class="subtitle">
-        Звяжыцеся з намі / Contact us: <a href="mailto:wir.help@gmail.com"><u>wir.help@gmail.com</u></a>
+        Звяжыцеся з намі / Contact us: <a href="mailto:help@wir.by"><u>help@wir.by</u></a>
     </div>
-    <br />
-    <br />
-    <a class="links" href="https://www.talaka.org/projects/2495/overview">
-        <img class="links-alignment" src="<%= imagesPath %>/references/talaka_logo.png" width="30"/>
-        <span class="links-alignment"><u>Праект на Талацэ</u></span>
-    </a>
+
+    <div class="project-description">
+
+        <h1>Што мы робім?</h1>
+
+        Асветніцкую анлайн-пляцоўку, дзе будуць размяшчацца лекцыі навукоўцаў і даследчыкаў, артыкулы, спецпраекты і інтэрактывы.
+        Тэматыка: літаратура, кіно, тэатр, музыка, гісторыя, лінгвістыка, архітэктура. Колькасны акцэнт робіцца на беларускай культуры, але мы таксама распавядаем пра культуру сусветную.
+
+        <br />
+
+        Мяркуем, што ў нашай прасторы пакуль няма падобных праектаў.
+
+        <h1>А навошта?</h1>
+
+        Каб чалавек, што чытае Wir, ведаў, хто такія беларусы і якія набыткі ў галіне культуры яны маюць.
+
+        <h1>Якія праблемы вырашаем</h1>
+
+        <ul>
+            <li>
+                Для беларусаў па-ранейшаму актуальны пошук ідэнтычнасці. Не зусім вырашаным застаецца не толькі пытанне “хто ты гэткі?”, але не менш істотная праблема — “што мы маем?”.
+            </li>
+            <li>
+                Не хапае надзейных i цiкавых асветніцкіх анлайн-пляцовак, якія б распавядалі пра беларускую культуру ўпоравень з сусветнай.
+            </li>
+            <li>
+                Большасць асветніцкіх і адукацыйных мерапрыемстваў адбываецца ў Мінску, рэгіёны выключаныя з культурнага жыцця.
+            </li>
+            <li>
+                Беларуская культура нярэдка ўспрымаецца ізалявана ад сусветнага і еўрапейскага кантэксту. Мы хочам гэта змяніць.
+            </li>
+        </ul>
+
+        <h1>Што ўжо ёсць?</h1>
+
+        <ul>
+            <li>
+                Каманда.
+            </li>
+            <li>
+                Чатыры цыклы адзнятых лекцый (13 лекцый).
+            </li>
+            <li>
+                Дамоўленасці з лектарамі на здымкі новых лекцый.
+            </li>
+            <li>
+                28 артыкулаў.
+            </li>
+            <li>
+                На дадзены момант пішуцца новыя артыкулы, у праект запрашаюцца новыя аўтары.
+            </li>
+            <li>
+                Матэрыялы для спецпраектаў і інтэрактываў.
+            </li>
+            <li>
+                Пляцоўка для здымак лекцый — кнігарня "Кніжная Шафа" (http://shafa-minsk.by/).
+            </li>
+            <li>
+                Дамоўленасці з іншымі пляцоўкамі для далейшага супрацоўніцтва  ("Масаракш", "Мінскі фестываль моў", "Студэнцкае этнаграфічнае таварыства", некаторыя мінскія музеі)
+            </li>
+            <li>
+                Сайт у працэсе распрацоўкі.
+            </li>
+        </ul>
+
+        <h1>Планы на бліжэйшы час</h1>
+
+        <ul>
+            <li>
+                Запусціць сайт да канца 2018 года.
+            </li>
+            <li>
+                Ствараць новыя артыкулы, а таксама займацца іх рэдактурай, ілюстрацыяй і перакладам.
+            </li>
+            <li>
+                Працаваць над ілюстрацыяй гатовых артыкулаў.
+            </li>
+            <li>
+                Рабіць і апрацоўваць новыя відэалекцыі і падкасты.
+            </li>
+            <li>
+                Штотыдзень выкладаць на сайт мінімум два артыкулы і мінімум адну лекцыю (відэа альбо падкаст).
+            </li>
+            <li>
+                Запрашаць у праект новых лектараў і аўтараў.
+            </li>
+        </ul>
+
+        <h1>Бюджэт</h1>
+
+        Мы шукаем грошы на абсталяванне для запісу відэалекцый і падкастаў, мантаж відэа, рэкламу, дамен і хостынг сайта.
+
+    </div>
 
 </div>
 

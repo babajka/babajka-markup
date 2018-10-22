@@ -15,11 +15,14 @@ const log = require('fancy-log');
 const cors = require('cors');
 
 const fs = require('fs');
-const templateVariables = JSON.parse(fs.readFileSync('./src/templateVariables.json', 'utf8'));
+const templateVariables = JSON.parse(
+  fs.readFileSync('./src/templateVariables.json', 'utf8')
+);
 const team = JSON.parse(fs.readFileSync('./src/about/team.json', 'utf8'));
 
 const port = process.env.PORT || 3001;
-const pathPrefix = (process.env.BABAJKA_PREFIX && `/${process.env.BABAJKA_PREFIX}`) || '';
+const pathPrefix =
+  (process.env.BABAJKA_PREFIX && `/${process.env.BABAJKA_PREFIX}`) || '';
 
 const config = {
   libsPath: 'node_modules',
@@ -28,7 +31,7 @@ const config = {
   fontsPath: 'fonts',
   imagesPath: 'images',
   srcPath: 'src',
-  staticPath: 'static',
+  staticPath: 'static'
 };
 
 templateVariables.bundlePath = `${pathPrefix}/${config.staticPath}/${
@@ -37,22 +40,28 @@ templateVariables.bundlePath = `${pathPrefix}/${config.staticPath}/${
 templateVariables.assetsPath = `${pathPrefix}/${config.staticPath}/${
   config.stylesPath
 }/assets.min.css`;
-templateVariables.imagesPath = `${pathPrefix}/${config.staticPath}/${config.imagesPath}`;
+templateVariables.imagesPath = `${pathPrefix}/${config.staticPath}/${
+  config.imagesPath
+}`;
 templateVariables.team = team;
 
 gulp.task('sass:bundle', () =>
   gulp
     .src([`${config.srcPath}/**/*.scss`, `!${config.srcPath}/index.scss`], {
-      base: config.srcPath,
+      base: config.srcPath
     })
     .pipe(sass().on('error', sass.logError))
     .pipe(autoprefixer())
     .pipe(replace('url("/images/', 'url("../images/'))
     .pipe(concatCss('bundle.css', { rebaseUrls: false }))
-    .pipe(gulp.dest(`${config.buildPath}/${config.staticPath}/${config.stylesPath}`))
+    .pipe(
+      gulp.dest(`${config.buildPath}/${config.staticPath}/${config.stylesPath}`)
+    )
     .pipe(concatCss('bundle.min.css', { rebaseUrls: false }))
     .pipe(cleanCSS())
-    .pipe(gulp.dest(`${config.buildPath}/${config.staticPath}/${config.stylesPath}`))
+    .pipe(
+      gulp.dest(`${config.buildPath}/${config.staticPath}/${config.stylesPath}`)
+    )
 );
 
 gulp.task('sass:assets', () =>
@@ -63,13 +72,15 @@ gulp.task('sass:assets', () =>
         includePaths: [
           'node_modules/bulma',
           'node_modules/bulma-badge/dist/css/',
-          'node_modules/font-awesome/scss',
-        ],
+          'node_modules/font-awesome/scss'
+        ]
       }).on('error', sass.logError)
     )
     .pipe(concatCss('assets.min.css'))
     .pipe(cleanCSS())
-    .pipe(gulp.dest(`${config.buildPath}/${config.staticPath}/${config.stylesPath}`))
+    .pipe(
+      gulp.dest(`${config.buildPath}/${config.staticPath}/${config.stylesPath}`)
+    )
 );
 
 gulp.task('sass:lint', () =>
@@ -78,19 +89,24 @@ gulp.task('sass:lint', () =>
     .pipe(plumber())
     .pipe(
       stylelint({
-        reporters: [{ formatter: 'string', console: true }],
+        reporters: [{ formatter: 'string', console: true }]
       })
     )
 );
 
 gulp.task('sass:watch', () =>
-  watch(`${config.srcPath}/**/*.scss`, gulp.series('sass:bundle', 'sass:assets', 'sass:lint'))
+  watch(
+    `${config.srcPath}/**/*.scss`,
+    gulp.series('sass:bundle', 'sass:assets', 'sass:lint')
+  )
 );
 
 gulp.task('fa:fonts', () =>
   gulp
     .src(`${config.libsPath}/font-awesome/fonts/fontawesome-webfont.*`)
-    .pipe(gulp.dest(`${config.buildPath}/${config.staticPath}/${config.fontsPath}`))
+    .pipe(
+      gulp.dest(`${config.buildPath}/${config.staticPath}/${config.fontsPath}`)
+    )
 );
 
 gulp.task('ejs:compile', () =>
@@ -108,37 +124,58 @@ const lintHtml = () =>
 
 gulp.task('html:lint', gulp.series('ejs:compile', lintHtml));
 
-gulp.task('images:copy', () =>
+gulp.task('static:copy', () =>
   gulp
-    .src(`${config.staticPath}/images/**/*`)
-    .pipe(gulp.dest(`${config.buildPath}/${config.staticPath}/${config.imagesPath}`))
+    .src(`${config.staticPath}/**/**/*`)
+    .pipe(
+      gulp.dest(`${config.buildPath}/${config.staticPath}`)
+    )
 );
 
-gulp.task('ejs:watch', () => watch(`${config.srcPath}/**/*.ejs`, gulp.series('html:lint')));
+gulp.task('search-engines:copy', () =>
+  gulp
+    .src(`${config.staticPath}/search-engines/**/*`)
+    .pipe(
+      gulp.dest(`${config.buildPath}/${config.staticPath}/search-engines`)
+    )
+);
+
+gulp.task('ejs:watch', () =>
+  watch(`${config.srcPath}/**/*.ejs`, gulp.series('html:lint'))
+);
 
 gulp.task('serve', () =>
   connect.server({
     port,
     livereload: true,
     root: config.buildPath,
-    middleware: () => [cors()],
+    middleware: () => [cors()]
   })
 );
 
 gulp.task('livereload', () =>
   watch([
     `${config.buildPath}/**/*.html`,
-    `${config.buildPath}/${config.staticPath}/${config.stylesPath}/**/*.css`,
+    `${config.buildPath}/${config.staticPath}/${config.stylesPath}/**/*.css`
   ]).pipe(connect.reload())
 );
 
 // export tasks
 gulp.task(
   'build',
-  gulp.parallel('ejs:compile', 'sass:bundle', 'sass:assets', 'fa:fonts', 'images:copy')
+  gulp.parallel(
+    'ejs:compile',
+    'sass:bundle',
+    'sass:assets',
+    'fa:fonts',
+    'static:copy'
+  )
 );
 gulp.task('lint', gulp.parallel('sass:lint', 'html:lint'));
 gulp.task(
   'watch',
-  gulp.series('build', gulp.parallel('serve', 'livereload', 'lint', 'sass:watch', 'ejs:watch'))
+  gulp.series(
+    'build',
+    gulp.parallel('serve', 'livereload', 'lint', 'sass:watch', 'ejs:watch')
+  )
 );
