@@ -18,13 +18,14 @@ addons:
   ssh_known_hosts: dev.wir.by
 before_deploy:
 - openssl aes-256-cbc -K $encrypted_0edcbc894897_key -iv $encrypted_0edcbc894897_iv
-  -in deploy_travis_markup_rsa.enc -out /tmp/deploy_travis_markup_rsa -d
+  -in babajka_dev_rsa.enc -out /tmp/babajka_dev_rsa -d
 - eval "$(ssh-agent -s)"
-- chmod 600 /tmp/deploy_travis_markup_rsa
-- ssh-add /tmp/deploy_travis_markup_rsa
+- chmod 600 /tmp/babajka_dev_rsa
+- ssh-add /tmp/babajka_dev_rsa
 deploy:
   provider: script
   skip_cleanup: true
-  script: rsync -r --delete-after --quiet $TRAVIS_BUILD_DIR/dist wir-dev@dev.wir.by:/home/wir-dev/experiment/
+  script:
+  - rsync -r --delete-after --quiet $TRAVIS_BUILD_DIR/dist wir-dev@dev.wir.by:/home/wir-dev/deployed/markup
   on:
     branch: deploy
