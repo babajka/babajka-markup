@@ -29,6 +29,6 @@ deploy:
   provider: script
   skip_cleanup: true
   script:
-  - rsync -r --delete-after --quiet $TRAVIS_BUILD_DIR/dist wir-dev@dev.wir.by:/home/wir-dev/deployed/markup
+  - rsync -r --delete-after --quiet $TRAVIS_BUILD_DIR/dist wir-dev@dev.wir.by:/home/wir-dev/deployed/markup/
   on:
-    branch: deploy
+    branch: develop
