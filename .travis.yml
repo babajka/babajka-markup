@@ -4,6 +4,9 @@ cache:
   - "~/.npm"
 notifications:
   email: false
+  slack:
+    rooms:
+      secure: ivT0flZtONiC42JM2DqVUK8XQnEXtmmnvF3oreJqKybJFqQIwOV6MJq6uDek8Q9dkMs8upIV46ZWG+xTjPIfQ9vY/+Z+fQHif+u2MDqxQ4FMzprMoed1yYRTafFfNRswAy0n+wvNzf0D/UYHztnf0KQeofHDB3V7sP8Wf+bDGNQ6PZM4cHVt1/LYR8lcQ544cko7BRPyssr281PeTXw//2zcXdUjZqzEWnzTJBoR6mOXXU/h+A+kna5SsPvrbg9wGDi2aF0IzDCV+/dh8jkMF4GUiONZk7ypB26EGuU+7b5j0lzKe0E/T7fldSmpURjGV9DFy6ZY89ad1g9t7olRSmZvyxw9a4k0vElTIjSHeDwH5p5zwHPORelV5KVESkVdVZKfAqOwaFI+VuUs1yuAc9zPnuzneoJicyYJwK66/MPsXf0AqrCX9AjGnZPcOTVzF4yBF+ZCgWcO/RhoL0EqaLMUdd0NOFZ+La3RtDDDcoG5FqNaPKZ7+cEDhjVQfAaSW9tF+pgcJXPhfiCd6O2qdSxhTzByGaM/pgjhTEYPHwdTnBJzOU2wItjjScKzIxX9iivL116BABW/wOgZa20i2AhKn/9fK1UsG3pGoSfQl2watM2czAACupBUbNGkKqn74/jTkayAY4kQSEz/JT5yaDEVtJLMWFZJqYZC4EKZYWQ=
 node_js:
 - '10'
 after_success:
