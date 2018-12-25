@@ -1,144 +1,146 @@
 <!DOCTYPE html>
 <html lang="be">
 <%- include('../head/head.ejs', { title: 'Пра нас' }) %>
-<body>
-<% include ../navbar/navbar.ejs %>
 
-<div class="about-container about-team">
+<body>
+  <% include ../navbar/navbar.ejs %>
+
+  <div class="about-container about-team">
     <div class="title">
-        Wir.by
+      Wir.by
     </div>
     <div class="goal">
-        Wir — асветніцкая пляцоўка пра беларускую і сусветную культуру з артыкуламі,
-        лекцыямі даследчыкаў, гульнямі і спецпраектамі.
+      Wir — асветніцкая пляцоўка пра беларускую і сусветную культуру з артыкуламі,
+      лекцыямі даследчыкаў, гульнямі і спецпраектамі.
     </div>
     <hr />
     <div class="helpus">
-        <div class="title">
-            Далучыцца да праекта
-        </div>
-        Нам патрэбныя:
-        <div>
-            <div class="positions is-centered">
-                <div class="position" onclick="collapsePositionDescription()">
-                    Аўтары артыкулаў
-                    <i class="fa fa-chevron-circle-down" aria-hidden="true"></i>
-                </div>
-                <div class="position" onclick="collapsePositionDescription()">
-                    Мантажор відэа
-                    <i class="fa fa-chevron-circle-down" aria-hidden="true"></i>
-                </div>
-                <div class="position" onclick="collapsePositionDescription()">
-                    Аператар
-                    <i class="fa fa-chevron-circle-down" aria-hidden="true"></i>
-                </div>
-                <div class="position is-active" onclick="collapsePositionDescription()">
-                    JS-распрацоўшчык
-                    <i class="fa fa-chevron-circle-up" aria-hidden="true"></i>
-                </div>
-                <div class="position" onclick="collapsePositionDescription()">
-                    Дызайнер / Web-дызайнер
-                    <i class="fa fa-chevron-circle-down" aria-hidden="true"></i>
-                </div>
-            </div>
-
-            <div id="position-description" class="position-description hidden">
-                <div class="name">
-                    JS-распрацоўшчык
-                </div>
-                Наш сайт цалкам напісаны на JS-е. Мы пішам так, як нам падабаецца,
-                не баімся новых тэхналогіяў і заўсёды спрабуем новае. Калі Вам цікава
-                спрычыніцца да тэхнічнага боку праекта і Вы ўмееце ў JS - пішыце нам!
-                <br />
-                <u>wir.development@gmail.com</u>
-            </div>
+      <div class="title">
+        Далучыцца да праекта
+      </div>
+      Нам патрэбныя:
+      <div>
+        <div class="positions is-centered">
+          <div class="position" onclick="collapsePositionDescription()">
+            Аўтары артыкулаў
+            <i class="fa fa-chevron-circle-down" aria-hidden="true"></i>
+          </div>
+          <div class="position" onclick="collapsePositionDescription()">
+            Мантажор відэа
+            <i class="fa fa-chevron-circle-down" aria-hidden="true"></i>
+          </div>
+          <div class="position" onclick="collapsePositionDescription()">
+            Аператар
+            <i class="fa fa-chevron-circle-down" aria-hidden="true"></i>
+          </div>
+          <div class="position is-active" onclick="collapsePositionDescription()">
+            JS-распрацоўшчык
+            <i class="fa fa-chevron-circle-up" aria-hidden="true"></i>
+          </div>
+          <div class="position" onclick="collapsePositionDescription()">
+            Дызайнер / Web-дызайнер
+            <i class="fa fa-chevron-circle-down" aria-hidden="true"></i>
+          </div>
         </div>
 
-        <script>
+        <div id="position-description" class="position-description hidden">
+          <div class="name">
+            JS-распрацоўшчык
+          </div>
+          Наш сайт цалкам напісаны на JS-е. Мы пішам так, як нам падабаецца,
+          не баімся новых тэхналогіяў і заўсёды спрабуем новае. Калі Вам цікава
+          спрычыніцца да тэхнічнага боку праекта і Вы ўмееце ў JS - пішыце нам!
+          <br />
+          <u>wir.development@gmail.com</u>
+        </div>
+      </div>
+
+      <script>
         function collapsePositionDescription() {
-            document.getElementById('position-description').classList.toggle('hidden');
+          document.getElementById('position-description').classList.toggle('hidden');
         }
-        </script>
+      </script>
     </div>
     <hr />
     <div class="team">
-        <div class="title">
-            Каманда
+      <div class="title">
+        Каманда
+      </div>
+      <div class="columns is-centered is-desktop">
+        <div class="column">
+          <div class="columns">
+            <%- include('./teammate.ejs', { idx: 0 }) %>
+            <%- include('./teammate.ejs', { idx: 1 }) %>
+            <%- include('./teammate.ejs', { idx: 2 }) %>
+          </div>
         </div>
-        <div class="columns is-centered is-desktop">
-            <div class="column">
-                <div class="columns">
-                    <%- include('./teammate.ejs', { idx: 0 }) %>
-                    <%- include('./teammate.ejs', { idx: 1 }) %>
-                    <%- include('./teammate.ejs', { idx: 2 }) %>
-                </div>
-            </div>
-            <div class="column">
-                <div class="columns">
-                    <%- include('./teammate.ejs', { idx: 3 }) %>
-                    <%- include('./teammate.ejs', { idx: 4 }) %>
-                    <%- include('./teammate.ejs', { idx: 5 }) %>
-                </div>
-            </div>
+        <div class="column">
+          <div class="columns">
+            <%- include('./teammate.ejs', { idx: 3 }) %>
+            <%- include('./teammate.ejs', { idx: 4 }) %>
+            <%- include('./teammate.ejs', { idx: 5 }) %>
+          </div>
         </div>
-        <div class="columns is-centered is-desktop">
-            <div class="column">
-                <div class="columns">
-                    <%- include('./teammate.ejs', { idx: 6 }) %>
-                    <%- include('./teammate.ejs', { idx: 7 }) %>
-                    <%- include('./teammate.ejs', { idx: 8 }) %>
-                </div>
-            </div>
-            <div class="column">
-                <div class="columns">
-                    <%- include('./teammate.ejs', { idx: 9 }) %>
-                    <%- include('./teammate.ejs', { idx: 10 }) %>
-                    <%- include('./teammate.ejs', { idx: 11 }) %>
-                </div>
-            </div>
+      </div>
+      <div class="columns is-centered is-desktop">
+        <div class="column">
+          <div class="columns">
+            <%- include('./teammate.ejs', { idx: 6 }) %>
+            <%- include('./teammate.ejs', { idx: 7 }) %>
+            <%- include('./teammate.ejs', { idx: 8 }) %>
+          </div>
         </div>
-        <div class="columns is-centered is-desktop">
-            <div class="column">
-                <div class="columns">
-                    <%- include('./teammate.ejs', { idx: 12 }) %>
-                    <%- include('./teammate.ejs', { idx: 13 }) %>
-                    <%- include('./teammate.ejs', { idx: 14 }) %>
-                </div>
-            </div>
-            <div class="column">
-                <div class="columns">
-                    <%- include('./teammate.ejs', { idx: 15 }) %>
-                    <%- include('./teammate.ejs', { idx: 16 }) %>
-                    <%- include('./teammate.ejs', { idx: 17 }) %>
-                </div>
-            </div>
+        <div class="column">
+          <div class="columns">
+            <%- include('./teammate.ejs', { idx: 9 }) %>
+            <%- include('./teammate.ejs', { idx: 10 }) %>
+            <%- include('./teammate.ejs', { idx: 11 }) %>
+          </div>
         </div>
-        <div class="columns is-centered is-desktop">
-            <%- include('./teammate.ejs', { idx: 18 }) %>
+      </div>
+      <div class="columns is-centered is-desktop">
+        <div class="column">
+          <div class="columns">
+            <%- include('./teammate.ejs', { idx: 12 }) %>
+            <%- include('./teammate.ejs', { idx: 13 }) %>
+            <%- include('./teammate.ejs', { idx: 14 }) %>
+          </div>
         </div>
-        <div class="thanks">
-            Выражаем падзяку <b>Ганне Бучко</b> (лагатып) і <b>Даніілу Пячэнка</b> (саўндтрэк да лекцый).
+        <div class="column">
+          <div class="columns">
+            <%- include('./teammate.ejs', { idx: 15 }) %>
+            <%- include('./teammate.ejs', { idx: 16 }) %>
+            <%- include('./teammate.ejs', { idx: 17 }) %>
+          </div>
         </div>
+      </div>
+      <div class="columns is-centered is-desktop">
+        <%- include('./teammate.ejs', { idx: 18 }) %>
+      </div>
+      <div class="thanks">
+        Выражаем падзяку <b>Ганне Бучко</b> (лагатып) і <b>Даніілу Пячэнка</b> (саўндтрэк да лекцый).
+      </div>
     </div>
     <hr />
     <div class="contact">
-        Мы заўжды даступныя ў сацсетках, спасылкі ў футэры.
-        <br />
-        Таксама звязацца з намі можна па электроннай пошце.
-        <br />
-        Па тэхнічных пытаннях: <a href="mailto:dev@wir.by"><u>dev@wir.by</u></a>
-        <br />
-        Па любых іншых: <a href="mailto:help@wir.by"><u>help@wir.by</u></a>
-        <div class="talaka">
-            <span class="talaka-text">Мы на</span>
-            <a class="talaka" href="https://www.talaka.org/projects/2495/overview">
-                <img class="talaka-text" src="<%= imagesPath %>/references/talaka_logo.png" width="30"/>
-                <span class="talaka-text">Талацэ</span>
-            </a>
-        </div>
+      Мы заўжды даступныя ў сацсетках, спасылкі ў футэры.
+      <br />
+      Таксама звязацца з намі можна па электроннай пошце.
+      <br />
+      Па тэхнічных пытаннях: <a href="mailto:dev@wir.by"><u>dev@wir.by</u></a>
+      <br />
+      Па любых іншых: <a href="mailto:help@wir.by"><u>help@wir.by</u></a>
+      <div class="talaka">
+        <span class="talaka-text">Мы на</span>
+        <a class="talaka" href="https://www.talaka.org/projects/2495/overview">
+          <img class="talaka-text" src="<%= imagesPath %>/references/talaka_logo.png" width="30" />
+          <span class="talaka-text">Талацэ</span>
+        </a>
+      </div>
     </div>
-</div>
+  </div>
 
-<% include ../footer/footer.ejs %>
+  <% include ../footer/footer.ejs %>
 </body>
+
 </html>

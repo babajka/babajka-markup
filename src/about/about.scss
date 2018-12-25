@@ -10,7 +10,7 @@
   }
 
   hr {
-    background: #fff;
+    background: #ffffff;
     border: 0;
     border-bottom: 4px dotted $primary-darkgray;
     margin: 2.5rem 25%;
@@ -61,6 +61,7 @@
         flex-direction: column;
       }
 
+      // stylelint-disable-next-line selector-max-compound-selectors
       .position {
         border: 1px solid $primary;
         border-radius: 5px;
@@ -68,10 +69,11 @@
         margin: 0.5rem;
         padding: 0.5rem;
 
+        // stylelint-disable-next-line selector-max-compound-selectors, max-nesting-depth
         &.is-active,
         &:hover {
           background-color: $primary;
-          color: #fff;
+          color: #ffffff;
         }
       }
     }
@@ -81,6 +83,7 @@
       padding: 1rem;
       text-align: left;
 
+      // stylelint-disable-next-line selector-max-compound-selectors
       .name {
         color: $primary-darkgray;
         font-size: 1.5rem;

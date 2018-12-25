@@ -1,3 +1,5 @@
+// stylelint-disable selector-max-compound-selectors, max-nesting-depth, no-descending-specificity
+
 @import '../variables';
 
 .navbar {
@@ -63,7 +65,7 @@
           &:hover {
             background-color: $primary;
             border-top: 0.2rem solid $primary;
-            color: #fff;
+            color: #ffffff;
           }
         }
 

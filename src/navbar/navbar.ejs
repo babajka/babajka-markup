@@ -1,67 +1,67 @@
 <script>
-function collapse() {
-  document.getElementById('navmenu').classList.toggle('is-active');
-  document.getElementById('navburger').classList.toggle('is-active');
-}
+  function collapse() {
+    document.getElementById('navmenu').classList.toggle('is-active');
+    document.getElementById('navburger').classList.toggle('is-active');
+  }
 </script>
 
 <div class="navbar">
-    <div class="navbar-brand">
-        <a class="navbar-item" href="../main-page/main-page.html">
-            <img class="logo-image" src="<%= imagesPath %>/logo/W-coloured-transparent.png" />
-        </a>
+  <div class="navbar-brand">
+    <a class="navbar-item" href="../main-page/main-page.html">
+      <img class="logo-image" src="<%= imagesPath %>/logo/W-coloured-transparent.png" />
+    </a>
 
-        <div id="navburger" class="button navbar-burger" onclick="collapse()">
-            <span></span>
-            <span></span>
-            <span></span>
-        </div>
+    <div id="navburger" class="button navbar-burger" onclick="collapse()">
+      <span></span>
+      <span></span>
+      <span></span>
     </div>
-    <div id="navmenu" class="navbar-menu">
-        <div class="navbar-start">
-            <a class="navbar-item" href="../main-page/main-page.html">
-                <span class="rubric is-active">АРТЫКУЛЫ</span>
-            </a>
-            <a class="navbar-item" href="">
-                <span class="rubric">КАЛЕКЦЫІ</span>
-            </a>
-            <a class="navbar-item" href="">
-                <span class="rubric">ПАРТНЁРЫ</span>
-            </a>
-            <a class="navbar-item" href="../article-page-edit/article-page-edit.html">
-                <span class="rubric">СТВАРЫЦЬ АРТЫКУЛ</span>
-            </a>
-            <a class="navbar-item" href="../about/about.html">
-                <span class="rubric">ПРА НАС</span>
-            </a>
-        </div>
+  </div>
+  <div id="navmenu" class="navbar-menu">
+    <div class="navbar-start">
+      <a class="navbar-item" href="../main-page/main-page.html">
+        <span class="rubric is-active">АРТЫКУЛЫ</span>
+      </a>
+      <a class="navbar-item" href="">
+        <span class="rubric">КАЛЕКЦЫІ</span>
+      </a>
+      <a class="navbar-item" href="">
+        <span class="rubric">ПАРТНЁРЫ</span>
+      </a>
+      <a class="navbar-item" href="../article-page-edit/article-page-edit.html">
+        <span class="rubric">СТВАРЫЦЬ АРТЫКУЛ</span>
+      </a>
+      <a class="navbar-item" href="../about/about.html">
+        <span class="rubric">ПРА НАС</span>
+      </a>
+    </div>
 
-        <div class="navbar-end">
-            <div class="navbar-item">
-                <div class="user">
-                    <div class="name-section">Марыя Бадзей</div>
-                    <div class="auth-section">
-                        <a class="auth-button" href="../login-page/login-page.html">Выйсці</a>
-                    </div>
-                    <div class="lang-section">
-                        <div class="dropdown is-right is-hoverable">
-                            <div class="dropdown-trigger">
-                                <span class="current-lang">беларуская</span>
-                            </div>
-                            <div class="dropdown-menu" role="menu">
-                                <div class="dropdown-content">
-                                    <a class="dropdown-item lang">
-                                        русский
-                                    </a>
-                                    <a class="dropdown-item lang">
-                                        English
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+    <div class="navbar-end">
+      <div class="navbar-item">
+        <div class="user">
+          <div class="name-section">Марыя Бадзей</div>
+          <div class="auth-section">
+            <a class="auth-button" href="../login-page/login-page.html">Выйсці</a>
+          </div>
+          <div class="lang-section">
+            <div class="dropdown is-right is-hoverable">
+              <div class="dropdown-trigger">
+                <span class="current-lang">беларуская</span>
+              </div>
+              <div class="dropdown-menu" role="menu">
+                <div class="dropdown-content">
+                  <a class="dropdown-item lang">
+                    русский
+                  </a>
+                  <a class="dropdown-item lang">
+                    English
+                  </a>
                 </div>
+              </div>
             </div>
+          </div>
         </div>
+      </div>
     </div>
+  </div>
 </div>

@@ -95,6 +95,7 @@
     .no-content {
       margin: auto;
 
+      // stylelint-disable-next-line selector-max-compound-selectors
       img {
         filter: grayscale(70%) opacity(20%);
         padding: 0 2rem;

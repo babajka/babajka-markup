@@ -2,7 +2,7 @@
 
 .app-footer {
   background-color: $primary;
-  color: #fff;
+  color: #ffffff;
   flex-shrink: 0;
   font-family: $family-navbar;
   font-size: 0.95rem;
@@ -18,7 +18,7 @@
     vertical-align: center;
 
     a {
-      color: #fff;
+      color: #ffffff;
       text-decoration: underline;
     }
   }
@@ -36,32 +36,32 @@
 
     .facebook:hover {
       background-color: $facebook-color;
-      color: #fff;
+      color: #ffffff;
     }
 
     .vk:hover {
       background-color: $vk-color;
-      color: #fff;
+      color: #ffffff;
     }
 
     .twitter:hover {
       background-color: $twitter-color;
-      color: #fff;
+      color: #ffffff;
     }
 
     .telegram:hover {
       background-color: $telegram-color;
-      color: #fff;
+      color: #ffffff;
     }
 
     .youtube:hover {
       background-color: $youtube-color;
-      color: #fff;
+      color: #ffffff;
     }
 
     .instagram:hover {
       background-color: $instagram-color;
-      color: #fff;
+      color: #ffffff;
     }
   }
 }

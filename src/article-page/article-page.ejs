@@ -8,311 +8,309 @@
 <% var partnerName = "Курылка Гутэнберга"; %>
 
 <body>
-<div class="babajka-root">
+  <div class="babajka-root">
     <div class="babajka-content">
 
-    <% include ../navbar/navbar.ejs %>
+      <% include ../navbar/navbar.ejs %>
 
-    <div class="article-container container">
+      <div class="article-container container">
         <div class="columns">
-            <div class="article-side column is-hidden-touch"></div>
+          <div class="article-side column is-hidden-touch"></div>
 
-            <div class="article column">
-                <div class="article__top">
-                    <div class="article__collection-block article__another-names is-hidden-touch">
-                        <span>Крама «як з крамы крамы крамы крамы крамы крамы крамы крамы крамы»</span>
-                        <span>Некоратка аб Ахматавай</span>
+          <div class="article column">
+            <div class="article__top">
+              <div class="article__collection-block article__another-names is-hidden-touch">
+                <span>Крама «як з крамы крамы крамы крамы крамы крамы крамы крамы крамы»</span>
+                <span>Некоратка аб Ахматавай</span>
+              </div>
+              <div class="article__collection-block">
+                <a class="article__another" href="#">
+                  <span class="article__arrow-wrap icon">
+                    <i class="article__arrow fa fa-long-arrow-left"></i>
+                  </span>
+                </a>
+                <div class="has-text-centered">
+                  <a class="article__collection is-uppercase" title="Глядзець усе артыкулы калекцыі">
+                    <%= collectionName %>
+                  </a>
+                </div>
+                <a class="article__another" href="#">
+                  <span class="article__arrow-wrap icon">
+                    <i class="article__arrow fa fa-long-arrow-right"></i>
+                  </span>
+                </a>
+              </div>
+
+              <div class="article__title-block">
+                <h3 class="article__title title">
+                  Гэта ня тое як склеіць разьбіты кубак...
+                </h3>
+                <a class="icon-button button is-hidden-desktop" href="../article-page-edit/article-page-edit.html" title="Адрэдагаваць артыкул">
+                  <span class="article__usual-icon icon-button__usual-icon icon">
+                    <i class="fa fa-pencil fa-lg"></i>
+                  </span>
+                </a>
+                <a class="icon-button button is-hidden-desktop" title="Выдаліць артыкул">
+                  <span class="article__usual-icon icon-button__usual-icon icon">
+                    <i class="fa fa-trash fa-lg"></i>
+                  </span>
+                </a>
+              </div>
+
+              <div class="article__info">
+                <div class="article__info-left">
+                  <div class="article__author-block is-hidden-desktop">
+                    <a class="article__info-item article__info-item--clickable">
+                      <span class="article__info-icon icon">
+                        <i class="fa fa-user" aria-hidden="true"></i>
+                      </span>
+                      <span class="article__info-link">
+                        <%= authorName %>
+                      </span>
+                      <span class="icon">
+                        <i class="fa fa-angle-up" aria-hidden="true"></i>
+                      </span>
+                    </a>
+                    <div class="article__author-info">
+                      <figure class="article__author-image-wrap image is-48x48">
+                        <img class="article__author-image" src="<%= imagesPath %>/mock/vajc.jpg" alt="Тут павінна быць фота аўтара артыкула" />
+                      </figure>
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                      Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                      nisi ut aliquip ex ea commodo consequat.
                     </div>
-                    <div class="article__collection-block">
-                        <a class="article__another" href="#">
-                            <span class="article__arrow-wrap icon">
-                                <i class="article__arrow fa fa-long-arrow-left"></i>
-                            </span>
-                        </a>
-                        <div class="has-text-centered">
-                            <a class="article__collection is-uppercase" title="Глядзець усе артыкулы калекцыі">
-                                <%= collectionName %>
-                            </a>
+                  </div>
+                  <a class="article__info-item article__info-item--clickable is-hidden-desktop">
+                    <span class="article__info-icon icon">
+                      <i class="fa fa-user" aria-hidden="true"></i>
+                    </span>
+                    <span class="article__info-link">
+                      <%= authorName %>
+                    </span>
+                    <span class="icon">
+                      <i class="fa fa-angle-down" aria-hidden="true"></i>
+                    </span>
+                  </a>
+                  <div class="dropdown is-hoverable is-hidden-touch">
+                    <div class="dropdown-trigger">
+                      <a class="article__info-item article__info-item--clickable" aria-haspopup="true" aria-controls="author-dropdown">
+                        <span class="article__info-icon icon">
+                          <i class="fa fa-user" aria-hidden="true"></i>
+                        </span>
+                        <%= authorName %>
+                      </a>
+                    </div>
+                    <div class="article__author-menu dropdown-menu" id="author-dropdown" role="menu">
+                      <div class="dropdown-content">
+                        <div class="dropdown-item">
+                          <div class="article__author-top media">
+                            <div class="media-left">
+                              <figure class="image is-48x48">
+                                <img class="article__author-image" src="<%= imagesPath %>/mock/vajc.jpg" alt="Тут павінна быць фота аўтара артыкула" />
+                              </figure>
+                            </div>
+                            <div class="media-content">
+                              <p class="article__author-name is-size-6">
+                                <%= authorName %>
+                              </p>
+                              <p>Якая-небудзь інфа пра аўтара</p>
+                            </div>
+                          </div>
+
+                          <div class="content">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                            Ut enim ad minim veniam, quis nostrud exercitation
+                            ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                          </div>
                         </div>
-                        <a class="article__another" href="#">
-                            <span class="article__arrow-wrap icon">
-                                <i class="article__arrow fa fa-long-arrow-right"></i>
-                            </span>
-                        </a>
+                      </div>
                     </div>
-
-                    <div class="article__title-block">
-                        <h3 class="article__title title">
-                            Гэта ня тое як склеіць разьбіты кубак...
-                        </h3>
-                        <a class="icon-button button is-hidden-desktop" href="../article-page-edit/article-page-edit.html" title="Адрэдагаваць артыкул">
-                            <span class="article__usual-icon icon-button__usual-icon icon">
-                                <i class="fa fa-pencil fa-lg"></i>
-                            </span>
-                        </a>
-                        <a class="icon-button button is-hidden-desktop" title="Выдаліць артыкул">
-                            <span class="article__usual-icon icon-button__usual-icon icon">
-                                <i class="fa fa-trash fa-lg"></i>
-                            </span>
-                        </a>
-                    </div>
-
-                    <div class="article__info">
-                        <div class="article__info-left">
-                            <div class="article__author-block is-hidden-desktop">
-                                <a class="article__info-item article__info-item--clickable">
-                                    <span class="article__info-icon icon">
-                                        <i class="fa fa-user" aria-hidden="true"></i>
-                                    </span>
-                                    <span class="article__info-link">
-                                        <%= authorName %>
-                                    </span>
-                                    <span class="icon">
-                                        <i class="fa fa-angle-up" aria-hidden="true"></i>
-                                    </span>
-                                </a>
-                                <div class="article__author-info">
-                                    <figure class="article__author-image-wrap image is-48x48">
-                                        <img class="article__author-image" src="<%= imagesPath %>/mock/vajc.jpg" alt="Тут павінна быць фота аўтара артыкула" />
-                                    </figure>
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                                    Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
-                                    nisi ut aliquip ex ea commodo consequat.
-                                </div>
-                            </div>
-                            <a class="article__info-item article__info-item--clickable is-hidden-desktop">
-                                <span class="article__info-icon icon">
-                                    <i class="fa fa-user" aria-hidden="true"></i>
-                                </span>
-                                <span class="article__info-link">
-                                    <%= authorName %>
-                                </span>
-                                <span class="icon">
-                                    <i class="fa fa-angle-down" aria-hidden="true"></i>
-                                </span>
-                            </a>
-                            <div class="dropdown is-hoverable is-hidden-touch">
-                                <div class="dropdown-trigger">
-                                    <a class="article__info-item article__info-item--clickable" aria-haspopup="true" aria-controls="author-dropdown">
-                                        <span class="article__info-icon icon">
-                                            <i class="fa fa-user" aria-hidden="true"></i>
-                                        </span>
-                                        <%= authorName %>
-                                    </a>
-                                </div>
-                                <div class="article__author-menu dropdown-menu" id="author-dropdown" role="menu">
-                                    <div class="dropdown-content">
-                                        <div class="dropdown-item">
-                                            <div class="article__author-top media">
-                                                <div class="media-left">
-                                                    <figure class="image is-48x48">
-                                                        <img class="article__author-image" src="<%= imagesPath %>/mock/vajc.jpg" alt="Тут павінна быць фота аўтара артыкула" />
-                                                    </figure>
-                                                </div>
-                                                <div class="media-content">
-                                                    <p class="article__author-name is-size-6">
-                                                        <%= authorName %>
-                                                    </p>
-                                                    <p>Якая-небудзь інфа пра аўтара</p>
-                                                </div>
-                                            </div>
-
-                                            <div class="content">
-                                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                                                Ut enim ad minim veniam, quis nostrud exercitation
-                                                ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <a class="article__info-item article__info-item--clickable" title="Чытаць пра партнёра падрабязней">
-                                <span class="article__info-icon icon">
-                                    <i class="fa fa-handshake-o" aria-hidden="true"></i>
-                                </span>
-                                <span class="article__info-link">
-                                    <%= partnerName %>
-                                </span>
-                            </a>
-                            <!-- <span class="article__info-item">
+                  </div>
+                  <a class="article__info-item article__info-item--clickable" title="Чытаць пра партнёра падрабязней">
+                    <span class="article__info-icon icon">
+                      <i class="fa fa-handshake-o" aria-hidden="true"></i>
+                    </span>
+                    <span class="article__info-link">
+                      <%= partnerName %>
+                    </span>
+                  </a>
+                  <!-- <span class="article__info-item">
                                 <span class="article__info-icon icon">
                                     <i class="fa fa-clock-o" aria-hidden="true"></i>
                                 </span>
                                 7 красавіка 2018
                             </span> -->
-                            <!-- <span class="article__info-item has-text-primary">
+                  <!-- <span class="article__info-item has-text-primary">
                                 Публікацыя не запланавана
                             </span> -->
-                            <span class="article__info-item article__info-planned has-text-primary">
-                                Будзе апублікаваны 15 красавіка 2018
-                            </span>
-                        </div>
-                        <button class="article__info-now button is-small is-primary">Апублікаваць зараз</button>
-                    </div>
-                    <div class="article__info-langs">
-                        <span>
-                            Чытаць на:
-                            <a class="article__info-lang tag">русский</a>
-                            <a class="article__info-lang tag">english</a>
-                        </span>
-                    </div>
+                  <span class="article__info-item article__info-planned has-text-primary">
+                    Будзе апублікаваны 15 красавіка 2018
+                  </span>
                 </div>
+                <button class="article__info-now button is-small is-primary">Апублікаваць зараз</button>
+              </div>
+              <div class="article__info-langs">
+                <span>
+                  Чытаць на:
+                  <a class="article__info-lang tag">русский</a>
+                  <a class="article__info-lang tag">english</a>
+                </span>
+              </div>
+            </div>
 
-                <figure class="article__imagewrapper image">
-                    <img src="<%= imagesPath %>/mock/photo8.jpg" alt="Тут павінны быць малюнак да артыкулу" />
-                </figure>
+            <figure class="article__imagewrapper image">
+              <img src="<%= imagesPath %>/mock/photo8.jpg" alt="Тут павінны быць малюнак да артыкулу" />
+            </figure>
 
-                <div class="is-size-5 article__text">
-                    <p>– Вы доўгі час жывяце не ў Беларусі. Як асэнсоўваеце краіну ў новых творах?</p>
-                    <p>
-                        – Для мяне Беларусь пашыраецца не ўшыр, а ўглыб. У маёй новай кнізе вершы пабудаваныя вакол вобраза дрэва, якое расце з крыві,
-                        касцей, чалавечыны і нашай зямлі. Дрэва расце ўгару, размаўляе з намі
-                        лісцем шэптам, які нарадзіўся раней за вусны. Мне цікавы шэпт нашых мёртвых,
-                        нашых прывідаў. Гэта Беларусь невербалізаваных жыццяў, якія не хочуць
-                        знікнуць і маўчаць, каб мы іх пачулі.
-                    </p>
-                    <p>– Што здарылася з вашымі кнігамі ў перыяд з 2005 па 2017?</p>
-                    <p>
-                        – Паміж 2005 і 2017 у мяне выйшлі кніжкі ў ЗША, Нямеччыне і Швецыі. У «Эпідэміі ружаў» ёсць вершы з гэтых кніжак, і трэць
-                        з іх – новыя. У першую чаргу паэт – гэта вушы і вочы. Я ўважліва сачу
-                        за прывідамі, слухаю сваіх мёртвых. Яны жывуць сярод нас. Іх прысутнасць
-                        можна пабачыць на нашых тварах.
-                    </p>
-                    <p>– Мёртвыя – гэта продкі або гэта нейкая метафара?</p>
-                    <p>
-                        – Я не бачу розніцы паміж рэальнасцю і метафарай. Літаратура змешвае памяць і ўяўленне так, што немагчыма адрозніць адно
-                        ад аднаго. У нашай прыродзе так і ёсць: памяць не можа існаваць без уяўлення,
-                        а ўяўленне не можа існаваць без памяці. Гэтыя два паняцці існуюць разам.
-                        Разам яны шукаюць нейкую форму: літаратурную, музычную, кінематаграфічную.
-                        Тут няма розніцы. Наогул паэзію і літаратуру я бачу як навуку. Біялогія
-                        чалавека, анатомія чалавека і літаратурная метафара існуюць для мяне
-                        ў адной прасторы. Метафара – гэта не гуманітарная абстракцыя, а элемент
-                        навуковага падыходу да свету. Гэта жаданне знайсці матэматычную або фізічную
-                        формулу, з дапамогай якой мы скажам: «Я – гэта ты», «Ты – гэта кніга»,
-                        «Кніга – гэта паліца кніг», «Паліца – гэта дрэва, з якой яна зроблена,
-                        а дрэва – гэта я». Мы ўсе звязаныя адной формулай: розныя рэчы ствараюць
-                        асобную прастору, дзе яны могуць быць адным, застаючыся пры гэтым сабою.
-                    </p>
-                </div>
+            <div class="is-size-5 article__text">
+              <p>– Вы доўгі час жывяце не ў Беларусі. Як асэнсоўваеце краіну ў новых творах?</p>
+              <p>
+                – Для мяне Беларусь пашыраецца не ўшыр, а ўглыб. У маёй новай кнізе вершы пабудаваныя вакол вобраза дрэва, якое расце з крыві,
+                касцей, чалавечыны і нашай зямлі. Дрэва расце ўгару, размаўляе з намі
+                лісцем шэптам, які нарадзіўся раней за вусны. Мне цікавы шэпт нашых мёртвых,
+                нашых прывідаў. Гэта Беларусь невербалізаваных жыццяў, якія не хочуць
+                знікнуць і маўчаць, каб мы іх пачулі.
+              </p>
+              <p>– Што здарылася з вашымі кнігамі ў перыяд з 2005 па 2017?</p>
+              <p>
+                – Паміж 2005 і 2017 у мяне выйшлі кніжкі ў ЗША, Нямеччыне і Швецыі. У «Эпідэміі ружаў» ёсць вершы з гэтых кніжак, і трэць
+                з іх – новыя. У першую чаргу паэт – гэта вушы і вочы. Я ўважліва сачу
+                за прывідамі, слухаю сваіх мёртвых. Яны жывуць сярод нас. Іх прысутнасць
+                можна пабачыць на нашых тварах.
+              </p>
+              <p>– Мёртвыя – гэта продкі або гэта нейкая метафара?</p>
+              <p>
+                – Я не бачу розніцы паміж рэальнасцю і метафарай. Літаратура змешвае памяць і ўяўленне так, што немагчыма адрозніць адно
+                ад аднаго. У нашай прыродзе так і ёсць: памяць не можа існаваць без уяўлення,
+                а ўяўленне не можа існаваць без памяці. Гэтыя два паняцці існуюць разам.
+                Разам яны шукаюць нейкую форму: літаратурную, музычную, кінематаграфічную.
+                Тут няма розніцы. Наогул паэзію і літаратуру я бачу як навуку. Біялогія
+                чалавека, анатомія чалавека і літаратурная метафара існуюць для мяне
+                ў адной прасторы. Метафара – гэта не гуманітарная абстракцыя, а элемент
+                навуковага падыходу да свету. Гэта жаданне знайсці матэматычную або фізічную
+                формулу, з дапамогай якой мы скажам: «Я – гэта ты», «Ты – гэта кніга»,
+                «Кніга – гэта паліца кніг», «Паліца – гэта дрэва, з якой яна зроблена,
+                а дрэва – гэта я». Мы ўсе звязаныя адной формулай: розныя рэчы ствараюць
+                асобную прастору, дзе яны могуць быць адным, застаючыся пры гэтым сабою.
+              </p>
+            </div>
 
-                <div class="article__bottom">
-                    <div class="is-hidden-mobile">
-                        <span class="article__bottom-item">Калекцыя:
-                            <span class="article__bottom-text">
-                                <%= collectionName %>
-                            </span>
-                        </span>
-                        <span class="article__bottom-item">Аўтар:
-                            <span class="article__bottom-text">
-                                <%= authorName %>
-                            </span>
-                        </span>
-                        <span class="article__bottom-item">Партнёр:
-                            <span class="article__bottom-text">
-                                <%= partnerName %>
-                            </span>
-                        </span>
-                    </div>
-                    <div class="article__actions">
-                        <a class="icon-button button" title="Падзяліцца ў Facebook">
-                            <span class="article__facebook-icon icon-button__facebook-icon icon">
-                                <i class="fa fa-facebook fa-lg"></i>
-                            </span>
-                        </a>
-                        <a class="icon-button button" title="Падзяліцца ў Укантакце">
-                            <span class="article__vk-icon icon-button__vk-icon icon">
-                                <i class="fa fa-vk fa-lg"></i>
-                            </span>
-                        </a>
-                        <a class="icon-button button" title="Падзяліцца ў Twitter">
-                            <span class="article__twitter-icon icon-button__twitter-icon icon">
-                                <i class="fa fa-twitter fa-lg"></i>
-                            </span>
-                        </a>
-                    </div>
-                </div>
-                <hr class="article__line" />
-                <div class="article__more has-text-centered">
-                    <span class="article__more-text is-uppercase ">Чытаць таксама:</span>
-                    <div class="columns">
-                        <%- include('article-card/article-card.ejs', {
+            <div class="article__bottom">
+              <div class="is-hidden-mobile">
+                <span class="article__bottom-item">Калекцыя:
+                  <span class="article__bottom-text">
+                    <%= collectionName %>
+                  </span>
+                </span>
+                <span class="article__bottom-item">Аўтар:
+                  <span class="article__bottom-text">
+                    <%= authorName %>
+                  </span>
+                </span>
+                <span class="article__bottom-item">Партнёр:
+                  <span class="article__bottom-text">
+                    <%= partnerName %>
+                  </span>
+                </span>
+              </div>
+              <div class="article__actions">
+                <a class="icon-button button" title="Падзяліцца ў Facebook">
+                  <span class="article__facebook-icon icon-button__facebook-icon icon">
+                    <i class="fa fa-facebook fa-lg"></i>
+                  </span>
+                </a>
+                <a class="icon-button button" title="Падзяліцца ў Укантакце">
+                  <span class="article__vk-icon icon-button__vk-icon icon">
+                    <i class="fa fa-vk fa-lg"></i>
+                  </span>
+                </a>
+                <a class="icon-button button" title="Падзяліцца ў Twitter">
+                  <span class="article__twitter-icon icon-button__twitter-icon icon">
+                    <i class="fa fa-twitter fa-lg"></i>
+                  </span>
+                </a>
+              </div>
+            </div>
+            <hr class="article__line" />
+            <div class="article__more has-text-centered">
+              <span class="article__more-text is-uppercase ">Чытаць таксама:</span>
+              <div class="columns">
+                <%- include('article-card/article-card.ejs', {
                             imageVar: 'mock/photo2.jpg',
                             titleVar: 'Крама «як з крамы»',
                             authorPhotoVar: 'mock/vajc.jpg',
                             authorNameVar: 'Змітр Корнеў',
                         }); %>
-                        <%- include('article-card/article-card.ejs', {
+                <%- include('article-card/article-card.ejs', {
                             imageVar: 'mock/photo3.jpg',
                             titleVar: '«Гэта ня тое як склеіць разьбіты кубак...»',
                             authorPhotoVar: 'mock/mort.jpg',
                             authorNameVar: 'Вальжына Морт',
                         }); %>
-                        <%- include('article-card/article-card.ejs', {
+                <%- include('article-card/article-card.ejs', {
                             imageVar: 'mock/photo5.jpg',
                             titleVar: 'Некоратка аб Ахматавай',
                             authorPhotoVar: 'mock/volski.jpg',
                             authorNameVar: 'Лявон Вольскі',
                         }); %>
-                    </div>
-                </div>
+              </div>
             </div>
+          </div>
 
-            <div class="article-side column is-hidden-touch">
-                <div class="article-side__actions">
-                    <ul class="article-side__top">
-                        <li>
-                            <a class="article-side__button icon-button button" href="../article-page-edit/article-page-edit.html"
-                                title="Адрэдагаваць артыкул">
-                                <span class="icon-button__usual-icon icon">
-                                    <i class="fa fa-pencil fa-lg"></i>
-                                </span>
-                            </a>
-                        </li>
-                        <li>
-                            <a class="article-side__button article-side__button--remove icon-button button"
-                                title="Выдаліць артыкул">
-                                <span class="icon-button__usual-icon icon">
-                                    <i class="fa fa-trash fa-lg"></i>
-                                </span>
-                            </a>
-                        </li>
-                        <li>
-                            <a class="icon-button article-side__button button" title="Падзяліцца ў Facebook">
-                                <span class="icon-button__facebook-icon icon">
-                                    <i class="fa fa-facebook fa-lg"></i>
-                                </span>
-                            </a>
-                        </li>
-                        <li>
-                            <a class="article-side__button icon-button button" title="Падзяліцца ў Укантакце">
-                                <span class="icon-button__vk-icon icon">
-                                    <i class="fa fa-vk fa-lg"></i>
-                                </span>
-                            </a>
-                        </li>
-                        <li>
-                            <a class="article-side__button icon-button button" title="Падзяліцца ў Twitter">
-                                <span class="icon-button__twitter-icon icon">
-                                    <i class="fa fa-twitter fa-lg"></i>
-                                </span>
-                            </a>
-                        </li>
-                    </ul>
-                    <div class="article-side__bottom">
-                        <a class="article-side__button icon-button button" href="#top" title="Перайсці ў пачатак артыкула">
-                            <span class="icon-button__usual-icon icon">
-                                <i class="fa fa-chevron-up fa-lg"></i>
-                            </span>
-                        </a>
-                    </div>
-                </div>
+          <div class="article-side column is-hidden-touch">
+            <div class="article-side__actions">
+              <ul class="article-side__top">
+                <li>
+                  <a class="article-side__button icon-button button" href="../article-page-edit/article-page-edit.html" title="Адрэдагаваць артыкул">
+                    <span class="icon-button__usual-icon icon">
+                      <i class="fa fa-pencil fa-lg"></i>
+                    </span>
+                  </a>
+                </li>
+                <li>
+                  <a class="article-side__button article-side__button--remove icon-button button" title="Выдаліць артыкул">
+                    <span class="icon-button__usual-icon icon">
+                      <i class="fa fa-trash fa-lg"></i>
+                    </span>
+                  </a>
+                </li>
+                <li>
+                  <a class="icon-button article-side__button button" title="Падзяліцца ў Facebook">
+                    <span class="icon-button__facebook-icon icon">
+                      <i class="fa fa-facebook fa-lg"></i>
+                    </span>
+                  </a>
+                </li>
+                <li>
+                  <a class="article-side__button icon-button button" title="Падзяліцца ў Укантакце">
+                    <span class="icon-button__vk-icon icon">
+                      <i class="fa fa-vk fa-lg"></i>
+                    </span>
+                  </a>
+                </li>
+                <li>
+                  <a class="article-side__button icon-button button" title="Падзяліцца ў Twitter">
+                    <span class="icon-button__twitter-icon icon">
+                      <i class="fa fa-twitter fa-lg"></i>
+                    </span>
+                  </a>
+                </li>
+              </ul>
+              <div class="article-side__bottom">
+                <a class="article-side__button icon-button button" href="#top" title="Перайсці ў пачатак артыкула">
+                  <span class="icon-button__usual-icon icon">
+                    <i class="fa fa-chevron-up fa-lg"></i>
+                  </span>
+                </a>
+              </div>
             </div>
+          </div>
         </div>
-    </div>
+      </div>
 
-    <% include ../footer/footer.ejs %>
+      <% include ../footer/footer.ejs %>
     </div>
-</div>
+  </div>
 </body>
 
 </html>

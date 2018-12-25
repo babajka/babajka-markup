@@ -14,6 +14,7 @@
 
   &__actions {
     margin-left: 2rem;
+
     @media only screen and (max-width: $intermediate) {
       display: none;
     }
@@ -184,6 +185,7 @@
   }
 
   &__info-left {
+
     @media only screen and (max-width: $mobile) {
       align-items: flex-start;
       display: flex;
@@ -218,7 +220,7 @@
 
   &__info-planned.tag {
     background-color: $primary;
-    color: #fff;
+    color: #ffffff;
   }
 
   &__author-block {
@@ -238,6 +240,7 @@
   }
 
   &__info-now {
+
     @media only screen and (max-width: $mobile) {
       margin-top: 2px;
     }
@@ -252,7 +255,7 @@
   }
 
   &__info-lang.tag {
-    background-color: #fff;
+    background-color: #ffffff;
     border: 1px solid $primary-bright;
     color: $primary-bright;
   }
@@ -320,6 +323,7 @@
 
   &__actions {
     display: none;
+
     @media only screen and (max-width: $intermediate) {
       display: block;
     }

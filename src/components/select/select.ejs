@@ -3,116 +3,116 @@
 
 <%- include('../../head/head.ejs', { title: 'Select' }) %>
 
-    <body>
-        <div class="select-temp select-temp-container">
-            <div class="select-temp-item">
-                <div class="babajka-dropdown dropdown is-active size-xs">
-                    <div class="babajka-dropdown__trigger dropdown-trigger">
-                        <div class="control has-icons-right">
-                            <div class="input">Apple</div>
-                            <span class="icon is-small is-right">
-                                <span class="babajka-dropdown-clear">×</span>
-                                <i class="fa fa-angle-down" aria-hidden="true"></i>
-                            </span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="select-temp-item">
-                <div class="babajka-dropdown dropdown is-active size-s">
-                    <div class="babajka-dropdown__trigger dropdown-trigger">
-                        <div class="control has-icons-right">
-                            <input class="babajka-dropdown-input input" placeholder="Choose fruit..." />
-                            <span class="icon is-small is-right">
-                                <i class="fa fa-angle-up" aria-hidden="true"></i>
-                            </span>
-                        </div>
-                    </div>
-                    <div class="babajka-dropdown-menu dropdown-menu" role="menu">
-                        <ul class="babajka-dropdown-content dropdown-content">
-                            <li class="dropdown-item">
-                                Banana
-                            </li>
-                            <li class="dropdown-item is-active">
-                                Apple
-                            </li>
-                            <li class="dropdown-item">
-                                Orange
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-            <div class="select-temp-item">
-                <div class="babajka-dropdown dropdown is-active">
-                    <div class="babajka-dropdown__trigger dropdown-trigger">
-                        <div class="control has-icons-right">
-                            <input class="babajka-dropdown-input input" placeholder="Choose author..." />
-                            <span class="icon is-small is-right">
-                                <i class="fa fa-angle-up" aria-hidden="true"></i>
-                            </span>
-                        </div>
-                    </div>
-                    <div class="babajka-dropdown-menu dropdown-menu" role="menu">
-                        <ul class="babajka-dropdown-content dropdown-content">
-                            <li class="dropdown-item">
-                                <%- include('./author.ejs', { name: 'Lavon Volski', photo: 'mock/volski.jpg' }) %>
-                            </li>
-                            <li class="dropdown-item">
-                                <%- include('./author.ejs', { name: 'Вальжына Морт', photo: 'mock/mort.jpg' }) %>
-                            </li>
-                            <li class="dropdown-item is-active">
-                                <%- include('./author.ejs', { name: 'Вайцюшкевіч', photo: 'mock/vajc.jpg' }) %>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-            <div class="select-temp-item">
-                <div class="babajka-dropdown dropdown is-active size-l">
-                    <div class="babajka-dropdown__trigger dropdown-trigger">
-                        <div class="control has-icons-right">
-                            <div class="input">
-                                <%- include('./author.ejs', { name: 'Вайцюшкевіч', photo: 'mock/vajc.jpg' }) %>
-                            </div>
-                            <span class="icon is-small is-right">
-                                <span class="babajka-dropdown-clear">×</span>
-                                <i class="fa fa-angle-down" aria-hidden="true"></i>
-                            </span>
-                        </div>
-                    </div>
-                    <div class="babajka-dropdown-menu dropdown-menu" role="menu">
-                        <ul class="babajka-dropdown-content dropdown-content">
-                            <li class="dropdown-item">
-                                <%- include('./author.ejs', { name: 'Lavon Volski', photo: 'mock/volski.jpg' }) %>
-                            </li>
-                            <li class="dropdown-item">
-                                <%- include('./author.ejs', { name: 'Вальжына Морт', photo: 'mock/mort.jpg' }) %>
-                            </li>
-                            <li class="dropdown-item is-active">
-                                <%- include('./author.ejs', { name: 'Вайцюшкевіч', photo: 'mock/vajc.jpg' }) %>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-            <div class="select-temp-item">
-                <div class="babajka-dropdown dropdown">
-                    <div class="dropdown-trigger">
-                        <div class="control has-icons-right">
-                            <div class="input">
-                                <%- include('./author.ejs', { name: 'Вайцюшкевіч', photo: 'mock/vajc.jpg' }) %>
-                            </div>
-                            <span class="icon is-small is-right">
-                                <span class="babajka-dropdown-clear">×</span>
-                                <i class="fa fa-angle-down" aria-hidden="true"></i>
-                            </span>
-                        </div>
-                    </div>
-                </div>
-            </div>
+<body>
+  <div class="select-temp select-temp-container">
+    <div class="select-temp-item">
+      <div class="babajka-dropdown dropdown is-active size-xs">
+        <div class="babajka-dropdown__trigger dropdown-trigger">
+          <div class="control has-icons-right">
+            <div class="input">Apple</div>
+            <span class="icon is-small is-right">
+              <span class="babajka-dropdown-clear">×</span>
+              <i class="fa fa-angle-down" aria-hidden="true"></i>
+            </span>
+          </div>
         </div>
+      </div>
+    </div>
+    <div class="select-temp-item">
+      <div class="babajka-dropdown dropdown is-active size-s">
+        <div class="babajka-dropdown__trigger dropdown-trigger">
+          <div class="control has-icons-right">
+            <input class="babajka-dropdown-input input" placeholder="Choose fruit..." />
+            <span class="icon is-small is-right">
+              <i class="fa fa-angle-up" aria-hidden="true"></i>
+            </span>
+          </div>
+        </div>
+        <div class="babajka-dropdown-menu dropdown-menu" role="menu">
+          <ul class="babajka-dropdown-content dropdown-content">
+            <li class="dropdown-item">
+              Banana
+            </li>
+            <li class="dropdown-item is-active">
+              Apple
+            </li>
+            <li class="dropdown-item">
+              Orange
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="select-temp-item">
+      <div class="babajka-dropdown dropdown is-active">
+        <div class="babajka-dropdown__trigger dropdown-trigger">
+          <div class="control has-icons-right">
+            <input class="babajka-dropdown-input input" placeholder="Choose author..." />
+            <span class="icon is-small is-right">
+              <i class="fa fa-angle-up" aria-hidden="true"></i>
+            </span>
+          </div>
+        </div>
+        <div class="babajka-dropdown-menu dropdown-menu" role="menu">
+          <ul class="babajka-dropdown-content dropdown-content">
+            <li class="dropdown-item">
+              <%- include('./author.ejs', { name: 'Lavon Volski', photo: 'mock/volski.jpg' }) %>
+            </li>
+            <li class="dropdown-item">
+              <%- include('./author.ejs', { name: 'Вальжына Морт', photo: 'mock/mort.jpg' }) %>
+            </li>
+            <li class="dropdown-item is-active">
+              <%- include('./author.ejs', { name: 'Вайцюшкевіч', photo: 'mock/vajc.jpg' }) %>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="select-temp-item">
+      <div class="babajka-dropdown dropdown is-active size-l">
+        <div class="babajka-dropdown__trigger dropdown-trigger">
+          <div class="control has-icons-right">
+            <div class="input">
+              <%- include('./author.ejs', { name: 'Вайцюшкевіч', photo: 'mock/vajc.jpg' }) %>
+            </div>
+            <span class="icon is-small is-right">
+              <span class="babajka-dropdown-clear">×</span>
+              <i class="fa fa-angle-down" aria-hidden="true"></i>
+            </span>
+          </div>
+        </div>
+        <div class="babajka-dropdown-menu dropdown-menu" role="menu">
+          <ul class="babajka-dropdown-content dropdown-content">
+            <li class="dropdown-item">
+              <%- include('./author.ejs', { name: 'Lavon Volski', photo: 'mock/volski.jpg' }) %>
+            </li>
+            <li class="dropdown-item">
+              <%- include('./author.ejs', { name: 'Вальжына Морт', photo: 'mock/mort.jpg' }) %>
+            </li>
+            <li class="dropdown-item is-active">
+              <%- include('./author.ejs', { name: 'Вайцюшкевіч', photo: 'mock/vajc.jpg' }) %>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="select-temp-item">
+      <div class="babajka-dropdown dropdown">
+        <div class="dropdown-trigger">
+          <div class="control has-icons-right">
+            <div class="input">
+              <%- include('./author.ejs', { name: 'Вайцюшкевіч', photo: 'mock/vajc.jpg' }) %>
+            </div>
+            <span class="icon is-small is-right">
+              <span class="babajka-dropdown-clear">×</span>
+              <i class="fa fa-angle-down" aria-hidden="true"></i>
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 
-    </body>
+</body>
 
 </html>

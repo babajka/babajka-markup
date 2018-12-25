@@ -5,256 +5,257 @@
 
 <body>
 
-<div class="babajka-root">
+  <div class="babajka-root">
     <div class="babajka-content">
 
-        <% include ../navbar/navbar.ejs %>
+      <% include ../navbar/navbar.ejs %>
 
-        <div class="article-page-edit page-content">
+      <div class="article-page-edit page-content">
 
-            <div class="title">
-                Рэдактар артыкулаў
-            </div>
-
-            <div class="common-data">
-                <div class="common-data-title">
-                    Рэдагаваць асноўныя звесткі
-                </div>
-
-                <div class="inputs">
-
-                    <div class="field">
-                        <p class="help">Тып артыкула</p>
-                        <div class="dropdown">
-                            <div class="dropdown-trigger">
-                                <button class="button" aria-haspopup="true" aria-controls="dropdown-menu">
-                                    <span>тэкст</span>
-                                    <span class="icon is-small">
-                                        <i class="fa fa-angle-down" aria-hidden="true"></i>
-                                    </span>
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="field">
-                        <p class="help">Аўтар</p>
-                        <div class="dropdown">
-                            <div class="dropdown-trigger">
-                                <button class="button" aria-haspopup="true" aria-controls="dropdown-menu">
-                                    <span><i>без аўтара</i></span>
-                                    <span class="icon is-small">
-                                        <i class="fa fa-angle-down" aria-hidden="true"></i>
-                                    </span>
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="field">
-                        <p class="help">Пад якім брэндам выходзіць артыкул</p>
-                        <div class="dropdown">
-                            <div class="dropdown-trigger">
-                                <button class="button" aria-haspopup="true" aria-controls="dropdown-menu">
-                                    <span>Wir.by - Адукацыйная платформа</span>
-                                    <span class="icon is-small">
-                                        <i class="fa fa-angle-down" aria-hidden="true"></i>
-                                    </span>
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="field">
-                        <p class="help">Калекцыя / цыкл</p>
-                        <div class="dropdown">
-                            <div class="dropdown-trigger">
-                                <button class="button" aria-haspopup="true" aria-controls="dropdown-menu">
-                                    <span>Беларускае кіно</span>
-                                    <span class="icon is-small">
-                                        <i class="fa fa-angle-down" aria-hidden="true"></i>
-                                    </span>
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="field">
-                        <p class="help">Час публікацыі артыкула</p>
-                        <input class="input" type="datetime-local" />
-                    </div>
-
-                    <div class="field long-input">
-                        <input class="input" type="text" placeholder="Напрыклад: https://cloudinary.com/wir-by/preview-photo.jpg" />
-                        <p class="help">URL фатаздымка, які будзе адлюстроўвацца на прэв'ю артыкула. Фатаздымак павінен быць у добрай якасці, не парушаць аўтарскіх правоў і быць размешчаным у кантралюемым сховішчы</p>
-                    </div>
-
-                    <div class="field long-input">
-                        <input class="input" type="text" placeholder="Напрыклад: https://cloudinary.com/wir-by/folder-photo.jpg" />
-                        <p class="help">URL фатаздымка, які будзе адлюстроўвацца на старонцы артыкула. Фатаздымак павінен быць у добрай якасці, не парушаць аўтарскіх правоў і быць размешчаным у кантралюемым сховішчы</p>
-                    </div>
-
-                    <div class="field long-input">
-                        <input class="input" type="text" placeholder="Напрыклад: https://www.youtube.com/watch?v=Eve34hxXo5M" />
-                        <p class="help">Спасылка на відэа, размешчанае на нашым канале на YouTube</p>
-                    </div>
-
-                </div>
-
-                <div class="new-entity">
-                    <div class="new-entity-title">
-                        Стварыць новага аўтара
-                    </div>
-
-                    <input class="input" type="text" placeholder="URL фатаздымка аўтара" />
-
-                    <div class="entity-locale-section">
-                        <div class="dropdown">
-                            <div class="dropdown-trigger">
-                                <button class="button" aria-haspopup="true" aria-controls="dropdown-menu">
-                                    <span>BE</span>
-                                    <span class="icon is-small">
-                                        <i class="fa fa-angle-down" aria-hidden="true"></i>
-                                    </span>
-                                </button>
-                            </div>
-                        </div>
-                        <input class="short-input input" type="text" placeholder="Імя" />
-                        <input class="short-input input" type="text" placeholder="Прозвішча" />
-                        <div class="field">
-                            <div class="control">
-                                <textarea class="textarea is-small" cols="75" rows="2" type="text" placeholder="Кароткая біяграфія аўтара"></textarea>
-                            </div>
-                        </div>
-                        <div class="add-locale-button">
-                            <i class="fa fa-plus-circle"></i>
-                        </div>
-                    </div>
-
-                    <div class="action-buttons">
-                        <div class="save-button button">
-                            Захаваць
-                        </div>
-                    </div>
-                </div>
-
-                <div class="new-entity">
-                    <div class="new-entity-title">
-                        Стварыць новую калекцыю
-                    </div>
-
-                    <input class="input" type="text" placeholder="slug новай калекцыі" />
-
-                    <div class="entity-locale-section">
-                        <div class="dropdown">
-                            <div class="dropdown-trigger">
-                                <button class="button" aria-haspopup="true" aria-controls="dropdown-menu">
-                                    <span>BE</span>
-                                    <span class="icon is-small">
-                                        <i class="fa fa-angle-down" aria-hidden="true"></i>
-                                    </span>
-                                </button>
-                            </div>
-                        </div>
-                        <input class="long-input input" type="text" placeholder="Назва калекцыі" />
-                        <div class="field">
-                            <div class="control">
-                                <textarea class="textarea is-small" cols="75" rows="2" type="text" placeholder="Апісанне калекцыі"></textarea>
-                            </div>
-                        </div>
-                        <div class="add-locale-button">
-                            <i class="fa fa-plus-circle"></i>
-                        </div>
-                    </div>
-
-                    <div class="action-buttons">
-                        <div class="save-button button">
-                            Захаваць
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="localized-data">
-                <div class="localized-data-title">
-                    Лакалізаваць артыкул
-                </div>
-
-                <div class="add-locale-button dropdown">
-                    <div class="dropdown-trigger">
-                        <button class="button" aria-haspopup="true" aria-controls="dropdown-menu">
-                            <span>Дадаць лакалізацыю</span>
-                            <span class="icon is-small">
-                                <i class="fa fa-angle-down" aria-hidden="true"></i>
-                            </span>
-                        </button>
-                    </div>
-                </div>
-
-                <div class="tabs is-centered">
-                    <ul>
-                        <li class="is-active"><a>BE - беларуская</a></li>
-                        <li>
-                            <a>
-                                <span class="badge is-badge-danger is-badge-left" data-badge="">
-                                    RU - русский
-                                </span>
-                            </a>
-                        </li>
-                        <li><a>EN - English</a></li>
-                    </ul>
-                </div>
-
-                <div class="inputs">
-                    <div class="edit-info">
-                        <div class="edit-info__item field">
-                            <label class="label">Назва артыкула</label>
-                            <div class="control">
-                                <input class="input is-danger" type="text" />
-                            </div>
-                            <p class="help is-danger">Памылка валідацыі</p>
-                        </div>
-                        <div class="edit-info__item field">
-                            <label class="label">Slug артыкула</label>
-                            <div class="control">
-                                <input class="input is-danger" type="text" placeholder="bielaruskaje-kino" />
-                            </div>
-                            <p class="help">Назва артыкула, якая будзе адлюстроўвацца ў URL</p>
-                            <p class="help is-danger">Памылка валідацыі</p>
-                        </div>
-                        <div class="edit-info__item field">
-                            <label class="label">Кароткае апісанне артыкула</label>
-                            <div class="control">
-                                <textarea class="textarea is-danger"></textarea>
-                            </div>
-                            <p class="help">Якое будзе адлюстроўвацца ў прэв'ю артыкула</p>
-                            <p class="help is-danger">Памылка валідацыі</p>
-                        </div>
-                    </div>
-                    <div class="field editor">
-                        <div class="control">
-                            <textarea class="textarea" rows="10" type="text" placeholder="Тут будзе рэдактар паўнавартасны."></textarea>
-                        </div>
-                    </div>
-                    <div class="action-buttons">
-                        <div class="remove-button button">
-                            <span class="icon is-small">
-                                <i class="fa fa-remove"></i>
-                            </span>
-                            <span>Выдаліць лакалізацыю</span>
-                        </div>
-                        <div class="save-button button">
-                            Захаваць для публікацыі
-                        </div>
-                    </div>
-                </div>
-            </div>
-
+        <div class="title">
+          Рэдактар артыкулаў
         </div>
 
-        <% include ../footer/footer.ejs %>
+        <div class="common-data">
+          <div class="common-data-title">
+            Рэдагаваць асноўныя звесткі
+          </div>
+
+          <div class="inputs">
+
+            <div class="field">
+              <p class="help">Тып артыкула</p>
+              <div class="dropdown">
+                <div class="dropdown-trigger">
+                  <button class="button" aria-haspopup="true" aria-controls="dropdown-menu">
+                    <span>тэкст</span>
+                    <span class="icon is-small">
+                      <i class="fa fa-angle-down" aria-hidden="true"></i>
+                    </span>
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <div class="field">
+              <p class="help">Аўтар</p>
+              <div class="dropdown">
+                <div class="dropdown-trigger">
+                  <button class="button" aria-haspopup="true" aria-controls="dropdown-menu">
+                    <span><i>без аўтара</i></span>
+                    <span class="icon is-small">
+                      <i class="fa fa-angle-down" aria-hidden="true"></i>
+                    </span>
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <div class="field">
+              <p class="help">Пад якім брэндам выходзіць артыкул</p>
+              <div class="dropdown">
+                <div class="dropdown-trigger">
+                  <button class="button" aria-haspopup="true" aria-controls="dropdown-menu">
+                    <span>Wir.by - Адукацыйная платформа</span>
+                    <span class="icon is-small">
+                      <i class="fa fa-angle-down" aria-hidden="true"></i>
+                    </span>
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <div class="field">
+              <p class="help">Калекцыя / цыкл</p>
+              <div class="dropdown">
+                <div class="dropdown-trigger">
+                  <button class="button" aria-haspopup="true" aria-controls="dropdown-menu">
+                    <span>Беларускае кіно</span>
+                    <span class="icon is-small">
+                      <i class="fa fa-angle-down" aria-hidden="true"></i>
+                    </span>
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <div class="field">
+              <p class="help">Час публікацыі артыкула</p>
+              <input class="input" type="datetime-local" />
+            </div>
+
+            <div class="field long-input">
+              <input class="input" type="text" placeholder="Напрыклад: https://cloudinary.com/wir-by/preview-photo.jpg" />
+              <p class="help">URL фатаздымка, які будзе адлюстроўвацца на прэв'ю артыкула. Фатаздымак павінен быць у добрай якасці, не парушаць аўтарскіх правоў і быць размешчаным у кантралюемым сховішчы</p>
+            </div>
+
+            <div class="field long-input">
+              <input class="input" type="text" placeholder="Напрыклад: https://cloudinary.com/wir-by/folder-photo.jpg" />
+              <p class="help">URL фатаздымка, які будзе адлюстроўвацца на старонцы артыкула. Фатаздымак павінен быць у добрай якасці, не парушаць аўтарскіх правоў і быць размешчаным у кантралюемым сховішчы</p>
+            </div>
+
+            <div class="field long-input">
+              <input class="input" type="text" placeholder="Напрыклад: https://www.youtube.com/watch?v=Eve34hxXo5M" />
+              <p class="help">Спасылка на відэа, размешчанае на нашым канале на YouTube</p>
+            </div>
+
+          </div>
+
+          <div class="new-entity">
+            <div class="new-entity-title">
+              Стварыць новага аўтара
+            </div>
+
+            <input class="input" type="text" placeholder="URL фатаздымка аўтара" />
+
+            <div class="entity-locale-section">
+              <div class="dropdown">
+                <div class="dropdown-trigger">
+                  <button class="button" aria-haspopup="true" aria-controls="dropdown-menu">
+                    <span>BE</span>
+                    <span class="icon is-small">
+                      <i class="fa fa-angle-down" aria-hidden="true"></i>
+                    </span>
+                  </button>
+                </div>
+              </div>
+              <input class="short-input input" type="text" placeholder="Імя" />
+              <input class="short-input input" type="text" placeholder="Прозвішча" />
+              <div class="field">
+                <div class="control">
+                  <textarea class="textarea is-small" cols="75" rows="2" type="text" placeholder="Кароткая біяграфія аўтара"></textarea>
+                </div>
+              </div>
+              <div class="add-locale-button">
+                <i class="fa fa-plus-circle"></i>
+              </div>
+            </div>
+
+            <div class="action-buttons">
+              <div class="save-button button">
+                Захаваць
+              </div>
+            </div>
+          </div>
+
+          <div class="new-entity">
+            <div class="new-entity-title">
+              Стварыць новую калекцыю
+            </div>
+
+            <input class="input" type="text" placeholder="slug новай калекцыі" />
+
+            <div class="entity-locale-section">
+              <div class="dropdown">
+                <div class="dropdown-trigger">
+                  <button class="button" aria-haspopup="true" aria-controls="dropdown-menu">
+                    <span>BE</span>
+                    <span class="icon is-small">
+                      <i class="fa fa-angle-down" aria-hidden="true"></i>
+                    </span>
+                  </button>
+                </div>
+              </div>
+              <input class="long-input input" type="text" placeholder="Назва калекцыі" />
+              <div class="field">
+                <div class="control">
+                  <textarea class="textarea is-small" cols="75" rows="2" type="text" placeholder="Апісанне калекцыі"></textarea>
+                </div>
+              </div>
+              <div class="add-locale-button">
+                <i class="fa fa-plus-circle"></i>
+              </div>
+            </div>
+
+            <div class="action-buttons">
+              <div class="save-button button">
+                Захаваць
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="localized-data">
+          <div class="localized-data-title">
+            Лакалізаваць артыкул
+          </div>
+
+          <div class="add-locale-button dropdown">
+            <div class="dropdown-trigger">
+              <button class="button" aria-haspopup="true" aria-controls="dropdown-menu">
+                <span>Дадаць лакалізацыю</span>
+                <span class="icon is-small">
+                  <i class="fa fa-angle-down" aria-hidden="true"></i>
+                </span>
+              </button>
+            </div>
+          </div>
+
+          <div class="tabs is-centered">
+            <ul>
+              <li class="is-active"><a>BE - беларуская</a></li>
+              <li>
+                <a>
+                  <span class="badge is-badge-danger is-badge-left" data-badge="">
+                    RU - русский
+                  </span>
+                </a>
+              </li>
+              <li><a>EN - English</a></li>
+            </ul>
+          </div>
+
+          <div class="inputs">
+            <div class="edit-info">
+              <div class="edit-info__item field">
+                <label class="label">Назва артыкула</label>
+                <div class="control">
+                  <input class="input is-danger" type="text" />
+                </div>
+                <p class="help is-danger">Памылка валідацыі</p>
+              </div>
+              <div class="edit-info__item field">
+                <label class="label">Slug артыкула</label>
+                <div class="control">
+                  <input class="input is-danger" type="text" placeholder="bielaruskaje-kino" />
+                </div>
+                <p class="help">Назва артыкула, якая будзе адлюстроўвацца ў URL</p>
+                <p class="help is-danger">Памылка валідацыі</p>
+              </div>
+              <div class="edit-info__item field">
+                <label class="label">Кароткае апісанне артыкула</label>
+                <div class="control">
+                  <textarea class="textarea is-danger"></textarea>
+                </div>
+                <p class="help">Якое будзе адлюстроўвацца ў прэв'ю артыкула</p>
+                <p class="help is-danger">Памылка валідацыі</p>
+              </div>
+            </div>
+            <div class="field editor">
+              <div class="control">
+                <textarea class="textarea" rows="10" type="text" placeholder="Тут будзе рэдактар паўнавартасны."></textarea>
+              </div>
+            </div>
+            <div class="action-buttons">
+              <div class="remove-button button">
+                <span class="icon is-small">
+                  <i class="fa fa-remove"></i>
+                </span>
+                <span>Выдаліць лакалізацыю</span>
+              </div>
+              <div class="save-button button">
+                Захаваць для публікацыі
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <% include ../footer/footer.ejs %>
     </div>
-</div>
+  </div>
 
 </body>
+
 </html>

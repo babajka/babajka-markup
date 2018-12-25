@@ -5,19 +5,19 @@
 
 <body>
 
-<div class="babajka-root">
+  <div class="babajka-root">
     <div class="babajka-content">
-        <% include ../navbar/navbar.ejs %>
+      <% include ../navbar/navbar.ejs %>
 
-        <div class="main-page page-container">
-            <div class="page-content">
+      <div class="main-page page-container">
+        <div class="page-content">
 
-                <!-- FIRST LINE -->
+          <!-- FIRST LINE -->
 
-                <div class="first-line tile is-ancestor">
+          <div class="first-line tile is-ancestor">
 
-                    <!-- UNPUBLISHED ARTICLE -->
-                    <%- include('../tiles/tile.ejs', {
+            <!-- UNPUBLISHED ARTICLE -->
+            <%- include('../tiles/tile.ejs', {
                         authorVar: 'Змітр Корнеў',
                         authorPhotoVar: 'mock/vajc.jpg',
                         isUnpublished: true,
@@ -27,7 +27,7 @@
                         titleVar: 'Крама "як з крамы"',
                     }); %>
 
-                    <%- include('../tiles/tile.ejs', {
+            <%- include('../tiles/tile.ejs', {
                         authorVar: 'Вальжына Морт',
                         authorPhotoVar: 'mock/mort.jpg',
                         isVideoArticle: true,
@@ -37,7 +37,7 @@
                         titleVar: '"Гэта ня тое як склеіць разьбіты кубак..."',
                     }); %>
 
-                    <%- include('../tiles/tile.ejs', {
+            <%- include('../tiles/tile.ejs', {
                         isUnpublished: true,
                         isDraft: true,
                         authorVar: 'Лявон Вольскі',
@@ -49,7 +49,7 @@
                         titleVar: 'Некоратка аб Ахматавай',
                     }); %>
 
-                    <%- include('../tiles/tile.ejs', {
+            <%- include('../tiles/tile.ejs', {
                         photoClassVar: 'is-3by2',
                         photoVar: 'mock/photo4.jpg',
                         specialHeadingNameVar: 'Курылка Гутэнберга',
@@ -58,16 +58,16 @@
                         titleVar: 'Культура і псіхалогія',
                     }); %>
 
-                </div>
+          </div>
 
-                <!--FIRST LINE END-->
-                <!--SECOND LINE-->
+          <!--FIRST LINE END-->
+          <!--SECOND LINE-->
 
-                <div class="second-line">
+          <div class="second-line">
 
-                    <div class="tile is-ancestor">
+            <div class="tile is-ancestor">
 
-                        <%- include('../tiles/tile.ejs', {
+              <%- include('../tiles/tile.ejs', {
                             photoClassVar: 'is-3by2',
                             photoVar: 'mock/photo3.jpg',
                             specialHeadingHandmadeVar: '(не)',
@@ -76,7 +76,7 @@
                             titleVar: 'Ад біяграфія да творчасці: Алесь Дудар',
                         }); %>
 
-                        <%- include('../tiles/tile.ejs', {
+              <%- include('../tiles/tile.ejs', {
                             authorVar: 'Змітр Корнеў',
                             authorPhotoVar: 'mock/vajc.jpg',
                             isVideoArticle: true,
@@ -86,13 +86,13 @@
                             titleVar: 'Крама "як з крамы"',
                         }); %>
 
-                        <% include ../specials/diary/diary.ejs %>
+              <% include ../specials/diary/diary.ejs %>
 
-                    </div>
+            </div>
 
-                    <div class="tile is-ancestor">
+            <div class="tile is-ancestor">
 
-                        <%- include('../tiles/tile.ejs', {
+              <%- include('../tiles/tile.ejs', {
                             authorVar: 'Наталля Ламека',
                             authorPhotoVar: 'mock/vajc.jpg',
                             photoClassVar: 'is-3by1',
@@ -101,7 +101,7 @@
                             titleVar: 'Eўрапейскі мадэрнізм',
                         }); %>
 
-                        <%- include('../tiles/tile.ejs', {
+              <%- include('../tiles/tile.ejs', {
                             photoClassVar: 'is-3by2',
                             photoVar: 'mock/photo3.jpg',
                             specialHeadingNameVar: 'Мінск',
@@ -110,7 +110,7 @@
                             titleVar: 'Культура і псіхалогія',
                         }); %>
 
-                        <%- include('../tiles/tile.ejs', {
+              <%- include('../tiles/tile.ejs', {
                             photoClassVar: 'is-3by2',
                             photoVar: 'mock/photo3.jpg',
                             specialHeadingNameVar: 'Мінск',
@@ -119,25 +119,25 @@
                             titleVar: 'Культура і псіхалогія',
                         }); %>
 
-                    </div>
+            </div>
 
-                </div>
+          </div>
 
-                <!--SECOND LINE END-->
+          <!--SECOND LINE END-->
 
-                <!--HERE ANY ADDITIONAL LINES OF TILES MAY BE ADDED-->
+          <!--HERE ANY ADDITIONAL LINES OF TILES MAY BE ADDED-->
 
-                <div class="load-more" align="center">
-                    <a class="button">Загрузіць яшчэ!</a>
-                </div>
+          <div class="load-more" align="center">
+            <a class="button">Загрузіць яшчэ!</a>
+          </div>
 
-                <!--EXAMPLE OF LAST INCOMPLETE LINE-->
-                <br />
-                <br />
+          <!--EXAMPLE OF LAST INCOMPLETE LINE-->
+          <br />
+          <br />
 
-                <div class="first-line tile is-ancestor">
+          <div class="first-line tile is-ancestor">
 
-                    <%- include('../tiles/tile.ejs', {
+            <%- include('../tiles/tile.ejs', {
                         authorVar: 'Змітр Корнеў',
                         authorPhotoVar: 'mock/vajc.jpg',
                         photoClassVar: 'is-16by9',
@@ -146,7 +146,7 @@
                         titleVar: 'Крама "як з крамы"',
                     }); %>
 
-                    <%- include('../tiles/tile.ejs', {
+            <%- include('../tiles/tile.ejs', {
                         authorVar: 'Змітр Корнеў',
                         authorPhotoVar: 'mock/vajc.jpg',
                         isVideoArticle: true,
@@ -156,17 +156,17 @@
                         titleVar: 'Крама "як з крамы"',
                     }); %>
 
-                    <div class="tile"></div>
-                    <div class="tile"></div>
+            <div class="tile"></div>
+            <div class="tile"></div>
 
-                </div>
+          </div>
 
-            </div>
         </div>
+      </div>
 
-        <% include ../footer/footer.ejs %>
+      <% include ../footer/footer.ejs %>
     </div>
-</div>
+  </div>
 
 </body>
 
