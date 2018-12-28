@@ -18,7 +18,14 @@ const fs = require('fs');
 const templateVariables = JSON.parse(
   fs.readFileSync('./src/templateVariables.json', 'utf8')
 );
-const team = JSON.parse(fs.readFileSync('./src/about/team.json', 'utf8'));
+
+const teammateImageScaleOptions = 'c_scale,w_240';
+
+let rawTeam = JSON.parse(fs.readFileSync('./src/about/team.json', 'utf8'));
+const team = rawTeam.map(teammate => ({
+  ...teammate,
+  imageUrl: teammate.imageUrl.replace('upload/', `upload/${teammateImageScaleOptions}/`)
+}));
 
 const port = process.env.PORT || 3001;
 const pathPrefix =
