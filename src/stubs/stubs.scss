@@ -98,54 +98,130 @@
     }
   }
 
-  .social-weekend {
-    border: 2px solid $socialweekend-color;
-    border-radius: 10px;
+  .specials {
+    display: flex;
+    flex-direction: column;
     margin: auto;
-    overflow: hidden;
-    text-align: left;
-    width: 50%;
+    overflow: auto;
 
     @include touch {
+      align-items: center;
+    }
+
+    @include desktop {
+      flex-direction: row;
+      justify-content: center;
+      width: 80%;
+    }
+  }
+
+  .special-section {
+    border: 2px solid;
+    border-radius: 10px;
+    // height: 100%;
+    margin: 0 0.5rem;
+    overflow: hidden;
+
+    @include touch {
+      margin-bottom: 1rem;
       text-align: center;
       width: 90%;
     }
 
-    .sent {
-      background-color: $socialweekend-color;
-      border-radius: 10px;
+    &__action {
+      border-radius: 7px;
       color: $primary-white;
       cursor: pointer;
       display: inline-block;
       font-weight: bold;
-      margin-top: 0.5rem;
+      margin: 0.5rem;
       padding: 0.15rem 0.6rem;
     }
 
     img {
-      float: left;
-      height: 13rem;
-      margin: 0.5rem;
-      margin-right: 1rem;
-
       @include touch {
-        float: none;
         margin: 0.5rem;
       }
     }
 
-    .text {
-      margin: 0.5rem 0;
+    &__text {
+      margin: 0.5rem;
+      text-align: center;
+
+      @include desktop {
+        margin: 0.5rem;
+        text-align: left;
+      }
+    }
+
+    &__title {
+      font-size: 1.3rem;
+      font-weight: bold;
+      margin: 0.5rem;
+    }
+
+    &__left {
+      @include desktop {
+        float: left;
+      }
+    }
+
+    &__right {
+      @include desktop {
+        float: right;
+      }
+    }
+
+    &__large {
+      @include desktop {
+        width: 50%;
+      }
+    }
+
+    &__small {
+      @include desktop {
+        width: 35%;
+      }
+    }
+  }
+
+  .social-weekend {
+    border-color: $socialweekend-color;
+
+    img {
+      width: 80%;
+
+      @include desktop {
+        float: left;
+        margin: 0.5rem;
+        width: 25%;
+      }
+    }
+  }
+
+  .wir-stickers {
+    border-color: $skaryna-stickers-color;
+
+    img {
+      max-width: 95%;
+
+      @include desktop {
+        float: right;
+        margin-right: 0.5rem;
+        margin-top: 0.5rem;
+        width: 45%;
+      }
 
       @include touch {
-        margin: 0.5rem;
-        text-align: center;
+        margin: 0;
+        margin-top: 0.5rem;
+        width: 35%;
       }
+    }
 
-      .sw-title {
-        font-size: 1.3rem;
-        font-weight: bold;
-      }
+    &__action {
+      background-color: $skaryna-stickers-color;
+      color: #fff;
     }
   }
 
