@@ -7,7 +7,7 @@
   "id-class-ad-disabled": true,
   "id-class-value": "false",
   "id-unique": true,
-  "space-tab-mixed-disabled": "space4",
+  "space-tab-mixed-disabled": "space2",
   "spec-char-escape": true,
   "src-not-empty": true,
   "style-disabled": false,

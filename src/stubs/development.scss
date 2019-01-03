@@ -1,0 +1,382 @@
+// Import the initial variables
+@import '../../node_modules/bulma/sass/utilities/initial-variables';
+@import '../../node_modules/bulma/sass/utilities/mixins';
+
+/* stylelint-disable scss/at-import-no-partial-leading-underscore  */
+@import '../../node_modules/bulma/sass/utilities/_all.sass';
+@import '../../node_modules/bulma/sass/grid/columns.sass';
+
+@import url('https://fonts.googleapis.com/css?family=Ubuntu:300,400');
+
+$wirby-white: #fff;
+$wirby-gray: #f2f2f2;
+$wirby-darkgray: #808080;
+$wirby-header-gray: #4a4a4a;
+$wirby-black: #000;
+
+$wirby-primary: #103a2a;
+
+$skaryna-stickers-color: #d93189;
+
+html,
+body {
+  font-family: 'Ubuntu', sans-serif;
+  font-weight: 300;
+  height: 100%;
+  margin: 1rem;
+
+  @include desktop {
+    margin: 0;
+  }
+}
+
+a:link,
+a:visited {
+  color: inherit;
+}
+
+.section {
+  &__body {
+    // overflow-y: scroll;
+    // scroll-snap-type: y mandatory;
+  }
+
+  &__front {
+    box-sizing: border-box;
+    // scroll-snap-align: start;
+
+    @include touch {
+      margin: 1rem;
+    }
+
+    @include desktop {
+      min-height: 100%;
+      padding: 15vh 15vw;
+    }
+  }
+
+  &__main-left {
+    @include touch {
+      margin-bottom: 3rem;
+      margin-top: 7rem;
+    }
+
+    @include desktop {
+      float: left;
+      width: 50%;
+    }
+  }
+
+  &__main-right {
+    @include touch {
+      margin-bottom: 3rem;
+    }
+
+    @include desktop {
+      float: right;
+      width: 50%;
+    }
+  }
+
+  &__heading {
+    font-weight: 400;
+
+    @include desktop {
+      padding-right: 5vw;
+    }
+  }
+
+  &__social-weekend {
+    font-weight: 400;
+
+    @include desktop {
+      padding-left: 5vw;
+    }
+  }
+
+  &__following {
+    margin: auto;
+    overflow: auto;
+    // scroll-snap-align: start;
+    // scroll-snap-stop: always;
+
+    @include desktop {
+      width: 70%;
+    }
+  }
+
+  &__text-description {
+    line-height: 1.42em;
+
+    ul {
+      list-style-position: outside;
+      padding-left: 1.5em;
+    }
+  }
+
+  &__team {
+    margin: 1rem auto;
+    width: 90%;
+
+    @include desktop {
+      margin: 3rem auto;
+    }
+
+    .columns {
+      margin: 0;
+      max-width: 100%;
+    }
+  }
+
+  &__team-column {
+    padding: 0;
+  }
+
+  &__teammate {
+    align-items: center;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+
+    @include desktop {
+      padding: 0 0.5rem 1rem;
+    }
+  }
+
+  &__partners {
+    margin: 3rem auto;
+    width: 75%;
+
+    .columns {
+      margin: 0;
+      max-width: 100%;
+    }
+  }
+
+  &__partner-logo {
+    box-sizing: border-box;
+    margin: auto;
+    padding: 0;
+    text-align: center;
+  }
+
+  &__stickers {
+    display: flex;
+    flex-direction: row;
+    overflow: auto;
+    padding-top: 5rem;
+
+    @include desktop {
+      width: 60%;
+    }
+
+    a:link,
+    a:visited {
+      color: $wirby-white;
+      text-decoration: none;
+    }
+  }
+
+  &__stickers-controls {
+    align-items: flex-start;
+    display: flex;
+    flex-direction: column;
+    padding: 1rem 0 1rem 1rem;
+    width: 55%;
+  }
+
+  &__stickers-image {
+    width: 45%;
+  }
+
+  &__footer {
+    display: flex;
+    flex-direction: column;
+    overflow: auto;
+    padding: 5rem 0;
+
+    @include desktop {
+      flex-direction: row;
+    }
+  }
+
+  &__follow-us {
+    flex-grow: 1;
+  }
+
+  &__contact-us {
+    flex-grow: 1;
+  }
+}
+
+.navigation {
+  &__arrow-down {
+    bottom: 1rem;
+    left: 50%;
+    position: absolute;
+    transform: translate(-50%, 0);
+
+    @include touch {
+      visibility: hidden;
+    }
+
+    img {
+      opacity: 0.3;
+      width: 2.5rem;
+    }
+  }
+}
+
+.image {
+  &__main-logo {
+    width: 5rem;
+
+    @include desktop {
+      width: 6rem;
+    }
+  }
+
+  &__social-weekend-final-certificate {
+    border: 1px solid $wirby-black;
+    box-shadow: 0 14px 34px rgba(0, 0, 0, 0.25);
+    box-sizing: border-box;
+    margin: 3rem 0 1rem;
+    padding: 1rem;
+    width: 100%;
+
+    @include desktop {
+      margin: 1.5rem 0;
+      width: 18rem;
+    }
+  }
+
+  &__team-member {
+    border-radius: 45%;
+    height: 6rem;
+    width: 6rem;
+  }
+
+  &__partner-logo {
+    width: 60%;
+
+    @include touch {
+      margin-bottom: 1.5rem;
+    }
+
+    @include desktop {
+      width: 85%;
+    }
+  }
+
+  &__partner-logo--smaller {
+    width: 50%;
+
+    @include desktop {
+      width: 75%;
+    }
+  }
+
+  &__partner-logo--smallest {
+    width: 45%;
+
+    @include desktop {
+      width: 60%;
+    }
+  }
+
+  &__stickers-skaryna {
+    filter: brightness(90%);
+    width: 100%;
+
+    @include touch {
+      padding-top: 2rem;
+    }
+  }
+}
+
+.label {
+  &__main-heading {
+    color: $wirby-primary;
+    font-size: 5rem;
+  }
+
+  &__main-subheading {
+    font-size: 1.5rem;
+    font-weight: 300;
+    margin: 2rem 0;
+  }
+
+  &__contact-email {
+    a:link,
+    a:visited {
+      color: $wirby-black;
+    }
+  }
+
+  &__social-weekend-heading {
+    font-size: 0.9rem;
+  }
+
+  &__social-weekend-subheading {
+    font-size: 0.8rem;
+  }
+
+  &__subsection-heading {
+    font-size: 1.6rem;
+    line-height: 1.35em;
+    margin: 2rem 0 1rem;
+  }
+
+  &__teammate-name {
+    font-size: 0.9rem;
+    font-weight: 400;
+    padding-top: 0.1rem;
+    text-align: center;
+  }
+
+  &__teammate-role {
+    color: $wirby-darkgray;
+    font-size: 0.7rem;
+    text-align: center;
+  }
+
+  &__team-special-thanks {
+    text-align: center;
+
+    @include desktop {
+      padding-top: 1.5rem;
+    }
+  }
+
+  &__stickers-header {
+    color: $wirby-header-gray;
+    float: left;
+    font-size: 1.5rem;
+    padding-bottom: 2rem;
+  }
+
+  &__footer-header {
+    color: $wirby-header-gray;
+    font-size: 1.7rem;
+    padding: 1rem 0;
+  }
+
+  &__social-network-link {
+    padding-right: 0.2rem;
+
+    @include desktop {
+      padding-right: 1rem;
+    }
+  }
+}
+
+.button {
+  &__stickers-install {
+    background-color: $skaryna-stickers-color;
+    border-radius: 7px;
+    color: $wirby-white;
+    cursor: pointer;
+    display: inline-block;
+    padding: 0.5rem;
+  }
+}

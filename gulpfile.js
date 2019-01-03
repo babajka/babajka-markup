@@ -47,6 +47,7 @@ templateVariables.bundlePath = `${pathPrefix}/${config.staticPath}/${
 templateVariables.assetsPath = `${pathPrefix}/${config.staticPath}/${
   config.stylesPath
 }/assets.min.css`;
+templateVariables.stubStylesPath = `${pathPrefix}/${config.staticPath}/${config.stylesPath}/stubStyles.min.css`;
 templateVariables.imagesPath = `${pathPrefix}/${config.staticPath}/${
   config.imagesPath
 }`;
@@ -54,7 +55,7 @@ templateVariables.team = team;
 
 gulp.task('sass:bundle', () =>
   gulp
-    .src([`${config.srcPath}/**/*.scss`, `!${config.srcPath}/index.scss`], {
+    .src([`${config.srcPath}/**/*.scss`, `!${config.srcPath}/index.scss`, `!${config.srcPath}/stubs/development.scss`], {
       base: config.srcPath
     })
     .pipe(sass().on('error', sass.logError))
@@ -65,6 +66,25 @@ gulp.task('sass:bundle', () =>
       gulp.dest(`${config.buildPath}/${config.staticPath}/${config.stylesPath}`)
     )
     .pipe(concatCss('bundle.min.css', { rebaseUrls: false }))
+    .pipe(cleanCSS())
+    .pipe(
+      gulp.dest(`${config.buildPath}/${config.staticPath}/${config.stylesPath}`)
+    )
+);
+
+gulp.task('sass:bundle', () =>
+  gulp
+    .src([`${config.srcPath}/stubs/development.scss`], {
+      base: config.srcPath
+    })
+    .pipe(sass().on('error', sass.logError))
+    .pipe(autoprefixer())
+    .pipe(replace('url("/images/', 'url("../images/'))
+    .pipe(concatCss('stubStyles.css', { rebaseUrls: false }))
+    .pipe(
+      gulp.dest(`${config.buildPath}/${config.staticPath}/${config.stylesPath}`)
+    )
+    .pipe(concatCss('stubStyles.min.css', { rebaseUrls: false }))
     .pipe(cleanCSS())
     .pipe(
       gulp.dest(`${config.buildPath}/${config.staticPath}/${config.stylesPath}`)
