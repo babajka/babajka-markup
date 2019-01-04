@@ -10,6 +10,7 @@
 
 $wirby-white: #fff;
 $wirby-gray: #f2f2f2;
+$wirby-thingray: #dbdbdb;
 $wirby-darkgray: #808080;
 $wirby-header-gray: #4a4a4a;
 $wirby-black: #000;
@@ -115,11 +116,18 @@ a:visited {
   }
 
   &__team {
-    margin: 1rem auto;
-    width: 90%;
+    margin-bottom: 1rem;
+    margin-top: 1rem;
 
     @include desktop {
-      margin: 3rem auto;
+      margin-bottom: 3rem;
+      margin-top: 3rem;
+    }
+  }
+
+  &__team-grid {
+    @include tablet {
+      width: 90%;
     }
 
     .columns {
@@ -237,7 +245,7 @@ a:visited {
   }
 
   &__social-weekend-final-certificate {
-    border: 1px solid $wirby-black;
+    border: 1px solid $wirby-thingray;
     box-shadow: 0 14px 34px rgba(0, 0, 0, 0.25);
     box-sizing: border-box;
     margin: 3rem 0 1rem;
@@ -251,9 +259,14 @@ a:visited {
   }
 
   &__team-member {
-    border-radius: 45%;
-    height: 6rem;
-    width: 6rem;
+    height: 7.5rem;
+    object-fit: cover;
+    object-position: center;
+    width: 100%;
+
+    @include desktop {
+      height: 5.75rem;
+    }
   }
 
   &__partner-logo {
@@ -303,6 +316,7 @@ a:visited {
   &__main-subheading {
     font-size: 1.5rem;
     font-weight: 300;
+    line-height: 1.4em;
     margin: 2rem 0;
   }
 
@@ -315,10 +329,12 @@ a:visited {
 
   &__social-weekend-heading {
     font-size: 0.9rem;
+    line-height: 1.5em;
   }
 
   &__social-weekend-subheading {
     font-size: 0.8rem;
+    line-height: 1.5em;
   }
 
   &__subsection-heading {
@@ -330,18 +346,18 @@ a:visited {
   &__teammate-name {
     font-size: 0.9rem;
     font-weight: 400;
-    padding-top: 0.1rem;
-    text-align: center;
+    padding-top: 0.2rem;
+    width: 100%;
   }
 
   &__teammate-role {
     color: $wirby-darkgray;
     font-size: 0.7rem;
-    text-align: center;
+    width: 100%;
   }
 
   &__team-special-thanks {
-    text-align: center;
+    padding-top: 0.5rem;
 
     @include desktop {
       padding-top: 1.5rem;
