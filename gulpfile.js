@@ -21,7 +21,7 @@ const templateVariables = JSON.parse(
 
 const teammateImageScaleOptions = 'c_scale,w_240';
 
-let rawTeam = JSON.parse(fs.readFileSync('./src/about/team.json', 'utf8'));
+const rawTeam = JSON.parse(fs.readFileSync('./src/about/team.json', 'utf8'));
 const team = rawTeam.map(teammate => ({
   ...teammate,
   imageUrl: teammate.imageUrl.replace('upload/', `upload/${teammateImageScaleOptions}/`)
@@ -53,7 +53,7 @@ templateVariables.imagesPath = `${pathPrefix}/${config.staticPath}/${
 }`;
 templateVariables.team = team;
 
-gulp.task('sass:bundle', () =>
+gulp.task('sass:bundle:main', () =>
   gulp
     .src([`${config.srcPath}/**/*.scss`, `!${config.srcPath}/index.scss`, `!${config.srcPath}/stubs/development.scss`], {
       base: config.srcPath
@@ -72,7 +72,7 @@ gulp.task('sass:bundle', () =>
     )
 );
 
-gulp.task('sass:bundle', () =>
+gulp.task('sass:bundle:stubs', () =>
   gulp
     .src([`${config.srcPath}/stubs/development.scss`], {
       base: config.srcPath
@@ -124,7 +124,7 @@ gulp.task('sass:lint', () =>
 gulp.task('sass:watch', () =>
   watch(
     `${config.srcPath}/**/*.scss`,
-    gulp.series('sass:bundle', 'sass:assets', 'sass:lint')
+    gulp.series('sass:bundle:main', 'sass:bundle:stubs', 'sass:assets', 'sass:lint')
   )
 );
 
@@ -192,7 +192,8 @@ gulp.task(
   'build',
   gulp.parallel(
     'ejs:compile',
-    'sass:bundle',
+    'sass:bundle:main',
+    'sass:bundle:stubs',
     'sass:assets',
     'fa:fonts',
     'static:copy'
