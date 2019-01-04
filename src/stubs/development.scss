@@ -152,12 +152,16 @@ a:visited {
   }
 
   &__partners {
-    margin: 3rem auto;
+    margin: 2rem auto 3rem;
     width: 75%;
+  }
 
-    .columns {
-      margin: 0;
-      max-width: 100%;
+  &__partners-columns {
+    margin: 0;
+    max-width: 100%;
+
+    @include desktop {
+      margin: 1.5rem 0;
     }
   }
 
