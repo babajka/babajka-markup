@@ -21,7 +21,7 @@ const templateVariables = JSON.parse(
 
 const teammateImageScaleOptions = 'c_scale,w_240';
 
-const rawTeam = JSON.parse(fs.readFileSync('./src/about/team.json', 'utf8'));
+const rawTeam = JSON.parse(fs.readFileSync('./data/team.json', 'utf8'));
 const team = rawTeam.map(teammate => ({
   ...teammate,
   imageUrl: teammate.imageUrl.replace('upload/', `upload/${teammateImageScaleOptions}/`)
@@ -37,9 +37,14 @@ const config = {
   stylesPath: 'styles',
   fontsPath: 'fonts',
   imagesPath: 'images',
+  landingPath: 'landing',
   srcPath: 'src',
-  staticPath: 'static'
+  staticPath: 'static',
+  stubsPath: 'stubs'
 };
+
+const allSass = [`${config.srcPath}/**/*.scss`, `${config.landingPath}/*.scss`, `${config.stubsPath}/*.scss`];
+const allEjs = [`${config.srcPath}/**/*.ejs`, `${config.landingPath}/*.ejs`, `${config.stubsPath}/*.ejs`];
 
 templateVariables.bundlePath = `${pathPrefix}/${config.staticPath}/${
   config.stylesPath
@@ -47,7 +52,7 @@ templateVariables.bundlePath = `${pathPrefix}/${config.staticPath}/${
 templateVariables.assetsPath = `${pathPrefix}/${config.staticPath}/${
   config.stylesPath
 }/assets.min.css`;
-templateVariables.stubStylesPath = `${pathPrefix}/${config.staticPath}/${config.stylesPath}/stubStyles.min.css`;
+templateVariables.landingPath = `${pathPrefix}/${config.staticPath}/${config.stylesPath}/landing.min.css`;
 templateVariables.imagesPath = `${pathPrefix}/${config.staticPath}/${
   config.imagesPath
 }`;
@@ -55,7 +60,7 @@ templateVariables.team = team;
 
 gulp.task('sass:bundle:main', () =>
   gulp
-    .src([`${config.srcPath}/**/*.scss`, `!${config.srcPath}/index.scss`, `!${config.srcPath}/stubs/development.scss`], {
+    .src([`${config.srcPath}/**/*.scss`, `${config.stubsPath}/*.scss`, `!${config.srcPath}/index.scss`], {
       base: config.srcPath
     })
     .pipe(sass().on('error', sass.logError))
@@ -72,19 +77,19 @@ gulp.task('sass:bundle:main', () =>
     )
 );
 
-gulp.task('sass:bundle:stubs', () =>
+gulp.task('sass:bundle:landing', () =>
   gulp
-    .src([`${config.srcPath}/stubs/development.scss`], {
+    .src([`${config.landingPath}/landing.scss`], {
       base: config.srcPath
     })
     .pipe(sass().on('error', sass.logError))
     .pipe(autoprefixer())
     .pipe(replace('url("/images/', 'url("../images/'))
-    .pipe(concatCss('stubStyles.css', { rebaseUrls: false }))
+    .pipe(concatCss('landing.css', { rebaseUrls: false }))
     .pipe(
       gulp.dest(`${config.buildPath}/${config.staticPath}/${config.stylesPath}`)
     )
-    .pipe(concatCss('stubStyles.min.css', { rebaseUrls: false }))
+    .pipe(concatCss('landing.min.css', { rebaseUrls: false }))
     .pipe(cleanCSS())
     .pipe(
       gulp.dest(`${config.buildPath}/${config.staticPath}/${config.stylesPath}`)
@@ -112,7 +117,7 @@ gulp.task('sass:assets', () =>
 
 gulp.task('sass:lint', () =>
   gulp
-    .src(`${config.srcPath}/**/*.scss`)
+    .src(allSass)
     .pipe(plumber())
     .pipe(
       stylelint({
@@ -121,12 +126,13 @@ gulp.task('sass:lint', () =>
     )
 );
 
-gulp.task('sass:watch', () =>
+gulp.task('sass:watch', (done) => {
   watch(
-    `${config.srcPath}/**/*.scss`,
-    gulp.series('sass:bundle:main', 'sass:bundle:stubs', 'sass:assets', 'sass:lint')
-  )
-);
+    allSass,
+    gulp.series('sass:bundle:main', 'sass:bundle:landing', 'sass:assets', 'sass:lint')
+  );
+  done();
+});
 
 gulp.task('fa:fonts', () =>
   gulp
@@ -138,7 +144,7 @@ gulp.task('fa:fonts', () =>
 
 gulp.task('ejs:compile', () =>
   gulp
-    .src(`${config.srcPath}/**/*.ejs`)
+    .src(allEjs)
     .pipe(ejs(templateVariables, {}, { ext: '.html' }).on('error', log))
     .pipe(gulp.dest(config.buildPath))
 );
@@ -167,25 +173,28 @@ gulp.task('search-engines:copy', () =>
     )
 );
 
-gulp.task('ejs:watch', () =>
-  watch(`${config.srcPath}/**/*.ejs`, gulp.series('html:lint'))
-);
+gulp.task('ejs:watch', (done) => {
+  watch(allEjs, gulp.series('html:lint'));
+  done();
+});
 
-gulp.task('serve', () =>
+gulp.task('serve', (done) => {
   connect.server({
     port,
     livereload: true,
     root: config.buildPath,
     middleware: () => [cors()]
-  })
-);
+  });
+  done();
+});
 
-gulp.task('livereload', () =>
+gulp.task('livereload', (done) => {
   watch([
     `${config.buildPath}/**/*.html`,
     `${config.buildPath}/${config.staticPath}/${config.stylesPath}/**/*.css`
-  ]).pipe(connect.reload())
-);
+  ]).pipe(connect.reload());
+  done();
+});
 
 // export tasks
 gulp.task(
@@ -193,7 +202,7 @@ gulp.task(
   gulp.parallel(
     'ejs:compile',
     'sass:bundle:main',
-    'sass:bundle:stubs',
+    'sass:bundle:landing',
     'sass:assets',
     'fa:fonts',
     'static:copy'

@@ -17,7 +17,7 @@ module.exports = {
         'login',
         'tools',
         'stubs',
-        'wirby',
+        'landing',
       ],
     ],
     'scope-empty': [2, 'never'],
