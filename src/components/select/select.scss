@@ -5,17 +5,6 @@ $size-s: 10rem;
 $size-m: 15rem;
 $size-l: 20rem;
 
-.select-temp {
-  &-container {
-    display: flex;
-    flex-direction: row;
-  }
-
-  &-item {
-    margin: 10px;
-  }
-}
-
 .babajka-dropdown {
   width: $size-m;
 

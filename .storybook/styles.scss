@@ -1,3 +1,6 @@
+// fix fa path
+$fa-font-path: '../node_modules/font-awesome/fonts';
+
 // Import Bulma's and own variables
 @import 'variables';
 // Import the rest of Bulma

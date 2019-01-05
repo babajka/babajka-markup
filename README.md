@@ -39,9 +39,13 @@ All commit messages checked with [commitlint](https://github.com/marionebl/commi
   _ `dist/fonts/` - FontAwesome fonts \* `dist/images` - images
 
 - `npm start` or `npm run watch`:
+
   - build all static
   - start dev server on [`localhost:3001`](http://localhost:3001)
   - watch for changes, recompile styles and templates and reload page
+
+- `npm run storybook` for start development playground / styleguide
+- `npm run storybook:build` - check out [deployed version](https://babajka.github.io/babajka-markup/storybook)
 
 > enjoy coding!
 

@@ -1,74 +1,62 @@
-<!-- List of variables used below. This suppresses lint warnings. -->
-<% var authorVar; %>
-<% var authorPhotoVar; %>
-<% var photoClassVar; %>
-<% var photoVar; %>
-<% var specialHeadingHandmadeVar; %>
-<% var specialHeadingNameVar; %>
-<% var specialHeadingPhotoVar; %>
-<% var subtitleVar; %>
-<% var titleVar; %>
-<% var isUnpublished; %>
-<% var isVideoArticle; %>
-<% var isDraft; %>
-
 <div class="tile is-parent">
-  <article class="card tile is-child is-flex <% if (isUnpublished) { %> with-opacity <% } %>" <% if (isUnpublished) { %> title="Гэты артыкул яшчэ не апублікаваны"
-    <% } %> >
+  <article
+    class="card tile is-child is-flex <% if (locals.isUnpublished) { %> with-opacity <% } %>"
+    <% if (locals.isUnpublished) { %> title="Гэты артыкул яшчэ не апублікаваны" <% } %>
+  >
     <div class="card-image">
-      <figure class="image <%= photoClassVar %>">
-        <img src="<%= imagesPath %>/<%= photoVar %>" />
+      <figure class="image <%= locals.photoClassVar %>">
+        <img src="<%= locals.imagesPath %>/<%= locals.photoVar %>" />
       </figure>
-      <% if (specialHeadingNameVar) { %>
-      <div class="media special-heading is-pulled-right">
-        <div class="media-left">
-          <% if (specialHeadingHandmadeVar) { %>
+      <% if (locals.specialHeadingNameVar) { %>
+        <div class="media special-heading is-pulled-right">
           <div class="media-left">
-            <div class="handmade">
-              <%= specialHeadingHandmadeVar %>
-            </div>
+            <% if (locals.specialHeadingHandmadeVar) { %>
+              <div class="media-left">
+                <div class="handmade">
+                  <%= locals.specialHeadingHandmadeVar %>
+                </div>
+              </div>
+            <% } else { %>
+              <figure class="image is-32x32">
+                <img src="<%= locals.imagesPath %>/<%= locals.specialHeadingPhotoVar %>" />
+              </figure>
+            <% } %>
           </div>
-          <% } else { %>
-          <figure class="image is-32x32">
-            <img src="<%= imagesPath %>/<%= specialHeadingPhotoVar %>" />
-          </figure>
-          <% } %>
+          <div class="media-content">
+            <span class="subtitle is-6">
+              <%= locals.specialHeadingNameVar %></span>
+          </div>
         </div>
-        <div class="media-content">
-          <span class="subtitle is-6">
-            <%= specialHeadingNameVar %></span>
-        </div>
-      </div>
       <% } %>
-      <div class="actions"><i class="fa fa-pencil fa-lg"></i></div>
-      <% if (isVideoArticle) { %>
-      <a href="../article-page/article-page.html" class="video-article"><i class="fa fa-play"></i></a>
+      <div class="actions">
+        <i class="fa fa-pencil fa-lg"></i>
+      </div>
+      <% if (locals.isVideoArticle) { %>
+        <a href="../article-page/article-page.html" class="video-article"><i class="fa fa-play"></i></a>
       <% } %>
     </div>
     <div class="card-content is-video-article ">
       <span class="title">
-        <a href="../article-page/article-page.html">
-          <%= titleVar %></a>
+        <a href="../article-page/article-page.html"><%= locals.titleVar %></a>
       </span>
       <p class="subtitle">
-        <%= subtitleVar %>
+        <%= locals.subtitleVar %>
       </p>
       <div class="level tile-footer is-mobile">
         <div class="level-left">
-          <% if (authorVar) { %>
-          <img src="<%= imagesPath %>/<%= authorPhotoVar %>" />
-          <div class="author-name">
-            <span>
-              <%= authorVar %></span>
-          </div>
+          <% if (locals.authorVar) { %>
+            <img src="<%= locals.imagesPath %>/<%= locals.authorPhotoVar %>" />
+            <div class="author-name">
+              <span><%= locals.authorVar %></span>
+            </div>
           <% } %>
         </div>
-        <% if (isUnpublished) { %>
-        <% if (isDraft) { %>
-        <div class="level-right publication-not-scheduled">Публікацыя не запланавана</div>
-        <% } else { %>
-        <div class="level-right publication-scheduled">праз 3 дні</div>
-        <% } %>
+        <% if (locals.isUnpublished) { %>
+          <% if (locals.isDraft) { %>
+            <div class="level-right publication-not-scheduled">Публікацыя не запланавана</div>
+          <% } else { %>
+            <div class="level-right publication-scheduled">праз 3 дні</div>
+          <% } %>
         <% } %>
       </div>
     </div>
