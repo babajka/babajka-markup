@@ -1,13 +1,12 @@
 module.exports = {
-  parserOptions: {
-    ecmaVersion: 2018,
-    sourceType: 'module',
+  parser: 'babel-eslint',
+  extends: ['airbnb-base', 'prettier'],
+  plugins: ['prettier'],
+  env: {
+    browser: true,
   },
   rules: {
-    semi: 2,
-    quotes: ['error', 'single'],
-  },
-  env: {
-    node: true,
+    // prettier overrides
+    'prettier/prettier': 'error',
   },
 };

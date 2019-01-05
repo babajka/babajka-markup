@@ -1,3 +1,9 @@
+const fs = require('fs');
+
+const log = require('fancy-log');
+const cors = require('cors');
+
+/* gulg */
 const gulp = require('gulp');
 const watch = require('gulp-watch');
 const connect = require('gulp-connect');
@@ -11,14 +17,8 @@ const ejs = require('gulp-ejs');
 const htmlhint = require('gulp-htmlhint');
 const plumber = require('gulp-plumber');
 
-const log = require('fancy-log');
-const cors = require('cors');
-
-const fs = require('fs');
 const templateVariables = JSON.parse(fs.readFileSync('./src/templateVariables.json', 'utf8'));
-
 const teammateImageScaleOptions = 'c_scale,w_240';
-
 const rawTeam = JSON.parse(fs.readFileSync('./data/team.json', 'utf8'));
 const team = rawTeam.map(teammate => ({
   ...teammate,
@@ -193,7 +193,7 @@ gulp.task('livereload', done => {
   done();
 });
 
-// export tasks
+/* export tasks */
 gulp.task(
   'build',
   gulp.parallel(
