@@ -17,7 +17,7 @@ module.exports = {
     'stylelint-config-sass-guidelines',
     './node_modules/prettier-stylelint/config.js',
   ],
-  plugins: ['stylelint-scss', 'stylelint-selector-bem-pattern'],
+  plugins: ['stylelint-scss'],
   rules: {
     /* ==========================================================================
        Airbnb config
@@ -39,16 +39,6 @@ module.exports = {
         ignore: ['stylelint-commands'],
       },
     ],
-
-    // Bem
-    'plugin/selector-bem-pattern': {
-      componentName: '[A-Z]+',
-      componentSelectors: {
-        initial: '^\\.{componentName}(?:-[a-z]+)?$',
-        combined: '^\\.combined-{componentName}-[a-z]+$',
-      },
-      utilitySelectors: '^\\.util-[a-z]+$',
-    },
 
     // Border
     'declaration-property-value-blacklist': {
