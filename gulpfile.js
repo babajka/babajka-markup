@@ -18,7 +18,7 @@ const htmlhint = require('gulp-htmlhint');
 const plumber = require('gulp-plumber');
 
 const templateVariables = JSON.parse(fs.readFileSync('./src/templateVariables.json', 'utf8'));
-const teammateImageTransformationOptions = 'c_scale,w_240,f_auto';
+const teammateImageTransformationOptions = 'c_scale,w_240,f_auto,q_auto';
 const rawTeam = JSON.parse(fs.readFileSync('./data/team.json', 'utf8'));
 const team = rawTeam.map(teammate => ({
   ...teammate,
