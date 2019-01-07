@@ -15,27 +15,19 @@ a:visited {
   color: inherit;
 }
 
-.section {
-  &__body {
-    // overflow-y: scroll;
-    // scroll-snap-type: y mandatory;
+.front-slide {
+  box-sizing: border-box;
+
+  @include touch {
+    margin: 1rem;
   }
 
-  &__front {
-    box-sizing: border-box;
-    // scroll-snap-align: start;
-
-    @include touch {
-      margin: 1rem;
-    }
-
-    @include desktop {
-      min-height: 100%;
-      padding: 15vh 15vw;
-    }
+  @include desktop {
+    min-height: 100%;
+    padding: 15vh 15vw;
   }
 
-  &__main-left {
+  &__left-content {
 
     @include touch {
       margin-bottom: 2rem;
@@ -48,7 +40,7 @@ a:visited {
     }
   }
 
-  &__main-right {
+  &__right-content {
 
     @include touch {
       margin-bottom: 3rem;
@@ -59,28 +51,81 @@ a:visited {
       width: 50%;
     }
   }
+}
+
+.project-overview {
+
+  @include desktop {
+    padding-right: 5vw;
+  }
+
+  &__logo {
+    width: 5rem;
+
+    @include desktop {
+      width: 6rem;
+    }
+  }
 
   &__heading {
+    color: $wirby-primary;
+    font-size: 5rem;
+    font-weight: 400;
+  }
+
+  &__subheading {
+    font-size: 1.5rem;
+    font-weight: 300;
+    line-height: 1.4em;
+    margin: 2rem 0;
+  }
+
+  &__contact-email {
     font-weight: 400;
 
+    a:link,
+    a:visited {
+      color: $wirby-black;
+    }
+  }
+}
+
+.social-weekend {
+  font-weight: 400;
+
+  @include desktop {
+    padding-left: 5vw;
+  }
+
+  &__final-certificate {
+    border: 1px solid $wirby-thingray;
+    box-shadow: 0 14px 34px rgba(0, 0, 0, 0.25);
+    box-sizing: border-box;
+    margin: 3rem 0 1rem;
+    padding: 1rem;
+    width: 100%;
+
     @include desktop {
-      padding-right: 5vw;
+      margin: 1.5rem 0;
+      width: 18rem;
     }
   }
 
-  &__social-weekend {
-    font-weight: 400;
-
-    @include desktop {
-      padding-left: 5vw;
-    }
+  &__heading {
+    font-size: 0.9rem;
+    line-height: 1.5em;
   }
 
+  &__subheading {
+    font-size: 0.8rem;
+    line-height: 1.5em;
+  }
+}
+
+.section {
   &__following {
     margin: auto;
     overflow: auto;
-    // scroll-snap-align: start;
-    // scroll-snap-stop: always;
 
     @include desktop {
       width: 70%;
@@ -212,28 +257,6 @@ a:visited {
 }
 
 .image {
-  &__main-logo {
-    width: 5rem;
-
-    @include desktop {
-      width: 6rem;
-    }
-  }
-
-  &__social-weekend-final-certificate {
-    border: 1px solid $wirby-thingray;
-    box-shadow: 0 14px 34px rgba(0, 0, 0, 0.25);
-    box-sizing: border-box;
-    margin: 3rem 0 1rem;
-    padding: 1rem;
-    width: 100%;
-
-    @include desktop {
-      margin: 1.5rem 0;
-      width: 18rem;
-    }
-  }
-
   &__partner-logo {
     width: 60%;
 
@@ -273,35 +296,6 @@ a:visited {
 }
 
 .label {
-  &__main-heading {
-    color: $wirby-primary;
-    font-size: 5rem;
-  }
-
-  &__main-subheading {
-    font-size: 1.5rem;
-    font-weight: 300;
-    line-height: 1.4em;
-    margin: 2rem 0;
-  }
-
-  &__contact-email {
-    a:link,
-    a:visited {
-      color: $wirby-black;
-    }
-  }
-
-  &__social-weekend-heading {
-    font-size: 0.9rem;
-    line-height: 1.5em;
-  }
-
-  &__social-weekend-subheading {
-    font-size: 0.8rem;
-    line-height: 1.5em;
-  }
-
   &__subsection-heading {
     font-size: 1.6rem;
     line-height: 1.35em;
