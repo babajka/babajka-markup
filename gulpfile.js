@@ -18,11 +18,11 @@ const htmlhint = require('gulp-htmlhint');
 const plumber = require('gulp-plumber');
 
 const templateVariables = JSON.parse(fs.readFileSync('./src/templateVariables.json', 'utf8'));
-const teammateImageScaleOptions = 'c_scale,w_240';
+const teammateImageTransformationOptions = 'c_scale,w_240,f_auto';
 const rawTeam = JSON.parse(fs.readFileSync('./data/team.json', 'utf8'));
 const team = rawTeam.map(teammate => ({
   ...teammate,
-  imageUrl: teammate.imageUrl.replace('upload/', `upload/${teammateImageScaleOptions}/`),
+  imageUrl: teammate.imageUrl.replace('upload/', `upload/${teammateImageTransformationOptions}/`),
 }));
 
 const port = process.env.PORT || 3001;
