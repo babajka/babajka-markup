@@ -87,7 +87,7 @@ gulp.task('sass:bundle:main', () =>
 
 gulp.task('sass:bundle:landing', () =>
   gulp
-    .src([`${config.landingPath}/landing.scss`], {
+    .src([`${config.landingPath}/index.scss`], {
       base: config.srcPath,
     })
     .pipe(sass().on('error', sass.logError))

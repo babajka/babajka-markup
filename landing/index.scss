@@ -1,0 +1,23 @@
+// Import the initial variables
+@import '../node_modules/bulma/sass/utilities/initial-variables';
+@import '../node_modules/bulma/sass/utilities/mixins';
+
+/* stylelint-disable scss/at-import-no-partial-leading-underscore  */
+@import '../node_modules/bulma/sass/utilities/_all.sass';
+@import '../node_modules/bulma/sass/grid/columns.sass';
+
+@import url('https://fonts.googleapis.com/css?family=Ubuntu:300,400');
+
+$wirby-white: #ffffff;
+$wirby-thingray: #dbdbdb;
+$wirby-darkgray: #808080;
+$wirby-header-gray: #4a4a4a;
+$wirby-black: #000000;
+
+$wirby-primary: #103a2a;
+
+$skaryna-stickers-color: #d93189;
+
+// Import all the sass files for this bundle. This avoids import duplications.
+@import 'landing';
+@import 'teammate';

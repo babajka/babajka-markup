@@ -1,9 +1,9 @@
-<div class="column section__teammate %>">
-    <img class="image__team-member" src="<%= team[idx].imageUrl || `${imagesPath}/placeholders/user.png` %>" alt="<%= team[idx].name %>" />
-    <div class="label__teammate-name">
+<div class="column teammate">
+    <img class="teammate__photo" src="<%= team[idx].imageUrl || `${imagesPath}/placeholders/user.png` %>" alt="<%= team[idx].name %>" />
+    <div class="teammate__name">
         <%= team[idx].name %>
     </div>
-    <div class="label__teammate-role">
+    <div class="teammate__role">
         <%= team[idx].role %>
     </div>
 </div>
