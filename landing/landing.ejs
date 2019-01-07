@@ -74,29 +74,31 @@
       </div>
     </div>
 
-    <div class="navigation__arrow-down">
+    <div class="front-slide__arrow-down">
       <img src="<%= imagesPath %>/navigation/down-arrow.svg" />
     </div>
 
   </div>
 
-  <div class="section__following">
+  <div class="secondary-content">
 
-    <div class="section__text-description">
-
-      <div class="label__subsection-heading">Што мы&nbsp;робім?</div>
+    <div class="secondary-content__section text-description">
+      <div class="secondary-content__section-heading">Што мы&nbsp;робім?</div>
       Асветніцкую анлайн-пляцоўку для ўсіх, хто цікавіцца беларускай і&nbsp;сусветнай культурай, дзе будуць размяшчацца лекцыі навукоўцаў і&nbsp;даследчыкаў, артыкулы, гульні і&nbsp;спецпраекты.
       <br />
       <br />
       Тэматыка: літаратура, кіно, тэатр, музыка, гісторыя, лінгвістыка, архітэктура, міфалогія, мастацтва, філасофія.
       Колькасны акцэнт робіцца на&nbsp;беларускай культуры, але мы&nbsp;таксама распавядаем пра культуру сусветную.
       Сайт можна будзе чытаць па-беларуску і&nbsp;па-руску. У&nbsp;будучыні магчымая англамоўная версія.
+    </div>
 
-      <div class="label__subsection-heading">А навошта?</div>
+    <div class="secondary-content__section text-description">
+      <div class="secondary-content__section-heading">А навошта?</div>
       Каб чалавек, што чытае Wir, ведаў, хто такія беларусы і&nbsp;якія набыткі ў&nbsp;галіне культуры яны маюць.
+    </div>
 
-      <div class="label__subsection-heading">Якія праблемы мы&nbsp;вырашаем?</div>
-
+    <div class="secondary-content__section text-description">
+      <div class="secondary-content__section-heading">Якія праблемы мы&nbsp;вырашаем?</div>
       <ul>
           <li>
               Для беларусаў па-ранейшаму актуальны пошук ідэнтычнасці. Не&nbsp;зусім вырашаным застаецца не&nbsp;толькі пытанне &laquo;хто ты&nbsp;гэткі?&raquo;, але не&nbsp;менш істотная праблема&nbsp;&mdash; &laquo;што мы&nbsp;маем?&raquo;.
@@ -111,13 +113,17 @@
               Беларуская культура нярэдка ўспрымаецца ізалявана ад&nbsp;сусветнага і&nbsp;еўрапейскага кантэксту. Мы&nbsp;хочам гэта змяніць.
           </li>
       </ul>
+    </div>
 
-      <div class="label__subsection-heading">Ці&nbsp;існуе ўжо нешта падобнае?</div>
+    <div class="secondary-content__section text-description">
+      <div class="secondary-content__section-heading">Ці&nbsp;існуе ўжо нешта падобнае?</div>
       У свеце &mdash; так:  <a href="https://arzamas.academy/" target="_blank" rel="noreferrer noopener">arzamas.academy</a>,
       <a href="https://postnauka.ru/" target="_blank" rel="noreferrer noopener">postnauka.ru</a>, <a href="https://www.ted.com/" target="_blank" rel="noreferrer noopener">ted.com</a> <br />
       Мяркуем, што ў&nbsp;Беларусі пакуль няма падобных праектаў.
+    </div>
 
-      <div class="label__subsection-heading">Што ўжо ёсць?</div>
+    <div class="secondary-content__section text-description">
+      <div class="secondary-content__section-heading">Што ўжо ёсць?</div>
       <ul>
           <li>
               Каманда.
@@ -155,21 +161,20 @@
       </ul>
     </div>
 
-    <div class="label__subsection-heading">Каманда праекта</div>
+    <div class="secondary-content__section team">
+      <div class="secondary-content__section-heading">Каманда праекта</div>
 
-    <div class="section__team">
-
-      <div class="section__team-grid">
+      <div class="team__grid">
 
         <div class="columns">
-          <div class="column section__team-column">
+          <div class="column team__column">
             <div class="columns is-mobile">
               <%- include('./teammate.ejs', { idx: 0 }) %>
               <%- include('./teammate.ejs', { idx: 1 }) %>
               <%- include('./teammate.ejs', { idx: 2 }) %>
             </div>
           </div>
-          <div class="column section__team-column">
+          <div class="column team__column">
             <div class="columns is-mobile">
               <%- include('./teammate.ejs', { idx: 3 }) %>
               <%- include('./teammate.ejs', { idx: 4 }) %>
@@ -178,14 +183,14 @@
           </div>
         </div>
         <div class="columns">
-          <div class="column section__team-column">
+          <div class="column team__column">
             <div class="columns is-mobile">
               <%- include('./teammate.ejs', { idx: 6 }) %>
               <%- include('./teammate.ejs', { idx: 7 }) %>
               <%- include('./teammate.ejs', { idx: 8 }) %>
             </div>
           </div>
-          <div class="column section__team-column">
+          <div class="column team__column">
             <div class="columns is-mobile">
               <%- include('./teammate.ejs', { idx: 9 }) %>
               <%- include('./teammate.ejs', { idx: 10 }) %>
@@ -194,14 +199,14 @@
           </div>
         </div>
         <div class="columns">
-          <div class="column section__team-column">
+          <div class="column team__column">
             <div class="columns is-mobile">
               <%- include('./teammate.ejs', { idx: 12 }) %>
               <%- include('./teammate.ejs', { idx: 13 }) %>
               <%- include('./teammate.ejs', { idx: 14 }) %>
             </div>
           </div>
-          <div class="column section__team-column">
+          <div class="column team__column">
             <div class="columns is-mobile">
               <%- include('./teammate.ejs', { idx: 15 }) %>
               <%- include('./teammate.ejs', { idx: 16 }) %>
@@ -210,69 +215,70 @@
           </div>
         </div>
         <div class="columns">
-          <div class="column section__team-column">
+          <div class="column team__column">
             <div class="columns is-mobile">
               <%- include('./teammate.ejs', { idx: 18 }) %>
-              <div class="column section__teammate"></div>
-              <div class="column section__teammate"></div>
+              <div class="column teammate"></div>
+              <div class="column teammate"></div>
             </div>
           </div>
-          <div class="column section__team-column"></div>
+          <div class="column team__column"></div>
         </div>
 
       </div>
 
-      <div class="label__team-special-thanks">
+      <div class="team__special-thanks">
         А&nbsp;таксама выражаем падзяку <b>Ганне Бучко</b> (лагатып) і&nbsp;<b>Даніілу Пячэнка</b> (саўндтрэк да&nbsp;лекцый).
       </div>
     </div>
 
-    <div class="label__subsection-heading">Нас падтрымліваюць</div>
+    <div class="secondary-content__section partners">
+      <div class="secondary-content__section-heading">Нас падтрымліваюць</div>
 
-    <div class="section__partners">
-      <div class="columns section__partners-columns">
-        <div class="column section__partner-logo">
+      <div class="columns partners__columns">
+        <div class="column partner">
           <a href="http://shafa-minsk.by/" target="_blank" rel="noreferrer noopener">
-            <img class="image__partner-logo image__partner-logo--smallest" src="https://res.cloudinary.com/wir-by/image/upload/c_scale,w_250,f_auto,q_auto/v1546529672/production/partners-logos/shafa_logo.jpg" alt="Лагатып Кніжнай Шафы" />
+            <img class="partner__logo partner__logo--size--smallest" src="https://res.cloudinary.com/wir-by/image/upload/c_scale,w_250,f_auto,q_auto/v1546529672/production/partners-logos/shafa_logo.jpg" alt="Лагатып Кніжнай Шафы" />
           </a>
         </div>
-        <div class="column section__partner-logo">
+        <div class="column partner">
           <a href="http://www.artmuseum.by/by/" target="_blank" rel="noreferrer noopener">
-            <img class="image__partner-logo" src="https://res.cloudinary.com/wir-by/image/upload/c_scale,w_250,f_auto,q_auto/v1546529671/production/partners-logos/mastacki_logo.jpg" alt="Лагатып Нацыяльнага Мастацкага Музея" />
+            <img class="partner__logo" src="https://res.cloudinary.com/wir-by/image/upload/c_scale,w_250,f_auto,q_auto/v1546529671/production/partners-logos/mastacki_logo.jpg" alt="Лагатып Нацыяльнага Мастацкага Музея" />
           </a>
         </div>
-        <div class="column section__partner-logo">
+        <div class="column partner">
           <a href="http://minsklingfest.by/" target="_blank" rel="noreferrer noopener">
-            <img class="image__partner-logo image__partner-logo--smallest" src="https://res.cloudinary.com/wir-by/image/upload/c_scale,w_250,f_auto,q_auto/v1546529671/production/partners-logos/festyval_mou_logo.jpg" alt="Лагатып Фестываля Моў у Мінску" />
+            <img class="partner__logo partner__logo--size--smallest" src="https://res.cloudinary.com/wir-by/image/upload/c_scale,w_250,f_auto,q_auto/v1546529671/production/partners-logos/festyval_mou_logo.jpg" alt="Лагатып Фестываля Моў у Мінску" />
           </a>
         </div>
       </div>
-      <div class="columns section__partners-columns">
-        <div class="column section__partner-logo">
+      <div class="columns partners__columns">
+        <div class="column partner">
           <a href="https://vk.com/massaraksh_minsk" target="_blank" rel="noreferrer noopener">
-            <img class="image__partner-logo image__partner-logo--smallest" src="https://res.cloudinary.com/wir-by/image/upload/c_scale,w_250,f_auto,q_auto/v1546529671/production/partners-logos/masaraksh_logo.jpg" alt="Лагатып суполкі Масаракш Мінск" />
+            <img class="partner__logo partner__logo--size--smallest" src="https://res.cloudinary.com/wir-by/image/upload/c_scale,w_250,f_auto,q_auto/v1546529671/production/partners-logos/masaraksh_logo.jpg" alt="Лагатып суполкі Масаракш Мінск" />
           </a>
         </div>
-        <div class="column section__partner-logo">
+        <div class="column partner">
           <a href="https://ethno.by" target="_blank" rel="noreferrer noopener">
-            <img class="image__partner-logo" src="https://res.cloudinary.com/wir-by/image/upload/c_scale,w_250,f_auto,q_auto/v1546529671/production/partners-logos/ethno_logo.jpg" alt="Лагатып Этнаўсё" />
+            <img class="partner__logo" src="https://res.cloudinary.com/wir-by/image/upload/c_scale,w_250,f_auto,q_auto/v1546529671/production/partners-logos/ethno_logo.jpg" alt="Лагатып Этнаўсё" />
           </a>
         </div>
-        <div class="column section__partner-logo">
+        <div class="column partner">
           <a href="https://libra-gallery.by" target="_blank" rel="noreferrer noopener">
-            <img class="image__partner-logo" src="https://res.cloudinary.com/wir-by/image/upload/c_scale,w_250,f_auto,q_auto/v1546529671/production/partners-logos/libra_logo.png" alt="Лагатып галерэі Libra" />
+            <img class="partner__logo" src="https://res.cloudinary.com/wir-by/image/upload/c_scale,w_250,f_auto,q_auto/v1546529671/production/partners-logos/libra_logo.png" alt="Лагатып галерэі Libra" />
           </a>
         </div>
-        <div class="column section__partner-logo">
+        <div class="column partner">
           <a href="http://brouka.museum.by/" target="_blank" rel="noreferrer noopener">
-            <img class="image__partner-logo image__partner-logo--smaller" src="https://res.cloudinary.com/wir-by/image/upload/c_scale,w_250,f_auto,q_auto/v1546529671/production/partners-logos/museum_brouka_logo.jpg" alt="Лагатып Літаратурнага музея Пятруся Броўкі" />
+            <img class="partner__logo partner__logo--size--smaller" src="https://res.cloudinary.com/wir-by/image/upload/c_scale,w_250,f_auto,q_auto/v1546529671/production/partners-logos/museum_brouka_logo.jpg" alt="Лагатып Літаратурнага музея Пятруся Броўкі" />
           </a>
         </div>
       </div>
+
     </div>
 
-    <div class="section__text-description">
-      <div class="label__subsection-heading">Планы на&nbsp;бліжэйшы час</div>
+    <div class="secondary-content__section text-description">
+      <div class="secondary-content__section-heading">Планы на&nbsp;бліжэйшы час</div>
       <ul>
         <li>
             Запусціць сайт узімку 2019&nbsp;года.
@@ -290,8 +296,10 @@
             Адзняць новыя відэалекцыі (2-3&nbsp;цыклы).
         </li>
       </ul>
+    </div>
 
-      <div class="label__subsection-heading">Далейшыя планы</div>
+    <div class="secondary-content__section text-description">
+      <div class="secondary-content__section-heading">Далейшыя планы</div>
       <ul>
         <li>
             Рабіць і&nbsp;апрацоўваць новыя відэалекцыі і&nbsp;падкасты.
@@ -311,37 +319,35 @@
       </ul>
     </div>
 
-    <div class="section__stickers">
-      <div class="section__stickers-controls">
-        <div class="label__stickers-header">
+    <div class="stickers">
+      <div class="stickers__content">
+        <div class="stickers__header">
           А&nbsp;пакуль што прапануем усталяваць вам нашыя стыкеры са&nbsp;Скарынам ;)
         </div>
-        <a class="button__stickers-install" href="https://t.me/addstickers/skarynawirby" target="_blank" rel="noreferrer noopener">
+        <a class="stickers__button-install" href="https://t.me/addstickers/skarynawirby" target="_blank" rel="noreferrer noopener">
           Усталяваць
         </a>
       </div>
-      <div class="section__stickers-image">
-        <img class="image__stickers-skaryna" src="https://res.cloudinary.com/wir-by/image/upload/f_auto,q_auto/v1546106206/production/specials/skaryna-title-photo.svg" alt="Прыклад стыкера са Скарынам" />
+      <div class="stickers__image-container">
+        <img class="stickers__image" src="https://res.cloudinary.com/wir-by/image/upload/f_auto,q_auto/v1546106206/production/specials/skaryna-title-photo.svg" alt="Прыклад стыкера са Скарынам" />
       </div>
     </div>
 
-    <div class="section__footer">
-      <div class="section__follow-us">
-        <div class="label__footer-header">
+    <div class="footer">
+      <div class="footer__content">
+        <div class="footer__header">
           Сачыце за&nbsp;нашымі навінамі
         </div>
-        <div class="section__follow-us-links">
-          <a class="label__social-network-link" href="https://facebook.com/wirdotby"  target="_blank" rel="noreferrer noopener">Facebook</a>
-          <a class="label__social-network-link" href="https://instagram.com/wir_by"  target="_blank" rel="noreferrer noopener">Instagram</a>
-          <a class="label__social-network-link" href="https://twitter.com/wir_by"  target="_blank" rel="noreferrer noopener">Twitter</a>
-          <a class="label__social-network-link" href="https://vk.com/wir_by"  target="_blank" rel="noreferrer noopener">ВКонтакте</a>
-        </div>
+        <a class="footer__social-network-link" href="https://facebook.com/wirdotby"  target="_blank" rel="noreferrer noopener">Facebook</a>
+        <a class="footer__social-network-link" href="https://instagram.com/wir_by"  target="_blank" rel="noreferrer noopener">Instagram</a>
+        <a class="footer__social-network-link" href="https://twitter.com/wir_by"  target="_blank" rel="noreferrer noopener">Twitter</a>
+        <a class="footer__social-network-link" href="https://vk.com/wir_by"  target="_blank" rel="noreferrer noopener">ВКонтакте</a>
       </div>
-      <div class="section__contact-us">
-        <div class="label__footer-header">
+      <div class="footer__content">
+        <div class="footer__header">
           Скрыня для сувязі
         </div>
-        <a class="label__footer-contact-email" href="mailto:hello@wir.by">
+        <a href="mailto:hello@wir.by">
           hello@wir.by
         </a>
       </div>

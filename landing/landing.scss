@@ -51,6 +51,22 @@ a:visited {
       width: 50%;
     }
   }
+
+  &__arrow-down {
+    bottom: 1rem;
+    left: 50%;
+    position: absolute;
+    transform: translate(-50%, 0);
+
+    @include touch {
+      visibility: hidden;
+    }
+
+    img {
+      opacity: 0.3;
+      width: 2.5rem;
+    }
+  }
 }
 
 .project-overview {
@@ -122,36 +138,44 @@ a:visited {
   }
 }
 
-.section {
-  &__following {
-    margin: auto;
-    overflow: auto;
+.secondary-content {
+  margin: auto;
+  overflow: auto;
 
-    @include desktop {
-      width: 70%;
-    }
+  @include desktop {
+    width: 70%;
   }
 
-  &__text-description {
-    line-height: 1.42em;
-
-    ul {
-      list-style-position: outside;
-      padding-left: 1.5em;
-    }
+  &__section {
+    //
   }
 
-  &__team {
-    margin-bottom: 1rem;
-    margin-top: 1rem;
+  &__section-heading {
+    font-size: 1.6rem;
+    line-height: 1.35em;
+    margin: 2rem 0 1rem;
+  }
+}
 
-    @include desktop {
-      margin-bottom: 3rem;
-      margin-top: 3rem;
-    }
+.text-description {
+  line-height: 1.42em;
+
+  ul {
+    list-style-position: outside;
+    padding-left: 1.5em;
+  }
+}
+
+.team {
+  margin-bottom: 1rem;
+  margin-top: 1rem;
+
+  @include desktop {
+    margin-bottom: 3rem;
+    margin-top: 3rem;
   }
 
-  &__team-grid {
+  &__grid {
 
     @include tablet {
       width: 90%;
@@ -163,101 +187,40 @@ a:visited {
     }
   }
 
-  &__team-column {
+  &__column {
     padding: 0;
   }
 
-  &__partners {
-    margin-bottom: 3rem;
-    margin-top: 2rem;
-    width: 75%;
-  }
+  &__special-thanks {
+    padding-top: 0.5rem;
 
-  &__partners-columns {
+    @include desktop {
+      padding-top: 1.5rem;
+    }
+  }
+}
+
+.partners {
+  margin-bottom: 3rem;
+  margin-top: 2rem;
+
+  &__columns {
     margin: 0;
-    max-width: 100%;
+    width: 75%;
 
     @include desktop {
       margin: 1.5rem 0;
     }
   }
-
-  &__partner-logo {
-    box-sizing: border-box;
-    margin: auto;
-    padding: 0;
-    text-align: center;
-  }
-
-  &__stickers {
-    display: flex;
-    flex-direction: row;
-    overflow: auto;
-    padding-top: 5rem;
-
-    @include desktop {
-      width: 60%;
-    }
-
-    a:link,
-    a:visited {
-      color: $wirby-white;
-      text-decoration: none;
-    }
-  }
-
-  &__stickers-controls {
-    align-items: flex-start;
-    display: flex;
-    flex-direction: column;
-    padding: 1rem 0 1rem 1rem;
-    width: 55%;
-  }
-
-  &__stickers-image {
-    width: 45%;
-  }
-
-  &__footer {
-    display: flex;
-    flex-direction: column;
-    overflow: auto;
-    padding: 5rem 0;
-
-    @include desktop {
-      flex-direction: row;
-    }
-  }
-
-  &__follow-us {
-    flex-grow: 1;
-  }
-
-  &__contact-us {
-    flex-grow: 1;
-  }
 }
 
-.navigation {
-  &__arrow-down {
-    bottom: 1rem;
-    left: 50%;
-    position: absolute;
-    transform: translate(-50%, 0);
+.partner {
+  box-sizing: border-box;
+  margin: auto;
+  padding: 0;
+  text-align: center;
 
-    @include touch {
-      visibility: hidden;
-    }
-
-    img {
-      opacity: 0.3;
-      width: 2.5rem;
-    }
-  }
-}
-
-.image {
-  &__partner-logo {
+  &__logo {
     width: 60%;
 
     @include touch {
@@ -267,25 +230,69 @@ a:visited {
     @include desktop {
       width: 85%;
     }
-  }
 
-  &__partner-logo--smaller {
-    width: 50%;
+    &--size--smaller {
+      width: 50%;
 
-    @include desktop {
-      width: 75%;
+      @include desktop {
+        width: 75%;
+      }
+    }
+
+    &--size--smallest {
+      width: 45%;
+
+      @include desktop {
+        width: 60%;
+      }
     }
   }
+}
 
-  &__partner-logo--smallest {
+.stickers {
+  display: flex;
+  flex-direction: row;
+  overflow: auto;
+  padding-top: 5rem;
+
+  @include desktop {
+    width: 60%;
+  }
+
+  a:link,
+  a:visited {
+    color: $wirby-white;
+    text-decoration: none;
+  }
+
+  &__content {
+    align-items: flex-start;
+    display: flex;
+    flex-direction: column;
+    padding: 1rem 0 1rem 1rem;
+    width: 55%;
+  }
+
+  &__header {
+    color: $wirby-header-gray;
+    float: left;
+    font-size: 1.5rem;
+    padding-bottom: 2rem;
+  }
+
+  &__button-install {
+    background-color: $skaryna-stickers-color;
+    border-radius: 7px;
+    cursor: pointer;
+    display: inline-block;
+    padding: 0.5rem;
+  }
+
+  &__image-container {
     width: 45%;
-
-    @include desktop {
-      width: 60%;
-    }
   }
 
-  &__stickers-skaryna {
+  &__image {
     filter: brightness(90%);
     width: 100%;
 
@@ -295,29 +302,21 @@ a:visited {
   }
 }
 
-.label {
-  &__subsection-heading {
-    font-size: 1.6rem;
-    line-height: 1.35em;
-    margin: 2rem 0 1rem;
+.footer {
+  display: flex;
+  flex-direction: column;
+  overflow: auto;
+  padding: 5rem 0;
+
+  @include desktop {
+    flex-direction: row;
   }
 
-  &__team-special-thanks {
-    padding-top: 0.5rem;
-
-    @include desktop {
-      padding-top: 1.5rem;
-    }
+  &__content {
+    flex-grow: 1;
   }
 
-  &__stickers-header {
-    color: $wirby-header-gray;
-    float: left;
-    font-size: 1.5rem;
-    padding-bottom: 2rem;
-  }
-
-  &__footer-header {
+  &__header {
     color: $wirby-header-gray;
     font-size: 1.7rem;
     padding: 1rem 0;
@@ -329,15 +328,5 @@ a:visited {
     @include desktop {
       padding-right: 1rem;
     }
-  }
-}
-
-.button {
-  &__stickers-install {
-    background-color: $skaryna-stickers-color;
-    border-radius: 7px;
-    cursor: pointer;
-    display: inline-block;
-    padding: 0.5rem;
   }
 }
