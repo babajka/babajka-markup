@@ -1,0 +1,26 @@
+<div class="babajka-dropdown dropdown is-active size-<%= locals.size %>">
+  <div class="babajka-dropdown__trigger dropdown-trigger">
+    <div class="control has-icons-right">
+      <div class="input">Apple</div>
+      <span class="icon is-small is-right">
+        <span class="babajka-dropdown-clear">×</span>
+        <i class="fa fa-angle-down" aria-hidden="true"></i>
+      </span>
+    </div>
+  </div>
+  <% if (locals.opened) { %>
+    <div class="babajka-dropdown-menu dropdown-menu" role="menu">
+      <ul class="babajka-dropdown-content dropdown-content">
+        <li class="dropdown-item">
+          Banana
+        </li>
+        <li class="dropdown-item is-active">
+          Apple
+        </li>
+        <li class="dropdown-item">
+          Orange
+        </li>
+      </ul>
+    </div>
+  <% } %>
+</div>

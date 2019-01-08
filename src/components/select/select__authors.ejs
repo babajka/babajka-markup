@@ -1,0 +1,23 @@
+<div class="babajka-dropdown dropdown is-active">
+  <div class="babajka-dropdown__trigger dropdown-trigger">
+    <div class="control has-icons-right">
+      <input class="babajka-dropdown-input input" placeholder="Choose author..." />
+      <span class="icon is-small is-right">
+        <i class="fa fa-angle-up" aria-hidden="true"></i>
+      </span>
+    </div>
+  </div>
+  <div class="babajka-dropdown-menu dropdown-menu" role="menu">
+    <ul class="babajka-dropdown-content dropdown-content">
+      <li class="dropdown-item">
+        <%- include('./author.ejs', { name: 'Lavon Volski', photo: 'mock/volski.jpg' }) %>
+      </li>
+      <li class="dropdown-item">
+        <%- include('./author.ejs', { name: 'Вальжына Морт', photo: 'mock/mort.jpg' }) %>
+      </li>
+      <li class="dropdown-item is-active">
+        <%- include('./author.ejs', { name: 'Вайцюшкевіч', photo: 'mock/vajc.jpg' }) %>
+      </li>
+    </ul>
+  </div>
+</div>

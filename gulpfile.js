@@ -152,7 +152,7 @@ gulp.task('ejs:compile', () =>
 
 const lintHtml = () =>
   gulp
-    .src(`${config.buildPath}/**/*.html`)
+    .src(`${config.buildPath}/{,!(storybook)/**/}*.html`)
     .pipe(htmlhint('.htmlhintrc'))
     .pipe(htmlhint.reporter());
 
@@ -162,12 +162,6 @@ gulp.task('static:copy', () =>
   gulp
     .src(`${config.staticPath}/**/**/*`)
     .pipe(gulp.dest(`${config.buildPath}/${config.staticPath}`))
-);
-
-gulp.task('search-engines:copy', () =>
-  gulp
-    .src(`${config.staticPath}/search-engines/**/*`)
-    .pipe(gulp.dest(`${config.buildPath}/${config.staticPath}/search-engines`))
 );
 
 gulp.task('ejs:watch', done => {

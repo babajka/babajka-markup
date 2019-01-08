@@ -1,3 +1,10 @@
+## [1.1.2](https://github.com/babajka/babajka-markup/compare/v1.1.1...v1.1.2) (2019-01-08)
+
+
+### Bug Fixes
+
+* **tools:** add storybook, add eslint config [[#55](https://github.com/babajka/babajka-markup/issues/55)] ([e9110c0](https://github.com/babajka/babajka-markup/commit/e9110c0))
+
 ## [1.1.1](https://github.com/babajka/babajka-markup/compare/v1.1.0...v1.1.1) (2019-01-05)
 
 

@@ -8,5 +8,7 @@ module.exports = {
   rules: {
     // prettier overrides
     'prettier/prettier': 'error',
+
+    'import/no-extraneous-dependencies': 'off',
   },
 };
