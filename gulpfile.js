@@ -17,7 +17,24 @@ const ejs = require('gulp-ejs');
 const htmlhint = require('gulp-htmlhint');
 const plumber = require('gulp-plumber');
 
-const templateVariables = JSON.parse(fs.readFileSync('./src/templateVariables.json', 'utf8'));
+const { PORT, BABAJKA_LEGACY, BABAJKA_PREFIX } = process.env;
+
+const config = {
+  libsPath: 'node_modules',
+  buildPath: BABAJKA_LEGACY ? 'dist-legacy' : 'dist',
+  stylesPath: 'styles',
+  fontsPath: 'fonts',
+  imagesPath: 'images',
+  landingPath: 'landing',
+  srcPath: BABAJKA_LEGACY ? 'legacy' : 'src',
+  staticPath: 'static',
+  stubsPath: 'stubs',
+};
+
+const templateVariables = JSON.parse(
+  fs.readFileSync(`./${config.srcPath}/templateVariables.json`, 'utf8')
+);
+const landingVariables = JSON.parse(fs.readFileSync(`./landing/templateVariables.json`, 'utf8'));
 const teammateImageScaleOptions = 'c_scale,w_240';
 const rawTeam = JSON.parse(fs.readFileSync('./data/team.json', 'utf8'));
 const team = rawTeam.map(teammate => ({
@@ -25,20 +42,18 @@ const team = rawTeam.map(teammate => ({
   imageUrl: teammate.imageUrl.replace('upload/', `upload/${teammateImageScaleOptions}/`),
 }));
 
-const port = process.env.PORT || 3001;
-const pathPrefix = (process.env.BABAJKA_PREFIX && `/${process.env.BABAJKA_PREFIX}`) || '';
-
-const config = {
-  libsPath: 'node_modules',
-  buildPath: 'dist',
-  stylesPath: 'styles',
-  fontsPath: 'fonts',
-  imagesPath: 'images',
-  landingPath: 'landing',
-  srcPath: 'src',
-  staticPath: 'static',
-  stubsPath: 'stubs',
+const getPrefix = () => {
+  if (BABAJKA_PREFIX && BABAJKA_LEGACY) {
+    return `/${BABAJKA_PREFIX}/legacy`;
+  }
+  if (BABAJKA_PREFIX) {
+    return `/${BABAJKA_PREFIX}`;
+  }
+  return '';
 };
+
+const port = PORT || 3001;
+const pathPrefix = getPrefix();
 
 const allSass = [
   `${config.srcPath}/**/*.scss`,
@@ -146,7 +161,8 @@ gulp.task('fa:fonts', () =>
 gulp.task('ejs:compile', () =>
   gulp
     .src(allEjs)
-    .pipe(ejs(templateVariables, {}, { ext: '.html' }).on('error', log))
+    // TODO: remove `landingVariables`
+    .pipe(ejs({ ...landingVariables, ...templateVariables }, {}, { ext: '.html' }).on('error', log))
     .pipe(gulp.dest(config.buildPath))
 );
 

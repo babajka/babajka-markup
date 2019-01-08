@@ -4,7 +4,7 @@ import { text, boolean } from '@storybook/addon-knobs';
 import render from './tile.ejs';
 import './tile.scss';
 
-const tile = storiesOf('Tile', module);
+const tile = storiesOf('legacy/Tile', module);
 tile.add('playground', ({ parameters: { defaultData } }) => {
   const isUnpublished = boolean('unpublished', true);
   const isDraft = boolean('draft', true);

@@ -13,7 +13,7 @@ import './author.scss';
 const render = withIncludes({ './author.ejs': renderAuthor });
 const wrapper = content => `<div style="margin: 30px">${content}</div>`;
 
-const selectStories = storiesOf('Select', module);
+const selectStories = storiesOf('legacy/Select', module);
 selectStories.add('author', ({ parameters: { defaultData } }) => {
   const name = text('name', 'Lavon Volski');
   const photo = text('photo', 'mock/volski.jpg');

@@ -3,8 +3,11 @@
   "version": "1.1.2",
   "description": "Markups",
   "scripts": {
-    "start": "cross-env PORT=3001 npm run watch",
-    "build": "gulp build && npm run storybook:build",
+    "clean": "rm -rf dist",
+    "start": "npm run clean && cross-env PORT=3001 npm run watch",
+    "start:legacy": "cross-env BABAJKA_LEGACY=true npm start",
+    "build": "npm run clean && gulp build",
+    "build:legacy": "cross-env BABAJKA_LEGACY=true gulp build",
     "watch": "gulp watch",
     "lint": "gulp lint && npm run eslint .",
     "deploy": "sh bin/deploy.sh",
