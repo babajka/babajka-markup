@@ -1,0 +1,22 @@
+<aside class="sidebar">
+  <ul class="langs">
+    <% for(var i = 0; i < locals.langs.length; i ++) { %>
+      <li class="langs__item">
+          <a><%= locals.langs[i] %></a>
+      </li>
+   <% } %>
+  </ul>
+
+  <div class="divider"></div>
+
+  <section class="section">
+    <div class="section__title">
+        <%= locals.topicsTitle %>
+    </div>
+    <ul class="section__list">
+        <% for(var i = 0; i < locals.topics.length; i ++) { %>
+          <li><a><%= locals.topics[i] %></a></li>
+       <% } %>
+    </ul>
+  </section>
+</aside>

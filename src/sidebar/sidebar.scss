@@ -1,0 +1,41 @@
+@import '../../legacy/variables';
+
+.sidebar {
+  background-color: #f2f2f2; // ?
+  min-width: 240px;
+  padding: 21px 24px;
+  width: 240px;
+
+  .langs {
+    color: #1a9582;
+    font-size: 14px;
+    letter-spacing: 1px;
+    line-height: 24px;
+    text-transform: uppercase;
+  }
+
+  .divider {
+    border: 0.25px solid #000000;
+  }
+
+  .section {
+    margin: 60px 0;
+    padding: 0;
+
+    .section__title {
+      color: #000000;
+      font-size: 14px;
+      letter-spacing: 1px;
+      line-height: 24px;
+      margin-bottom: 9px;
+      text-transform: uppercase;
+    }
+
+    .section__list {
+      color: #1a9582;
+      font-size: 20px;
+      line-height: 36px;
+      text-transform: capitalize;
+    }
+  }
+}
