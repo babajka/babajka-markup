@@ -7,16 +7,79 @@
    <% } %>
   </ul>
 
+  <div class="about">
+    <a>аб праекце</a>
+    <span class="icon is-pulled-right">
+      <i class="fa fa-user"></i>
+    </span>
+  </div>
+
+  <div class="field search">
+    <p class="control has-icons-left">
+      <input class="input">
+      <span class="icon is-left">
+        <i class="fa fa-search"></i>
+      </span>
+    </p>
+  </div>
+
+  <section class="section">
+    <ul class="list">
+      <li class="list__item"><a>Топ-10</a></li>
+      <li class="list__item"><a>Самае актуальнае</a></li>
+      <li class="list__item"><a>&lt5 хвілін на прагляд</a></li>
+    </ul>
+  </section>
+
+  <div class="divider"></div>
+
+  <section class="section">
+    <ul class="list">
+      <li class="list__item"><a>Артыкулы</a></li>
+      <li class="list__item"><a>Відэалекцыі</a></li>
+      <li class="list__item"><a>падкасты</a></li>
+      <li class="list__item"><a>гульні і тэсты</a></li>
+    </ul>
+  </section>
+
   <div class="divider"></div>
 
   <section class="section">
     <div class="section__title">
         <%= locals.topicsTitle %>
     </div>
-    <ul class="section__list">
+    <ul class="list">
         <% for(var i = 0; i < locals.topics.length; i ++) { %>
-          <li><a><%= locals.topics[i] %></a></li>
+          <li class="list__item"><a><%= locals.topics[i] %></a></li>
        <% } %>
+    </ul>
+  </section>
+
+  <div class="divider"></div>
+
+  <section class="section">
+    <div class="section__title">
+        <%= locals.peopleTitle %>
+    </div>
+    <ul class="list">
+        <% for(var i = 0; i < locals.people.length; i ++) { %>
+          <li class="list__item"><a><%= locals.people[i] %></a></li>
+       <% } %>
+       <li class="list__item-all"><a>усе персаналіі</a></li>
+    </ul>
+  </section>
+
+  <div class="divider"></div>
+
+  <section class="section">
+    <div class="section__title">
+        <%= locals.timeTitle %>
+    </div>
+    <ul class="list">
+        <% for(var i = 0; i < locals.times.length; i ++) { %>
+          <li class="list__item"><a><%= locals.times[i] %></a></li>
+       <% } %>
+       <li class="list__item-all"><a>усе храналогія</a></li>
     </ul>
   </section>
 </aside>

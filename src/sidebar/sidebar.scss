@@ -1,21 +1,33 @@
-@import '../../legacy/variables';
+@import '../variables';
 
 .sidebar {
   background-color: #f2f2f2; // ?
+  font-family: Ubuntu;
+  font-size: 14px;
+  letter-spacing: 1px;
+  line-height: 24px;
   min-width: 240px;
   padding: 21px 24px;
   width: 240px;
 
   .langs {
-    color: #1a9582;
-    font-size: 14px;
-    letter-spacing: 1px;
-    line-height: 24px;
+    color: $primary;
+    margin-bottom: 38px;
     text-transform: uppercase;
   }
 
+  .about {
+    margin-bottom: 43px;
+    text-transform: uppercase;
+
+    .icon {
+      color: $primary;
+      font-size: 20px;
+    }
+  }
+
   .divider {
-    border: 0.25px solid #000000;
+    border: 0.5px solid #b5b5b5;
   }
 
   .section {
@@ -23,19 +35,26 @@
     padding: 0;
 
     .section__title {
-      color: #000000;
-      font-size: 14px;
-      letter-spacing: 1px;
-      line-height: 24px;
+      color: black;
       margin-bottom: 9px;
       text-transform: uppercase;
     }
 
-    .section__list {
-      color: #1a9582;
+    .list {
+      color: $primary;
       font-size: 20px;
       line-height: 36px;
+    }
+
+    .list__item::first-letter {
       text-transform: capitalize;
+    }
+
+    .list__item-all {
+      font-size: 14px;
+      line-height: 24px;
+      margin-top: 30px;
+      text-transform: uppercase;
     }
   }
 }

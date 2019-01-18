@@ -1,0 +1,60 @@
+// Import the initial variables
+@import '../node_modules/bulma/sass/utilities/initial-variables';
+@import '../node_modules/bulma/sass/utilities/mixins';
+
+// Primary pallete
+// https://coolors.co/ae42ff-d1caca-44494d-ff5e42-9a9d9f
+$primary: #1a9582;
+$primary-opaqued: rgba(26, 149, 130, 0.5);
+$primary-bright: #06c5df;
+$primary-gray-alt: #b8b8b8;
+$primary-heliotrope: #82e0dd;
+$primary-mako: #44494d;
+$primary-swiss-coffee: #dfe0da;
+$primary-gray: #f2f2f2;
+$primary-darkgray: #808080;
+$primary-black: #000000;
+$primary-white: #ffffff;
+
+// Links
+$link: $primary !default;
+$link-focus-border: $primary !default;
+
+// Add a serif family
+$family-serif: 'Lora', serif;
+$family-arial: 'Roboto Condensed', sans-serif;
+$family-navbar: 'Open Sans', sans-serif;
+$tile-primary-text: 'Cormorant', serif;
+$tile-secondary-text: 'Open Sans', sans-serif;
+
+// Generated with http://chir.ag/projects/name-that-color
+$punch: #dd4b39;
+$chambray: #3b5998;
+$wedgewood: #4c75a3;
+$picton-blue: #55acee;
+
+// Set the derived variables
+$success: $primary-heliotrope;
+$info: $picton-blue;
+// Use the existing orange as the danger color
+$danger: #bb0000;
+// Use the new serif family
+$family-primary: $family-arial;
+
+$abbey: rgba(255, 255, 255, 0.9);
+
+$special-color: #032967;
+
+// Social networks official colors
+$facebook-color: #3b5998;
+$vk-color: #45668e;
+$twitter-color: #1da1f2;
+$google-plus-color: #d34836;
+$instagram-color: #517fa4;
+$telegram-color: #0088cc;
+$youtube-color: #bb0000;
+
+$socialweekend-color: #0fabdd;
+
+$mobile: 768px;
+$intermediate: 1120px;
