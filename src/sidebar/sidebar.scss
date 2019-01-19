@@ -37,25 +37,28 @@
     margin: 60px 0;
     padding: 0;
 
-    .section__title {
+    &__title {
       color: black;
       margin-bottom: 9px;
       text-transform: uppercase;
     }
 
-    .list {
+    &__list {
       color: $primary;
       font-size: 20px;
-      line-height: 36px;
     }
 
-    .list__item::first-letter {
-      text-transform: capitalize;
+    &__list-item {
+      padding: 6px 0;
+
+      &::first-letter {
+        text-transform: capitalize;
+      }
     }
 
-    .list__item-all {
+    &__link-to-all {
+      display: inline-block;
       font-size: 14px;
-      line-height: 24px;
       margin-top: 30px;
       text-transform: uppercase;
     }

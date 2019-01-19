@@ -19,21 +19,21 @@
   <%- include ../input/input.ejs %>
 
   <section class="section">
-    <ul class="list">
-      <li class="list__item"><a>Топ-10</a></li>
-      <li class="list__item"><a>Самае актуальнае</a></li>
-      <li class="list__item"><a>&lt5 хвілін на прагляд</a></li>
+    <ul class="section__list">
+      <li class="section__list-item"><a>Топ-10</a></li>
+      <li class="section__list-item"><a>Самае актуальнае</a></li>
+      <li class="section__list-item"><a>&lt5 хвілін на прагляд</a></li>
     </ul>
   </section>
 
   <div class="divider"></div>
 
   <section class="section">
-    <ul class="list">
-      <li class="list__item"><a>Артыкулы</a></li>
-      <li class="list__item"><a>Відэалекцыі</a></li>
-      <li class="list__item"><a>падкасты</a></li>
-      <li class="list__item"><a>гульні і тэсты</a></li>
+    <ul class="section__list">
+      <li class="section__list-item"><a>Артыкулы</a></li>
+      <li class="section__list-item"><a>Відэалекцыі</a></li>
+      <li class="section__list-item"><a>падкасты</a></li>
+      <li class="section__list-item"><a>гульні і тэсты</a></li>
     </ul>
   </section>
 
@@ -41,11 +41,11 @@
 
   <section class="section">
     <div class="section__title">
-        <%= locals.topicsTitle %>
+      тэмы
     </div>
-    <ul class="list">
+    <ul class="section__list">
         <% for(var i = 0; i < locals.topics.length; i ++) { %>
-          <li class="list__item"><a><%= locals.topics[i] %></a></li>
+          <li class="section__list-item"><a><%= locals.topics[i] %></a></li>
        <% } %>
     </ul>
   </section>
@@ -54,13 +54,54 @@
 
   <section class="section">
     <div class="section__title">
-        <%= locals.peopleTitle %>
+      асноўныя персаналіі
     </div>
-    <ul class="list">
+    <ul class="section__list">
         <% for(var i = 0; i < locals.people.length; i ++) { %>
-          <li class="list__item"><a><%= locals.people[i] %></a></li>
+          <li class="section__list-item"><a><%= locals.people[i] %></a></li>
        <% } %>
-       <li class="list__item-all"><a>усе персаналіі</a></li>
+    </ul>
+    <span class="section__link-to-all"><a>усе персаналіі</a></span>
+  </section>
+
+  <div class="divider"></div>
+
+  <section class="section">
+    <div class="section__title">
+      асноўныя часы
+    </div>
+    <ul class="section__list">
+        <% for(var i = 0; i < locals.times.length; i ++) { %>
+          <li class="section__list-item"><a><%= locals.times[i] %></a></li>
+       <% } %>
+    </ul>
+    <span class="section__link-to-all"><a>уся храналогія</a></span>
+  </section>
+
+  <div class="divider"></div>
+
+  <section class="section">
+    <div class="section__title">
+      асноўныя лакацыі
+    </div>
+    <ul class="section__list">
+        <% for(var i = 0; i < locals.locations.length; i ++) { %>
+          <li class="section__list-item"><a><%= locals.locations[i] %></a></li>
+       <% } %>
+    </ul>
+    <span class="section__link-to-all"><a>усе лакацыі</a></span>
+  </section>
+
+  <div class="divider"></div>
+
+  <section class="section">
+    <div class="section__title">
+      матэрыялы партнераў
+    </div>
+    <ul class="section__list">
+        <% for(var i = 0; i < locals.partners.length; i ++) { %>
+          <li class="section__list-item"><a><%= locals.partners[i] %></a></li>
+       <% } %>
     </ul>
   </section>
 
@@ -68,13 +109,13 @@
 
   <section class="section">
     <div class="section__title">
-        <%= locals.timeTitle %>
+      папулярныя аўтары
     </div>
-    <ul class="list">
-        <% for(var i = 0; i < locals.times.length; i ++) { %>
-          <li class="list__item"><a><%= locals.times[i] %></a></li>
+    <ul class="section__list">
+        <% for(var i = 0; i < locals.authors.length; i ++) { %>
+          <li class="section__list-item"><a><%= locals.authors[i] %></a></li>
        <% } %>
-       <li class="list__item-all"><a>усе храналогія</a></li>
     </ul>
+    <span class="section__link-to-all"><a>уся каманда wir.by</a></span>
   </section>
 </aside>
