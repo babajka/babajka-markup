@@ -31,4 +31,4 @@ deploy:
   script:
   - rsync -r --delete-after --quiet $TRAVIS_BUILD_DIR/dist wir-dev@dev.wir.by:/home/wir-dev/deployed/markup/
   on:
-    branch: master
+    branch: develop

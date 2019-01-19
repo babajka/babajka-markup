@@ -2,7 +2,6 @@ module.exports = {
   verifyConditions: [
     '@semantic-release/changelog',
     '@semantic-release/git',
-    '@semantic-release/npm',
     '@semantic-release/github',
   ],
   analyzeCommits: {
@@ -16,11 +15,16 @@ module.exports = {
   },
   prepare: [
     '@semantic-release/changelog',
-    '@semantic-release/npm',
+    {
+      path: '@semantic-release/npm',
+      npmPublish: false,
+    },
     {
       path: '@semantic-release/git',
       assets: ['package.json', 'package-lock.json', 'CHANGELOG.md'],
       message: '${nextRelease.version} release [skip ci]',
     },
   ],
+  success: ['@semantic-release/github'],
+  fail: ['@semantic-release/github'],
 };
