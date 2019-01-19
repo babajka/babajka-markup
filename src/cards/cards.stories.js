@@ -1,15 +1,17 @@
 import { storiesOf } from '@storybook/html';
-import { select, color, boolean, text } from '@storybook/addon-knobs';
+import { select, color, boolean, text, number } from '@storybook/addon-knobs';
 import { withViewport } from '@storybook/addon-viewport';
 
 import renderArticle from './article.ejs';
 import './article.scss';
+import renderCollection from './collection.ejs';
+import './collection.scss';
 
 const wrapper = content => `<div style="margin: 10px">${content}</div>`;
 
 const cards = storiesOf('Cards', module).addDecorator(withViewport());
 cards.add('Article', ({ parameters: { defaultData } }) => {
-  const size = select('size', ['xxl', 'xl', 'l', 'm', 'square-m', 'square-s', 's', 'xs'], 'xxl');
+  const size = select('size', ['xxl', 'xl', 'l', 'm', 'square-m', 'square-s'], 'xxl');
   const backgroundColor = color('backgroundColor', '#1a2e48');
   const isDarkTheme = boolean('isDarkTheme', false);
   const title = text('title', 'Як прыгатаваць мову ВКЛ?');
@@ -30,4 +32,27 @@ cards.add('Article', ({ parameters: { defaultData } }) => {
   };
 
   return wrapper(renderArticle(data));
+});
+
+cards.add('Collection', ({ parameters: { defaultData } }) => {
+  const size = select('size', ['xxl', 'xl', 'l', 'm', 'square-m', 'square-s'], 'xxl');
+  const backgroundColor = color('backgroundColor', '#F6D39D');
+  const isDarkTheme = boolean('isDarkTheme', true);
+  const partNumber = number('partNumber', 1);
+  const collectionName = text('seriesName', 'Міцкевіч: геаграфія паэта');
+  const title = text('title', 'Літва! Ты, як здароўе ў нас, мая Айчына!');
+  const author = text('author', 'Марыя Бадзей');
+
+  const data = {
+    ...defaultData,
+    size,
+    backgroundColor,
+    isDarkTheme,
+    partNumber,
+    collectionName,
+    title,
+    author,
+  };
+
+  return wrapper(renderCollection(data));
 });

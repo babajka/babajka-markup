@@ -1,0 +1,34 @@
+<div class="size-<%= locals.size %>">
+  <style>
+    .collection {
+      background-color: <%= locals.backgroundColor %>;
+    }
+  </style>
+  <div class="collection <% if (locals.isDarkTheme) { %>theme-dark<% } %>">
+    <% if (!['square-m', 'square-s'].includes(locals.size)) { %>
+      <div class="collection__cover">
+        <img
+          src="<%= imagesPath %>/mock/covers/<% if(locals.size === 'm'){ %>collection-2<% } else{ %>collection-1<% } %>.png"
+          alt="Тут павінна быць вокладка артыкула"
+        />
+      </div>
+    <% } %>
+    <div class="collection__content">
+      <div class="collection__content-top">
+        <div class="collection__collection">
+          <%= locals.partNumber%> частка цыклу
+          <div class="collection__collection-name"><%= locals.collectionName %></div>
+        </div>
+        <img
+          class="collection__aux-image"
+          src="<%= imagesPath %>/mock/persons/mickiewicz.png"
+          alt="Фота аўтара"
+        />
+      </div>
+      <div class="collection__content-bottom">
+        <div class="collection__title"><%= locals.title %></div>
+        <div class="collection__author"><%= locals.author %></div>
+      </div>
+    </div>
+  </div>
+</div>

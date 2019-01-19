@@ -1,6 +1,6 @@
 @import '../index';
 
-.article {
+.collection {
   border-radius: 3px;
   color: #ffffff;
   display: flex;
@@ -17,6 +17,23 @@
     justify-content: space-between;
   }
 
+  &__content-top {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  &__collection-name {
+    font-weight: bold;
+  }
+
+  &__aux-image {
+    border-radius: 50%;
+    height: 68px;
+    margin-left: 24px;
+    min-width: 68px;
+  }
+
   &__title {
     font-weight: bold;
   }
@@ -25,24 +42,10 @@
     font-size: 14px;
     line-height: 21px;
   }
-
-  &__content-bottom {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-  }
-
-  &__read {
-    color: #0dc6aa;
-
-    &.theme-dark {
-      color: #1a9582;
-    }
-  }
 }
 
 .size-xxl {
-  .article {
+  .collection {
 
     @include xxl-sizes;
 
@@ -52,7 +55,12 @@
     }
 
     &__content {
-      padding: 30px 60px 66px 30px;
+      padding: 31px 58px 66px 30px;
+    }
+
+    &__collection {
+      font-size: 20px;
+      line-height: 36px;
     }
 
     &__title {
@@ -63,16 +71,11 @@
     &__author {
       margin-top: 24px;
     }
-
-    &__content-bottom {
-      font-size: 20px;
-      line-height: 36px;
-    }
   }
 }
 
 .size-xl {
-  .article {
+  .collection {
 
     @include xl-sizes;
 
@@ -82,7 +85,12 @@
     }
 
     &__content {
-      padding: 24px 62px 48px 23px;
+      padding: 25px 59px 42px 23px;
+    }
+
+    &__collection {
+      font-size: 20px;
+      line-height: 24px;
     }
 
     &__title {
@@ -93,16 +101,11 @@
     &__author {
       margin-top: 24px;
     }
-
-    &__content-bottom {
-      font-size: 14px;
-      line-height: 21px;
-    }
   }
 }
 
 .size-l {
-  .article {
+  .collection {
 
     @include l-sizes;
 
@@ -112,7 +115,12 @@
     }
 
     &__content {
-      padding: 28px 42px 42px 30px;
+      padding: 30px 40px 42px 30px;
+    }
+
+    &__collection {
+      font-size: 20px;
+      line-height: 27px;
     }
 
     &__title {
@@ -123,16 +131,11 @@
     &__author {
       margin-top: 18px;
     }
-
-    &__content-bottom {
-      font-size: 14px;
-      line-height: 21px;
-    }
   }
 }
 
 .size-m {
-  .article {
+  .collection {
 
     @include m-sizes;
 
@@ -142,7 +145,12 @@
     }
 
     &__content {
-      padding: 30px 30px 42px 24px;
+      padding: 30px 28px 42px 24px;
+    }
+
+    &__collection {
+      font-size: 14px;
+      line-height: 21px;
     }
 
     &__title {
@@ -153,77 +161,55 @@
     &__author {
       margin-top: 12px;
     }
-
-    &__content-bottom {
-      font-size: 14px;
-      line-height: 21px;
-    }
-
-    &__description {
-      display: none;
-    }
-  }
-}
-
-.square-article {
-  border-radius: 3px;
-  color: #ffffff;
-  display: flex;
-  flex-direction: column;
-
-  &.theme-dark {
-    color: #000000;
-  }
-
-  &__content {
-    align-items: center;
-    display: flex;
-    flex-direction: column;
-    height: 100%;
-    justify-content: flex-end;
-  }
-
-  &__title {
-    font-weight: bold;
-    text-align: center;
-  }
-
-  &__author {
-    font-size: 14px;
-    line-height: 21px;
-    margin-top: 5px;
-    text-align: center;
   }
 }
 
 .size-square-m {
-  .square-article {
+  .collection {
 
     @include square-m-sizes;
 
     &__content {
-      padding: 0 39px 42px;
+      padding: 25px 50px 42px 39px;
+    }
+
+    &__collection {
+      font-size: 14px;
+      line-height: 21px;
     }
 
     &__title {
       font-size: 30px;
       line-height: 36px;
     }
+
+    &__author {
+      margin-top: 12px;
+    }
   }
 }
 
 .size-square-s {
-  .square-article {
+  .collection {
 
     @include square-s-sizes;
 
     &__content {
-      padding: 0 5px 42px;
+      padding: 19px 29px 42px 30px;
+    }
+
+    &__collection {
+      font-size: 14px;
+      line-height: 21px;
     }
 
     &__title {
-      font-size: 20px;
-      line-height: 24px;
+      font-size: 30px;
+      line-height: 36px;
+    }
+
+    &__author {
+      margin-top: 12px;
     }
   }
 }
