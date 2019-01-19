@@ -1,14 +1,17 @@
-@import '../variables';
+@import '../index.scss';
 
 .sidebar {
-  background-color: #f2f2f2; // ?
-  font-family: Ubuntu;
+  background-color: $primary-concrete;
   font-size: 14px;
   letter-spacing: 1px;
   line-height: 24px;
   min-width: 240px;
   padding: 21px 24px;
   width: 240px;
+
+  .search {
+    margin-top: 30px;
+  }
 
   .langs {
     color: $primary;
@@ -17,7 +20,7 @@
   }
 
   .about {
-    margin-bottom: 43px;
+    margin-bottom: 12px;
     text-transform: uppercase;
 
     .icon {
@@ -27,7 +30,7 @@
   }
 
   .divider {
-    border: 0.5px solid #b5b5b5;
+    border: 0.5px solid $primary-grey;
   }
 
   .section {

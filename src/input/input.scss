@@ -1,0 +1,51 @@
+@import '../index.scss';
+
+.wir-input {
+  display: flex;
+  position: relative;
+
+  input {
+    background: inherit;
+    border: none;
+    flex-grow: 1;
+    font-size: 20px;
+    outline: none;
+
+    &:focus {
+      & ~ .wir-input__bar {
+        background-color: $primary;
+      }
+
+      & ~ .wir-input__icon {
+        color: $primary;
+      }
+    }
+
+    &:disabled {
+      & ~ .wir-input__bar {
+        background-color: $primary-grey;
+      }
+
+      & ~ .wir-input__icon {
+        color: $primary-grey;
+      }
+    }
+  }
+
+  &__icon {
+    color: black;
+    font-size: 20px;
+    margin-right: 11.5px;
+    order: -1;
+    transition: 150ms ease all;
+  }
+
+  &__bar {
+    background-color: black;
+    bottom: -10px;
+    height: 2px;
+    position: absolute;
+    transition: 150ms ease all;
+    width: 100%;
+  }
+}
