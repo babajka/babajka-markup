@@ -1,4 +1,4 @@
-@import '../index.scss';
+@import '../index';
 
 .sidebar {
   background-color: $primary-concrete;
@@ -38,7 +38,7 @@
     padding: 0;
 
     &__title {
-      color: black;
+      color: $primary-black;
       margin-bottom: 9px;
       text-transform: uppercase;
     }
