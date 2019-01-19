@@ -1,5 +1,6 @@
 import { configure, addDecorator, addParameters } from '@storybook/html';
 import { withKnobs } from '@storybook/addon-knobs';
+import { configureViewport } from '@storybook/addon-viewport';
 
 import './styles.scss';
 
@@ -18,4 +19,5 @@ addParameters({
   },
 });
 
+configureViewport();
 configure(loadStories, module);

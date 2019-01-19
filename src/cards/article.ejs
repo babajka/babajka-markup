@@ -1,0 +1,43 @@
+<div class="size-<%= locals.size %>">
+  <style>
+    .article,
+    .square-article {
+      background-color: <%= locals.backgroundColor %>;
+    }
+  </style>
+  <% if (['xxl', 'xl', 'l', 'm'].includes(locals.size)) { %>
+  <div class="article <% if (locals.isDarkTheme) { %>theme-dark<% } %>">
+    <div class="article__cover">
+      <img
+        src="<%= imagesPath %>/mock/covers/article-vertical.png"
+        alt="Тут павінна быць вокладка артыкула"
+      />
+    </div>
+    <div class="article__content">
+      <div>
+        <div class="article__title"><%= locals.title %></div>
+        <div class="article__author"><%= locals.author %></div>
+      </div>
+      <div class="article__content-bottom">
+        <span class="article__description"><%= locals.description %></span>
+        <span class="article__read <% if (locals.isDarkTheme) { %>theme-dark<% } %>"
+          >Чытаць<% if (locals.size === 'm') { %> артыкул<% } %></span
+        >
+      </div>
+    </div>
+  </div>
+  <% } %> <% if (['square-m', 'square-s'].includes(locals.size)) { %>
+  <div class="square-article <% if (locals.isDarkTheme) { %>theme-dark<% } %>">
+    <div class="square-article__cover">
+      <img
+        src="<%= imagesPath %>/mock/covers/article-horizontal.png"
+        alt="Тут павінна быць вокладка артыкула"
+      />
+    </div>
+    <div class="square-article__content">
+      <div class="square-article__title"><%= locals.title %></div>
+      <div class="square-article__author"><%= locals.author %></div>
+    </div>
+  </div>
+  <% } %>
+</div>

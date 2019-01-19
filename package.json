@@ -51,6 +51,7 @@
     "@semantic-release/changelog": "^3.0.0",
     "@semantic-release/git": "^7.0.4",
     "@storybook/addon-knobs": "^4.1.4",
+    "@storybook/addon-viewport": "^4.1.6",
     "@storybook/html": "^4.1.4",
     "babel-eslint": "^10.0.1",
     "babel-loader": "^8.0.4",
