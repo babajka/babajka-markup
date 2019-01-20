@@ -11,7 +11,7 @@ export const TOPICS = [
   'філасофія',
 ];
 
-export const PEOPLE = [
+export const PERSONS = [
   'Янка Купала',
   'Уладзімір Караткевіч',
   'Адам Міцкевіч',

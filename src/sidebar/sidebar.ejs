@@ -20,7 +20,7 @@
 
   <div class="divider"></div>
 
-  <%- include ../kit/input/input.ejs %>
+  <%- include('../kit/input/input.ejs', { leftIcon: 'search' }) %>
 
   <section class="section">
     <ul class="section__list">
@@ -61,8 +61,8 @@
       асноўныя персаналіі
     </div>
     <ul class="section__list">
-        <% for(var i = 0; i < locals.people.length; i ++) { %>
-          <li class="section__list-item"><a><%= locals.people[i] %></a></li>
+        <% for(var i = 0; i < locals.persons.length; i ++) { %>
+          <li class="section__list-item"><a><%= locals.persons[i] %></a></li>
        <% } %>
     </ul>
     <span class="section__link-to-all"><a>усе персаналіі</a></span>
