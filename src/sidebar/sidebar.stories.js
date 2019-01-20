@@ -7,8 +7,8 @@ import '../input/input.scss';
 
 import { TOPICS, PEOPLE, TIMES, LOCATIONS, PARTNERS, AUTHORS } from './staticData';
 
-const tile = storiesOf('src/Sidebar', module);
-tile.add('playground', ({ parameters: { defaultData } }) => {
+const sidebar = storiesOf('Sidebar', module);
+sidebar.add('playground', ({ parameters: { defaultData } }) => {
   const russianLang = text('russian lang text', 'по-русски');
   const englishLang = text('english lang text', 'in english');
 
