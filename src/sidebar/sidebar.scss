@@ -22,11 +22,12 @@
   .about {
     margin-bottom: 12px;
     text-transform: uppercase;
+  }
 
-    .icon {
-      color: $primary;
-      font-size: 20px;
-    }
+  .icon {
+    color: $primary;
+    cursor: pointer;
+    font-size: 20px;
   }
 
   .divider {
