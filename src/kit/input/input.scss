@@ -1,4 +1,4 @@
-@import '../index';
+@import '../../index';
 
 .wir-input {
   display: flex;
@@ -7,20 +7,23 @@
   &__icon {
     color: $primary-black;
     font-size: 20px;
-    transition: 150ms ease all;
+    margin: 5px 0 8px;
 
     &-left {
       margin-right: 11.5px;
       order: -1;
     }
+
+    &-right {
+      margin-left: 11.5px;
+    }
   }
 
   &__bar {
     background-color: $primary-black;
-    bottom: -10px;
+    bottom: 0;
     height: 2px;
     position: absolute;
-    transition: 150ms ease all;
     width: 100%;
   }
 
@@ -29,6 +32,8 @@
     border: 0;
     flex-grow: 1;
     font-size: 20px;
+    height: 30px;
+    margin: 5px 0 8px;
     min-width: 0;
     outline: none;
 

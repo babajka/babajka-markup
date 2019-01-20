@@ -3,7 +3,7 @@ import { text, array } from '@storybook/addon-knobs';
 
 import render from './sidebar.ejs';
 import './sidebar.scss';
-import '../input/input.scss';
+import '../kit/input/input.scss';
 
 import { TOPICS, PEOPLE, TIMES, LOCATIONS, PARTNERS, AUTHORS } from './staticData';
 

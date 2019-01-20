@@ -1,0 +1,14 @@
+<div class="wir-input search">
+  <input <% if (locals.isDisabled) { %>disabled<% } %>>
+  <% if (locals.hasLeftIcon) { %>
+    <span class="wir-input__icon wir-input__icon-left">
+      <i class="fa fa-search"></i>
+    </span>
+  <% } %>
+  <% if (locals.hasRightIcon) { %>
+    <span class="wir-input__icon wir-input__icon-right">
+      <i class="fa fa-arrow-right"></i>
+    </span>
+  <% } %>
+  <span class="wir-input__bar"></span>
+</div>
