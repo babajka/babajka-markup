@@ -17,6 +17,10 @@
     &-right {
       margin-left: 11.5px;
     }
+
+    &-loading {
+      animation: spin 1.5s linear infinite;
+    }
   }
 
   &__bar {
@@ -56,6 +60,16 @@
       &__icon {
         color: $primary-grey;
       }
+    }
+  }
+
+  @keyframes spin {
+    0% {
+      transform: rotate(0deg);
+    }
+
+    100% {
+      transform: rotate(360deg);
     }
   }
 }
