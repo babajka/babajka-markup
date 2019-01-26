@@ -5,6 +5,7 @@
   color: #ffffff;
   display: flex;
   flex-direction: row;
+  position: relative;
 
   &.theme-dark {
     color: #000000;
@@ -14,6 +15,10 @@
     height: 100%;
     object-fit: cover;
     width: 100%;
+  }
+
+  &__brand {
+    position: absolute;
   }
 
   &__content {
@@ -57,6 +62,13 @@
       min-width: 390px;
     }
 
+    &__brand {
+      height: 53px;
+      left: 49px;
+      top: 32px;
+      width: 118px;
+    }
+
     &__content {
       padding: 30px 60px 66px 30px;
     }
@@ -85,6 +97,13 @@
     &__cover-wrapper {
       max-width: 313px;
       min-width: 313px;
+    }
+
+    &__brand {
+      height: 42px;
+      left: 39px;
+      top: 26px;
+      width: 94px;
     }
 
     &__content {
@@ -117,6 +136,13 @@
       min-width: 240px;
     }
 
+    &__brand {
+      height: 33px;
+      left: 30px;
+      top: 36px;
+      width: 72px;
+    }
+
     &__content {
       padding: 28px 42px 42px 30px;
     }
@@ -145,6 +171,13 @@
     &__cover-wrapper {
       max-width: 186px;
       min-width: 186px;
+    }
+
+    &__brand {
+      height: 33px;
+      left: 30px;
+      top: 28px;
+      width: 72px;
     }
 
     &__content {
@@ -185,6 +218,14 @@
     height: 100%;
     object-fit: cover;
     width: 100%;
+  }
+
+  &__brand {
+    height: 33px;
+    left: 30px;
+    position: absolute;
+    top: 30px;
+    width: 72px;
   }
 
   &__content {

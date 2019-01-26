@@ -36,7 +36,7 @@ cards.add('Article', ({ parameters: { defaultData } }) => {
   return wrapper(renderArticle(data));
 });
 
-cards.add('Collection', ({ parameters: { defaultData } }) => {
+cards.add('Collection Article', ({ parameters: { defaultData } }) => {
   const size = select('size', ['xxl', 'xl', 'l', 'm', 'square-m', 'square-s'], 'xxl');
   const backgroundColor = color('backgroundColor', '#F6D39D');
   const isDarkTheme = boolean('isDarkTheme', true);
@@ -59,7 +59,7 @@ cards.add('Collection', ({ parameters: { defaultData } }) => {
   return wrapper(renderCollection(data));
 });
 
-cards.add('Video', ({ parameters: { defaultData } }) => {
+cards.add('Video Article', ({ parameters: { defaultData } }) => {
   const size = select('size', ['xxl', 'xl', 'l', 'm', 'square-m', 'square-s'], 'xxl');
   const isDarkTheme = boolean('isDarkTheme', false);
   const title = text('title', 'Джэймс Джойс');
@@ -74,4 +74,30 @@ cards.add('Video', ({ parameters: { defaultData } }) => {
   };
 
   return wrapper(renderVideo(data));
+});
+
+cards.add('Brand Article', ({ parameters: { defaultData } }) => {
+  const size = select('size', ['xxl', 'xl', 'l', 'm', 'square-m', 'square-s'], 'xxl');
+  const backgroundColor = color('backgroundColor', '#D5D4D9');
+  const isDarkTheme = boolean('isDarkTheme', true);
+  const isBrandArticle = boolean('isBrandArticle', true);
+  const title = text('title', 'Вітальд Бялыніцкі-Біруля');
+  const author = text('author', 'А.П.Харак');
+  const description = text(
+    'description',
+    'Мноства баталій, якія з зайздроснай рэгулярнасцю разгараюцца вакол беларускай мовы, тычацца не толькі яе сучаснага стану. Мовазнаўцы і гісторыкі і па сёння не могуць пагадзіцца наконт таго, на якую мову Скарына пераклаў Біблію, што можна лічыць моваю беларускай і з якіх часоў варта адсочваць яе развіццё.'
+  );
+
+  const data = {
+    ...defaultData,
+    size,
+    backgroundColor,
+    isDarkTheme,
+    isBrandArticle,
+    title,
+    author,
+    description,
+  };
+
+  return wrapper(renderArticle(data));
 });

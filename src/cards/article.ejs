@@ -10,10 +10,17 @@
     <div class="article__cover-wrapper">
       <img
         class="article__cover"
-        src="<%= imagesPath %>/mock/covers/article-vertical.png"
+        src="<%= imagesPath %>/mock/covers/<% if(locals.isBrandArticle){ %>brand<% } else{ %>article<% } %>-vertical.png"
         alt="Тут павінна быць вокладка артыкула"
       />
     </div>
+    <% if (locals.isBrandArticle) { %>
+      <img
+        class="article__brand"
+        src="<%= imagesPath %>/mock/brands/art-museum.png"
+        alt="Лагатып партнёра"
+      />
+    <% } %>
     <div class="article__content">
       <div>
         <div class="article__title"><%= locals.title %></div>
@@ -32,10 +39,17 @@
     <div class="square-article__cover-wrapper">
       <img
         class="square-article__cover"
-        src="<%= imagesPath %>/mock/covers/article-horizontal.png"
+        src="<%= imagesPath %>/mock/covers/<% if(locals.isBrandArticle){ %>brand<% } else{ %>article<% } %>-horizontal.png"
         alt="Тут павінна быць вокладка артыкула"
       />
     </div>
+    <% if (locals.isBrandArticle) { %>
+      <img
+        class="square-article__brand"
+        src="<%= imagesPath %>/mock/brands/art-museum.png"
+        alt="Лагатып партнёра"
+      />
+    <% } %>
     <div class="square-article__content">
       <div class="square-article__title"><%= locals.title %></div>
       <div class="square-article__author"><%= locals.author %></div>
