@@ -1,0 +1,21 @@
+<div class="size-<%= locals.size %>">
+  <style>
+    .person {
+      background-color: <%= locals.backgroundColor %>;
+    }
+  </style>
+  <div class="person <% if (locals.isDarkTheme) { %>theme-dark<% } %>">
+    <div class="person__cover-wrapper">
+      <img
+        class="person__cover"
+        src="<%= imagesPath %>/mock/covers/person.png"
+        alt="Тут павінна быць вокладка тэга"
+      />
+    </div>
+    <div class="person__content">
+      <div class="person__years"><%= locals.years %></div>
+      <div class="person__title"><%= locals.title %></div>
+      <div class="person__description"><%= locals.description %></div>
+    </div>
+  </div>
+</div>

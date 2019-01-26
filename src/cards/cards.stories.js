@@ -8,6 +8,8 @@ import renderCollection from './collection.ejs';
 import './collection.scss';
 import renderVideo from './video.ejs';
 import './video.scss';
+import renderPerson from './person.ejs';
+import './person.scss';
 
 const wrapper = content => `<div style="margin: 10px">${content}</div>`;
 
@@ -100,4 +102,28 @@ cards.add('Brand Article', ({ parameters: { defaultData } }) => {
   };
 
   return wrapper(renderArticle(data));
+});
+
+cards.add('Person Tag', ({ parameters: { defaultData } }) => {
+  const size = select('size', ['l', 'square-m', 'square-s', 's', 'xs'], 'l');
+  const backgroundColor = color('backgroundColor', '#686868');
+  const isDarkTheme = boolean('isDarkTheme', false);
+  const years = text('years', '1947—2016');
+  const title = text('title', 'Дэвід Боўі');
+  const description = text(
+    'description',
+    'Брытанскі рок-музыка, аўтар песень, прадзюсар, гукарэжысёр, мастак і акцёр'
+  );
+
+  const data = {
+    ...defaultData,
+    size,
+    backgroundColor,
+    isDarkTheme,
+    years,
+    title,
+    description,
+  };
+
+  return wrapper(renderPerson(data));
 });
