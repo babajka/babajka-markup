@@ -1,0 +1,17 @@
+<div class="size-<%= locals.size %>">
+  <div class="video <% if (locals.isDarkTheme) { %>theme-dark<% } %>">
+    <div class="video__cover-wrapper">
+      <img
+        class="video__cover"
+        src="<%= imagesPath %>/mock/covers/video.png"
+        alt="Тут павінна быць вокладка артыкула"
+      />
+      <div class="video__cover-gradient"></div>
+    </div>
+    <i class="video__icon fa fa-play"></i>
+    <div class="video__content">
+      <div class="video__title"><%= locals.title %></div>
+      <div class="video__author"><%= locals.author %></div>
+    </div>
+  </div>
+</div>

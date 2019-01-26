@@ -10,6 +10,12 @@
     color: #000000;
   }
 
+  &__cover {
+    height: 100%;
+    object-fit: cover;
+    width: 100%;
+  }
+
   &__content {
     display: flex;
     flex-direction: column;
@@ -46,7 +52,7 @@
 
     @include xxl-sizes;
 
-    &__cover {
+    &__cover-wrapper {
       max-width: 390px;
       min-width: 390px;
     }
@@ -76,7 +82,7 @@
 
     @include xl-sizes;
 
-    &__cover {
+    &__cover-wrapper {
       max-width: 313px;
       min-width: 313px;
     }
@@ -106,7 +112,7 @@
 
     @include l-sizes;
 
-    &__cover {
+    &__cover-wrapper {
       max-width: 240px;
       min-width: 240px;
     }
@@ -136,7 +142,7 @@
 
     @include m-sizes;
 
-    &__cover {
+    &__cover-wrapper {
       max-width: 186px;
       min-width: 186px;
     }
@@ -175,12 +181,18 @@
     color: #000000;
   }
 
+  &__cover {
+    height: 100%;
+    object-fit: cover;
+    width: 100%;
+  }
+
   &__content {
-    align-items: center;
     display: flex;
     flex-direction: column;
     height: 100%;
     justify-content: flex-end;
+    text-align: center;
   }
 
   &__title {
@@ -201,6 +213,10 @@
 
     @include square-m-sizes;
 
+    &__cover-wrapper {
+      height: 240px;
+    }
+
     &__content {
       padding: 0 39px 42px;
     }
@@ -217,8 +233,12 @@
 
     @include square-s-sizes;
 
+    &__cover-wrapper {
+      height: 186px;
+    }
+
     &__content {
-      padding: 0 5px 42px;
+      padding: 0 10px 42px;
     }
 
     &__title {

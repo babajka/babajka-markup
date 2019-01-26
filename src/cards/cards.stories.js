@@ -6,6 +6,8 @@ import renderArticle from './article.ejs';
 import './article.scss';
 import renderCollection from './collection.ejs';
 import './collection.scss';
+import renderVideo from './video.ejs';
+import './video.scss';
 
 const wrapper = content => `<div style="margin: 10px">${content}</div>`;
 
@@ -55,4 +57,21 @@ cards.add('Collection', ({ parameters: { defaultData } }) => {
   };
 
   return wrapper(renderCollection(data));
+});
+
+cards.add('Video', ({ parameters: { defaultData } }) => {
+  const size = select('size', ['xxl', 'xl', 'l', 'm', 'square-m', 'square-s'], 'xxl');
+  const isDarkTheme = boolean('isDarkTheme', false);
+  const title = text('title', 'Джэймс Джойс');
+  const author = text('author', 'Наталля Ламека');
+
+  const data = {
+    ...defaultData,
+    size,
+    isDarkTheme,
+    title,
+    author,
+  };
+
+  return wrapper(renderVideo(data));
 });

@@ -6,9 +6,10 @@
   </style>
   <div class="collection <% if (locals.isDarkTheme) { %>theme-dark<% } %>">
     <% if (!['square-m', 'square-s'].includes(locals.size)) { %>
-      <div class="collection__cover">
+      <div class="collection__cover-wrapper">
         <img
-          src="<%= imagesPath %>/mock/covers/<% if(locals.size === 'm'){ %>collection-2<% } else{ %>collection-1<% } %>.png"
+          class="collection__cover"
+          src="<%= imagesPath %>/mock/covers/<% if(locals.size === 'm'){ %>collection-1<% } else{ %>collection-2<% } %>.png"
           alt="Тут павінна быць вокладка артыкула"
         />
       </div>
