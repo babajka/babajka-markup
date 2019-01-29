@@ -10,6 +10,8 @@ import renderVideo from './video.ejs';
 import './video.scss';
 import renderPerson from './person.ejs';
 import './person.scss';
+import renderLocation from './location.ejs';
+import './location.scss';
 
 const wrapper = content => `<div style="margin: 10px">${content}</div>`;
 
@@ -127,3 +129,26 @@ cards.add('Person Tag', ({ parameters: { defaultData } }) => {
 
   return wrapper(renderPerson(data));
 });
+
+cards.add(
+  'Location Tag',
+  ({ parameters: { defaultData } }) => {
+    const size = select('size', ['l', 'square-m', 'square-s', 's', 'xs'], 'l');
+    const isDarkTheme = boolean('isDarkTheme', true);
+    const title = text('title', "Міжзем'e");
+
+    const data = {
+      ...defaultData,
+      size,
+      isDarkTheme,
+      title,
+    };
+
+    return wrapper(renderLocation(data));
+  },
+  {
+    knobs: {
+      escapeHTML: false,
+    },
+  }
+);

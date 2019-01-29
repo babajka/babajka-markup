@@ -1,0 +1,10 @@
+<div class="size-<%= locals.size %>">
+  <style>
+    .location {
+      background-image: url('<%= imagesPath %>/mock/covers/location.png');
+    }
+  </style>
+  <div class="location <% if (locals.isDarkTheme) { %>theme-dark<% } %>">
+    <div class="location__title"><%= locals.title %></div>
+  </div>
+</div>
