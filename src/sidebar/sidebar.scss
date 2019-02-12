@@ -3,7 +3,6 @@
 .sidebar {
   background-color: $primary-concrete;
   font-size: 14px;
-  letter-spacing: 1px;
   line-height: 24px;
   min-width: 240px;
   padding: 21px 24px;
@@ -15,11 +14,13 @@
 
   .langs {
     color: $primary;
+    letter-spacing: 1px;
     margin-bottom: 38px;
     text-transform: uppercase;
   }
 
   .about {
+    letter-spacing: 1px;
     margin-bottom: 12px;
     text-transform: uppercase;
   }
@@ -40,6 +41,7 @@
 
     &__title {
       color: $primary-black;
+      letter-spacing: 1px;
       margin-bottom: 9px;
       text-transform: uppercase;
     }
@@ -60,6 +62,7 @@
     &__link-to-all {
       display: inline-block;
       font-size: 14px;
+      letter-spacing: 1px;
       margin-top: 30px;
       text-transform: uppercase;
     }
