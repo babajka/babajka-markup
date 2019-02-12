@@ -1,0 +1,23 @@
+@import '../../variables';
+
+.wir-link {
+  display: block;
+
+  &__icon {
+    align-items: center;
+    display: inline-flex;
+    font-size: 20px;
+    height: 1.5rem;
+    justify-content: center;
+    width: 1.5rem;
+  }
+
+  &:hover {
+    color: $primary-lighter;
+  }
+
+  &-disabled {
+    opacity: 0.2;
+    pointer-events: none;
+  }
+}

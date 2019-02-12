@@ -3,15 +3,20 @@ import { text, array } from '@storybook/addon-knobs';
 
 import renderSidebar from './sidebar.ejs';
 import renderInput from '../kit/input/input.ejs';
+import renderLink from '../kit/link/link.ejs';
 
 import { withIncludes } from '../../.storybook/utils';
 
 import './sidebar.scss';
 import '../kit/input/input.scss';
+import '../kit/link/link.scss';
 
 import { TOPICS, PERSONS, TIMES, LOCATIONS, PARTNERS, AUTHORS } from './staticData';
 
-const render = withIncludes({ '../kit/input/input.ejs': renderInput });
+const render = withIncludes({
+  '../kit/input/input.ejs': renderInput,
+  '../kit/link/link.ejs': renderLink,
+});
 
 const sidebar = storiesOf('Sidebar', module);
 sidebar.add('playground', ({ parameters: { defaultData } }) => {

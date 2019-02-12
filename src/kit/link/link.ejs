@@ -1,0 +1,8 @@
+<a class="wir-link <%= locals.class %> <% if (locals.disabled) { %>wir-link-disabled<% } %>">
+  <span><%= locals.text %></span>
+  <% if (locals.rightIcon) { %>
+    <span class="wir-link__icon is-pulled-right">
+      <i class="fa fa-<%= locals.rightIcon %>"></i>
+    </span>
+  <% } %>
+</a>
