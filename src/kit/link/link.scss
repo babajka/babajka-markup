@@ -3,6 +3,14 @@
 .wir-link {
   display: block;
 
+  &.theme-dark {
+    color: $primary-caribbean-green;
+
+    &:hover {
+      color: $primary-bright-turquoise;
+    }
+  }
+
   &__icon {
     align-items: center;
     display: inline-flex;
@@ -13,7 +21,7 @@
   }
 
   &:hover {
-    color: $primary-lighter;
+    color: $primary-caribbean-green;
   }
 
   &-disabled {

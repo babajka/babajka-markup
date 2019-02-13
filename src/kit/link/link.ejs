@@ -1,4 +1,6 @@
-<a class="wir-link <%= locals.class %> <% if (locals.disabled) { %>wir-link-disabled<% } %>">
+<a class="wir-link <%= locals.class %> 
+  <% if (locals.disabled) { %>wir-link-disabled<% } %> 
+  <% if (locals.isDarkTheme) { %>theme-dark<% } %>">
   <span><%= locals.text %></span>
   <% if (locals.rightIcon) { %>
     <span class="wir-link__icon is-pulled-right">

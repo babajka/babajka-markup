@@ -1,0 +1,12 @@
+.container {
+  margin: 30px;
+  width: 250px;
+
+  &.theme-dark {
+    background-color: #000000;
+  }
+}
+
+.link {
+  padding: 30px;
+}
