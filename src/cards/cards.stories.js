@@ -17,7 +17,7 @@ const wrapper = content => `<div style="margin: 10px">${content}</div>`;
 
 const cards = storiesOf('Cards', module).addDecorator(withViewport());
 cards.add('Article', ({ parameters: { defaultData } }) => {
-  const size = select('size', ['xxl', 'xl', 'l', 'm', 'square-m', 'square-s'], 'xxl');
+  const size = select('size', ['xxl', 'xl', 'l', 'm', 'square-m', 'square-s'], 'xl');
   const backgroundColor = color('backgroundColor', '#1a2e48');
   const isDarkTheme = boolean('isDarkTheme', false);
   const title = text('title', 'Як прыгатаваць мову ВКЛ?');
@@ -41,8 +41,8 @@ cards.add('Article', ({ parameters: { defaultData } }) => {
 });
 
 cards.add('Collection Article', ({ parameters: { defaultData } }) => {
-  const size = select('size', ['xxl', 'xl', 'l', 'm', 'square-m', 'square-s'], 'xxl');
-  const backgroundColor = color('backgroundColor', '#F6D39D');
+  const size = select('size', ['xxl', 'xl', 'l', 'm', 'square-m', 'square-s'], 'xl');
+  const backgroundColor = color('backgroundColor', '#f6d39d');
   const isDarkTheme = boolean('isDarkTheme', true);
   const partNumber = number('partNumber', 1);
   const collectionName = text('seriesName', 'Міцкевіч: геаграфія паэта');
@@ -64,7 +64,7 @@ cards.add('Collection Article', ({ parameters: { defaultData } }) => {
 });
 
 cards.add('Video Article', ({ parameters: { defaultData } }) => {
-  const size = select('size', ['xxl', 'xl', 'l', 'm', 'square-m', 'square-s'], 'xxl');
+  const size = select('size', ['xxl', 'xl', 'l', 'm', 'square-m', 'square-s'], 'xl');
   const isDarkTheme = boolean('isDarkTheme', false);
   const title = text('title', 'Джэймс Джойс');
   const author = text('author', 'Наталля Ламека');
@@ -81,8 +81,8 @@ cards.add('Video Article', ({ parameters: { defaultData } }) => {
 });
 
 cards.add('Brand Article', ({ parameters: { defaultData } }) => {
-  const size = select('size', ['xxl', 'xl', 'l', 'm', 'square-m', 'square-s'], 'xxl');
-  const backgroundColor = color('backgroundColor', '#D5D4D9');
+  const size = select('size', ['xxl', 'xl', 'l', 'm', 'square-m', 'square-s'], 'xl');
+  const backgroundColor = color('backgroundColor', '#d5d4d9');
   const isDarkTheme = boolean('isDarkTheme', true);
   const isBrandArticle = boolean('isBrandArticle', true);
   const title = text('title', 'Вітальд Бялыніцкі-Біруля');
