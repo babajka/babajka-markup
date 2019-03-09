@@ -3,15 +3,15 @@
 
 .sidebar {
   background-color: $primary-concrete;
+  box-sizing: border-box;
   font-size: 14px;
+  height: 100%;
   line-height: 24px;
+  max-width: 400px;
+  min-height: 100vh;
   min-width: 240px;
   padding: 21px 24px 60px;
-  width: 185px;
-
-  @include widescreen {
-    width: 300px;
-  }
+  width: calc(240px + (100vw - #{$desktop-with-sidebar}) * 2 / 3);
 
   &__langs {
     color: $primary;
@@ -40,13 +40,22 @@
     }
   }
 
-  &__divider {
-    border: 0.5px solid $primary-grey;
-  }
-
   &__section {
-    margin: 60px 0;
-    padding: 0;
+    border-top: 0.5px solid $primary-grey;
+    display: none;
+    padding: 40px 0 30px;
+
+    &--visible {
+      display: block;
+    }
+
+    &--short {
+      // ID of a section for a short sidebar.
+    }
+
+    &--long {
+      // ID of a section for a long sidebar.
+    }
   }
 
   &__section-title {

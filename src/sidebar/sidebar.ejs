@@ -15,9 +15,17 @@
     <%- include('../kit/link/link.ejs', { text: 'пра праект'}) %>
   </div>
 
-  <div class="sidebar__divider"></div>
+  <section class="sidebar__section sidebar__section--short">
+    <ul class="sidebar__section-list">
+      <% ['Спасылкі', 'Для кароткага', 'Сайдбара'].forEach(function(label) { %>
+        <li class="sidebar__section-list-item">
+          <%- include('../kit/link/link.ejs', { text: label }) %>
+        </li>
+      <% }) %>
+    </ul>
+  </section>
 
-  <section class="sidebar__section">
+  <section class="sidebar__section sidebar__section--long sidebar__section--visible">
     <ul class="sidebar__section-list">
       <% ['Топ-10', 'Самае актуальнае', '&lt5 хвілін на прагляд'].forEach(function(label) { %>
         <li class="sidebar__section-list-item">
@@ -27,9 +35,7 @@
     </ul>
   </section>
 
-  <div class="sidebar__divider"></div>
-
-  <section class="sidebar__section">
+  <section class="sidebar__section sidebar__section--long sidebar__section--visible">
     <ul class="sidebar__section-list">
       <% ['Артыкулы', 'Відэалекцыі', 'падкасты', 'гульні і тэсты'].forEach(function(label) { %>
         <li class="sidebar__section-list-item">
@@ -39,9 +45,7 @@
     </ul>
   </section>
 
-  <div class="sidebar__divider"></div>
-
-  <section class="sidebar__section">
+  <section class="sidebar__section sidebar__section--long sidebar__section--visible">
     <div class="sidebar__section-title">
       тэмы
     </div>
@@ -54,9 +58,7 @@
     </ul>
   </section>
 
-  <div class="sidebar__divider"></div>
-
-  <section class="sidebar__section">
+  <section class="sidebar__section sidebar__section--long sidebar__section--visible">
     <div class="sidebar__section-title">
       асноўныя асобы
     </div>
@@ -72,9 +74,7 @@
     </span>
   </section>
 
-  <div class="sidebar__divider"></div>
-
-  <section class="sidebar__section">
+  <section class="sidebar__section sidebar__section--long sidebar__section--visible">
     <div class="sidebar__section-title">
       асноўныя часы
     </div>
@@ -90,9 +90,7 @@
     </span>
   </section>
 
-  <div class="sidebar__divider"></div>
-
-  <section class="sidebar__section">
+  <section class="sidebar__section sidebar__section--long sidebar__section--visible">
     <div class="sidebar__section-title">
       асноўныя лакацыі
     </div>
@@ -108,9 +106,7 @@
     </span>
   </section>
 
-  <div class="sidebar__divider"></div>
-
-  <section class="sidebar__section">
+  <section class="sidebar__section sidebar__section--long sidebar__section--visible">
     <div class="sidebar__section-title">
       матэрыялы партнераў
     </div>
@@ -123,9 +119,7 @@
     </ul>
   </section>
 
-  <div class="sidebar__divider"></div>
-
-  <section class="sidebar__section">
+  <section class="sidebar__section sidebar__section--long sidebar__section--visible">
     <div class="sidebar__section-title">
       папулярныя аўтары
     </div>
