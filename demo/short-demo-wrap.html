@@ -3,7 +3,7 @@
 
 <head>
   <title>
-    Demo page
+    Short demo page
   </title>
   <link rel="icon" type="image/png" href="/babajka-markup/static/images/logo/favicon.png" />
 
@@ -18,16 +18,46 @@
 </head>
 
 
-<body>
+<script>
+  function toggleSidebar() {
+    document.getElementById("wir-sidebar").classList.toggle("wir-sidebar--expanded");
+    document.getElementById("wir-overlay").classList.toggle("wir-overlay--active");
+  }
 
-  <script>
-    function toggleSidebar() {
-      document.getElementById("wir-sidebar").classList.toggle("wir-sidebar--expanded");
-      document.getElementById("wir-overlay").classList.toggle("wir-overlay--active");
+  // This is an approximate height of the sidebar. The page must be
+  // at least this high to fit a long sidebar. Short one is used otherwise.
+  let sidebarHeight = 3300;
+
+  // There seem to be no way to get content height with pure CSS.
+  // This JS method adjusts classes of sidebar sections.
+  function adjustSidebar() {
+    let clientHeight = document.getElementById("wir-root").clientHeight;
+    let sectionsShort = document.getElementsByClassName("sidebar__section--short");
+    let sectionsLong = document.getElementsByClassName("sidebar__section--long");
+    let i;
+    if (clientHeight < sidebarHeight) {
+      for (i = 0; i < sectionsShort.length; i++) {
+        sectionsShort[i].classList.add("sidebar__section--visible");
+      }
+      for (i = 0; i < sectionsLong.length; i++) {
+        sectionsLong[i].classList.remove("sidebar__section--visible");
+      }
+    } else {
+      for (i = 0; i < sectionsShort.length; i++) {
+        sectionsShort[i].classList.remove("sidebar__section--visible");
+      }
+      for (i = 0; i < sectionsLong.length; i++) {
+        sectionsLong[i].classList.add("sidebar__section--visible");
+      }
     }
-  </script>
+  }
+</script>
 
-  <div class="wir-root">
+<body onload="adjustSidebar()" onresize="adjustSidebar()">
+
+  <div id="wir-root" class="wir-root">
+
+    <a name="top"></a>
 
     <div class="wir-space">
       <div class="navbar">
@@ -316,7 +346,7 @@
 </footer>
 
 
-      <div id="wir-overlay" class="wir-overlay"></div>
+      <div id="wir-overlay" class="wir-overlay" onclick="toggleSidebar()"></div>
     </div>
 
     <div id="wir-sidebar" class="wir-sidebar">
@@ -373,9 +403,49 @@
 
   </div>
 
-  <div class="sidebar__divider"></div>
+  <section class="sidebar__section sidebar__section--short">
+    <ul class="sidebar__section-list">
+      
+        <li class="sidebar__section-list-item">
+          <a class="wir-link 
+  
+  "
+  
+   >
+  <span>Спасылкі</span>
+  
+</a>
 
-  <section class="sidebar__section">
+        </li>
+      
+        <li class="sidebar__section-list-item">
+          <a class="wir-link 
+  
+  "
+  
+   >
+  <span>Для кароткага</span>
+  
+</a>
+
+        </li>
+      
+        <li class="sidebar__section-list-item">
+          <a class="wir-link 
+  
+  "
+  
+   >
+  <span>Сайдбара</span>
+  
+</a>
+
+        </li>
+      
+    </ul>
+  </section>
+
+  <section class="sidebar__section sidebar__section--long sidebar__section--visible">
     <ul class="sidebar__section-list">
       
         <li class="sidebar__section-list-item">
@@ -417,9 +487,7 @@
     </ul>
   </section>
 
-  <div class="sidebar__divider"></div>
-
-  <section class="sidebar__section">
+  <section class="sidebar__section sidebar__section--long sidebar__section--visible">
     <ul class="sidebar__section-list">
       
         <li class="sidebar__section-list-item">
@@ -473,9 +541,7 @@
     </ul>
   </section>
 
-  <div class="sidebar__divider"></div>
-
-  <section class="sidebar__section">
+  <section class="sidebar__section sidebar__section--long sidebar__section--visible">
     <div class="sidebar__section-title">
       тэмы
     </div>
@@ -604,9 +670,7 @@
     </ul>
   </section>
 
-  <div class="sidebar__divider"></div>
-
-  <section class="sidebar__section">
+  <section class="sidebar__section sidebar__section--long sidebar__section--visible">
     <div class="sidebar__section-title">
       асноўныя асобы
     </div>
@@ -686,9 +750,7 @@
     </span>
   </section>
 
-  <div class="sidebar__divider"></div>
-
-  <section class="sidebar__section">
+  <section class="sidebar__section sidebar__section--long sidebar__section--visible">
     <div class="sidebar__section-title">
       асноўныя часы
     </div>
@@ -768,9 +830,7 @@
     </span>
   </section>
 
-  <div class="sidebar__divider"></div>
-
-  <section class="sidebar__section">
+  <section class="sidebar__section sidebar__section--long sidebar__section--visible">
     <div class="sidebar__section-title">
       асноўныя лакацыі
     </div>
@@ -850,9 +910,7 @@
     </span>
   </section>
 
-  <div class="sidebar__divider"></div>
-
-  <section class="sidebar__section">
+  <section class="sidebar__section sidebar__section--long sidebar__section--visible">
     <div class="sidebar__section-title">
       матэрыялы партнераў
     </div>
@@ -909,9 +967,7 @@
     </ul>
   </section>
 
-  <div class="sidebar__divider"></div>
-
-  <section class="sidebar__section">
+  <section class="sidebar__section sidebar__section--long sidebar__section--visible">
     <div class="sidebar__section-title">
       папулярныя аўтары
     </div>
@@ -998,7 +1054,7 @@
       <a class="wir-link 
   
   "
-   href="#"
+   href="#top"
    >
   <span><span><i class="fa fa-arrow-circle-o-up"></i></span></span>
   
