@@ -1335,10 +1335,6 @@ footer {
   padding: 6px 0;
 }
 
-.sidebar__section-list-item::first-letter {
-  text-transform: capitalize;
-}
-
 .sidebar__section-link-to-all {
   color: #1a9582;
   display: inline-block;
