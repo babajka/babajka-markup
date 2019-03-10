@@ -4,6 +4,7 @@
 html {
   height: 100%;
   max-width: 100vw;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -12,7 +13,6 @@ body {
   height: 100%;
   margin: 0;
   max-width: 100vw;
-  scroll-behavior: smooth;
 
   @include sidebar-visible {
     display: block;

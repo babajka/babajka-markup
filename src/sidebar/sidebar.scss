@@ -74,10 +74,6 @@
   &__section-list-item {
     list-style: none;
     padding: 6px 0;
-
-    &::first-letter {
-      text-transform: capitalize;
-    }
   }
 
   &__section-link-to-all {
