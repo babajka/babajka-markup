@@ -1075,7 +1075,7 @@
 }
 
 .footer__mailing {
-  padding-bottom: 1rem;
+  padding-bottom: 2rem;
 }
 
 .footer__help-us {
@@ -1229,13 +1229,13 @@ footer {
 }
 
 .navbar__logo {
-  width: 2.6rem;
+  width: 42px;
 }
 
 .navbar__title {
-  font-size: 1.2rem;
+  font-size: 14px;
   letter-spacing: 1px;
-  margin: 0 1.4rem;
+  margin: 0 18px;
   text-transform: uppercase;
 }
 
@@ -1309,7 +1309,7 @@ footer {
 .sidebar__section {
   border-top: 0.5px solid #888888;
   display: none;
-  padding: 40px 0 30px;
+  padding: 40px 0 28px;
 }
 
 .sidebar__section--visible {
@@ -1318,14 +1318,15 @@ footer {
 
 .sidebar__section-title {
   color: #000000;
+  font-size: 14px;
   letter-spacing: 1px;
-  margin-bottom: 9px;
   text-transform: uppercase;
 }
 
 .sidebar__section-list {
   color: #1a9582;
   font-size: 20px;
+  margin: 0;
   -webkit-padding-start: 0;
   padding-inline-start: 0;
 }
@@ -1350,8 +1351,8 @@ footer {
 
 .wir-input__icon {
   color: #000000;
-  font-size: 20px;
-  margin: 5px 0 8px;
+  font-size: 24px;
+  margin: 7px 0 2px;
 }
 
 .wir-input__icon-left {
@@ -1382,7 +1383,7 @@ footer {
   flex-grow: 1;
   font-size: 20px;
   height: 30px;
-  margin: 5px 0 8px;
+  margin: 5px 0 4px;
   min-width: 0;
   outline: none;
 }
