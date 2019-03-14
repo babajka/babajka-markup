@@ -39,6 +39,7 @@
     "LICENSE"
   ],
   "dependencies": {
+    "@fortawesome/fontawesome-free": "^5.7.2",
     "bulma": "^0.6.2",
     "bulma-badge": "^2.0.0",
     "font-awesome": "^4.7.0",

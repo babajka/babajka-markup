@@ -23,7 +23,8 @@ const config = {
   libsPath: 'node_modules',
   buildPath: BABAJKA_LEGACY ? 'dist-legacy' : 'dist',
   stylesPath: 'styles',
-  fontsPath: 'fonts',
+  legacyFontsPath: 'fonts',
+  fontsPath: 'webfonts',
   imagesPath: 'images',
   landingPath: 'landing',
   srcPath: BABAJKA_LEGACY ? 'legacy' : 'src',
@@ -163,9 +164,15 @@ gulp.task('css:normalize', () =>
     .pipe(gulp.dest(`${config.buildPath}/${config.staticPath}/${config.stylesPath}`))
 );
 
-gulp.task('fa:fonts', () =>
+gulp.task('fa:fonts:legacy', () =>
   gulp
     .src(`${config.libsPath}/font-awesome/fonts/fontawesome-webfont.*`)
+    .pipe(gulp.dest(`${config.buildPath}/${config.staticPath}/${config.legacyFontsPath}`))
+);
+
+gulp.task('fa:fonts', () =>
+  gulp
+    .src(`${config.libsPath}/@fortawesome/fontawesome-free/webfonts/*`)
     .pipe(gulp.dest(`${config.buildPath}/${config.staticPath}/${config.fontsPath}`))
 );
 
@@ -224,6 +231,7 @@ gulp.task(
     'sass:assets',
     'css:normalize',
     'fa:fonts',
+    'fa:fonts:legacy',
     'static:copy'
   )
 );

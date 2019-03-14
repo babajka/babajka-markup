@@ -1,6 +1,6 @@
 <aside class="sidebar">
   <span class="sidebar__icon-close" onclick="toggleSidebar()">
-    <%- include('../kit/link/link.ejs', { text: '<i class="fa fa-times"></i>' }) %>
+    <%- include('../kit/link/link.ejs', { text: '<i class="fas fa-times"></i>' }) %>
   </span>
 
   <ul class="sidebar__langs">
@@ -46,10 +46,10 @@
   </section>
 
   <section class="sidebar__section sidebar__section--long sidebar__section--visible">
-    <div class="sidebar__section-title">
-      тэмы
-    </div>
     <ul class="sidebar__section-list">
+      <li class="sidebar__section-list-item sidebar__section-title">
+        тэмы
+      </li>
       <% for(var i = 0; i < locals.topics.length; i ++) { %>
         <li class="sidebar__section-list-item">
           <%- include('../kit/link/link.ejs', { text: locals.topics[i] }) %>
@@ -59,10 +59,10 @@
   </section>
 
   <section class="sidebar__section sidebar__section--long sidebar__section--visible">
-    <div class="sidebar__section-title">
-      асноўныя асобы
-    </div>
     <ul class="sidebar__section-list">
+      <li class="sidebar__section-list-item sidebar__section-title">
+        асноўныя асобы
+      </li>
       <% for(var i = 0; i < locals.persons.length; i ++) { %>
         <li class="sidebar__section-list-item">
           <%- include('../kit/link/link.ejs', { text: locals.persons[i] }) %>
@@ -75,10 +75,10 @@
   </section>
 
   <section class="sidebar__section sidebar__section--long sidebar__section--visible">
-    <div class="sidebar__section-title">
-      асноўныя часы
-    </div>
     <ul class="sidebar__section-list">
+      <li class="sidebar__section-list-item sidebar__section-title">
+        асноўныя часы
+      </li>
       <% for(var i = 0; i < locals.times.length; i ++) { %>
         <li class="sidebar__section-list-item">
           <%- include('../kit/link/link.ejs', { text: locals.times[i] }) %>
@@ -91,10 +91,10 @@
   </section>
 
   <section class="sidebar__section sidebar__section--long sidebar__section--visible">
-    <div class="sidebar__section-title">
-      асноўныя лакацыі
-    </div>
     <ul class="sidebar__section-list">
+      <li class="sidebar__section-list-item sidebar__section-title">
+        асноўныя лакацыі
+      </li>
       <% for(var i = 0; i < locals.locations.length; i ++) { %>
         <li class="sidebar__section-list-item">
           <%- include('../kit/link/link.ejs', { text: locals.locations[i] }) %>
@@ -107,10 +107,10 @@
   </section>
 
   <section class="sidebar__section sidebar__section--long sidebar__section--visible">
-    <div class="sidebar__section-title">
-      матэрыялы партнераў
-    </div>
     <ul class="sidebar__section-list">
+      <li class="sidebar__section-list-item sidebar__section-title">
+        матэрыялы партнёраў
+      </li>
       <% for(var i = 0; i < locals.partners.length; i ++) { %>
         <li class="sidebar__section-list-item">
           <%- include('../kit/link/link.ejs', { text: locals.partners[i] }) %>
@@ -120,10 +120,10 @@
   </section>
 
   <section class="sidebar__section sidebar__section--long sidebar__section--visible">
-    <div class="sidebar__section-title">
-      папулярныя аўтары
-    </div>
     <ul class="sidebar__section-list">
+      <li class="sidebar__section-list-item sidebar__section-title">
+        папулярныя аўтары
+      </li>
       <% for(var i = 0; i < locals.authors.length; i ++) { %>
         <li class="sidebar__section-list-item">
           <%- include('../kit/link/link.ejs', { text: locals.authors[i] }) %>

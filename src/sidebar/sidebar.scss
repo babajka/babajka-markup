@@ -43,7 +43,7 @@
   &__section {
     border-top: 0.5px solid $primary-grey;
     display: none;
-    padding: 40px 0 30px;
+    padding: 40px 0 28px;
 
     &--visible {
       display: block;
@@ -60,14 +60,15 @@
 
   &__section-title {
     color: $primary-black;
+    font-size: 14px;
     letter-spacing: 1px;
-    margin-bottom: 9px;
     text-transform: uppercase;
   }
 
   &__section-list {
     color: $primary;
     font-size: 20px;
+    margin: 0;
     padding-inline-start: 0;
   }
 

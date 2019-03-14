@@ -1,9 +1,16 @@
-// fix fa path
-$fa-font-path: '../node_modules/font-awesome/fonts';
+// This overrides fa path.
+$fa-font-path: '../node_modules/@fortawesome/fontawesome-free/webfonts';
 
 // I am not sure if that helps with normalizing styles in Storybook.
 // But it is at least delivered.
 @import '../node_modules/normalize.css/normalize';
 
-@import '../legacy/index';
+// Legacy styles are not compatible with Font Awesome 5 and crash storybook build.
+// Let's not fix that and consider that as a first step to get rid of legacy.
+// @import '../legacy/index';
+
 @import '../src/index';
+
+body {
+  font-family: 'Ubuntu', sans-serif;
+}

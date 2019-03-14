@@ -2,18 +2,18 @@
   <input <% if (locals.disabled) { %>disabled<% } %> />
   <% if (locals.loading) { %>
     <span class="wir-input__icon wir-input__icon-left wir-input__icon-loading">
-      <i class="fa fa-circle-o-notch"></i>
+      <i class="fas fa-circle-notch"></i>
     </span>
-  <% } else { %>  
+  <% } else { %>
     <% if (locals.leftIcon) { %>
       <span class="wir-input__icon wir-input__icon-left">
-        <i class="fa fa-<%= locals.leftIcon %>"></i>
+        <i class="<%= locals.leftIcon %>"></i>
       </span>
     <% } %>
   <% } %>
   <% if (locals.rightIcon) { %>
     <span class="wir-input__icon wir-input__icon-right">
-      <i class="fa fa-<%= locals.rightIcon %>"></i>
+      <i class="<%= locals.rightIcon %>"></i>
     </span>
   <% } %>
   <span class="wir-input__bar"></span>
