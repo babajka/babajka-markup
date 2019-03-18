@@ -1,0 +1,21 @@
+@import '../variables';
+
+.sidebar {
+  &__section {
+    border-top: 0.5px solid $primary-grey;
+    display: none;
+    padding: 40px 0 28px;
+
+    &--visible {
+      display: block;
+    }
+
+    &--short {
+      // ID of a section for a short sidebar.
+    }
+
+    &--long {
+      // ID of a section for a long sidebar.
+    }
+  }
+}
