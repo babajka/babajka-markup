@@ -1114,7 +1114,6 @@
 html {
   height: 100%;
   max-width: 100vw;
-  scroll-behavior: smooth;
 }
 
 body {
@@ -1221,15 +1220,14 @@ footer {
   right: 30px;
   z-index: 400;
 }
+.navbar__logo {
+  width: 42px;
+}
 .navbar {
   align-items: center;
   display: flex;
   flex-direction: row;
   padding: 1.5rem;
-}
-
-.navbar__logo {
-  width: 42px;
 }
 
 .navbar__title {
@@ -1262,6 +1260,15 @@ footer {
   border-radius: 2px;
   height: 5px;
   width: 100%;
+}
+.sidebar__section {
+  border-top: 0.5px solid #888888;
+  display: none;
+  padding: 40px 0 28px;
+}
+
+.sidebar__section--visible {
+  display: block;
 }
 .sidebar {
   background-color: #f2f2f2;
@@ -1308,12 +1315,7 @@ footer {
 
 .sidebar__section {
   border-top: 0.5px solid #888888;
-  display: none;
   padding: 40px 0 28px;
-}
-
-.sidebar__section--visible {
-  display: block;
 }
 
 .sidebar__section-title {
