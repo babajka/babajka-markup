@@ -209,6 +209,7 @@
   color: #ffffff;
   display: flex;
   flex-direction: column;
+  position: relative;
 
   &.theme-dark {
     color: #000000;
@@ -229,10 +230,10 @@
   }
 
   &__content {
+    bottom: 0;
     display: flex;
     flex-direction: column;
-    height: 100%;
-    justify-content: flex-end;
+    position: absolute;
     text-align: center;
   }
 

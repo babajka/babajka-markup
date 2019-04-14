@@ -38,9 +38,11 @@
   }
 
   &__content {
+    box-sizing: border-box;
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
+    width: 100%;
   }
 
   &__title {
@@ -64,11 +66,9 @@
     }
 
     &__content {
-      bottom: 26px;
-      left: 31px;
+      bottom: 0;
+      padding: 0 89px 26px 31px;
       position: absolute;
-      right: 89px;
-      top: 0;
     }
 
     &__title {
@@ -100,11 +100,9 @@
     }
 
     &__content {
-      bottom: 42px;
-      left: 30px;
+      bottom: 0;
+      padding: 0 68px 42px 30px;
       position: absolute;
-      right: 68px;
-      top: 0;
     }
 
     &__title {
@@ -136,11 +134,9 @@
     }
 
     &__content {
-      bottom: 47px;
-      left: 31px;
+      bottom: 0;
+      padding: 0 53px 47px 31px;
       position: absolute;
-      right: 53px;
-      top: 0;
     }
 
     &__title {
@@ -172,11 +168,9 @@
     }
 
     &__content {
-      bottom: 42px;
-      left: 31px;
+      bottom: 0;
+      padding: 0 59px 42px 31px;
       position: absolute;
-      right: 59px;
-      top: 0;
     }
 
     &__title {
@@ -206,8 +200,10 @@
     }
 
     &__content {
+      bottom: 0;
       height: 100%;
       padding: 0 10px 40px;
+      position: absolute;
       text-align: center;
     }
 
@@ -238,8 +234,10 @@
     }
 
     &__content {
+      bottom: 0;
       height: 100%;
       padding: 0 10px 39px;
+      position: absolute;
       text-align: center;
     }
 
