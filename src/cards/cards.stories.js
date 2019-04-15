@@ -13,19 +13,18 @@ import './person.scss';
 import renderLocation from './location.ejs';
 import './location.scss';
 
+import { article, collectionArticle, video, brandArticle, person, location } from './defaultData';
+
 const wrapper = content => `<div style="margin: 10px">${content}</div>`;
 
 const cards = storiesOf('Cards', module).addDecorator(withViewport());
 cards.add('Article', ({ parameters: { defaultData } }) => {
-  const size = select('size', ['xxl', 'xl', 'l', 'm', 'square-m', 'square-s'], 'xl');
-  const backgroundColor = color('backgroundColor', '#1a2e48');
-  const isDarkTheme = boolean('isDarkTheme', false);
-  const title = text('title', 'Як прыгатаваць мову ВКЛ?');
-  const author = text('author', 'Марыя Бадзей, Марына Анісімава');
-  const description = text(
-    'description',
-    'Мноства баталій, якія з зайздроснай рэгулярнасцю разгараюцца вакол беларускай мовы, тычацца не толькі яе сучаснага стану. Мовазнаўцы і гісторыкі і па сёння не могуць пагадзіцца наконт таго, на якую мову Скарына пераклаў Біблію, што можна лічыць моваю беларускай і з якіх часоў варта адсочваць яе развіццё. Паспрабуем прыгледзецца да мовы Вялікага Княства Літоўскага'
-  );
+  const size = select('size', ['xxl', 'xl', 'l', 'm', 'square-m', 'square-s'], article.size);
+  const backgroundColor = color('backgroundColor', article.backgroundColor);
+  const isDarkTheme = boolean('isDarkTheme', article.isDarkTheme);
+  const title = text('title', article.title);
+  const author = text('author', article.author);
+  const description = text('description', article.description);
 
   const data = {
     ...defaultData,
@@ -41,13 +40,17 @@ cards.add('Article', ({ parameters: { defaultData } }) => {
 });
 
 cards.add('Collection Article', ({ parameters: { defaultData } }) => {
-  const size = select('size', ['xxl', 'xl', 'l', 'm', 'square-m', 'square-s'], 'xl');
-  const backgroundColor = color('backgroundColor', '#f6d39d');
-  const isDarkTheme = boolean('isDarkTheme', true);
-  const partNumber = number('partNumber', 1);
-  const collectionName = text('seriesName', 'Міцкевіч: геаграфія паэта');
-  const title = text('title', 'Літва! Ты, як здароўе ў нас, мая Айчына!');
-  const author = text('author', 'Марыя Бадзей');
+  const size = select(
+    'size',
+    ['xxl', 'xl', 'l', 'm', 'square-m', 'square-s'],
+    collectionArticle.size
+  );
+  const backgroundColor = color('backgroundColor', collectionArticle.backgroundColor);
+  const isDarkTheme = boolean('isDarkTheme', collectionArticle.isDarkTheme);
+  const partNumber = number('partNumber', collectionArticle.partNumber);
+  const collectionName = text('seriesName', collectionArticle.seriesName);
+  const title = text('title', collectionArticle.title);
+  const author = text('author', collectionArticle.author);
 
   const data = {
     ...defaultData,
@@ -64,10 +67,10 @@ cards.add('Collection Article', ({ parameters: { defaultData } }) => {
 });
 
 cards.add('Video Article', ({ parameters: { defaultData } }) => {
-  const size = select('size', ['xxl', 'xl', 'l', 'm', 'square-m', 'square-s'], 'xl');
-  const isDarkTheme = boolean('isDarkTheme', false);
-  const title = text('title', 'Джэймс Джойс');
-  const author = text('author', 'Наталля Ламека');
+  const size = select('size', ['xxl', 'xl', 'l', 'm', 'square-m', 'square-s'], video.size);
+  const isDarkTheme = boolean('isDarkTheme', video.isDarkTheme);
+  const title = text('title', video.title);
+  const author = text('author', video.author);
 
   const data = {
     ...defaultData,
@@ -81,16 +84,13 @@ cards.add('Video Article', ({ parameters: { defaultData } }) => {
 });
 
 cards.add('Brand Article', ({ parameters: { defaultData } }) => {
-  const size = select('size', ['xxl', 'xl', 'l', 'm', 'square-m', 'square-s'], 'xl');
-  const backgroundColor = color('backgroundColor', '#d5d4d9');
-  const isDarkTheme = boolean('isDarkTheme', true);
-  const isBrandArticle = boolean('isBrandArticle', true);
-  const title = text('title', 'Вітальд Бялыніцкі-Біруля');
-  const author = text('author', 'А.П.Харак');
-  const description = text(
-    'description',
-    'Мноства баталій, якія з зайздроснай рэгулярнасцю разгараюцца вакол беларускай мовы, тычацца не толькі яе сучаснага стану. Мовазнаўцы і гісторыкі і па сёння не могуць пагадзіцца наконт таго, на якую мову Скарына пераклаў Біблію, што можна лічыць моваю беларускай і з якіх часоў варта адсочваць яе развіццё.'
-  );
+  const size = select('size', ['xxl', 'xl', 'l', 'm', 'square-m', 'square-s'], brandArticle.size);
+  const backgroundColor = color('backgroundColor', brandArticle.backgroundColor);
+  const isDarkTheme = boolean('isDarkTheme', brandArticle.isDarkTheme);
+  const isBrandArticle = boolean('isBrandArticle', brandArticle.isBrandArticle);
+  const title = text('title', brandArticle.title);
+  const author = text('author', brandArticle.author);
+  const description = text('description', brandArticle.description);
 
   const data = {
     ...defaultData,
@@ -107,15 +107,12 @@ cards.add('Brand Article', ({ parameters: { defaultData } }) => {
 });
 
 cards.add('Person Tag', ({ parameters: { defaultData } }) => {
-  const size = select('size', ['l', 'square-m', 'square-s', 's', 'xs'], 'l');
-  const backgroundColor = color('backgroundColor', '#686868');
-  const isDarkTheme = boolean('isDarkTheme', false);
-  const years = text('years', '1947—2016');
-  const title = text('title', 'Дэвід Боўі');
-  const description = text(
-    'description',
-    'Брытанскі рок-музыка, аўтар песень, прадзюсар, гукарэжысёр, мастак і акцёр'
-  );
+  const size = select('size', ['l', 'square-m', 'square-s', 's', 'xs'], person.size);
+  const backgroundColor = color('backgroundColor', person.backgroundColor);
+  const isDarkTheme = boolean('isDarkTheme', person.isDarkTheme);
+  const years = text('years', person.years);
+  const title = text('title', person.title);
+  const description = text('description', person.description);
 
   const data = {
     ...defaultData,
@@ -133,9 +130,9 @@ cards.add('Person Tag', ({ parameters: { defaultData } }) => {
 cards.add(
   'Location Tag',
   ({ parameters: { defaultData } }) => {
-    const size = select('size', ['l', 'square-m', 'square-s', 's', 'xs'], 'l');
-    const isDarkTheme = boolean('isDarkTheme', true);
-    const title = text('title', "Міжзем'e");
+    const size = select('size', ['l', 'square-m', 'square-s', 's', 'xs'], location.size);
+    const isDarkTheme = boolean('isDarkTheme', location.isDarkTheme);
+    const title = text('title', location.title);
 
     const data = {
       ...defaultData,
