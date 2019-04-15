@@ -13,7 +13,7 @@ import './person.scss';
 import renderLocation from './location.ejs';
 import './location.scss';
 
-import { article, collectionArticle, video, brandArticle, person, location } from './defaultData';
+import { article, collectionArticle, video, brandArticle, person, locations } from './defaultData';
 
 const wrapper = content => `<div style="margin: 10px">${content}</div>`;
 
@@ -130,9 +130,9 @@ cards.add('Person Tag', ({ parameters: { defaultData } }) => {
 cards.add(
   'Location Tag',
   ({ parameters: { defaultData } }) => {
-    const size = select('size', ['l', 'square-m', 'square-s', 's', 'xs'], location.size);
-    const isDarkTheme = boolean('isDarkTheme', location.isDarkTheme);
-    const title = text('title', location.title);
+    const size = select('size', ['l', 'square-m', 'square-s', 's', 'xs'], locations[0].size);
+    const isDarkTheme = boolean('isDarkTheme', locations[0].isDarkTheme);
+    const title = text('title', locations[0].title);
 
     const data = {
       ...defaultData,

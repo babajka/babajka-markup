@@ -8,11 +8,20 @@
 
     <div class="tags-by-topic__cards">
       <div class="tags-by-topic__2 <% if (locals.style === '1-2') { %> tags-by-topic__2--pulled-right <% } %>">
-        <%- include('../cards/location.ejs', locals.tag1) %>
-        <%- include('../cards/location.ejs', locals.tag2) %>
+        <%- include('../cards/location.ejs', {
+          ...locals.tag1,
+          size: 's',
+        }) %>
+        <%- include('../cards/location.ejs', {
+          ...locals.tag2,
+          size: 's',
+        }) %>
       </div>
       <div class="tags-by-topic__1">
-        <%- include('../cards/location.ejs', locals.tag3) %>
+        <%- include('../cards/location.ejs', {
+          ...locals.tag3,
+          size: 'l',
+        }) %>
       </div>
     </div>
 

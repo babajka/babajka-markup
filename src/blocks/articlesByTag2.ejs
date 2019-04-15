@@ -14,8 +14,14 @@
         <%- include('../kit/link/link.ejs', { text: locals.linkBottomText, isDarkTheme: true }) %>
       </div>
     </div>
-    <%- include('../cards/article.ejs', locals.article1) %>
-    <%- include('../cards/article.ejs', locals.article2) %>
+    <%- include('../cards/article.ejs', {
+      ...locals.article1,
+      size: 'square-m',
+    }) %>
+    <%- include('../cards/article.ejs', {
+      ...locals.article2,
+      size: 'square-m',
+    }) %>
   </div>
 
 </div>

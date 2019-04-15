@@ -47,11 +47,24 @@ const person = {
   image: 'https://babajka.github.io/babajka-markup/static/images/mock/covers/person.png',
 };
 
-const location = {
-  size: 'l',
-  isDarkTheme: true,
-  title: "Міжзем'e",
-  image: 'https://babajka.github.io/babajka-markup/static/images/mock/covers/location.png',
-};
+const locations = [
+  {
+    size: 'l',
+    title: "Міжзем'e",
+    backgroundImage: 'location.png',
+    isDarkTheme: true,
+  },
+  {
+    size: 'l',
+    title: 'ВКЛ',
+    backgroundImage: 'location.png',
+    isDarkTheme: true,
+  },
+  {
+    size: 'l',
+    title: 'Галактыка Андрамеды',
+    backgroundImage: 'location-galaxy.jpg',
+  },
+];
 
-module.exports = { article, collectionArticle, video, brandArticle, person, location };
+module.exports = { article, collectionArticle, video, brandArticle, person, locations };
