@@ -1,0 +1,21 @@
+.block {
+  //
+
+  &__twoInRow {
+    display: flex;
+  }
+}
+
+.screen-desktop {
+  //
+
+  .block {
+    //
+
+    &__twoInRow {
+      flex-direction: row;
+      justify-content: space-between;
+      max-width: 1020px;
+    }
+  }
+}

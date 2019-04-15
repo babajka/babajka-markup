@@ -1,0 +1,107 @@
+<div>
+
+  <%- include('../blocks/featured.ejs', {
+    screen: 'desktop',
+    featuredOptions: {
+      size: 'xxl',
+      backgroundColor: '#1a2e48',
+      title: 'Як прыгатаваць мову ВКЛ?',
+      author: 'Марыя Бадзей, Марына Анісімава',
+      description: 'Мноства баталій, якія з зайздроснай рэгулярнасцю разгараюцца вакол беларускай мовы, тычацца не толькі яе сучаснага стану. Мовазнаўцы і гісторыкі і па сёння не могуць пагадзіцца наконт таго, на якую мову Скарына пераклаў Біблію, што можна лічыць моваю беларускай і з якіх часоў варта адсочваць яе развіццё. Паспрабуем прыгледзецца да мовы Вялікага Княства Літоўскага'
+    },
+  }) %>
+
+  <%- include('../blocks/twoInRow.ejs', { screen: 'desktop' }) %>
+
+  <%- include('../blocks/tagsByTopic.ejs', {
+    screen: 'desktop',
+    style: '1-2',
+    titleLabel: 'усе асобы',
+    tag1: {
+      size: 's',
+      title: 'ВКЛ',
+      backgroundImage: 'location.png',
+      isDarkTheme: true,
+    },
+    tag2: {
+      size: 's',
+      title: 'Міжзем\'е',
+      backgroundImage: 'location.png',
+      isDarkTheme: true,
+    },
+    tag3: {
+      size: 'l',
+      title: 'Галактыка Андрамеды',
+      backgroundImage: 'location-galaxy.jpg',
+    }
+  }) %>
+
+  <%- include('../blocks/articlesByTag2.ejs', {
+    screen: 'desktop',
+    branded: false,
+    labelTop: 'Папулярная <br /> тэма: <br />',
+    linkTopText: 'міфалогія',
+    linkBottomText: 'усе тэмы',
+    article1: {
+      size: 'square-m',
+      backgroundColor: '#1a2e48',
+      title: 'Вітальд Бялыніцкі-Біруля',
+      author: 'А.П.Харак',
+    },
+    article2: {
+      size: 'square-m',
+      backgroundColor: '#1a2e48',
+      title: 'Як прыгатаваць мову ВКЛ?',
+      author: 'Марыя Бадзей, Марына Анісімава',
+      description: 'Мноства баталій, якія з зайздроснай рэгулярнасцю разгараюцца вакол беларускай мовы, тычацца не толькі яе сучаснага стану. Мовазнаўцы і гісторыкі і па сёння не могуць пагадзіцца наконт таго, на якую мову Скарына пераклаў Біблію, што можна лічыць моваю беларускай і з якіх часоў варта адсочваць яе развіццё. Паспрабуем прыгледзецца да мовы Вялікага Княства Літоўскага'
+    }
+  }) %>
+
+  <%- include('../blocks/tagsByTopic.ejs', {
+    screen: 'desktop',
+    style: '2-1',
+    titleLabel: 'усе лакацыі',
+    tag1: {
+      size: 's',
+      title: 'ВКЛ',
+      backgroundImage: 'location.png',
+      isDarkTheme: true,
+    },
+    tag2: {
+      size: 's',
+      title: 'Міжзем\'е',
+      backgroundImage: 'location.png',
+      isDarkTheme: true,
+    },
+    tag3: {
+      size: 'l',
+      title: 'Галактыка Андрамеды',
+      backgroundImage: 'location-galaxy.jpg',
+    }
+  }) %>
+
+  <%- include('../blocks/articlesByTag2.ejs', {
+    screen: 'desktop',
+    branded: true,
+    labelTop: 'нацыянальны <br /> мастацкі <br /> музей <br />',
+    linkBottomText: 'усе <br /> партнёрскія <br /> матэрыялы',
+    article1: {
+      size: 'square-m',
+      isBrandArticle: true,
+      backgroundColor: '#d5d4d9',
+      isDarkTheme: true,
+      title: 'Вітальд Бялыніцкі-Біруля',
+      author: 'А.П.Харак',
+    },
+    article2: {
+      size: 'square-m',
+      isBrandArticle: true,
+      backgroundColor: '#d5d4d9',
+      isDarkTheme: true,
+      title: 'Як прыгатаваць мову ВКЛ?',
+      author: 'Марыя Бадзей, Марына Анісімава',
+      description: 'Мноства баталій, якія з зайздроснай рэгулярнасцю разгараюцца вакол беларускай мовы, тычацца не толькі яе сучаснага стану. Мовазнаўцы і гісторыкі і па сёння не могуць пагадзіцца наконт таго, на якую мову Скарына пераклаў Біблію, што можна лічыць моваю беларускай і з якіх часоў варта адсочваць яе развіццё. Паспрабуем прыгледзецца да мовы Вялікага Княства Літоўскага'
+    }
+  }) %>
+
+</div>

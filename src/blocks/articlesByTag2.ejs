@@ -1,0 +1,21 @@
+<div class="screen-<%= locals.screen %>">
+  <div class="block block__with-background block__articlesByTag2">
+    <div class="block__labels <% if (locals.branded) { %> block__labels--right <% } %>">
+      <div style="width:120px;">
+        <% if (locals.branded) { %>
+          <img src="<%= imagesPath %>/mock/brands/art-museum.png" alt="Лагатып партнёра" width="120" />
+        <% } %>
+        <div class="block__label">
+          <%- locals.labelTop %>
+          <%- include('../kit/link/link.ejs', { text: locals.linkTopText, isDarkTheme: true }) %>
+        </div>
+      </div>
+      <div class="block__label">
+        <%- include('../kit/link/link.ejs', { text: locals.linkBottomText, isDarkTheme: true }) %>
+      </div>
+    </div>
+    <%- include('../cards/article.ejs', locals.article1) %>
+    <%- include('../cards/article.ejs', locals.article2) %>
+  </div>
+
+</div>

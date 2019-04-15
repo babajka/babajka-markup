@@ -1,0 +1,21 @@
+<div class="screen-<%= locals.screen %>">
+
+  <div class="block block__no-background tags-by-topic">
+
+    <div class="tags-by-topic__title-label">
+      <%- include('../kit/link/link.ejs', { text: locals.titleLabel }) %>
+    </div>
+
+    <div class="tags-by-topic__cards">
+      <div class="tags-by-topic__2 <% if (locals.style === '1-2') { %> tags-by-topic__2--pulled-right <% } %>">
+        <%- include('../cards/location.ejs', locals.tag1) %>
+        <%- include('../cards/location.ejs', locals.tag2) %>
+      </div>
+      <div class="tags-by-topic__1">
+        <%- include('../cards/location.ejs', locals.tag3) %>
+      </div>
+    </div>
+
+  </div>
+
+</div>

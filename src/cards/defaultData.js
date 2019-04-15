@@ -13,7 +13,7 @@ const collectionArticle = {
   backgroundColor: '#f6d39d',
   isDarkTheme: true,
   partNumber: 1,
-  seriesName: 'Міцкевіч: геаграфія паэта',
+  collectionName: 'Міцкевіч: геаграфія паэта',
   author: 'Марыя Бадзей',
   title: 'Літва! Ты, як здароўе ў нас, мая Айчына!',
 };

@@ -48,7 +48,7 @@ cards.add('Collection Article', ({ parameters: { defaultData } }) => {
   const backgroundColor = color('backgroundColor', collectionArticle.backgroundColor);
   const isDarkTheme = boolean('isDarkTheme', collectionArticle.isDarkTheme);
   const partNumber = number('partNumber', collectionArticle.partNumber);
-  const collectionName = text('seriesName', collectionArticle.seriesName);
+  const collectionName = text('collectionName', collectionArticle.collectionName);
   const title = text('title', collectionArticle.title);
   const author = text('author', collectionArticle.author);
 

@@ -1,0 +1,16 @@
+.screen-desktop {
+  //
+
+  .block {
+    //
+
+    &__articlesByTag2 {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      padding-bottom: 45px;
+      padding-top: 45px;
+      width: 1020px;
+    }
+  }
+}
