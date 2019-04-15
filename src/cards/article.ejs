@@ -1,6 +1,6 @@
 <div class="size-<%= locals.size %>">
   <% if (['xxl', 'xl', 'l', 'm'].includes(locals.size)) { %>
-  <div class="article <% if (locals.isDarkTheme) { %>theme-dark<% } %>" style="background-color: <%= locals.backgroundColor %>">
+  <div class="article <% if (locals.isDarkTheme) { %>theme-dark<% } %>" style="background-color: <%= locals.backgroundColor %>;">
     <div class="article__cover-wrapper">
       <img
         class="article__cover"
@@ -22,7 +22,7 @@
       </div>
       <div class="article__content-bottom">
         <span class="article__description"><%= locals.description %></span>
-        <span class="article__read <% if (locals.isDarkTheme) { %>theme-dark<% } %>"
+        <span class="wir-link <% if (locals.isDarkTheme) { %>wir-link--theme-dark<% } %>"
           >Чытаць<% if (locals.size === 'm') { %> артыкул<% } %></span
         >
       </div>

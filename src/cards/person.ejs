@@ -1,10 +1,5 @@
 <div class="size-<%= locals.size %>">
-  <style>
-    .person {
-      background-color: <%= locals.backgroundColor %>;
-    }
-  </style>
-  <div class="person <% if (locals.isDarkTheme) { %>theme-dark<% } %>">
+  <div class="person <% if (locals.isDarkTheme) { %>theme-dark<% } %>" style="background-color: <%= locals.backgroundColor %>;">
     <div class="person__cover-wrapper">
       <img
         class="person__cover"
