@@ -1757,6 +1757,13 @@ a:visited {
   margin: 2rem 0 1rem;
 }
 
+.secondary-content__separator {
+  color: #dbdbdb;
+  font-size: 1.75rem;
+  margin: 2rem 0;
+  text-align: center;
+}
+
 .text-description {
   line-height: 1.42em;
 }
@@ -1764,6 +1771,31 @@ a:visited {
 .text-description ul {
   list-style-position: outside;
   padding-left: 1.5em;
+}
+
+.podcast-widget {
+  margin: 2rem 0 0;
+  width: 100%;
+}
+
+.podcast-widget--mobile {
+  display: inline-block;
+}
+
+@media screen and (min-width: 769px), print {
+  .podcast-widget--mobile {
+    display: none;
+  }
+}
+
+.podcast-widget--desktop {
+  display: none;
+}
+
+@media screen and (min-width: 769px), print {
+  .podcast-widget--desktop {
+    display: inline-block;
+  }
 }
 
 .team {
