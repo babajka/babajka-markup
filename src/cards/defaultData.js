@@ -44,12 +44,14 @@ const person = {
   years: '1947—2016',
   title: 'Дэвід Боўі',
   description: 'Брытанскі рок-музыка, аўтар песень, прадзюсар, гукарэжысёр, мастак і акцёр',
+  image: 'https://babajka.github.io/babajka-markup/static/images/mock/covers/person.png',
 };
 
 const location = {
   size: 'l',
   isDarkTheme: true,
   title: "Міжзем'e",
+  image: 'https://babajka.github.io/babajka-markup/static/images/mock/covers/location.png',
 };
 
 module.exports = { article, collectionArticle, video, brandArticle, person, location };
