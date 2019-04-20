@@ -19,6 +19,7 @@ module.exports = {
         'stubs',
         'landing',
         'cards',
+        'kit',
       ],
     ],
     'scope-empty': [2, 'never'],
