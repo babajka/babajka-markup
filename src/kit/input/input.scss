@@ -9,16 +9,16 @@
     font-size: 24px;
     margin: 7px 0 2px;
 
-    &-left {
+    &--left {
       margin-right: 11.5px;
       order: -1;
     }
 
-    &-right {
+    &--right {
       margin-left: 11.5px;
     }
 
-    &-loading {
+    &--loading {
       animation: spin 1.5s linear infinite;
     }
   }
@@ -31,7 +31,11 @@
     width: 100%;
   }
 
-  input {
+  &__error {
+    color: $error;
+  }
+
+  &__input {
     background: inherit;
     border: 0;
     flex-grow: 1;
@@ -45,10 +49,20 @@
     &:focus ~ .wir-input {
       &__bar {
         background-color: $primary;
+
+        // stylelint-disable-next-line max-nesting-depth
+        &--error {
+          background-color: $error;
+        }
       }
 
       &__icon {
         color: $primary;
+
+        // stylelint-disable-next-line max-nesting-depth
+        &--error {
+          color: $error;
+        }
       }
     }
 

@@ -1,20 +1,20 @@
-<div class="wir-input search">
-  <input <% if (locals.disabled) { %>disabled<% } %> />
+<div class="wir-input">
+  <input class="wir-input__input" <% if (locals.disabled) { %>disabled<% } %> />
   <% if (locals.loading) { %>
-    <span class="wir-input__icon wir-input__icon-left wir-input__icon-loading">
+    <span class="wir-input__icon wir-input__icon--left wir-input__icon--loading">
       <i class="fas fa-circle-notch"></i>
     </span>
   <% } else { %>
     <% if (locals.leftIcon) { %>
-      <span class="wir-input__icon wir-input__icon-left">
+      <span class="wir-input__icon wir-input__icon--left">
         <i class="<%= locals.leftIcon %>"></i>
       </span>
     <% } %>
   <% } %>
   <% if (locals.rightIcon) { %>
-    <span class="wir-input__icon wir-input__icon-right">
+    <span class="wir-input__icon wir-input__icon--right">
       <i class="<%= locals.rightIcon %>"></i>
     </span>
   <% } %>
-  <span class="wir-input__bar"></span>
+  <span class="wir-input__bar wir-input__bar--error"></span>
 </div>
