@@ -19,7 +19,7 @@
     }
 
     &--loading {
-      animation: spin 1.5s linear infinite;
+      animation: spin 1.3s linear infinite;
     }
   }
 
@@ -86,4 +86,12 @@
       transform: rotate(360deg);
     }
   }
+}
+
+// change autocomplete styles in Chrome
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+  transition: background-color 5000s ease-in-out 0s;
 }
