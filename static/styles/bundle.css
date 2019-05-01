@@ -1,5 +1,341 @@
 
 
+.articles-by-tag-2 {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 1020px;
+}
+
+.articles-by-tag-2__labels {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 120px;
+}
+
+.articles-by-tag-2__label {
+  color: #ffffff;
+  display: inline-block;
+  font-size: 14px;
+  letter-spacing: 1px;
+  line-height: 24px;
+  text-transform: uppercase;
+  width: 100%;
+}
+
+.articles-by-tag-2__bottom-mobile-label {
+  margin: 45px 0;
+  text-align: center;
+  width: 100%;
+}
+
+.articles-by-tag-2__cards {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 840px;
+}
+
+.screen-desktop .articles-by-tag-2 {
+  padding-bottom: 62px;
+  padding-top: 42px;
+}
+
+.screen-desktop .articles-by-tag-2__bottom-labels {
+  display: none;
+}
+
+.screen-desktop .articles-by-tag-2__bottom-mobile-label {
+  display: none;
+}
+
+.screen-desktop .articles-by-tag-2__labels--right {
+  order: 1;
+}
+
+.screen-mobile .articles-by-tag-2 {
+  flex-direction: column;
+  padding: 0;
+}
+
+.screen-mobile .articles-by-tag-2__labels {
+  text-align: center;
+  width: 300px;
+}
+
+.screen-mobile .articles-by-tag-2__bottom-labels {
+  width: 300px;
+}
+
+.screen-mobile .articles-by-tag-2__top-mobile-labels {
+  margin: 45px 0;
+}
+
+.screen-mobile .articles-by-tag-2__bottom-desktop-label {
+  display: none;
+}
+
+.screen-mobile .articles-by-tag-2__card1 {
+  margin: 20px 0;
+}
+
+.screen-mobile .articles-by-tag-2__card-2 {
+  display: none;
+}
+.articles-by-tag-3__title {
+  font-size: 14px;
+  letter-spacing: 1px;
+  line-height: 21px;
+  text-transform: uppercase;
+}
+
+.articles-by-tag-3__combined-title-line {
+  border-bottom: solid 1px #888888;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding-bottom: 25px;
+}
+
+.articles-by-tag-3__separate-header {
+  border-top: solid 1px #888888;
+  padding: 15px 0;
+  text-align: center;
+}
+
+.articles-by-tag-3__separate-footer {
+  padding: 15px 0;
+  text-align: center;
+}
+
+.articles-by-tag-3__cards {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.screen-desktop .articles-by-tag-3__separate-header {
+  display: none;
+}
+
+.screen-desktop .articles-by-tag-3__separate-footer {
+  display: none;
+}
+
+.screen-desktop .articles-by-tag-3__cards {
+  margin-top: 40px;
+}
+
+.screen-mobile .articles-by-tag-3__combined-title-line {
+  display: none;
+}
+
+.screen-mobile .articles-by-tag-3__card-2 {
+  display: none;
+}
+
+.screen-mobile .articles-by-tag-3__card-3 {
+  display: none;
+}
+.banner {
+  cursor: pointer;
+}
+
+.banner img {
+  width: 100%;
+}
+.block__no-background {
+  margin-top: 60px;
+}
+
+.block__with-background {
+  background-color: #000000;
+  margin-bottom: 20px;
+  margin-top: 80px;
+}
+
+.screen-desktop .block {
+  padding-left: calc((100% - 1020px) / 3);
+  padding-right: calc((100% - 1020px) * 2 / 3);
+}
+
+.screen-mobile .block {
+  padding-left: calc((100% - 300px) / 3);
+  padding-right: calc((100% - 300px) * 2 / 3);
+}
+.diary {
+  margin-top: -15px;
+}
+
+.diary__content {
+  border-bottom: 1px solid #888888;
+  display: flex;
+  position: relative;
+}
+
+.diary__text-content {
+  display: flex;
+}
+
+.diary__picture {
+  z-index: 1;
+}
+
+.diary__picture img {
+  height: 100%;
+  width: 100%;
+}
+
+.diary__date {
+  font-weight: bold;
+}
+
+.diary__text {
+  overflow: hidden;
+}
+
+.diary__arrows {
+  background-color: #ffffff;
+  bottom: -13px;
+  display: flex;
+  flex-direction: row;
+  font-size: 24px;
+  justify-content: space-between;
+  left: 0;
+  line-height: 24px;
+  padding-right: 20px;
+  position: absolute;
+  width: 60px;
+  z-index: 1;
+}
+
+.screen-desktop .diary__content {
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.screen-desktop .diary__text-content {
+  align-items: center;
+  flex-direction: row;
+  height: 180px;
+}
+
+.screen-desktop .diary__picture {
+  height: 180px;
+  order: 1;
+  width: 180px;
+}
+
+.screen-desktop .diary__title {
+  font-size: 20px;
+  height: 100px;
+  line-height: 33px;
+  margin-top: 10px;
+  width: 240px;
+}
+
+.screen-desktop .diary__text {
+  font-size: 14px;
+  height: 100px;
+  line-height: 24px;
+  margin-top: 10px;
+  width: 570px;
+}
+
+.screen-mobile .diary__content {
+  flex-direction: column;
+}
+
+.screen-mobile .diary__picture {
+  border-bottom: 1px solid #888888;
+  height: 90px;
+  margin-bottom: 30px;
+  text-align: right;
+  width: 100%;
+}
+
+.screen-mobile .diary__picture img {
+  width: 90px;
+}
+
+.screen-mobile .diary__text-content {
+  flex-direction: column;
+  margin-bottom: 42px;
+}
+
+.screen-mobile .diary__title {
+  font-size: 14px;
+  font-weight: bold;
+  line-height: 21px;
+}
+
+.screen-mobile .diary__text {
+  font-size: 14px;
+  height: 105px;
+  line-height: 21px;
+}
+.tags-by-topic {
+  display: flex;
+  flex-direction: column;
+}
+
+.tags-by-topic__title-label {
+  font-size: 14px;
+  letter-spacing: 1px;
+  margin-bottom: 25px;
+  text-align: right;
+  text-transform: uppercase;
+  width: 100%;
+}
+
+.tags-by-topic__cards {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.tags-by-topic__2 {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.tags-by-topic__2--pulled-right {
+  order: 1;
+}
+
+.screen-mobile .tags-by-topic__title-label {
+  margin-top: 30px;
+  order: 1;
+  text-align: center;
+}
+
+.screen-mobile .tags-by-topic__1 {
+  display: none;
+}
+
+.screen-mobile .tags-by-topic__2-top {
+  margin-bottom: 5px;
+}
+.two-in-row {
+  display: flex;
+}
+
+.screen-desktop .two-in-row {
+  flex-direction: row;
+  justify-content: space-between;
+  max-width: 1020px;
+}
+
+.screen-mobile .two-in-row {
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.screen-mobile .two-in-row__first {
+  margin-bottom: 30px;
+}
 .article {
   border-radius: 3px;
   color: #ffffff;
@@ -262,6 +598,12 @@
   line-height: 36px;
 }
 
+.size-square-s {
+  height: 300px;
+  width: 300px;
+  margin: 0;
+}
+
 .size-square-s .square-article {
   height: 300px;
   width: 300px;
@@ -491,6 +833,7 @@
 .location {
   background-size: cover;
   border-radius: 3px;
+  box-sizing: border-box;
   color: #ffffff;
   display: flex;
   flex-direction: column;
@@ -877,7 +1220,6 @@
 .size-m .video {
   height: 300px;
   width: 480px;
-  padding-bottom: 31px;
 }
 
 .size-m .video__cover-wrapper {

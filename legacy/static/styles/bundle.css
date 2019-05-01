@@ -765,6 +765,9 @@
   background-color: #517fa4;
   color: #ffffff;
 }
+.main-page .load-more {
+  margin-top: 40px;
+}
 .container.login {
   margin-bottom: 3rem;
   margin-top: 1rem;
@@ -855,9 +858,6 @@
 .field .login__button:disabled,
 .field .login__button[disabled] {
   background-color: #55acee;
-}
-.main-page .load-more {
-  margin-top: 40px;
 }
 .navbar {
   flex-shrink: 0;

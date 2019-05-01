@@ -1,0 +1,1718 @@
+<!DOCTYPE html>
+<html lang="be">
+
+<head>
+  <title>
+    DESKTOP main page
+  </title>
+  <link rel="icon" type="image/png" href="/babajka-markup/static/images/logo/favicon.png" />
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#1a9582" />
+
+  <link rel="stylesheet" href="/babajka-markup/static/styles/normalize.css" />
+  <link rel="stylesheet" href="/babajka-markup/static/styles/bundle.min.css" />
+  <link rel="stylesheet" href="/babajka-markup/static/styles/assets.min.css" />
+</head>
+
+
+<script>
+  function toggleSidebar() {
+    document.getElementById("wir-sidebar").classList.toggle("wir-sidebar--expanded");
+    document.getElementById("wir-overlay").classList.toggle("wir-overlay--active");
+  }
+
+  // This is an approximate height of the sidebar. The page must be
+  // at least this high to fit a long sidebar. Short one is used otherwise.
+  let sidebarHeight = 3300;
+
+  // There seem to be no way to get content height with pure CSS.
+  // This JS method adjusts classes of sidebar sections.
+  function adjustSidebar() {
+    let clientHeight = document.getElementById("wir-root").clientHeight;
+    let sectionsShort = document.getElementsByClassName("sidebar__section--short");
+    let sectionsLong = document.getElementsByClassName("sidebar__section--long");
+    let i;
+    if (clientHeight < sidebarHeight) {
+      for (i = 0; i < sectionsShort.length; i++) {
+        sectionsShort[i].classList.add("sidebar__section--visible");
+      }
+      for (i = 0; i < sectionsLong.length; i++) {
+        sectionsLong[i].classList.remove("sidebar__section--visible");
+      }
+    } else {
+      for (i = 0; i < sectionsShort.length; i++) {
+        sectionsShort[i].classList.remove("sidebar__section--visible");
+      }
+      for (i = 0; i < sectionsLong.length; i++) {
+        sectionsLong[i].classList.add("sidebar__section--visible");
+      }
+    }
+  }
+</script>
+
+<body onload="adjustSidebar()" onresize="adjustSidebar()">
+
+  <div id="wir-root" class="wir-root">
+
+    <div class="wir-space">
+      <div class="navbar">
+  <!-- on frontend used svg -->
+  <img class="navbar__logo" src="/babajka-markup/static/images/logo/favicon.png" />
+  <div class="navbar__title">
+    <a class="wir-link 
+  
+  "
+  
+   >
+  <span>Беларуская</span>
+  
+</a>
+
+    , а таксама
+    <a class="wir-link 
+  
+  "
+  
+   >
+  <span>сусветная</span>
+  
+</a>
+
+    культура і
+    <a class="wir-link 
+  
+  "
+  
+   >
+  <span>гісторыя</span>
+  
+</a>
+
+  </div>
+  <div class="navbar__burger" onclick="toggleSidebar()">
+    <div class="navbar__burger-item"></div>
+    <div class="navbar__burger-item"></div>
+    <div class="navbar__burger-item"></div>
+  </div>
+</div>
+
+
+      <div class="wir-content">
+        
+          <div class="screen-desktop">
+
+  <div class="block block__no-background">
+  <div class="size-xxl">
+  
+  <div class="article " style="background-color: #1a2e48;">
+    <div class="article__cover-wrapper">
+      <img
+        class="article__cover"
+        src="/babajka-markup/static/images/mock/covers/article-vertical.png"
+        alt="Тут павінна быць вокладка артыкула"
+      />
+    </div>
+    
+    <div class="article__content">
+      <div>
+        <div class="article__title">Як прыгатаваць мову ВКЛ?</div>
+        <div class="article__author">Марыя Бадзей, Марына Анісімава</div>
+      </div>
+      <div class="article__content-bottom">
+        <span class="article__description">Мноства баталій, якія з зайздроснай рэгулярнасцю разгараюцца вакол беларускай мовы, тычацца не толькі яе сучаснага стану. Мовазнаўцы і гісторыкі і па сёння не могуць пагадзіцца наконт таго, на якую мову Скарына пераклаў Біблію, што можна лічыць моваю беларускай і з якіх часоў варта адсочваць яе развіццё. Паспрабуем прыгледзецца да мовы Вялікага Княства Літоўскага</span>
+        <span class="article__read "
+          >Чытаць</span
+        >
+      </div>
+    </div>
+  </div>
+  
+  
+</div>
+
+</div>
+
+
+  <div class="block block__no-background diary">
+
+  <div class="diary__content">
+
+    <div class="diary__picture">
+      <img src="/babajka-markup/static/images/mock/diary/karatkievich.png" alt="Уладзімір Караткевіч" />
+    </div>
+
+    
+    
+
+    <div class="diary__text-content">
+        <div class="diary__title">
+          <span class="diary__date">10 лістапада</span>
+          <span class="diary__year">1956</span>
+          <span class="diary__name">Уладзімір Караткевіч</span>
+          <span>занатаваў у дзённіку: </span>
+        </div>
+        <div class="diary__text">
+          У небе імгла, як ад далёкага пажару, так што нельга зразумець, сонечны дзень або туманны. «Мсціслаў» усё яшчэ чакае, рукі ўсё яшчэ не ляжаць да працы. А плюну на ўсе гэтыя канферэнцыі, з’езды будаўніцтва. Я ўрэшце не гісторык у дадзеным выпадку, а эсэіст, і не мушу пісаць таго, што можна знайсці...
+          <a class="wir-link 
+  
+  "
+  
+   >
+  <span>Цалкам</span>
+  
+</a>
+
+        </div>
+    </div>
+
+    <div class="diary__arrows">
+      <a class="wir-link 
+  
+  "
+  
+   >
+  <span><span><i class="fas fa-long-arrow-alt-left"></i></span></span>
+  
+</a>
+
+      <a class="wir-link 
+  wir-link--disabled
+  "
+  
+   >
+  <span><span><i class="fas fa-long-arrow-alt-right"></i></span></span>
+  
+</a>
+
+    </div>
+
+  </div>
+
+</div>
+
+
+  <div class="screen-desktop">
+
+  <div class="block block__no-background two-in-row">
+
+    <div class="two-in-row__first">
+      <div class="size-m">
+  <div class="video ">
+    <div class="video__cover-wrapper">
+      <img
+        class="video__cover"
+        src="/babajka-markup/static/images/mock/covers/video.png"
+        alt="Тут павінна быць вокладка артыкула"
+      />
+      <div class="video__cover-gradient"></div>
+    </div>
+    <i class="video__icon fa fa-play"></i>
+    <div class="video__content">
+      <div class="video__title">Джэймс Джойс</div>
+      <div class="video__author">Наталля Ламека</div>
+    </div>
+  </div>
+</div>
+
+    </div>
+
+    <div class="two-in-row__second">
+      <div class="size-m">
+  <div class="collection theme-dark" style="background-color: #f6d39d;">
+    
+      <div class="collection__cover-wrapper">
+        <img
+          class="collection__cover"
+          src="/babajka-markup/static/images/mock/covers/collection-1.png"
+          alt="Тут павінна быць вокладка артыкула"
+        />
+      </div>
+    
+    <div class="collection__content">
+      <div class="collection__content-top">
+        <div class="collection__collection">
+          1  частка цыклу
+          <div class="collection__collection-name">Міцкевіч: геаграфія паэта</div>
+        </div>
+        <img
+          class="collection__aux-image"
+          src="/babajka-markup/static/images/mock/persons/mickiewicz.png"
+          alt="Фота аўтара"
+        />
+      </div>
+      <div class="collection__content-bottom">
+        <div class="collection__title">Літва! Ты, як здароўе ў нас, мая Айчына!</div>
+        <div class="collection__author">Марыя Бадзей</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    </div>
+
+  </div>
+
+</div>
+
+
+  <div class="block block__no-background tags-by-topic">
+
+  <div class="tags-by-topic__title-label">
+    <a class="wir-link 
+  
+  "
+  
+   >
+  <span>усе асобы</span>
+  
+</a>
+
+  </div>
+
+  
+  
+
+  <div class="tags-by-topic__cards">
+
+    <div class="tags-by-topic__2  tags-by-topic__2--pulled-right ">
+
+      <div class="tags-by-topic__2-top">
+        <div class="size-s">
+  <div class="person " style="background-color: #686868;">
+    <div class="person__cover-wrapper">
+      <img
+        class="person__cover"
+        src="/babajka-markup/static/images/mock/covers/person.png"
+        alt="Тут павінна быць вокладка тэга"
+      />
+    </div>
+    <div class="person__content">
+      <div class="person__years">1947—2016</div>
+      <div class="person__title">Дэвід Боўі</div>
+      <div class="person__description">Брытанскі рок-музыка, аўтар песень, прадзюсар, гукарэжысёр, мастак і акцёр</div>
+    </div>
+  </div>
+</div>
+
+      </div>
+
+      <div class="tags-by-topic__2-bottom">
+        <div class="size-s">
+  <div class="person " style="background-color: #686868;">
+    <div class="person__cover-wrapper">
+      <img
+        class="person__cover"
+        src="/babajka-markup/static/images/mock/covers/person.png"
+        alt="Тут павінна быць вокладка тэга"
+      />
+    </div>
+    <div class="person__content">
+      <div class="person__years">1947—2016</div>
+      <div class="person__title">Дэвід Боўі</div>
+      <div class="person__description">Брытанскі рок-музыка, аўтар песень, прадзюсар, гукарэжысёр, мастак і акцёр</div>
+    </div>
+  </div>
+</div>
+
+      </div>
+
+    </div>
+
+    <div class="tags-by-topic__1">
+      <div class="size-l">
+  <div class="person " style="background-color: #686868;">
+    <div class="person__cover-wrapper">
+      <img
+        class="person__cover"
+        src="/babajka-markup/static/images/mock/covers/person.png"
+        alt="Тут павінна быць вокладка тэга"
+      />
+    </div>
+    <div class="person__content">
+      <div class="person__years">1947—2016</div>
+      <div class="person__title">Дэвід Боўі</div>
+      <div class="person__description">Брытанскі рок-музыка, аўтар песень, прадзюсар, гукарэжысёр, мастак і акцёр</div>
+    </div>
+  </div>
+</div>
+
+    </div>
+
+  </div>
+
+</div>
+
+
+  <div class="screen-desktop">
+
+  <div class="block block__no-background articles-by-tag-3">
+
+    <div class="articles-by-tag-3__combined-title-line articles-by-tag-3__title">
+      <a class="wir-link 
+  
+  "
+  
+   >
+  <span>XX стагоддзе</span>
+  
+</a>
+
+      <a class="wir-link 
+  
+  "
+  
+   >
+  <span>усе часы</span>
+  
+</a>
+
+    </div>
+
+    <div class="articles-by-tag-3__separate-header articles-by-tag-3__title">
+      <a class="wir-link 
+  
+  "
+  
+   >
+  <span>XX стагоддзе</span>
+  
+</a>
+
+    </div>
+
+    <div class="articles-by-tag-3__cards">
+
+      <div class="articles-by-tag-3__card-1">
+        <div class="size-square-s">
+  
+  
+  <div class="square-article " style="background-color: #1a2e48;">
+    <div class="square-article__cover-wrapper">
+      <img
+        class="square-article__cover"
+        src="/babajka-markup/static/images/mock/covers/article-horizontal.png"
+        alt="Тут павінна быць вокладка артыкула"
+      />
+    </div>
+    
+    <div class="square-article__content">
+      <div class="square-article__title">Як прыгатаваць мову ВКЛ?</div>
+      <div class="square-article__author">Марыя Бадзей, Марына Анісімава</div>
+    </div>
+  </div>
+  
+</div>
+
+      </div>
+
+      <div class="articles-by-tag-3__card-2">
+        <div class="size-square-s">
+  
+  
+  <div class="square-article " style="background-color: #1a2e48;">
+    <div class="square-article__cover-wrapper">
+      <img
+        class="square-article__cover"
+        src="/babajka-markup/static/images/mock/covers/article-horizontal.png"
+        alt="Тут павінна быць вокладка артыкула"
+      />
+    </div>
+    
+    <div class="square-article__content">
+      <div class="square-article__title">Як прыгатаваць мову ВКЛ?</div>
+      <div class="square-article__author">Марыя Бадзей, Марына Анісімава</div>
+    </div>
+  </div>
+  
+</div>
+
+      </div>
+
+      <div class="articles-by-tag-3__card-3">
+        <div class="size-square-s">
+  
+  
+  <div class="square-article " style="background-color: #1a2e48;">
+    <div class="square-article__cover-wrapper">
+      <img
+        class="square-article__cover"
+        src="/babajka-markup/static/images/mock/covers/article-horizontal.png"
+        alt="Тут павінна быць вокладка артыкула"
+      />
+    </div>
+    
+    <div class="square-article__content">
+      <div class="square-article__title">Як прыгатаваць мову ВКЛ?</div>
+      <div class="square-article__author">Марыя Бадзей, Марына Анісімава</div>
+    </div>
+  </div>
+  
+</div>
+
+      </div>
+
+    </div>
+
+    <div class="articles-by-tag-3__separate-footer articles-by-tag-3__title">
+      <a class="wir-link 
+  
+  "
+  
+   >
+  <span>усе часы</span>
+  
+</a>
+
+    </div>
+
+  </div>
+
+</div>
+
+
+  <div class="block block__with-background articles-by-tag-2">
+
+  <div class="articles-by-tag-2__labels ">
+    <div class="articles-by-tag-2__top-mobile-labels">
+      
+      <div class="articles-by-tag-2__label">
+        Папулярная тэма:
+        <a class="wir-link 
+  
+  wir-link--theme-dark"
+  
+   >
+  <span>міфалогія</span>
+  
+</a>
+
+      </div>
+    </div>
+    <div class="articles-by-tag-2__label articles-by-tag-2__bottom-desktop-label">
+      <a class="wir-link 
+  
+  wir-link--theme-dark"
+  
+   >
+  <span>усе тэмы</span>
+  
+</a>
+
+    </div>
+  </div>
+
+  <div class="articles-by-tag-2__cards">
+
+    <div class="articles-by-tag-2__card-1">
+      <div class="size-square-m">
+  
+  
+  <div class="square-article theme-dark" style="background-color: #d5d4d9;">
+    <div class="square-article__cover-wrapper">
+      <img
+        class="square-article__cover"
+        src="/babajka-markup/static/images/mock/covers/brand-horizontal.png"
+        alt="Тут павінна быць вокладка артыкула"
+      />
+    </div>
+    
+      <img
+        class="square-article__brand"
+        src="/babajka-markup/static/images/mock/brands/art-museum.png"
+        alt="Лагатып партнёра"
+      />
+    
+    <div class="square-article__content">
+      <div class="square-article__title">Вітальд Бялыніцкі-Біруля</div>
+      <div class="square-article__author">А.П.Харак</div>
+    </div>
+  </div>
+  
+</div>
+
+    </div>
+
+    <div class="articles-by-tag-2__card-2">
+      <div class="size-square-m">
+  
+  
+  <div class="square-article " style="background-color: #1a2e48;">
+    <div class="square-article__cover-wrapper">
+      <img
+        class="square-article__cover"
+        src="/babajka-markup/static/images/mock/covers/article-horizontal.png"
+        alt="Тут павінна быць вокладка артыкула"
+      />
+    </div>
+    
+    <div class="square-article__content">
+      <div class="square-article__title">Як прыгатаваць мову ВКЛ?</div>
+      <div class="square-article__author">Марыя Бадзей, Марына Анісімава</div>
+    </div>
+  </div>
+  
+</div>
+
+    </div>
+
+  </div>
+
+  <div class="articles-by-tag-2__bottom-labels">
+    <div class="articles-by-tag-2__label articles-by-tag-2__bottom-mobile-label">
+      <a class="wir-link 
+  
+  wir-link--theme-dark"
+  
+   >
+  <span>усе тэмы</span>
+  
+</a>
+
+    </div>
+  </div>
+
+</div>
+
+
+  <div class="block block__no-background banner">
+  <a href="https://map.wir.by" target="_blank" rel="noreferrer noopener">
+    <img src="/babajka-markup/static/images/mock/banners/mapa-desktop.png" alt="Мапа легенд Беларусі" />
+  </a>
+</div>
+
+
+  <div class="block block__no-background tags-by-topic">
+
+  <div class="tags-by-topic__title-label">
+    <a class="wir-link 
+  
+  "
+  
+   >
+  <span>усе лакацыі</span>
+  
+</a>
+
+  </div>
+
+  
+  
+
+  <div class="tags-by-topic__cards">
+
+    <div class="tags-by-topic__2 ">
+
+      <div class="tags-by-topic__2-top">
+        <div class="size-s">
+  <div class="location theme-dark" style="background-image: url('/babajka-markup/static/images/mock/covers/location.png');">
+    <div class="location__title">ВКЛ</div>
+  </div>
+</div>
+
+      </div>
+
+      <div class="tags-by-topic__2-bottom">
+        <div class="size-s">
+  <div class="location theme-dark" style="background-image: url('/babajka-markup/static/images/mock/covers/location.png');">
+    <div class="location__title">Міжзем&#39;e</div>
+  </div>
+</div>
+
+      </div>
+
+    </div>
+
+    <div class="tags-by-topic__1">
+      <div class="size-l">
+  <div class="location " style="background-image: url('/babajka-markup/static/images/mock/covers/location-galaxy.jpg');">
+    <div class="location__title">Галактыка Андрамеды</div>
+  </div>
+</div>
+
+    </div>
+
+  </div>
+
+</div>
+
+
+  <div class="block block__with-background articles-by-tag-2">
+
+  <div class="articles-by-tag-2__labels  articles-by-tag-2__labels--right ">
+    <div class="articles-by-tag-2__top-mobile-labels">
+      
+        <img src="/babajka-markup/static/images/mock/brands/art-museum.png" alt="Лагатып партнёра" width="120" />
+      
+      <div class="articles-by-tag-2__label">
+        нацыянальны мастацкі музей
+        <a class="wir-link 
+  
+  wir-link--theme-dark"
+  
+   >
+  <span></span>
+  
+</a>
+
+      </div>
+    </div>
+    <div class="articles-by-tag-2__label articles-by-tag-2__bottom-desktop-label">
+      <a class="wir-link 
+  
+  wir-link--theme-dark"
+  
+   >
+  <span>усе партнёрскія матэрыялы</span>
+  
+</a>
+
+    </div>
+  </div>
+
+  <div class="articles-by-tag-2__cards">
+
+    <div class="articles-by-tag-2__card-1">
+      <div class="size-square-m">
+  
+  
+  <div class="square-article theme-dark" style="background-color: #d5d4d9;">
+    <div class="square-article__cover-wrapper">
+      <img
+        class="square-article__cover"
+        src="/babajka-markup/static/images/mock/covers/brand-horizontal.png"
+        alt="Тут павінна быць вокладка артыкула"
+      />
+    </div>
+    
+      <img
+        class="square-article__brand"
+        src="/babajka-markup/static/images/mock/brands/art-museum.png"
+        alt="Лагатып партнёра"
+      />
+    
+    <div class="square-article__content">
+      <div class="square-article__title">Вітальд Бялыніцкі-Біруля</div>
+      <div class="square-article__author">А.П.Харак</div>
+    </div>
+  </div>
+  
+</div>
+
+    </div>
+
+    <div class="articles-by-tag-2__card-2">
+      <div class="size-square-m">
+  
+  
+  <div class="square-article theme-dark" style="background-color: #d5d4d9;">
+    <div class="square-article__cover-wrapper">
+      <img
+        class="square-article__cover"
+        src="/babajka-markup/static/images/mock/covers/brand-horizontal.png"
+        alt="Тут павінна быць вокладка артыкула"
+      />
+    </div>
+    
+      <img
+        class="square-article__brand"
+        src="/babajka-markup/static/images/mock/brands/art-museum.png"
+        alt="Лагатып партнёра"
+      />
+    
+    <div class="square-article__content">
+      <div class="square-article__title">Вітальд Бялыніцкі-Біруля</div>
+      <div class="square-article__author">А.П.Харак</div>
+    </div>
+  </div>
+  
+</div>
+
+    </div>
+
+  </div>
+
+  <div class="articles-by-tag-2__bottom-labels">
+    <div class="articles-by-tag-2__label articles-by-tag-2__bottom-mobile-label">
+      <a class="wir-link 
+  
+  wir-link--theme-dark"
+  
+   >
+  <span>усе партнёрскія матэрыялы</span>
+  
+</a>
+
+    </div>
+  </div>
+
+</div>
+
+
+</div>
+
+        
+      </div>
+
+      <footer class="footer footer-layout">
+  <div class="footer-layout__nested1">
+    <div class="footer-layout__nested2">
+
+      <div class="footer-layout__block1 footer__links">
+        <div class="footer__links-column">
+          <div class="footer__header">
+            Матэрыялы
+          </div>
+          <div class="footer__item">
+            <a class="wir-link 
+  
+  "
+  
+   >
+  <span>Па тэмах</span>
+  
+</a>
+
+          </div>
+          <div class="footer__item">
+            <a class="wir-link 
+  
+  "
+  
+   >
+  <span>Персаналіях</span>
+  
+</a>
+
+          </div>
+          <div class="footer__item">
+            <a class="wir-link 
+  
+  "
+  
+   >
+  <span>Храналогіі</span>
+  
+</a>
+
+          </div>
+          <div class="footer__item">
+            <a class="wir-link 
+  
+  "
+  
+   >
+  <span>Лакацыях</span>
+  
+</a>
+
+          </div>
+          <div class="footer__item">
+            <a class="wir-link 
+  
+  "
+  
+   >
+  <span>Партнёрах</span>
+  
+</a>
+
+          </div>
+          <div class="footer__item">
+            <a class="wir-link 
+  
+  "
+  
+   >
+  <span>Аўтарах</span>
+  
+</a>
+
+          </div>
+        </div>
+        <div class="footer__links-column">
+          <div class="footer__header">
+            Мы ў сетках
+          </div>
+          <div class="footer__item">
+            <a class="wir-link 
+  
+  "
+   href="https://facebook.com/wirdotby"
+   target="_blank" rel="noopener noreferrer"  >
+  <span>Facebook</span>
+  
+</a>
+
+          </div>
+          <div class="footer__item">
+            <a class="wir-link 
+  
+  "
+   href="https://instagram.com/wir_by"
+   target="_blank" rel="noopener noreferrer"  >
+  <span>Instagram</span>
+  
+</a>
+
+          </div>
+          <div class="footer__item">
+            <a class="wir-link 
+  
+  "
+   href="https://vk.com/wir_by"
+   target="_blank" rel="noopener noreferrer"  >
+  <span>ВКонтакте</span>
+  
+</a>
+
+          </div>
+          <div class="footer__item">
+            <a class="wir-link 
+  
+  "
+   href="https://t.me/wir_by"
+   target="_blank" rel="noopener noreferrer"  >
+  <span>Telegram</span>
+  
+</a>
+
+          </div>
+          <div class="footer__item">
+            <a class="wir-link 
+  
+  "
+   href="https://twitter.com/wir_by"
+   target="_blank" rel="noopener noreferrer"  >
+  <span>Twitter</span>
+  
+</a>
+
+          </div>
+          <div class="footer__item">
+            <a class="wir-link 
+  
+  "
+   href="https://www.youtube.com/channel/UCoj_6A55mEPeba8ZfBHqfCw"
+   target="_blank" rel="noopener noreferrer"  >
+  <span>YouTube</span>
+  
+</a>
+
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-layout__block2">
+        <div class="footer__interactions">
+          <div class="footer__mailing">
+            <div class="footer__header">
+              Падпісацца на абнаўленні
+            </div>
+            <div class="wir-input search">
+  <input  />
+  
+    
+      <span class="wir-input__icon wir-input__icon-left">
+        <i class="far fa-envelope"></i>
+      </span>
+    
+  
+  
+  <span class="wir-input__bar"></span>
+</div>
+
+          </div>
+          <div class="footer__social">
+            <div class="footer__header">
+              Расказаць пра нас усім
+            </div>
+            <div class="wir-social-buttons">
+  <div class="wir-social-buttons__container">
+    <div class="wir-social-buttons__item wir-social-buttons__button wir-social-buttons__button--facebook">
+      <span>
+        <i class="fab fa-facebook-square"></i>
+      </span>
+    </div>
+    <div class="wir-social-buttons__item wir-social-buttons__button wir-social-buttons__button--vk">
+      <span>
+        <i class="fab fa-vk"></i>
+      </span>
+    </div>
+    <div class="wir-social-buttons__item wir-social-buttons__button wir-social-buttons__button--twitter">
+      <span>
+        <i class="fab fa-twitter"></i>
+      </span>
+    </div>
+    <div class="wir-social-buttons__item wir-social-buttons__button wir-social-buttons__button--odnoklassniki">
+      <span>
+        <i class="fab fa-odnoklassniki"></i>
+      </span>
+    </div>
+  </div>
+</div>
+
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="footer-layout__block3">
+      <div class="footer__help-us">
+        <div class="footer__header">
+          Дапамагчы нам
+        </div>
+        <div class="footer__help-text">
+          Калі вы&nbsp;знайшлі памылку, у&nbsp;вас ёсць заўвагі па&nbsp;сайце,
+          ці&nbsp;хочаце дапамагчы нам, калі ласка, напішыце
+          <a class="wir-link 
+  
+  "
+   href="mailto:help@wir.by"
+   >
+  <span>на&nbsp;help@wir.by</span>
+  
+</a>
+
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="footer-layout__block4 footer__bottom">
+    <span class="footer__copyright">
+      © Wir.by, 2019
+    </span>
+
+  </div>
+</footer>
+
+
+      <div id="wir-overlay" class="wir-overlay" onclick="toggleSidebar()"></div>
+    </div>
+
+    <div id="wir-sidebar" class="wir-sidebar">
+      <aside class="sidebar">
+  <span class="sidebar__icon-close" onclick="toggleSidebar()">
+    <a class="wir-link 
+  
+  "
+  
+   >
+  <span><i class="fas fa-times"></i></span>
+  
+</a>
+
+  </span>
+
+  <ul class="sidebar__langs">
+    
+      <li class="langs__item">
+        <a class="wir-link 
+  
+  "
+  
+   >
+  <span>по-русски</span>
+  
+</a>
+
+      </li>
+    
+      <li class="langs__item">
+        <a class="wir-link 
+  
+  "
+  
+   >
+  <span>in english</span>
+  
+</a>
+
+      </li>
+    
+  </ul>
+
+  <div class="sidebar__about-label">
+    <a class="wir-link 
+  
+  "
+  
+   >
+  <span>пра праект</span>
+  
+</a>
+
+  </div>
+
+  <!-- sidebar__section--short - demo class for markup -->
+  <section class="sidebar__section sidebar__section--short">
+    <ul class="sidebar__section-list">
+      
+        <li class="sidebar__section-list-item">
+          <a class="wir-link 
+  
+  "
+  
+   >
+  <span>Спасылкі</span>
+  
+</a>
+
+        </li>
+      
+        <li class="sidebar__section-list-item">
+          <a class="wir-link 
+  
+  "
+  
+   >
+  <span>Для кароткага</span>
+  
+</a>
+
+        </li>
+      
+        <li class="sidebar__section-list-item">
+          <a class="wir-link 
+  
+  "
+  
+   >
+  <span>Сайдбара</span>
+  
+</a>
+
+        </li>
+      
+    </ul>
+  </section>
+
+  <!-- sidebar__section--long sidebar__section--visible - demo classes for markup -->
+  <section class="sidebar__section sidebar__section--long sidebar__section--visible">
+    <ul class="sidebar__section-list">
+      
+        <li class="sidebar__section-list-item">
+          <a class="wir-link 
+  
+  "
+  
+   >
+  <span>Топ-10</span>
+  
+</a>
+
+        </li>
+      
+        <li class="sidebar__section-list-item">
+          <a class="wir-link 
+  
+  "
+  
+   >
+  <span>Самае актуальнае</span>
+  
+</a>
+
+        </li>
+      
+        <li class="sidebar__section-list-item">
+          <a class="wir-link 
+  
+  "
+  
+   >
+  <span>&lt5 хвілін на прагляд</span>
+  
+</a>
+
+        </li>
+      
+    </ul>
+  </section>
+
+  <section class="sidebar__section sidebar__section--long sidebar__section--visible">
+    <ul class="sidebar__section-list">
+      
+        <li class="sidebar__section-list-item">
+          <a class="wir-link 
+  
+  "
+  
+   >
+  <span>Артыкулы</span>
+  
+</a>
+
+        </li>
+      
+        <li class="sidebar__section-list-item">
+          <a class="wir-link 
+  
+  "
+  
+   >
+  <span>Відэалекцыі</span>
+  
+</a>
+
+        </li>
+      
+        <li class="sidebar__section-list-item">
+          <a class="wir-link 
+  
+  "
+  
+   >
+  <span>Падкасты</span>
+  
+</a>
+
+        </li>
+      
+        <li class="sidebar__section-list-item">
+          <a class="wir-link 
+  
+  "
+  
+   >
+  <span>Гульні і тэсты</span>
+  
+</a>
+
+        </li>
+      
+    </ul>
+  </section>
+
+  <section class="sidebar__section sidebar__section--long sidebar__section--visible">
+    <ul class="sidebar__section-list">
+      <li class="sidebar__section-list-item sidebar__section-title">
+        тэмы
+      </li>
+      
+        <li class="sidebar__section-list-item">
+          <a class="wir-link 
+  
+  "
+  
+   >
+  <span>Архітэктура</span>
+  
+</a>
+
+        </li>
+      
+        <li class="sidebar__section-list-item">
+          <a class="wir-link 
+  
+  "
+  
+   >
+  <span>Гісторыя</span>
+  
+</a>
+
+        </li>
+      
+        <li class="sidebar__section-list-item">
+          <a class="wir-link 
+  
+  "
+  
+   >
+  <span>Кіно</span>
+  
+</a>
+
+        </li>
+      
+        <li class="sidebar__section-list-item">
+          <a class="wir-link 
+  
+  "
+  
+   >
+  <span>Лінгвістыка</span>
+  
+</a>
+
+        </li>
+      
+        <li class="sidebar__section-list-item">
+          <a class="wir-link 
+  
+  "
+  
+   >
+  <span>Літаратура</span>
+  
+</a>
+
+        </li>
+      
+        <li class="sidebar__section-list-item">
+          <a class="wir-link 
+  
+  "
+  
+   >
+  <span>Мастацтва</span>
+  
+</a>
+
+        </li>
+      
+        <li class="sidebar__section-list-item">
+          <a class="wir-link 
+  
+  "
+  
+   >
+  <span>Міфалогія</span>
+  
+</a>
+
+        </li>
+      
+        <li class="sidebar__section-list-item">
+          <a class="wir-link 
+  
+  "
+  
+   >
+  <span>Музыка</span>
+  
+</a>
+
+        </li>
+      
+        <li class="sidebar__section-list-item">
+          <a class="wir-link 
+  
+  "
+  
+   >
+  <span>Тэатр</span>
+  
+</a>
+
+        </li>
+      
+        <li class="sidebar__section-list-item">
+          <a class="wir-link 
+  
+  "
+  
+   >
+  <span>Філасофія</span>
+  
+</a>
+
+        </li>
+      
+    </ul>
+  </section>
+
+  <section class="sidebar__section sidebar__section--long sidebar__section--visible">
+    <ul class="sidebar__section-list">
+      <li class="sidebar__section-list-item sidebar__section-title">
+        асноўныя асобы
+      </li>
+      
+        <li class="sidebar__section-list-item">
+          <a class="wir-link 
+  
+  "
+  
+   >
+  <span>Янка Купала</span>
+  
+</a>
+
+        </li>
+      
+        <li class="sidebar__section-list-item">
+          <a class="wir-link 
+  
+  "
+  
+   >
+  <span>Уладзімір Караткевіч</span>
+  
+</a>
+
+        </li>
+      
+        <li class="sidebar__section-list-item">
+          <a class="wir-link 
+  
+  "
+  
+   >
+  <span>Адам Міцкевіч</span>
+  
+</a>
+
+        </li>
+      
+        <li class="sidebar__section-list-item">
+          <a class="wir-link 
+  
+  "
+  
+   >
+  <span>Якуб Колас</span>
+  
+</a>
+
+        </li>
+      
+        <li class="sidebar__section-list-item">
+          <a class="wir-link 
+  
+  "
+  
+   >
+  <span>Ян Баршчэўскі</span>
+  
+</a>
+
+        </li>
+      
+    </ul>
+    <span class="sidebar__section-link-to-all">
+      <a class="wir-link 
+  
+  "
+  
+   >
+  <span>усе асобы</span>
+  
+</a>
+
+    </span>
+  </section>
+
+  <section class="sidebar__section sidebar__section--long sidebar__section--visible">
+    <ul class="sidebar__section-list">
+      <li class="sidebar__section-list-item sidebar__section-title">
+        асноўныя часы
+      </li>
+      
+        <li class="sidebar__section-list-item">
+          <a class="wir-link 
+  
+  "
+  
+   >
+  <span>1956 год</span>
+  
+</a>
+
+        </li>
+      
+        <li class="sidebar__section-list-item">
+          <a class="wir-link 
+  
+  "
+  
+   >
+  <span>Сёння</span>
+  
+</a>
+
+        </li>
+      
+        <li class="sidebar__section-list-item">
+          <a class="wir-link 
+  
+  "
+  
+   >
+  <span>У будучыні</span>
+  
+</a>
+
+        </li>
+      
+        <li class="sidebar__section-list-item">
+          <a class="wir-link 
+  
+  "
+  
+   >
+  <span>1863 год</span>
+  
+</a>
+
+        </li>
+      
+        <li class="sidebar__section-list-item">
+          <a class="wir-link 
+  
+  "
+  
+   >
+  <span>XX стагоддзе</span>
+  
+</a>
+
+        </li>
+      
+    </ul>
+    <span class="sidebar__section-link-to-all">
+      <a class="wir-link 
+  
+  "
+  
+   >
+  <span>уся храналогія</span>
+  
+</a>
+
+    </span>
+  </section>
+
+  <section class="sidebar__section sidebar__section--long sidebar__section--visible">
+    <ul class="sidebar__section-list">
+      <li class="sidebar__section-list-item sidebar__section-title">
+        асноўныя лакацыі
+      </li>
+      
+        <li class="sidebar__section-list-item">
+          <a class="wir-link 
+  
+  "
+  
+   >
+  <span>Мінск</span>
+  
+</a>
+
+        </li>
+      
+        <li class="sidebar__section-list-item">
+          <a class="wir-link 
+  
+  "
+  
+   >
+  <span>ВКЛ</span>
+  
+</a>
+
+        </li>
+      
+        <li class="sidebar__section-list-item">
+          <a class="wir-link 
+  
+  "
+  
+   >
+  <span>Беларусь</span>
+  
+</a>
+
+        </li>
+      
+        <li class="sidebar__section-list-item">
+          <a class="wir-link 
+  
+  "
+  
+   >
+  <span>Лондан</span>
+  
+</a>
+
+        </li>
+      
+        <li class="sidebar__section-list-item">
+          <a class="wir-link 
+  
+  "
+  
+   >
+  <span>Еўропа</span>
+  
+</a>
+
+        </li>
+      
+    </ul>
+    <span class="sidebar__section-link-to-all">
+      <a class="wir-link 
+  
+  "
+  
+   >
+  <span>усе лакацыі</span>
+  
+</a>
+
+    </span>
+  </section>
+
+  <section class="sidebar__section sidebar__section--long sidebar__section--visible">
+    <ul class="sidebar__section-list">
+      <li class="sidebar__section-list-item sidebar__section-title">
+        матэрыялы партнёраў
+      </li>
+      
+        <li class="sidebar__section-list-item">
+          <a class="wir-link 
+  
+  "
+  
+   >
+  <span>Нацыянальны мастацкі музей</span>
+  
+</a>
+
+        </li>
+      
+        <li class="sidebar__section-list-item">
+          <a class="wir-link 
+  
+  "
+  
+   >
+  <span>Кніжная шафа</span>
+  
+</a>
+
+        </li>
+      
+        <li class="sidebar__section-list-item">
+          <a class="wir-link 
+  
+  "
+  
+   >
+  <span>Літаратурны музей Петруся Броўкі</span>
+  
+</a>
+
+        </li>
+      
+        <li class="sidebar__section-list-item">
+          <a class="wir-link 
+  
+  "
+  
+   >
+  <span>Мінскі фестываль моў</span>
+  
+</a>
+
+        </li>
+      
+    </ul>
+  </section>
+
+  <section class="sidebar__section sidebar__section--long sidebar__section--visible">
+    <ul class="sidebar__section-list">
+      <li class="sidebar__section-list-item sidebar__section-title">
+        папулярныя аўтары
+      </li>
+      
+        <li class="sidebar__section-list-item">
+          <a class="wir-link 
+  
+  "
+  
+   >
+  <span>Марыя Бадзей</span>
+  
+</a>
+
+        </li>
+      
+        <li class="sidebar__section-list-item">
+          <a class="wir-link 
+  
+  "
+  
+   >
+  <span>Марына Анісімава</span>
+  
+</a>
+
+        </li>
+      
+        <li class="sidebar__section-list-item">
+          <a class="wir-link 
+  
+  "
+  
+   >
+  <span>Аляксей Барысевіч</span>
+  
+</a>
+
+        </li>
+      
+        <li class="sidebar__section-list-item">
+          <a class="wir-link 
+  
+  "
+  
+   >
+  <span>Ірына Галухіна</span>
+  
+</a>
+
+        </li>
+      
+        <li class="sidebar__section-list-item">
+          <a class="wir-link 
+  
+  "
+  
+   >
+  <span>Вікторыя Міхнюк</span>
+  
+</a>
+
+        </li>
+      
+    </ul>
+    <span class="sidebar__section-link-to-all">
+      <a class="wir-link 
+  
+  "
+  
+   >
+  <span>уся каманда wir.by</span>
+  
+</a>
+
+    </span>
+  </section>
+</aside>
+
+    </div>
+
+    <div class="wir-up">
+      <a class="wir-link 
+  
+  "
+   href="#"
+   >
+  <span><span><i class="far fa-arrow-alt-circle-up"></i></span></span>
+  
+</a>
+
+    </div>
+
+  </div>
+
+</body>
+
+</html>
+
