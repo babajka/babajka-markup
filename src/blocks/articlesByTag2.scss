@@ -42,6 +42,10 @@
     padding-bottom: 62px;
     padding-top: 42px;
 
+    &__bottom-labels {
+      display: none;
+    }
+
     &__bottom-mobile-label {
       display: none;
     }
