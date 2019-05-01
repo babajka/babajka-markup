@@ -1,16 +1,21 @@
 <div class="screen-<%= locals.screen %>">
 
-  <div class="block block__no-background block__twoInRow">
+  <div class="block block__no-background two-in-row">
 
-    <%- include('../cards/video.ejs', {
-      ...locals.first,
-      size: 'm',
-    }) %>
+    <div class="two-in-row__first">
+      <%- include('../cards/video.ejs', {
+        ...locals.first,
+        size: { desktop: 'm', mobile: 'square-s'}[locals.screen],
+      }) %>
+    </div>
 
-    <%- include('../cards/collection.ejs', {
-      ...locals.second,
-      size: 'm',
-    }) %>
+    <div class="two-in-row__second">
+      <%- include('../cards/collection.ejs', {
+        ...locals.second,
+        size: { desktop: 'm', mobile: 'square-s'}[locals.screen],
+      }) %>
+    </div>
+
   </div>
 
 </div>

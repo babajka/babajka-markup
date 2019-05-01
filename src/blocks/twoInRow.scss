@@ -1,21 +1,22 @@
-.block {
-  //
-
-  &__twoInRow {
-    display: flex;
-  }
+.two-in-row {
+  display: flex;
 }
 
 .screen-desktop {
-  //
+  .two-in-row {
+    flex-direction: row;
+    justify-content: space-between;
+    max-width: 1020px;
+  }
+}
 
-  .block {
-    //
+.screen-mobile {
+  .two-in-row {
+    flex-direction: column;
+    justify-content: space-between;
 
-    &__twoInRow {
-      flex-direction: row;
-      justify-content: space-between;
-      max-width: 1020px;
+    &__first {
+      margin-bottom: 30px;
     }
   }
 }

@@ -1,10 +1,6 @@
-<div class="screen-<%= locals.screen %>">
-
-  <div class="block block__no-background block__featured">
-    <%- include('../cards/article.ejs', {
-      ...locals.featuredOptions,
-      size: 'xxl',
-    }) %>
-  </div>
-
+<div class="block block__no-background">
+  <%- include('../cards/article.ejs', {
+    ...locals.featuredOptions,
+    size: { desktop: 'xxl', 'mobile': 'square-s' }[locals.screen],
+  }) %>
 </div>

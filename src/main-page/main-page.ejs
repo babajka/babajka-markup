@@ -1,29 +1,34 @@
-<div>
+<div class="screen-<%= locals.screen %>">
 
   <%- include('../blocks/featured.ejs', {
-    screen: 'desktop',
     featuredOptions: defaultCardsData.article,
   }) %>
 
   <%- include('../blocks/twoInRow.ejs', {
-    screen: 'desktop',
     first: defaultCardsData.video,
     second: defaultCardsData.collectionArticle,
   }) %>
 
   <%- include('../blocks/tagsByTopic.ejs', {
-    screen: 'desktop',
     style: '1-2',
     titleLabel: 'усе асобы',
-    tag1: defaultCardsData.locations[1],
-    tag2: defaultCardsData.locations[0],
-    tag3: defaultCardsData.locations[2],
+    topic: 'person',
+    tag1: defaultCardsData.person,
+    tag2: defaultCardsData.person,
+    tag3: defaultCardsData.person,
+  }) %>
+
+  <%- include('../blocks/articlesByTag3.ejs', {
+    tagTitle: 'XX стагоддзе',
+    allTitle: 'усе часы',
+    article1: defaultCardsData.article,
+    article2: defaultCardsData.article,
+    article3: defaultCardsData.article,
   }) %>
 
   <%- include('../blocks/articlesByTag2.ejs', {
-    screen: 'desktop',
     branded: false,
-    labelTop: 'Папулярная <br /> тэма: <br />',
+    labelTop: 'Папулярная тэма:',
     linkTopText: 'міфалогія',
     linkBottomText: 'усе тэмы',
     article1: defaultCardsData.brandArticle,
@@ -31,19 +36,18 @@
   }) %>
 
   <%- include('../blocks/tagsByTopic.ejs', {
-    screen: 'desktop',
     style: '2-1',
     titleLabel: 'усе лакацыі',
+    topic: 'location',
     tag1: defaultCardsData.locations[1],
     tag2: defaultCardsData.locations[0],
     tag3: defaultCardsData.locations[2],
   }) %>
 
   <%- include('../blocks/articlesByTag2.ejs', {
-    screen: 'desktop',
     branded: true,
-    labelTop: 'нацыянальны <br /> мастацкі <br /> музей <br />',
-    linkBottomText: 'усе <br /> партнёрскія <br /> матэрыялы',
+    labelTop: 'нацыянальны мастацкі музей',
+    linkBottomText: 'усе партнёрскія матэрыялы',
     article1: defaultCardsData.brandArticle,
     article2: defaultCardsData.brandArticle,
   }) %>

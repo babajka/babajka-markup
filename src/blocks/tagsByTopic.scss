@@ -1,4 +1,7 @@
 .tags-by-topic {
+  display: flex;
+  flex-direction: column;
+
   &__title-label {
     font-size: 14px;
     letter-spacing: 1px;
@@ -21,6 +24,24 @@
 
     &--pulled-right {
       order: 1;
+    }
+  }
+}
+
+.screen-mobile {
+  .tags-by-topic {
+    &__title-label {
+      margin-top: 30px;
+      order: 1;
+      text-align: center;
+    }
+
+    &__1 {
+      display: none;
+    }
+
+    &__2-top {
+      margin-bottom: 5px;
     }
   }
 }

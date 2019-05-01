@@ -1,0 +1,45 @@
+<div class="screen-<%= locals.screen %>">
+
+  <div class="block block__no-background articles-by-tag-3">
+
+    <div class="articles-by-tag-3__combined-title-line articles-by-tag-3__title">
+      <%- include('../kit/link/link.ejs', { text: locals.tagTitle }) %>
+      <%- include('../kit/link/link.ejs', { text: locals.allTitle }) %>
+    </div>
+
+    <div class="articles-by-tag-3__separate-header articles-by-tag-3__title">
+      <%- include('../kit/link/link.ejs', { text: locals.tagTitle }) %>
+    </div>
+
+    <div class="articles-by-tag-3__cards">
+
+      <div class="articles-by-tag-3__card-1">
+        <%- include('../cards/article.ejs', {
+          ...locals.article1,
+          size: 'square-s',
+        }) %>
+      </div>
+
+      <div class="articles-by-tag-3__card-2">
+        <%- include('../cards/article.ejs', {
+          ...locals.article2,
+          size: 'square-s',
+        }) %>
+      </div>
+
+      <div class="articles-by-tag-3__card-3">
+        <%- include('../cards/article.ejs', {
+          ...locals.article3,
+          size: 'square-s',
+        }) %>
+      </div>
+
+    </div>
+
+    <div class="articles-by-tag-3__separate-footer articles-by-tag-3__title">
+      <%- include('../kit/link/link.ejs', { text: locals.allTitle }) %>
+    </div>
+
+  </div>
+
+</div>

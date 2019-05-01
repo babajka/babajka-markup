@@ -1,9 +1,6 @@
 @import '../variables';
 
 .block {
-  padding-left: calc((100% - 1020px) / 3);
-  padding-right: calc((100% - 1020px) * 2 / 3);
-
   &__no-background {
     margin-top: 60px;
   }
@@ -13,24 +10,18 @@
     margin-bottom: 20px;
     margin-top: 80px;
   }
+}
 
-  &__labels {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-
-    &--right {
-      order: 1;
-    }
+.screen-desktop {
+  .block {
+    padding-left: calc((100% - 1020px) / 3);
+    padding-right: calc((100% - 1020px) * 2 / 3);
   }
+}
 
-  &__label {
-    color: $primary-white;
-    display: inline-block;
-    font-size: 14px;
-    letter-spacing: 1px;
-    line-height: 24px;
-    text-transform: uppercase;
-    // word-spacing: 100vw;
+.screen-mobile {
+  .block {
+    padding-left: calc((100% - 300px) / 3);
+    padding-right: calc((100% - 300px) * 2 / 3);
   }
 }
