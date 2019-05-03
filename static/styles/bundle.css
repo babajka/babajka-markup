@@ -381,14 +381,6 @@
   justify-content: flex-end;
 }
 
-.article__read {
-  color: #0dc6aa;
-}
-
-.article__read.theme-dark {
-  color: #1a9582;
-}
-
 .size-xxl .article {
   height: 630px;
   width: 1020px;
@@ -1687,6 +1679,9 @@ footer {
   margin-top: 30px;
   text-transform: uppercase;
 }
+.form-error {
+  color: #e21017;
+}
 .wir-input {
   display: flex;
   position: relative;
@@ -1698,18 +1693,18 @@ footer {
   margin: 7px 0 2px;
 }
 
-.wir-input__icon-left {
+.wir-input__icon--left {
   margin-right: 11.5px;
   order: -1;
 }
 
-.wir-input__icon-right {
+.wir-input__icon--right {
   margin-left: 11.5px;
 }
 
-.wir-input__icon-loading {
-  -webkit-animation: spin 1.5s linear infinite;
-  animation: spin 1.5s linear infinite;
+.wir-input__icon--loading {
+  -webkit-animation: spin 1.3s linear infinite;
+  animation: spin 1.3s linear infinite;
 }
 
 .wir-input__bar {
@@ -1720,7 +1715,11 @@ footer {
   width: 100%;
 }
 
-.wir-input input {
+.wir-input__error {
+  color: #e21017;
+}
+
+.wir-input__input {
   background: inherit;
   border: 0;
   flex-grow: 1;
@@ -1731,21 +1730,31 @@ footer {
   outline: none;
 }
 
-.wir-input input:hover ~ .wir-input__bar,
-.wir-input input:focus ~ .wir-input__bar {
+.wir-input__input:hover ~ .wir-input__bar,
+.wir-input__input:focus ~ .wir-input__bar {
   background-color: #1a9582;
 }
 
-.wir-input input:hover ~ .wir-input__icon,
-.wir-input input:focus ~ .wir-input__icon {
+.wir-input__input:hover ~ .wir-input__bar--error,
+.wir-input__input:focus ~ .wir-input__bar--error {
+  background-color: #e21017;
+}
+
+.wir-input__input:hover ~ .wir-input__icon,
+.wir-input__input:focus ~ .wir-input__icon {
   color: #1a9582;
 }
 
-.wir-input input:disabled ~ .wir-input__bar {
+.wir-input__input:hover ~ .wir-input__icon--error,
+.wir-input__input:focus ~ .wir-input__icon--error {
+  color: #e21017;
+}
+
+.wir-input__input:disabled ~ .wir-input__bar {
   background-color: #888888;
 }
 
-.wir-input input:disabled ~ .wir-input__icon {
+.wir-input__input:disabled ~ .wir-input__icon {
   color: #888888;
 }
 
@@ -1771,6 +1780,13 @@ footer {
     -webkit-transform: rotate(360deg);
     transform: rotate(360deg);
   }
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+  transition: background-color 5000s ease-in-out 0s;
 }
 .wir-link {
   color: #1a9582;
