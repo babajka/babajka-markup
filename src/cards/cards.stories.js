@@ -133,12 +133,14 @@ cards.add(
     const size = select('size', ['l', 'square-m', 'square-s', 's', 'xs'], locations[0].size);
     const isDarkTheme = boolean('isDarkTheme', locations[0].isDarkTheme);
     const title = text('title', locations[0].title);
+    const backgroundImage = text('backgroundImage', 'location.png');
 
     const data = {
       ...defaultData,
       size,
       isDarkTheme,
       title,
+      backgroundImage,
     };
 
     return wrapper(renderLocation(data));
