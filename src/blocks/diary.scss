@@ -83,6 +83,39 @@
   }
 }
 
+.screen-tablet {
+  .diary {
+    &__content {
+      flex-direction: row;
+      justify-content: space-between;
+    }
+
+    &__text-content {
+      flex-direction: column;
+      margin-top: 50px;
+      width: 440px;
+    }
+
+    &__picture {
+      height: 180px;
+      order: 1;
+      width: 180px;
+    }
+
+    &__title {
+      font-size: 14px;
+      font-weight: bold;
+      line-height: 21px;
+    }
+
+    &__text {
+      font-size: 14px;
+      line-height: 24px;
+      width: 400px;
+    }
+  }
+}
+
 .screen-mobile {
   .diary {
     &__content {

@@ -19,6 +19,13 @@
   }
 }
 
+.screen-tablet {
+  .block {
+    padding-left: calc((100% - 624px) / 3);
+    padding-right: calc((100% - 624px) * 2 / 3);
+  }
+}
+
 .screen-mobile {
   .block {
     padding-left: calc((100% - 300px) / 3);

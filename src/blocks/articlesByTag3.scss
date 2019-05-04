@@ -50,6 +50,26 @@
   }
 }
 
+.screen-tablet {
+  .articles-by-tag-3 {
+    &__separate-header {
+      display: none;
+    }
+
+    &__separate-footer {
+      display: none;
+    }
+
+    &__cards {
+      margin-top: 40px;
+    }
+
+    &__card-3 {
+      display: none;
+    }
+  }
+}
+
 .screen-mobile {
   .articles-by-tag-3 {
     &__combined-title-line {
