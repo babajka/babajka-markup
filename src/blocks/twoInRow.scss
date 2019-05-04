@@ -2,11 +2,11 @@
   display: flex;
 }
 
-.screen-desktop {
+.screen-desktop,
+.screen-tablet-large {
   .two-in-row {
     flex-direction: row;
     justify-content: space-between;
-    max-width: 1020px;
   }
 }
 

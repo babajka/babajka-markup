@@ -46,7 +46,8 @@
   }
 }
 
-.screen-desktop {
+.screen-desktop,
+.screen-tablet-large {
   .diary {
     &__content {
       flex-direction: row;
@@ -78,7 +79,22 @@
       height: 100px;
       line-height: 24px;
       margin-top: 10px;
+    }
+  }
+}
+
+.screen-desktop {
+  .diary {
+    &__text {
       width: 570px;
+    }
+  }
+}
+
+.screen-tablet-large {
+  .diary {
+    &__text {
+      width: 384px;
     }
   }
 }

@@ -35,6 +35,11 @@
   width: 300px;
 }
 
+@mixin s-wide-sizes {
+  height: 194px;
+  width: 424px;
+}
+
 @mixin s-sizes {
   height: 194px;
   width: 390px;

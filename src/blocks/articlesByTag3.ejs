@@ -16,14 +16,14 @@
       <div class="articles-by-tag-3__card-1">
         <%- include('../cards/article.ejs', {
           ...locals.article1,
-          size: { desktop: 'square-s', tablet: 'square-s', touch: 'm', mobile: 'square-s' }[locals.screen],
+          size: { desktop: 'square-s', 'tablet-large': 'square-m', tablet: 'square-s', touch: 'm', mobile: 'square-s' }[locals.screen],
         }) %>
       </div>
 
       <div class="articles-by-tag-3__card-2">
         <%- include('../cards/article.ejs', {
           ...locals.article2,
-          size: 'square-s',
+          size: { desktop: 'square-s', 'tablet-large': 'square-m', tablet: 'square-s' }[locals.screen],
         }) %>
       </div>
 

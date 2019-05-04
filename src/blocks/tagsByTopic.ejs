@@ -14,14 +14,14 @@
       <div class="tags-by-topic__2-top">
         <%- include(`../cards/${locals.topic}.ejs`, {
           ...locals.tag1,
-          size: { desktop: 's', tablet: 'xs', touch: 'ms', mobile: 'xs-wide' }[locals.screen],
+          size: { desktop: 's', 'tablet-large': 's-wide', tablet: 'xs', touch: 'ms', mobile: 'xs-wide' }[locals.screen],
         }) %>
       </div>
 
       <div class="tags-by-topic__2-bottom">
         <%- include(`../cards/${locals.topic}.ejs`, {
           ...locals.tag2,
-          size: { desktop: 's', tablet: 'xs', touch: 'ms', mobile: 'xs-wide' }[locals.screen],
+          size: { desktop: 's', 'tablet-large': 's-wide', tablet: 'xs', touch: 'ms', mobile: 'xs-wide' }[locals.screen],
         }) %>
       </div>
 
@@ -30,7 +30,7 @@
     <div class="tags-by-topic__1">
       <%- include(`../cards/${locals.topic}.ejs`, {
         ...locals.tag3,
-        size: { desktop: 'l', tablet: 'square-m', mobile: 'l' }[locals.screen],
+        size: { desktop: 'l', 'tablet-large': 'square-m', tablet: 'square-m', mobile: 'l' }[locals.screen],
       }) %>
     </div>
 

@@ -19,6 +19,13 @@
   }
 }
 
+.screen-tablet-large {
+  .block {
+    padding-left: calc((100% - 818px) / 3);
+    padding-right: calc((100% - 818px) * 2 / 3);
+  }
+}
+
 .screen-tablet {
   .block {
     padding-left: calc((100% - 624px) / 3);

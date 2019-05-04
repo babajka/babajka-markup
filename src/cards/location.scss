@@ -61,17 +61,29 @@
   }
 }
 
-.size-ms {
+.size-ms,
+.size-s-wide {
   .location {
-
-    @include ms-sizes;
-
     padding: 0 30px 42px;
 
     &__title {
       font-size: 30px;
       line-height: 36px;
     }
+  }
+}
+
+.size-ms {
+  .location {
+
+    @include ms-sizes;
+  }
+}
+
+.size-s-wide {
+  .location {
+
+    @include s-wide-sizes;
   }
 }
 

@@ -60,11 +60,11 @@
   }
 }
 
+.screen-tablet-large,
 .screen-tablet {
   .articles-by-tag-2 {
     padding-bottom: 59px;
     padding-top: 36px;
-    width: 624px;
 
     &__bottom-labels {
       display: none;
@@ -80,13 +80,21 @@
       }
     }
 
-    &__cards {
-      // width: 398px;
-    }
-
     &__card-2 {
       display: none;
     }
+  }
+}
+
+.screen-tablet-large {
+  .articles-by-tag-2 {
+    width: 818px;
+  }
+}
+
+.screen-tablet {
+  .articles-by-tag-2 {
+    width: 624px;
   }
 }
 

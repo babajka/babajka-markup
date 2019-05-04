@@ -125,11 +125,9 @@
   }
 }
 
-.size-ms {
+.size-ms,
+.size-s-wide {
   .person {
-
-    @include ms-sizes;
-
     &__cover-wrapper {
       width: 194px;
     }
@@ -149,6 +147,20 @@
     &__description {
       display: none;
     }
+  }
+}
+
+.size-ms {
+  .person {
+
+    @include ms-sizes;
+  }
+}
+
+.size-s-wide {
+  .person {
+
+    @include s-wide-sizes;
   }
 }
 
