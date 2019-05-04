@@ -61,6 +61,20 @@
   }
 }
 
+.size-ms {
+  .location {
+
+    @include ms-sizes;
+
+    padding: 0 30px 42px;
+
+    &__title {
+      font-size: 30px;
+      line-height: 36px;
+    }
+  }
+}
+
 .size-s {
   .location {
 
@@ -71,6 +85,20 @@
     &__title {
       font-size: 60px;
       line-height: 72px;
+    }
+  }
+}
+
+.size-xs-wide {
+  .location {
+
+    @include xs-wide-sizes;
+
+    padding: 0 30px 42px;
+
+    &__title {
+      font-size: 30px;
+      line-height: 36px;
     }
   }
 }

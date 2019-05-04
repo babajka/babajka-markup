@@ -125,6 +125,33 @@
   }
 }
 
+.size-ms {
+  .person {
+
+    @include ms-sizes;
+
+    &__cover-wrapper {
+      width: 194px;
+    }
+
+    &__content {
+      bottom: 42px;
+      left: 30px;
+      position: absolute;
+      width: 230px;
+    }
+
+    &__title {
+      font-size: 30px;
+      line-height: 36px;
+    }
+
+    &__description {
+      display: none;
+    }
+  }
+}
+
 .size-s {
   .person {
 
@@ -144,6 +171,34 @@
     &__title {
       font-size: 48px;
       line-height: 60px;
+    }
+
+    &__description {
+      display: none;
+    }
+  }
+}
+
+.size-xs-wide {
+  .person {
+
+    @include xs-wide-sizes;
+
+    &__cover-wrapper {
+      width: 194px;
+    }
+
+    &__content {
+      bottom: 42px;
+      left: 30px;
+      position: absolute;
+      width: 150px;
+    }
+
+    &__title {
+      font-size: 30px;
+      line-height: 36px;
+      margin-top: 7px;
     }
 
     &__description {

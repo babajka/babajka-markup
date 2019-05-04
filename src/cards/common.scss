@@ -20,6 +20,11 @@
   width: 480px;
 }
 
+@mixin ms-sizes {
+  height: 194px;
+  width: 480px;
+}
+
 @mixin square-m-sizes {
   height: 390px;
   width: 390px;
@@ -33,6 +38,11 @@
 @mixin s-sizes {
   height: 194px;
   width: 390px;
+}
+
+@mixin xs-wide-sizes {
+  height: 194px;
+  width: 300px;
 }
 
 @mixin xs-sizes {
