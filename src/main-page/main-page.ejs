@@ -19,8 +19,22 @@
   }) %>
 
   <%- include('../blocks/twoInRow.ejs', {
-    first: defaultCardsData.video,
-    second: defaultCardsData.collectionArticle,
+    first: {
+      topic: 'article',
+      data: defaultCardsData.article,
+    },
+    second: {
+      topic: 'article',
+      data: defaultCardsData.article,
+    },
+    // first: {
+    //   topic: 'video',
+    //   data: defaultCardsData.video,
+    // },
+    // second: {
+    //   topic: 'collection',
+    //   data: defaultCardsData.collectionArticle,
+    // },
   }) %>
 
   <%- include('../blocks/tagsByTopic.ejs', {
