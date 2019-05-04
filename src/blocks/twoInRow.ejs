@@ -5,14 +5,14 @@
     <div class="two-in-row__first">
       <%- include('../cards/video.ejs', {
         ...locals.first,
-        size: { desktop: 'm', tablet: 'l', mobile: 'square-s'}[locals.screen],
+        size: { desktop: 'm', tablet: 'l', touch: 'm', mobile: 'square-s'}[locals.screen],
       }) %>
     </div>
 
     <div class="two-in-row__second">
       <%- include('../cards/collection.ejs', {
         ...locals.second,
-        size: { desktop: 'm', tablet: 'l', mobile: 'square-s'}[locals.screen],
+        size: { desktop: 'm', tablet: 'l', touch: 'm', mobile: 'square-s'}[locals.screen],
       }) %>
     </div>
 

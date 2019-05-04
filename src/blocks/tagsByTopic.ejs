@@ -14,14 +14,14 @@
       <div class="tags-by-topic__2-top">
         <%- include(`../cards/${locals.topic}.ejs`, {
           ...locals.tag1,
-          size: { desktop: 's', tablet: 'xs', mobile: 'square-s' }[locals.screen],
+          size: { desktop: 's', tablet: 'xs', touch: 's', mobile: 'square-s' }[locals.screen],
         }) %>
       </div>
 
       <div class="tags-by-topic__2-bottom">
         <%- include(`../cards/${locals.topic}.ejs`, {
           ...locals.tag2,
-          size: { desktop: 's', tablet: 'xs', mobile: 'square-s' }[locals.screen],
+          size: { desktop: 's', tablet: 'xs', touch: 's', mobile: 'square-s' }[locals.screen],
         }) %>
       </div>
 

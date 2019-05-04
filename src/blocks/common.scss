@@ -26,6 +26,13 @@
   }
 }
 
+.screen-touch {
+  .block {
+    padding-left: calc((100% - 480px) / 3);
+    padding-right: calc((100% - 480px) * 2 / 3);
+  }
+}
+
 .screen-mobile {
   .block {
     padding-left: calc((100% - 300px) / 3);

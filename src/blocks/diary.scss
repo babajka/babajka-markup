@@ -116,6 +116,7 @@
   }
 }
 
+.screen-touch,
 .screen-mobile {
   .diary {
     &__content {
@@ -147,8 +148,23 @@
 
     &__text {
       font-size: 14px;
-      height: 105px;
       line-height: 21px;
+    }
+  }
+}
+
+.screen-touch {
+  .diary {
+    &__text {
+      height: 63px;
+    }
+  }
+}
+
+.screen-mobile {
+  .diary {
+    &__text {
+      height: 105px;
     }
   }
 }

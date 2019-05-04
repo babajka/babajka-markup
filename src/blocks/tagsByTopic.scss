@@ -28,12 +28,12 @@
   }
 }
 
+.screen-touch,
 .screen-mobile {
   .tags-by-topic {
     &__title-label {
       margin-top: 30px;
       order: 1;
-      text-align: center;
     }
 
     &__1 {
@@ -42,6 +42,22 @@
 
     &__2-top {
       margin-bottom: 5px;
+    }
+  }
+}
+
+.screen-touch {
+  .tags-by-topic {
+    &__title-label {
+      text-align: left;
+    }
+  }
+}
+
+.screen-mobile {
+  .tags-by-topic {
+    &__title-label {
+      text-align: center;
     }
   }
 }

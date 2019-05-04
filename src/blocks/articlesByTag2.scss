@@ -24,7 +24,6 @@
 
   &__bottom-mobile-label {
     margin: 45px 0;
-    text-align: center;
     width: 100%;
   }
 
@@ -91,19 +90,18 @@
   }
 }
 
+.screen-touch,
 .screen-mobile {
   .articles-by-tag-2 {
     flex-direction: column;
     padding: 0;
-    width: 300px;
 
     &__labels {
-      text-align: center;
-      width: 300px;
+      width: 100%;
     }
 
     &__bottom-labels {
-      width: 300px;
+      width: 100%;
     }
 
     &__top-mobile-labels {
@@ -121,6 +119,28 @@
 
     &__card-2 {
       display: none;
+    }
+  }
+}
+
+.screen-touch {
+  .articles-by-tag-2 {
+    width: 480px;
+
+    &__labels,
+    &__bottom-labels {
+      text-align: left;
+    }
+  }
+}
+
+.screen-mobile {
+  .articles-by-tag-2 {
+    width: 300px;
+
+    &__labels,
+    &__bottom-labels {
+      text-align: center;
     }
   }
 }
