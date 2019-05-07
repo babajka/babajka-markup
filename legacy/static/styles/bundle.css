@@ -856,6 +856,9 @@
 .field .login__button[disabled] {
   background-color: #55acee;
 }
+.main-page .load-more {
+  margin-top: 40px;
+}
 .navbar {
   flex-shrink: 0;
   font-family: "Open Sans", sans-serif;
@@ -1003,9 +1006,6 @@
 .navbar .navbar-end .navbar-item .lang {
   font-size: 0.85rem;
   text-align: center;
-}
-.main-page .load-more {
-  margin-top: 40px;
 }
 article {
   border-bottom-left-radius: 3px;
