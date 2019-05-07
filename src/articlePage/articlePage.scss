@@ -9,9 +9,9 @@
 
 .article-page {
   background-color: #ffffff;
+  flex-grow: 1;
   font-size: 20px;
   line-height: 36px;
-  width: 1200px;
 
   &__margins {
     margin: 0 120px 72px 60px;
@@ -61,4 +61,91 @@
       margin-top: 24px;
     }
   }
+
+  &__right-element {
+    float: right;
+    margin: 0;
+    margin-left: 30px;
+  }
+}
+
+.article-image {
+  &__image {
+    height: 500px;
+    object-fit: cover;
+    object-position: 50% 0;
+    width: 100%;
+  }
+
+  &__caption {
+    font-size: 14px;
+    line-height: 18px;
+    margin-top: 9px;
+  }
+}
+
+.article-citation {
+  &__text {
+    border-left: 1px solid #000000;
+    font-size: 30px;
+    line-height: 48px;
+    padding-left: 30px;
+  }
+
+  &__caption {
+    font-size: 14px;
+    line-height: 21px;
+    margin-top: 12px;
+  }
+}
+
+.article-ordered {
+  margin: 0;
+
+  &__item {
+    margin-top: 24px;
+  }
+}
+
+.article-table {
+  display: flex;
+
+  th {
+    border-bottom: 0.25px solid #cccccc;
+    padding-bottom: 17px;
+    text-align: left;
+  }
+
+  td {
+    border-bottom: 0.25px solid #cccccc;
+    padding: 17px 0;
+  }
+}
+
+.article-unordered {
+  list-style: none;
+  margin: 0;
+
+  &__item {
+    margin-top: 24px;
+
+    &::before {
+      content: '—  ';
+      margin-left: -25px;
+    }
+  }
+}
+
+.article-poem {
+  display: flex;
+  justify-content: center;
+
+  &__content {
+    display: flex;
+    justify-content: flex-start;
+    width: 50%;
+  }
+}
+
+.article-columns {
 }
