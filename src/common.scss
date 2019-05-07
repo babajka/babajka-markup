@@ -1,0 +1,46 @@
+@import 'variables';
+
+html {
+  height: 100%;
+}
+
+body {
+  font-family: 'Ubuntu', sans-serif;
+  height: 100%;
+  margin: 0;
+}
+
+.babajka-root {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.babajka-content {
+  flex: 1 0 auto;
+}
+
+@mixin mobile {
+
+  @media screen and (max-width: $mobile-large) {
+    @content;
+  }
+}
+
+@mixin tablet {
+
+  @media screen and (min-width: $mobile-large+1) and (max-width: $tablet-large) {
+    @content;
+  }
+}
+
+@mixin desktop {
+
+  @media screen and (min-width: $tablet-large+1) {
+    @content;
+  }
+}
+
+a {
+  color: $primary;
+}

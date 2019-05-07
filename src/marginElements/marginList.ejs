@@ -1,0 +1,8 @@
+<div class="margin-element <%= locals.className %>">
+  <div class="margin-element__title"><%= locals.title %></div>
+  <ol class="margin-element__list">
+    <% locals.listElements.forEach(function (element) { %>
+    <li class="margin-element__list-element"><%= element %></li>
+    <% }) %>
+  </ol>
+</div>
