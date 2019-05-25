@@ -1,0 +1,161 @@
+<div class="screen-<%= locals.screen %>">
+  <div class="topics">
+    <div class="topics__column">
+      <div class="topics__section">
+        <div class="topics__section-title">
+          Кіно
+        </div>
+        <%- include('../cards/article.ejs', {
+          ...defaultCardsData.article,
+          size: 'square-s',
+        }) %>
+        <ul class="topics__section-list">
+          <% defaultTopicsData.articleListShort.forEach(function(label) { %>
+            <li class="topics__section-list-item">
+              <%- include('../kit/link/link.ejs', { text: label }) %>
+            </li>
+          <% }) %>
+        </ul>
+      </div>
+      <div class="topics__section">
+        <div class="topics__section-title">
+          Архітэктура
+        </div>
+        <ul class="topics__section-list">
+          <% defaultTopicsData.articleListShort.forEach(function(label) { %>
+            <li class="topics__section-list-item">
+              <%- include('../kit/link/link.ejs', { text: label }) %>
+            </li>
+          <% }) %>
+        </ul>
+      </div>
+      <div class="topics__section">
+        <div class="topics__section-title">
+          Гісторыя
+        </div>
+        <%- include('../cards/article.ejs', {
+          ...defaultCardsData.brandArticle,
+          isBrandArticle: true,
+          size: 'square-s',
+        }) %>
+        <ul class="topics__section-list">
+          <% defaultTopicsData.articleListLong.forEach(function(label) { %>
+            <li class="topics__section-list-item">
+              <%- include('../kit/link/link.ejs', { text: label }) %>
+            </li>
+          <% }) %>
+        </ul>
+      </div>
+    </div>
+    <div class="topics__column">
+      <div class="topics__section">
+        <div class="topics__section">
+          <div class="topics__section-title">
+            Лінгвістыка
+          </div>
+          <%- include('../cards/video.ejs', {
+            ...defaultCardsData.video,
+            size: 'square-s',
+          }) %>
+          <ul class="topics__section-list">
+            <% defaultTopicsData.articleListShort.forEach(function(label) { %>
+              <li class="topics__section-list-item">
+                <%- include('../kit/link/link.ejs', { text: label }) %>
+              </li>
+            <% }) %>
+          </ul>
+        </div>
+        <div class="topics__section">
+          <div class="topics__section-title">
+            Музыка
+          </div>
+          <ul class="topics__section-list">
+            <% defaultTopicsData.articleListShort.forEach(function(label) { %>
+              <li class="topics__section-list-item">
+                <%- include('../kit/link/link.ejs', { text: label }) %>
+              </li>
+            <% }) %>
+          </ul>
+        </div>
+        <div class="topics__section">
+          <div class="topics__section-title">
+            Філасофія
+          </div>
+          <ul class="topics__section-list">
+            <% defaultTopicsData.articleListLong.forEach(function(label) { %>
+              <li class="topics__section-list-item">
+                <%- include('../kit/link/link.ejs', { text: label }) %>
+              </li>
+            <% }) %>
+          </ul>
+        </div>
+        <div class="topics__section">
+          <div class="topics__section-title">
+            Тэатр
+          </div>
+          <ul class="topics__section-list">
+            <% defaultTopicsData.articleListShort.forEach(function(label) { %>
+              <li class="topics__section-list-item">
+                <%- include('../kit/link/link.ejs', { text: label }) %>
+              </li>
+            <% }) %>
+          </ul>
+        </div>
+        <div class="topics__section">
+          <div class="topics__section-title">
+            Міфалогія
+          </div>
+          <ul class="topics__section-list">
+            <% defaultTopicsData.articleListShort.forEach(function(label) { %>
+              <li class="topics__section-list-item">
+                <%- include('../kit/link/link.ejs', { text: label }) %>
+              </li>
+            <% }) %>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="topics__column">
+      <div class="topics__section">
+        <div class="topics__section-title">
+          Літаратура
+        </div>
+        <%- include('../cards/article.ejs', {
+          ...defaultCardsData.article,
+          size: 'square-s',
+        }) %>
+        <ul class="topics__section-list">
+          <% defaultTopicsData.articleListLong.forEach(function(label) { %>
+            <li class="topics__section-list-item">
+              <%- include('../kit/link/link.ejs', { text: label }) %>
+            </li>
+          <% }) %>
+        </ul>
+      </div>
+      <div class="topics__section">
+        <div class="topics__section-title">
+          Мастацтва
+        </div>
+        <%- include('../cards/collection.ejs', {
+          ...defaultCardsData.collectionArticle,
+          size: 'square-s',
+        }) %>
+        <ul class="topics__section-list">
+          <% defaultTopicsData.articleListShort.forEach(function(label) { %>
+            <li class="topics__section-list-item">
+              <%- include('../kit/link/link.ejs', { text: label }) %>
+            </li>
+          <% }) %>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <%- include('../blocks/articlesByTag2.ejs', {
+    branded: false,
+    labelTop: 'Самае папулярнае па тэме:',
+    linkTopText: 'міфалогія',
+    linkBottomText: 'усе тэмы',
+    article1: defaultCardsData.brandArticle,
+    article2: defaultCardsData.article,
+  }) %>
+</div>
