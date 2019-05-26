@@ -35,3 +35,30 @@
     padding-top: 40px;
   }
 }
+
+.screen-mobile {
+  .topics {
+    margin-left: calc((100% - 300px) / 3);
+    margin-right: calc((100% - 300px) * 2 / 3);
+  }
+}
+
+.screen-tablet {
+  .topics {
+    margin: 0 45px;
+
+    &__column {
+      margin-right: 45px;
+    }
+  }
+}
+
+.screen-tablet-large {
+  .topics {
+    margin: 0 35px;
+
+    &__column {
+      margin-right: 35px;
+    }
+  }
+}
