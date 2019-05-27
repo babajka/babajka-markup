@@ -4,11 +4,13 @@ import { text, boolean } from '@storybook/addon-knobs';
 import renderInput from './input/input.ejs';
 import renderLink from './link/link.ejs';
 import renderSocialButtons from './social-buttons/social-buttons.ejs';
+import renderButtonGroup from './button-group/button-group.ejs';
 
 import './stories.scss';
 import './input/input.scss';
 import './link/link.scss';
 import './social-buttons/social-buttons.scss';
+import './button-group/button-group.scss';
 
 const kit = storiesOf('UI Kit', module);
 kit.add('Input', ({ parameters: { defaultData } }) => {
@@ -49,4 +51,10 @@ kit.add(
   'Social buttons',
   ({ parameters: { defaultData } }) =>
     `<div class="container">${renderSocialButtons(defaultData)}</div>`
+);
+
+kit.add(
+  'ButtonGroup',
+  ({ parameters: { defaultData } }) =>
+    `<div class="container button-group">${renderButtonGroup(defaultData)}</div>`
 );

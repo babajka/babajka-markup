@@ -1,0 +1,28 @@
+@import '../../variables';
+
+.wir-button-group {
+  border: 1px solid $primary-grey;
+  border-radius: 5px;
+  display: inline-block;
+  position: relative;
+
+  &__container {
+    margin-left: -1px;
+  }
+
+  &__item {
+    border-left: 1px solid $primary-grey;
+    display: inline-block;
+
+    &:hover {
+      box-shadow: inset 0 0 1px $primary-grey;
+      cursor: pointer;
+    }
+  }
+
+  &__button {
+    font-size: 1rem;
+    padding: 0.8rem 1rem;
+    text-align: center;
+  }
+}
