@@ -18,13 +18,13 @@
     padding-inline-start: 0;
   }
 
+  &__section-image {
+    padding-bottom: 10px;
+  }
+
   &__section-list-item {
     list-style: none;
     padding: 10px 0;
-
-    &:first-child {
-      padding-top: 20px;
-    }
   }
 
   &__section-title {
