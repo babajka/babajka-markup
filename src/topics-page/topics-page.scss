@@ -18,13 +18,13 @@
     padding-inline-start: 0;
   }
 
+  &__section-image {
+    padding-bottom: 10px;
+  }
+
   &__section-list-item {
     list-style: none;
     padding: 10px 0;
-
-    &:first-child {
-      padding-top: 20px;
-    }
   }
 
   &__section-title {
@@ -36,6 +36,7 @@
   }
 }
 
+.screen-touch,
 .screen-mobile {
   .topics {
     margin-left: calc((100% - 300px) / 3);
@@ -45,10 +46,10 @@
 
 .screen-tablet {
   .topics {
-    margin: 0 45px;
+    margin: 0 50px;
 
     &__column {
-      margin-right: 45px;
+      margin-right: 50px;
     }
   }
 }
