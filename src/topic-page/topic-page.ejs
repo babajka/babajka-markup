@@ -1,0 +1,39 @@
+<div class="screen-<%= locals.screen %>">
+  <div class="topic">
+    <div class="topic__headline">
+      <div class="topic__card">
+        <%- include('../cards/video.ejs', {
+          ...defaultCardsData.video,
+          size: 'l',
+        }) %>
+      </div>
+      <div class="topic__card">
+        <%- include('../cards/article.ejs', {
+          ...defaultCardsData.article,
+          size: 'square-m',
+        }) %>
+      </div>
+    </div>
+    <div class="topic__other">
+      <div class="topic__card">
+        <%- include('../cards/collection.ejs', {
+          ...defaultCardsData.collectionArticle,
+          size: 'square-s',
+        }) %>
+      </div>
+      <div class="topic__card">
+        <%- include('../cards/article.ejs', {
+          ...defaultCardsData.article,
+          size: 'square-s',
+        }) %>
+      </div>
+      <div class="topic__card">
+        <%- include('../cards/person.ejs', {
+          ...defaultCardsData.person,
+          size: 'square-s',
+        }) %>
+      </div>
+    </div>
+    <%- include('../kit/button-group/button-group.ejs') %>
+  </div>
+</div>

@@ -1,0 +1,18 @@
+@import '../responsiveness';
+@import '../variables';
+
+.topic {
+  margin: 3rem 6rem 3rem 3rem;
+
+  &__other {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 2rem;
+  }
+
+  &__headline {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 5rem;
+  }
+}
