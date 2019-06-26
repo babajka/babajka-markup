@@ -17,7 +17,8 @@ const ejs = require('gulp-ejs');
 const htmlhint = require('gulp-htmlhint');
 const plumber = require('gulp-plumber');
 
-const defaultCardsData = require('./src/cards/defaultData');
+const defaultCardsData = require('./src/cards/defaultCardsData');
+const defaultMarginElementsData = require('./src/marginElements/defaultMarginElementsData');
 
 const { PORT, BABAJKA_LEGACY, BABAJKA_PREFIX } = process.env;
 
@@ -183,10 +184,11 @@ gulp.task('ejs:compile', () =>
     .src(allEjs)
     // TODO: remove `landingVariables`
     .pipe(
-      ejs({ ...landingVariables, ...templateVariables, defaultCardsData }, {}, { ext: '.html' }).on(
-        'error',
-        log
-      )
+      ejs(
+        { ...landingVariables, ...templateVariables, defaultCardsData, defaultMarginElementsData },
+        {},
+        { ext: '.html' }
+      ).on('error', log)
     )
     .pipe(gulp.dest(config.buildPath))
 );

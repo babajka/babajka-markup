@@ -1,0 +1,18 @@
+<table class="margin-element <%= locals.className %>">
+  <thead class="margin-element__table-headers">
+    <tr>
+      <% locals.tableHeaders.forEach(function (tableHeader) { %>
+      <th class="margin-element__table-header"><%= tableHeader %></th>
+      <% }) %>
+    </tr>
+  </thead>
+  <tbody>
+    <% locals.tableRows.forEach(function (tableRow) { %>
+    <tr>
+      <% tableRow.forEach(function (tableElement) { %>
+      <td class="margin-element__table-element"><%= tableElement %></td>
+      <% }) %>
+    </tr>
+    <% }) %>
+  </tbody>
+</table>
