@@ -13,6 +13,7 @@ module.exports = {
         'edit-article',
         'select',
         'modal',
+        'topics',
         'main',
         'login',
         'tools',
