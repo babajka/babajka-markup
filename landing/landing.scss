@@ -330,6 +330,26 @@ a:visited {
   }
 }
 
+.fullwidth-image {
+  img {
+    width: 100%;
+  }
+
+  &--desktop {
+
+    @include touch {
+      display: none;
+    }
+  }
+
+  &--touch {
+
+    @include desktop {
+      display: none;
+    }
+  }
+}
+
 .footer {
   display: flex;
   flex-direction: column;
