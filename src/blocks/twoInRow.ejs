@@ -1,0 +1,21 @@
+<div class="block block__no-background two-in-row">
+
+  <!-- ejs hacks -->
+  <% locals.first = locals.first || { topic: 'article' } %>
+  <% locals.second = locals.second || { topic: 'article' } %>
+
+  <div class="two-in-row__first">
+    <%- include(`../cards/${locals.first.topic}.ejs`, {
+      ...locals.first.data,
+      size: { desktop: 'm', 'tablet-large': 'm', tablet: 'l', touch: 'm', mobile: 'square-s'}[locals.screen],
+    }) %>
+  </div>
+
+  <div class="two-in-row__second">
+    <%- include(`../cards/${locals.second.topic}.ejs`, {
+      ...locals.second.data,
+      size: { desktop: 'm', 'tablet-large': 'square-s', tablet: 'l', touch: 'm', mobile: 'square-s'}[locals.screen],
+    }) %>
+  </div>
+
+</div>

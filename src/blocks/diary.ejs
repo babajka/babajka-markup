@@ -1,0 +1,32 @@
+<div class="block block__no-background diary">
+
+  <div class="diary__content">
+
+    <div class="diary__picture">
+      <img src="<%= imagesPath %>/mock/diary/karatkievich.png" alt="<%= locals.name %>" />
+    </div>
+
+    <%# ejs hack %>
+    <% locals.text = locals.text || { desktop: '', mobile: '' }; %>
+
+    <div class="diary__text-content">
+        <div class="diary__title">
+          <span class="diary__date"><%= locals.date %></span>
+          <span class="diary__year"><%= locals.year %></span>
+          <span class="diary__name"><%= locals.name %></span>
+          <span><%= { male: 'занатаваў', female: 'занатавала' }[locals.sex] %> у дзённіку: </span>
+        </div>
+        <div class="diary__text">
+          <%= locals.text[locals.screen] %>
+          <%- include('../kit/link/link.ejs', { text: 'Цалкам' }) %>
+        </div>
+    </div>
+
+    <div class="diary__arrows">
+      <%- include('../kit/link/link.ejs', { text: '<span><i class="fas fa-long-arrow-alt-left"></i></span>' }) %>
+      <%- include('../kit/link/link.ejs', { text: '<span><i class="fas fa-long-arrow-alt-right"></i></span>', disabled: true }) %>
+    </div>
+
+  </div>
+
+</div>

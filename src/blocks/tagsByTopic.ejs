@@ -1,0 +1,39 @@
+<div class="block block__no-background tags-by-topic">
+
+  <div class="tags-by-topic__title-label">
+    <%- include('../kit/link/link.ejs', { text: locals.titleLabel }) %>
+  </div>
+
+  <%# Markup-only hack. %>
+  <% locals.topic = locals.topic || 'location' %>
+
+  <div class="tags-by-topic__cards">
+
+    <div class="tags-by-topic__2 <% if (locals.style === '1-2') { %> tags-by-topic__2--pulled-right <% } %>">
+
+      <div class="tags-by-topic__2-top">
+        <%- include(`../cards/${locals.topic}.ejs`, {
+          ...locals.tag1,
+          size: { desktop: 's', 'tablet-large': 's-wide', tablet: 'xs', touch: 'ms', mobile: 'xs-wide' }[locals.screen],
+        }) %>
+      </div>
+
+      <div class="tags-by-topic__2-bottom">
+        <%- include(`../cards/${locals.topic}.ejs`, {
+          ...locals.tag2,
+          size: { desktop: 's', 'tablet-large': 's-wide', tablet: 'xs', touch: 'ms', mobile: 'xs-wide' }[locals.screen],
+        }) %>
+      </div>
+
+    </div>
+
+    <div class="tags-by-topic__1">
+      <%- include(`../cards/${locals.topic}.ejs`, {
+        ...locals.tag3,
+        size: { desktop: 'l', 'tablet-large': 'square-m', tablet: 'square-m', mobile: 'l' }[locals.screen],
+      }) %>
+    </div>
+
+  </div>
+
+</div>

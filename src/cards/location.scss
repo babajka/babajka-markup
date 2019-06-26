@@ -3,6 +3,7 @@
 .location {
   background-size: cover;
   border-radius: 3px;
+  box-sizing: border-box;
   color: #ffffff;
   display: flex;
   flex-direction: column;
@@ -60,6 +61,32 @@
   }
 }
 
+.size-ms,
+.size-s-wide {
+  .location {
+    padding: 0 30px 42px;
+
+    &__title {
+      font-size: 30px;
+      line-height: 36px;
+    }
+  }
+}
+
+.size-ms {
+  .location {
+
+    @include ms-sizes;
+  }
+}
+
+.size-s-wide {
+  .location {
+
+    @include s-wide-sizes;
+  }
+}
+
 .size-s {
   .location {
 
@@ -70,6 +97,20 @@
     &__title {
       font-size: 60px;
       line-height: 72px;
+    }
+  }
+}
+
+.size-xs-wide {
+  .location {
+
+    @include xs-wide-sizes;
+
+    padding: 0 30px 42px;
+
+    &__title {
+      font-size: 30px;
+      line-height: 36px;
     }
   }
 }

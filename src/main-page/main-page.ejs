@@ -1,0 +1,85 @@
+<div class="screen-<%= locals.screen %>">
+
+  <%- include('../blocks/featured.ejs', {
+    featuredOptions: defaultCardsData.article,
+  }) %>
+
+  <%- include('../blocks/diary.ejs', {
+    date: '10 лістапада',
+    year: '1956',
+    name: 'Уладзімір Караткевіч',
+    sex: 'male',
+    text: {
+      desktop: 'У небе імгла, як ад далёкага пажару, так што нельга зразумець, сонечны дзень або туманны. «Мсціслаў» усё яшчэ чакае, рукі ўсё яшчэ не ляжаць да працы. А плюну на ўсе гэтыя канферэнцыі, з’езды будаўніцтва. Я ўрэшце не гісторык у дадзеным выпадку, а эсэіст, і не мушу пісаць таго, што можна знайсці...',
+      'tablet-large': 'У небе імгла, як ад далёкага пажару, так што нельга зразумець, сонечны дзень або туманны. «Мсціслаў» усё яшчэ чакае, рукі ўсё яшчэ не ляжаць да працы. А плюну на ўсе гэтыя канферэнцыі, з’езды будаўніцтва.',
+      tablet: 'У небе імгла, як ад далёкага пажару, так што нельга зразумець, сонечны дзень або туманны. «Мсціслаў» усё яшчэ чакае, рукі ўсё...',
+      touch: 'У небе імгла, як ад далёкага пажару, так што нельга зразумець, сонечны дзень або туманны. «Мсціслаў» усё яшчэ чакае, рукі ўсё яшчэ не ляжаць да працы. А плюну на ўсе гэтыя канферэнцыі...',
+      mobile: 'У небе імгла, як ад далёкага пажару, так што нельга зразумець, сонечны дзень або туманны. «Мсціслаў» усё яшчэ чакае, рукі ўсё яшчэ не ляжаць да працы. А плюну на ўсе гэтыя канферэнцыі, з’езды...',
+    },
+  }) %>
+
+  <%- include('../blocks/twoInRow.ejs', {
+    first: {
+      topic: 'article',
+      data: defaultCardsData.article,
+    },
+    second: {
+      topic: 'article',
+      data: defaultCardsData.article,
+    },
+    // first: {
+    //   topic: 'video',
+    //   data: defaultCardsData.video,
+    // },
+    // second: {
+    //   topic: 'collection',
+    //   data: defaultCardsData.collectionArticle,
+    // },
+  }) %>
+
+  <%- include('../blocks/tagsByTopic.ejs', {
+    style: '1-2',
+    titleLabel: 'усе асобы',
+    topic: 'person',
+    tag1: defaultCardsData.person,
+    tag2: defaultCardsData.person,
+    tag3: defaultCardsData.person,
+  }) %>
+
+  <%- include('../blocks/articlesByTag3.ejs', {
+    tagTitle: 'XX стагоддзе',
+    allTitle: 'усе часы',
+    article1: defaultCardsData.article,
+    article2: defaultCardsData.article,
+    article3: defaultCardsData.article,
+  }) %>
+
+  <%- include('../blocks/articlesByTag2.ejs', {
+    branded: false,
+    labelTop: 'Папулярная тэма:',
+    linkTopText: 'міфалогія',
+    linkBottomText: 'усе тэмы',
+    article1: defaultCardsData.brandArticle,
+    article2: defaultCardsData.article,
+  }) %>
+
+  <%- include('../blocks/banner.ejs') %>
+
+  <%- include('../blocks/tagsByTopic.ejs', {
+    style: '2-1',
+    titleLabel: 'усе лакацыі',
+    topic: 'location',
+    tag1: defaultCardsData.locations[1],
+    tag2: defaultCardsData.locations[0],
+    tag3: defaultCardsData.locations[2],
+  }) %>
+
+  <%- include('../blocks/articlesByTag2.ejs', {
+    branded: true,
+    labelTop: 'нацыянальны мастацкі музей',
+    linkBottomText: 'усе партнёрскія матэрыялы',
+    article1: defaultCardsData.brandArticle,
+    article2: defaultCardsData.brandArticle,
+  }) %>
+
+</div>

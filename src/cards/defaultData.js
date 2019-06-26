@@ -13,7 +13,7 @@ const collectionArticle = {
   backgroundColor: '#f6d39d',
   isDarkTheme: true,
   partNumber: 1,
-  seriesName: 'Міцкевіч: геаграфія паэта',
+  collectionName: 'Міцкевіч: геаграфія паэта',
   author: 'Марыя Бадзей',
   title: 'Літва! Ты, як здароўе ў нас, мая Айчына!',
 };
@@ -47,11 +47,24 @@ const person = {
   image: 'https://babajka.github.io/babajka-markup/static/images/mock/covers/person.png',
 };
 
-const location = {
-  size: 'l',
-  isDarkTheme: true,
-  title: "Міжзем'e",
-  image: 'https://babajka.github.io/babajka-markup/static/images/mock/covers/location.png',
-};
+const locations = [
+  {
+    size: 'l',
+    title: "Міжзем'e",
+    backgroundImage: 'location.png',
+    isDarkTheme: true,
+  },
+  {
+    size: 'l',
+    title: 'ВКЛ',
+    backgroundImage: 'location.png',
+    isDarkTheme: true,
+  },
+  {
+    size: 'l',
+    title: 'Галактыка Андрамеды',
+    backgroundImage: 'location-galaxy.jpg',
+  },
+];
 
-module.exports = { article, collectionArticle, video, brandArticle, person, location };
+module.exports = { article, collectionArticle, video, brandArticle, person, locations };

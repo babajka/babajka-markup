@@ -263,6 +263,10 @@
 }
 
 .size-square-s {
+
+  @include square-s-sizes;
+  margin: 0;
+
   .square-article {
 
     @include square-s-sizes;
