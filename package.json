@@ -87,7 +87,7 @@
     "prettier": "^1.15.3",
     "prettier-stylelint": "^0.4.2",
     "sass-loader": "^7.1.0",
-    "semantic-release": "^15.13.12",
+    "semantic-release": "^15.13.18",
     "style-loader": "^0.23.1",
     "stylelint": "^9.10.1",
     "stylelint-config-sass-guidelines": "^5.3.0",
