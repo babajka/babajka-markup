@@ -2103,6 +2103,47 @@ input:-webkit-autofill:focus,
 input:-webkit-autofill:active {
   transition: background-color 5000s ease-in-out 0s;
 }
+.wir-link {
+  color: #1a9582;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.wir-link--theme-dark {
+  color: #0dc6aa;
+}
+
+.wir-link--theme-dark:link,
+.wir-link--theme-dark:visited {
+  color: #0dc6aa;
+}
+
+.wir-link--theme-dark:hover {
+  color: #00ffd8;
+}
+
+.wir-link__icon {
+  align-items: center;
+  display: inline-flex;
+  font-size: 20px;
+  height: 1.5rem;
+  justify-content: center;
+  width: 1.5rem;
+}
+
+.wir-link:link,
+.wir-link:visited {
+  color: #1a9582;
+}
+
+.wir-link:hover {
+  color: #0dc6aa;
+}
+
+.wir-link--disabled {
+  opacity: 0.2;
+  pointer-events: none;
+}
 .wir-social-buttons {
   border: 1px solid #888888;
   border-radius: 5px;
@@ -2150,47 +2191,6 @@ input:-webkit-autofill:active {
 
 .wir-social-buttons__button--odnoklassniki {
   color: #ed812b;
-}
-.wir-link {
-  color: #1a9582;
-  cursor: pointer;
-  text-decoration: none;
-}
-
-.wir-link--theme-dark {
-  color: #0dc6aa;
-}
-
-.wir-link--theme-dark:link,
-.wir-link--theme-dark:visited {
-  color: #0dc6aa;
-}
-
-.wir-link--theme-dark:hover {
-  color: #00ffd8;
-}
-
-.wir-link__icon {
-  align-items: center;
-  display: inline-flex;
-  font-size: 20px;
-  height: 1.5rem;
-  justify-content: center;
-  width: 1.5rem;
-}
-
-.wir-link:link,
-.wir-link:visited {
-  color: #1a9582;
-}
-
-.wir-link:hover {
-  color: #0dc6aa;
-}
-
-.wir-link--disabled {
-  opacity: 0.2;
-  pointer-events: none;
 }
 .stub-page,
 .error-page {
