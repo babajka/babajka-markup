@@ -1,9 +1,17 @@
 <div class="screen-<%= locals.screen %>">
   <div class="topic">
+    <div class="topic__header">
+      <div class="topic__text">Тэма</div>
+      <div>
+        <div class="topic__title">
+          Гісторыя
+        </div>
+      </div>
+    </div>
     <div class="topic__headline">
       <div class="topic__card">
-        <%- include('../cards/video.ejs', {
-          ...defaultCardsData.video,
+        <%- include('../cards/person.ejs', {
+          ...defaultCardsData.person,
           size: 'l',
         }) %>
       </div>

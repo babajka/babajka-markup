@@ -15,4 +15,18 @@
     justify-content: space-between;
     margin-bottom: 5rem;
   }
+
+  &__text {
+    color: $primary;
+    font-size: 14px;
+    line-height: 24px;
+    text-transform: uppercase;
+  }
+
+  &__title {
+    font-size: 48px;
+    font-weight: bold;
+    line-height: 60px;
+    margin-bottom: 20px;
+  }
 }
