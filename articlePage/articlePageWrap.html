@@ -1,0 +1,1553 @@
+<!DOCTYPE html>
+<html lang="be">
+
+<head>
+  <title>
+    Article Page
+  </title>
+  <link rel="icon" type="image/png" href="/babajka-markup/static/images/logo/favicon.png" />
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#1a9582" />
+
+  <link rel="stylesheet" href="/babajka-markup/static/styles/normalize.css" />
+  <link rel="stylesheet" href="/babajka-markup/static/styles/bundle.min.css" />
+  <link rel="stylesheet" href="/babajka-markup/static/styles/assets.min.css" />
+</head>
+
+
+<script>
+  function toggleSidebar() {
+    document.getElementById("wir-sidebar").classList.toggle("wir-sidebar--expanded");
+    document.getElementById("wir-overlay").classList.toggle("wir-overlay--active");
+  }
+
+  // This is an approximate height of the sidebar. The page must be
+  // at least this high to fit a long sidebar. Short one is used otherwise.
+  let sidebarHeight = 3300;
+
+  // There seem to be no way to get content height with pure CSS.
+  // This JS method adjusts classes of sidebar sections.
+  function adjustSidebar() {
+    let clientHeight = document.getElementById("wir-root").clientHeight;
+    let sectionsShort = document.getElementsByClassName("sidebar__section--short");
+    let sectionsLong = document.getElementsByClassName("sidebar__section--long");
+    let i;
+    if (clientHeight < sidebarHeight) {
+      for (i = 0; i < sectionsShort.length; i++) {
+        sectionsShort[i].classList.add("sidebar__section--visible");
+      }
+      for (i = 0; i < sectionsLong.length; i++) {
+        sectionsLong[i].classList.remove("sidebar__section--visible");
+      }
+    } else {
+      for (i = 0; i < sectionsShort.length; i++) {
+        sectionsShort[i].classList.remove("sidebar__section--visible");
+      }
+      for (i = 0; i < sectionsLong.length; i++) {
+        sectionsLong[i].classList.add("sidebar__section--visible");
+      }
+    }
+  }
+</script>
+
+<body onload="adjustSidebar()" onresize="adjustSidebar()">
+
+  <div id="wir-root" class="wir-root">
+
+    <div class="wir-space">
+      <div class="navbar">
+  <!-- on frontend used svg -->
+  <img class="navbar__logo" src="/babajka-markup/static/images/logo/favicon.png" />
+  <div class="navbar__title">
+    <a class="wir-link 
+  
+  "
+  
+   >
+  <span>Беларуская</span>
+  
+</a>
+
+    , а таксама
+    <a class="wir-link 
+  
+  "
+  
+   >
+  <span>сусветная</span>
+  
+</a>
+
+    культура і
+    <a class="wir-link 
+  
+  "
+  
+   >
+  <span>гісторыя</span>
+  
+</a>
+
+  </div>
+  <div class="navbar__burger" onclick="toggleSidebar()">
+    <div class="navbar__burger-item"></div>
+    <div class="navbar__burger-item"></div>
+    <div class="navbar__burger-item"></div>
+  </div>
+</div>
+
+
+      <div class="wir-content">
+        
+          <div class="article-page-wrapper">
+  <div class="article-page">
+    <div class="article-page__margins">
+      <div class="article-page__description">
+        Мноства баталій, якія з зайздроснай рэгулярнасцю разгараюцца вакол беларускай мовы,
+        тычацца не толькі яе сучаснага стану. Мовазнаўцы і гісторыкі і па сёння не могуць
+        пагадзіцца наконт таго, на якую мову Скарына пераклаў Біблію, што можна лічыць моваю
+        беларускай і з якіх часоў варта адсочваць яе развіццё. Паспрабуем прыгледзецца да мовы
+        Вялікага Княства Літоўскага, бо ўсім вядома: лепей адзін раз пакаштаваць, чым сто разоў
+        пачуць.
+      </div>
+    </div>
+    <img
+      class="article-page__image"
+      src="/babajka-markup/static/images/mock/covers/article-page-main.png"
+      alt="Тут павінна быць вокладка артыкула"
+    />
+    <div class="article-page__margins">
+      <div class="article-page__authors">
+        <img
+          class="article-page__author-image"
+          src="/babajka-markup/static/images/mock/brands/art-museum.png"
+          alt="Лагатып партнёра"
+        />
+        <img
+          class="article-page__author-image"
+          src="/babajka-markup/static/images/mock/persons/badzei.png"
+          alt="Фота аўтара"
+        />
+        <img
+          class="article-page__author-image"
+          src="/babajka-markup/static/images/mock/persons/anisimava.png"
+          alt="Фота аўтара"
+        />
+        <div class="article-page__authors-names">
+          <a class="article-page__link">Нацыянальны мастацкі музей</a>
+          <div>
+            <a class="article-page__link">Марыя Бадзей</a>,
+            <a class="article-page__link">Марына Анісімава</a>
+          </div>
+        </div>
+      </div>
+      <h1 class="article-page__title">Як прыгатаваць мову ВКЛ?</h1>
+      <section class="article-page__block">
+        <p class="article-page__paragraph">
+          <b>Старабеларуская</b>, <a>канцылярска-славянская</a>, старазаходняруская,
+          стараўкраінская, літоўска-руская, літоўска-славянская, руска-польская,
+          старозападнорусское наречие, простая мова, język polsko-białoruski, Ruthène…
+          Дзяржаўная мова Вялікага Княства Літоўскага цяпер мае каля сарака імёнаў. Дыскусіі
+          аб тым, якое з іх пасуе найлепш, цягнуцца ўжо два стагоддзі і не збіраюцца спыняцца.
+          Мова, якая мае столькі назваў, — страва для сапраўдных гурманаў. Кацёл гісторыі варыць
+          усё, што ў яго трапляе, а вынік адчуваецца на языку.
+        </p>
+      </section>
+      <section class="article-page__block">
+        <p class="article-page__paragraph">
+          <h2>Загаловак другога ўзроўню ў тэксце (H2)</h2>
+          <div class="margin-element article-page__right-element">
+  <img
+    class="margin-element__image"
+    src="/babajka-markup/static/images/mock/miscellaneous/margin-image.png"
+    alt="Фотакартка ў тэкце"
+  />
+  <div class="margin-element__image-caption">
+    <div class="margin-element__title">Фотакартка ў тэкце</div>
+    <div>Старонка Статута 1588 года (трэба пазначаць крыніцу, адкуль узялі)</div>
+  </div>
+</div>
+
+          <span
+            >Самі ж жыхары Вялікага Княства Літоўскага называлі сваю мову «руская». Прыклад
+            з артыкула са Статута 1588 года: а писар земский маетъ по руску словы и литеры
+            писати, што значыць «беларускія словы кірыліцкім пісьмом». Мову ж усходняга суседа
+            яны называлі «маскоўская»: «галасы утварывшы мовою московскою»; «подал
+            ку акътыкованю до книгъ кгродскихъ Пинскихъ грамоту руским москевским писмомъ…
+            писаную».</span
+          >
+        </p>
+      </section>
+      <section class="article-page__block">
+        <p class="article-page__paragraph">
+          <h3>Загаловак трэцяга і астатніх ўзроўняў (H3–H6)</h3>
+          <span>
+            Што ж датычыць самога ўсходняга суседа, то гэтую мову там не разумелі і называлі
+            «літоўская» ад слова «Літва». Зразумела, што ў сучасным разуменні яна не з’яўлялася
+            ані тым, ані тым — ні рускай і ні літоўскай. Каб прыгатаваць старабеларускую мову,
+            найперш трэба насыпаць у кацёл народныя гаворкі. Інгрэдыент гэты досыць складаны.
+            Беларусь, насуперак стэрэатыпам, не самая малая краіна (плошчай як пяць Швейцарый, сем
+            Бельгій ці дзесяць Славеній), асабліва ў моўным плане. Разнастайнасці народных гаворак
+            было (і ёсць) дзе разгарнуцца. Спачатку старабеларуская мова фарміравалася на аснове
+            гаворак полацка-смаленскага рэгіёна. Потым у падмурак сталі класціся сярэднебеларускія
+            гаворкі, пасля — гаворкі віленскага рэгіёна. Рух з усходу на захад абумоўлены тым, што
+            на працягу XVI стагоддзя вяліся разбуральныя войны з Маскоўскім княствам, пляцоўкай
+            якіх былі беларускія землі.
+          </span>
+        </p>
+        <p class="article-page__paragraph">
+          <div class="margin-element article-page__right-element">
+  <div class="margin-element__title">Зноска</div>
+  <span>Тое, што ў кнігах робіцца ў нізе старонкі, у нас будзе на палях каля абзацу, да якога датычыцца.</span>
+  <a>Спасылкі лепей таксама на палях</a>
+</div>
+
+          <span>
+            Дарэчы, з гэтымі невясёлымі падзеямі звязаны выхад у Вялікім Княстве Літоўскім
+            першай газеты, надрукаванай па-старабеларуску. 15 лютага 1563 года паў абложаны
+            Полацк. Назва газеты тыпова барокавая — такая не змясцілася б у твіт:
+            <i
+              >Навіны грозные а жалостлівые о нападе княжаті Московского Івана на землю русску,
+              которі то князь паленьнем, тыранством, мордованьнем мест, замков добываньнем
+              веліку і знаменіту шкоду вчыняет. 3 доданьнем релацый Его Мілості Гетмана ВКЛ
+              княжаті Радзівілла о поражцы места Полоцкого.</i
+            >
+          </span>
+        </p>
+      </section>
+      <section class="article-page__block"><div class="article-image">
+  <img
+    class="article-image__image"
+    src="/babajka-markup/static/images/mock/miscellaneous/article-page-image.png"
+    alt="Вялікае фота ў тэксце (таксама абавязкова патрэбна ўказваць крыніцу)"
+  />
+  <div class="article-image__caption">
+    Вялікае фота ў тэксце (таксама абавязкова патрэбна ўказваць крыніцу)
+  </div>
+</div></section>
+      <section class="article-page__block">
+        <p class="article-page__paragraph">
+          Змесціва, якое атрымалася з гэтага шэрагу гаворак, трэба добра вымешаць
+          з царкоўнаславянскай мовай — штучнай мовай на аснове стараславянскай
+          (старабалгарскай). Яе, у сваю чаргу, прыгатавалі Кірыл і Мяфодзій у IX стагоддзі.
+          Царкоўнаславянская — гэта мова праваслаўнай літургіі, аналаг латыні ў праваслаўных
+          кніжнікаў. Дарэчы, 33% лексікі ў Бібліі Францыска Скарыны — беларускія. Акадэмік
+          Аркадзь Іосіфавіч Жураўскі называе мову Скарыны «царкоўнаславянская мова беларускай
+          рэдакцыі». Запраўляем сумесь, якая ў нас атрымалася, польскай мовай, ды ставім на
+          агеньчык гісторыі.
+        </p>
+      </section>
+      <section class="article-page__block"><div class="article-citation">
+  <div class="article-citation__text">
+    Навіны грозные а жалостлівые о нападе княжаті Московского Івана на землю русску, которі то князь
+    паленьнем, тыранством, мордованьнем мест, замков добываньнем веліку і знаменіту шкоду вчыняет.
+    3 доданьнем релацый Его Мілості Гетмана ВКЛ княжаті Радзівілла о поражцы места Полоцкого.
+  </div>
+  <span class="article-citation__caption"
+    >Назва першай газеты, надрукаванай па-старабеларуску</span
+  >
+</div>
+</section>
+      <section class="article-page__block">
+        <p class="article-page__paragraph">
+          <div class="size-xs article-page__right-element">
+  <div class="person " style="background-color: #686868;">
+    <div class="person__cover-wrapper">
+      <img
+        class="person__cover"
+        src="/babajka-markup/static/images/mock/covers/person.png"
+        alt="Тут павінна быць вокладка тэга"
+      />
+    </div>
+    <div class="person__content">
+      <div class="person__years">1947—2016</div>
+      <div class="person__title">Дэвід Боўі</div>
+      <div class="person__description">Брытанскі рок-музыка, аўтар песень, прадзюсар, гукарэжысёр, мастак і акцёр</div>
+    </div>
+  </div>
+</div>
+
+          <span>
+            Словы
+            <i
+              >жадный, место, мешкати, панство, сведетство, быдло, валька, владза, владца,
+              державца, поборца, выдерца, бадати, жакгель, крайчый, барзо, дейца, свепетъ</i
+            >
+            у нас ад заходніх суседзяў. Дадаем некалькі лыжак цюркізмаў. З цюркскіх моў у
+            кацялок трапілі такія словы, як
+            <i
+              >бiклага, коберецъ, кiлім, чоботы, амбар, папуці, кешень. У дадатак прыперчваем
+              асновай асноў Рэнесансу — лацінскай мовай: аливэс, армата, касцёл, келюх, кляштар,
+              хундамент, мурын, буката, клебания, парфум, медитация , апсурдъ, афектъ, венусъ,
+              респектовати</i
+            >. Дадаем крыху ідыша. Беларускія габрэі прынеслі такія словы, як
+            <i
+              >кагал, талмуд, бахур, шабас, хала. Солім нямецкай: буда, крижъ, коштовати,
+              кгвалтъ, барберъ, маршалокъ, гзымс, баволна, дяка, мештеръ, манъ, ридель, скалва,
+              вата</i
+            >.
+          </span>
+        </p>
+        <p class="article-page__paragraph">
+          <table class="margin-element article-page__right-element">
+  <thead class="margin-element__table-headers">
+    <tr>
+      
+      <th class="margin-element__table-header">У ВКЛ</th>
+      
+      <th class="margin-element__table-header">Зараз</th>
+      
+    </tr>
+  </thead>
+  <tbody>
+    
+    <tr>
+      
+      <td class="margin-element__table-element">жадный</td>
+      
+      <td class="margin-element__table-element">ніякі, ніхто</td>
+      
+    </tr>
+    
+    <tr>
+      
+      <td class="margin-element__table-element">место</td>
+      
+      <td class="margin-element__table-element">горад</td>
+      
+    </tr>
+    
+    <tr>
+      
+      <td class="margin-element__table-element">мешкати</td>
+      
+      <td class="margin-element__table-element">жыць, знаходзіцца</td>
+      
+    </tr>
+    
+    <tr>
+      
+      <td class="margin-element__table-element">панство</td>
+      
+      <td class="margin-element__table-element">дзяржава</td>
+      
+    </tr>
+    
+    <tr>
+      
+      <td class="margin-element__table-element">сведетство</td>
+      
+      <td class="margin-element__table-element">сведчанне, паведамленне</td>
+      
+    </tr>
+    
+    <tr>
+      
+      <td class="margin-element__table-element">быдло</td>
+      
+      <td class="margin-element__table-element">свойская жывёла</td>
+      
+    </tr>
+    
+    <tr>
+      
+      <td class="margin-element__table-element">валька</td>
+      
+      <td class="margin-element__table-element">бой, бітва</td>
+      
+    </tr>
+    
+    <tr>
+      
+      <td class="margin-element__table-element">владза</td>
+      
+      <td class="margin-element__table-element">улада, сіла</td>
+      
+    </tr>
+    
+    <tr>
+      
+      <td class="margin-element__table-element">владца</td>
+      
+      <td class="margin-element__table-element">уладар</td>
+      
+    </tr>
+    
+    <tr>
+      
+      <td class="margin-element__table-element">державца</td>
+      
+      <td class="margin-element__table-element">ўладальнік, адміністратар</td>
+      
+    </tr>
+    
+    <tr>
+      
+      <td class="margin-element__table-element">поборца</td>
+      
+      <td class="margin-element__table-element">чалавек, які збірае падаткі</td>
+      
+    </tr>
+    
+    <tr>
+      
+      <td class="margin-element__table-element">выдерца</td>
+      
+      <td class="margin-element__table-element">асоба, якая забірае што-небудзь беззаконна, гвалтам</td>
+      
+    </tr>
+    
+    <tr>
+      
+      <td class="margin-element__table-element">бадати</td>
+      
+      <td class="margin-element__table-element">распытваць, дапытваць</td>
+      
+    </tr>
+    
+    <tr>
+      
+      <td class="margin-element__table-element">жакгель</td>
+      
+      <td class="margin-element__table-element">ветразь</td>
+      
+    </tr>
+    
+    <tr>
+      
+      <td class="margin-element__table-element">крайчый</td>
+      
+      <td class="margin-element__table-element">прыдворны, які на ўрачыстых абедах разразаў ежу, што падавалася вялікаму князю</td>
+      
+    </tr>
+    
+    <tr>
+      
+      <td class="margin-element__table-element">барзо</td>
+      
+      <td class="margin-element__table-element">вельмі</td>
+      
+    </tr>
+    
+    <tr>
+      
+      <td class="margin-element__table-element">дейца</td>
+      
+      <td class="margin-element__table-element">выканаўца, вытворца дзеяння</td>
+      
+    </tr>
+    
+    <tr>
+      
+      <td class="margin-element__table-element">свепетъ</td>
+      
+      <td class="margin-element__table-element">гняздо лясных пчол</td>
+      
+    </tr>
+    
+  </tbody>
+</table>
+ <span>Нумараваны спіс у тэксце</span> <ol class="article-ordered">
+  <li class="article-ordered__item">
+    У кацялку мовы перамешваюцца, смак аднаго складніка падкрэсліваецца альбо
+    заціраецца іншымі. Некаторыя словы з нямецкай перайшлі ў старабеларускую праз
+    пасрэдніцтва ідыша і польскай. З лаціны пярчынкі траплялі альбо наўпрост, альбо —
+    зноў жа — праз польскую. Усё змяшалася, зварылася і аддзяліць адно ад аднаго —
+    складана.
+  </li>
+  <li class="article-ordered__item">У нас атрымалася ўежная страва для школ і канцылярый.</li>
+  <li class="article-ordered__item">
+    Рэкамендуецца для ўжывання аўтарам, пісарам і перакладчыкам Вялікага Княства
+    Літоўскага. Падаецца ў трох статутах ВКЛ, філасофскіх трактатах, дакументах,
+    публіцыстыцы, мемуарах, рэлігійнай палеміцы, апокрыфах, летапісах, Метрыцы ВКЛ,
+    перакладной літаратуры, у перакладах Евангелля і ў творах прыгожага пісьменства.
+  </li>
+</ol>
+        </p>
+      </section>
+      <section class="article-page__block">
+        <h3>Ненумараваны спіс у тэксце (загаловак)</h3>
+        <ul class="article-unordered">
+  <li class="article-unordered__item">
+      У кацялку мовы перамешваюцца, смак аднаго складніка падкрэсліваецца альбо заціраецца іншымі. Некаторыя словы з нямецкай перайшлі ў старабеларускую праз пасрэдніцтва ідыша і польскай. З лаціны пярчынкі траплялі альбо наўпрост, альбо — зноў жа — праз польскую. Усё змяшалася, зварылася і аддзяліць адно ад аднаго — складана.
+      У нас атрымалася ўежная страва для школ і канцылярый. 
+  </li>
+  <li class="article-unordered__item">У нас атрымалася ўежная страва для школ і канцылярый.</li>
+  <li class="article-unordered__item">
+    Рэкамендуецца для ўжывання аўтарам, пісарам і перакладчыкам Вялікага Княства
+    Літоўскага. Падаецца ў трох статутах ВКЛ, філасофскіх трактатах, дакументах,
+    публіцыстыцы, мемуарах, рэлігійнай палеміцы, апокрыфах, летапісах, Метрыцы ВКЛ,
+    перакладной літаратуры, у перакладах Евангелля і ў творах прыгожага пісьменства.
+  </li>
+</ul>
+      </section>
+      <section class="article-page__block"><div class="article-table">
+  <table>
+    <thead>
+      <tr>
+        <th>Табліца ў тэксце</th>
+        <th>Другі стаўбец</th>
+        <th>Трэці</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Але ў пэўны момант смачная страва знікла са сталоў для пісьма.</td>
+        <td>
+          У 1696 годзе Генеральная канфедэрацыя саслоўяў забараніла выкарыстанне старабеларускай
+          мовы ва ўсіх новых афіцыйных дакументах.
+        </td>
+        <td>Уся дакументацыя цяпер павінна была весціся толькі па-польску.</td>
+      </tr>
+      <tr>
+        <td>Першае</td>
+        <td>Другое</td>
+        <td>Трэцяе</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+</section>
+      <section class="article-page__block">
+        <p class="article-page__paragraph">
+          <div class="margin-element article-page__right-element">
+  <div class="margin-element__year">1722</div>
+  <span>год выхаду ў свет апошняй друкаванай кнігі на старабеларускай мове</span>
+  <a>Больш пра XVIII стагоддзе</a>
+</div>
+
+          <span
+            >Апошняя друкаваная кніга на старабеларускай мове «Збор выпадкаў кароткі».
+            Яна выйшла ў Супраслі ў 1722 годзе. Больш на сталах старабеларуская мова не
+            з'яўлялася. Змесціва, якое атрымалася з гэтага шэрагу гаворак, трэба добра вымешаць
+            з царкоўнаславянскай мовай — штучнай мовай на аснове стараславянскай
+            (старабалгарскай). Яе, у сваю чаргу, прыгатавалі Кірыл і Мяфодзій у IX стагоддзі.
+            Царкоўнаславянская — гэта мова праваслаўнай літургіі, аналаг латыні ў праваслаўных
+            кніжнікаў. Дарэчы, 33% лексікі ў Бібліі Францыска Скарыны — беларускія. Акадэмік
+            Аркадзь Іосіфавіч Жураўскі называе мову Скарыны «царкоўнаславянская мова беларускай
+            рэдакцыі». Запраўляем сумесь, якая ў нас атрымалася, польскай мовай, ды ставім на
+            агеньчык гісторыі.</span
+          >
+        </p>
+        <p class="article-page__paragraph"><div class="article-poem">
+  <div class="article-poem__content">
+    Ноч павісла над зямлёю,<br />
+    Ўсё абнята цішынёю,<br />
+    Поўнай страху, поўнай чар.<br />
+    <br />
+    Быў гарачы дзень бясконца,<br />
+    Не сьвяціла — жэгла сонца,<br />
+    Парнасць страшная і вар.<br />
+    <br />
+    І вось неба не ўтрывала,<br />
+    Ўсё ў агнях запалыхала,<br />
+    Мрок хістаецца, дрыжыць...<br />
+    <br />
+    З верша «Вераб’іная ноч»
+  </div>
+</div>
+</p>
+        <p class="article-page__paragraph">
+          Праблемы з вызначэннем аўтараў паэм «Сымон-музыка» і «Курган», ламанне галавы над тым,
+          хто ж напісаў верш «Спадчына», сапраўдны ступар перад «Новай зямлёй». Янка Купала і
+          Якуб Колас — беларускія пісьменнікі, вядомыя, бадай, кожнаму. Але нягледзячы на гэта,
+          часта бывае складана вызначыць, хто ёсць хто. Ужо нават міф складваецца пра блытаніну
+          класікаў. Дык як жа адрозніць такіх падобных (розных!) пісьменнікаў?
+        </p>
+        <p class="article-page__paragraph"><div class="article-columns">
+</div>
+</p>
+      </section>
+      <section class="article-page__block">
+        <p class="article-page__paragraph">
+          <div class="margin-element article-page__right-element">
+  <div class="margin-element__title">Спіс не ў тэксце, а на палях</div>
+  <ol class="margin-element__list">
+    
+    <li class="margin-element__list-element">Першы пункт. Вялікі. У некалькі радкоў.</li>
+    
+    <li class="margin-element__list-element">Другі пункт.</li>
+    
+    <li class="margin-element__list-element">Трэці.</li>
+    
+  </ol>
+</div>
+
+          <span
+            >І Купала, і Колас пісалі вершы, прысвечаныя праблемам грамадства, бо ў часы
+            нашаніўства сацыяльнае і нацыянальнае становішча беларусаў было адной з найважнейшых
+            тэм у літаратуры. Але і ў творах, прысвечаных «долі беларуса», можна выразна ўбачыць
+            розніцу паміж паэтамі. Яна — у настроі вершаў і ў шляхах вырашэння праблемы.</span
+          >
+        </p>
+      </section>
+    </div>
+  </div>
+</div>
+
+        
+      </div>
+
+      <footer class="footer footer-layout">
+  <div class="footer-layout__nested1">
+    <div class="footer-layout__nested2">
+
+      <div class="footer-layout__block1 footer__links">
+        <div class="footer__links-column">
+          <div class="footer__header">
+            Матэрыялы
+          </div>
+          <div class="footer__item">
+            <a class="wir-link 
+  
+  "
+  
+   >
+  <span>Па тэмах</span>
+  
+</a>
+
+          </div>
+          <div class="footer__item">
+            <a class="wir-link 
+  
+  "
+  
+   >
+  <span>Персаналіях</span>
+  
+</a>
+
+          </div>
+          <div class="footer__item">
+            <a class="wir-link 
+  
+  "
+  
+   >
+  <span>Храналогіі</span>
+  
+</a>
+
+          </div>
+          <div class="footer__item">
+            <a class="wir-link 
+  
+  "
+  
+   >
+  <span>Лакацыях</span>
+  
+</a>
+
+          </div>
+          <div class="footer__item">
+            <a class="wir-link 
+  
+  "
+  
+   >
+  <span>Партнёрах</span>
+  
+</a>
+
+          </div>
+          <div class="footer__item">
+            <a class="wir-link 
+  
+  "
+  
+   >
+  <span>Аўтарах</span>
+  
+</a>
+
+          </div>
+        </div>
+        <div class="footer__links-column">
+          <div class="footer__header">
+            Мы ў сетках
+          </div>
+          <div class="footer__item">
+            <a class="wir-link 
+  
+  "
+   href="https://facebook.com/wirdotby"
+   target="_blank" rel="noopener noreferrer"  >
+  <span>Facebook</span>
+  
+</a>
+
+          </div>
+          <div class="footer__item">
+            <a class="wir-link 
+  
+  "
+   href="https://instagram.com/wir_by"
+   target="_blank" rel="noopener noreferrer"  >
+  <span>Instagram</span>
+  
+</a>
+
+          </div>
+          <div class="footer__item">
+            <a class="wir-link 
+  
+  "
+   href="https://vk.com/wir_by"
+   target="_blank" rel="noopener noreferrer"  >
+  <span>ВКонтакте</span>
+  
+</a>
+
+          </div>
+          <div class="footer__item">
+            <a class="wir-link 
+  
+  "
+   href="https://t.me/wir_by"
+   target="_blank" rel="noopener noreferrer"  >
+  <span>Telegram</span>
+  
+</a>
+
+          </div>
+          <div class="footer__item">
+            <a class="wir-link 
+  
+  "
+   href="https://twitter.com/wir_by"
+   target="_blank" rel="noopener noreferrer"  >
+  <span>Twitter</span>
+  
+</a>
+
+          </div>
+          <div class="footer__item">
+            <a class="wir-link 
+  
+  "
+   href="https://www.youtube.com/channel/UCoj_6A55mEPeba8ZfBHqfCw"
+   target="_blank" rel="noopener noreferrer"  >
+  <span>YouTube</span>
+  
+</a>
+
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-layout__block2">
+        <div class="footer__interactions">
+          <div class="footer__mailing">
+            <div class="footer__header">
+              Падпісацца на абнаўленні
+            </div>
+            <div class="wir-input">
+  <input class="wir-input__input"  />
+  
+    
+      <span class="wir-input__icon wir-input__icon--left">
+        <i class="far fa-envelope"></i>
+      </span>
+    
+  
+  
+  <span class="wir-input__bar wir-input__bar--error"></span>
+</div>
+
+          </div>
+          <div class="footer__social">
+            <div class="footer__header">
+              Расказаць пра нас усім
+            </div>
+            <div class="wir-social-buttons">
+  <div class="wir-social-buttons__container">
+    <div class="wir-social-buttons__item wir-social-buttons__button wir-social-buttons__button--facebook">
+      <span>
+        <i class="fab fa-facebook-square"></i>
+      </span>
+    </div>
+    <div class="wir-social-buttons__item wir-social-buttons__button wir-social-buttons__button--vk">
+      <span>
+        <i class="fab fa-vk"></i>
+      </span>
+    </div>
+    <div class="wir-social-buttons__item wir-social-buttons__button wir-social-buttons__button--twitter">
+      <span>
+        <i class="fab fa-twitter"></i>
+      </span>
+    </div>
+    <div class="wir-social-buttons__item wir-social-buttons__button wir-social-buttons__button--odnoklassniki">
+      <span>
+        <i class="fab fa-odnoklassniki"></i>
+      </span>
+    </div>
+  </div>
+</div>
+
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="footer-layout__block3">
+      <div class="footer__help-us">
+        <div class="footer__header">
+          Дапамагчы нам
+        </div>
+        <div class="footer__help-text">
+          Калі вы&nbsp;знайшлі памылку, у&nbsp;вас ёсць заўвагі па&nbsp;сайце,
+          ці&nbsp;хочаце дапамагчы нам, калі ласка, напішыце
+          <a class="wir-link 
+  
+  "
+   href="mailto:help@wir.by"
+   >
+  <span>на&nbsp;help@wir.by</span>
+  
+</a>
+
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="footer-layout__block4 footer__bottom">
+    <span class="footer__copyright">
+      © Wir.by, 2019
+    </span>
+
+  </div>
+</footer>
+
+
+      <div id="wir-overlay" class="wir-overlay" onclick="toggleSidebar()"></div>
+    </div>
+
+    <div id="wir-sidebar" class="wir-sidebar">
+      <aside class="sidebar">
+  <span class="sidebar__icon-close" onclick="toggleSidebar()">
+    <a class="wir-link 
+  
+  "
+  
+   >
+  <span><i class="fas fa-times"></i></span>
+  
+</a>
+
+  </span>
+
+  <ul class="sidebar__langs">
+    
+      <li class="langs__item">
+        <a class="wir-link 
+  
+  "
+  
+   >
+  <span>по-русски</span>
+  
+</a>
+
+      </li>
+    
+      <li class="langs__item">
+        <a class="wir-link 
+  
+  "
+  
+   >
+  <span>in english</span>
+  
+</a>
+
+      </li>
+    
+  </ul>
+
+  <div class="sidebar__about-label">
+    <a class="wir-link 
+  
+  "
+  
+   >
+  <span>пра праект</span>
+  
+</a>
+
+  </div>
+
+  <!-- sidebar__section--short - demo class for markup -->
+  <section class="sidebar__section sidebar__section--short">
+    <ul class="sidebar__section-list">
+      
+        <li class="sidebar__section-list-item">
+          <a class="wir-link 
+  
+  "
+  
+   >
+  <span>Спасылкі</span>
+  
+</a>
+
+        </li>
+      
+        <li class="sidebar__section-list-item">
+          <a class="wir-link 
+  
+  "
+  
+   >
+  <span>Для кароткага</span>
+  
+</a>
+
+        </li>
+      
+        <li class="sidebar__section-list-item">
+          <a class="wir-link 
+  
+  "
+  
+   >
+  <span>Сайдбара</span>
+  
+</a>
+
+        </li>
+      
+    </ul>
+  </section>
+
+  <!-- sidebar__section--long sidebar__section--visible - demo classes for markup -->
+  <section class="sidebar__section sidebar__section--long sidebar__section--visible">
+    <ul class="sidebar__section-list">
+      
+        <li class="sidebar__section-list-item">
+          <a class="wir-link 
+  
+  "
+  
+   >
+  <span>Топ-10</span>
+  
+</a>
+
+        </li>
+      
+        <li class="sidebar__section-list-item">
+          <a class="wir-link 
+  
+  "
+  
+   >
+  <span>Самае актуальнае</span>
+  
+</a>
+
+        </li>
+      
+        <li class="sidebar__section-list-item">
+          <a class="wir-link 
+  
+  "
+  
+   >
+  <span>&lt5 хвілін на прагляд</span>
+  
+</a>
+
+        </li>
+      
+    </ul>
+  </section>
+
+  <section class="sidebar__section sidebar__section--long sidebar__section--visible">
+    <ul class="sidebar__section-list">
+      
+        <li class="sidebar__section-list-item">
+          <a class="wir-link 
+  
+  "
+  
+   >
+  <span>Артыкулы</span>
+  
+</a>
+
+        </li>
+      
+        <li class="sidebar__section-list-item">
+          <a class="wir-link 
+  
+  "
+  
+   >
+  <span>Відэалекцыі</span>
+  
+</a>
+
+        </li>
+      
+        <li class="sidebar__section-list-item">
+          <a class="wir-link 
+  
+  "
+  
+   >
+  <span>Падкасты</span>
+  
+</a>
+
+        </li>
+      
+        <li class="sidebar__section-list-item">
+          <a class="wir-link 
+  
+  "
+  
+   >
+  <span>Гульні і тэсты</span>
+  
+</a>
+
+        </li>
+      
+    </ul>
+  </section>
+
+  <section class="sidebar__section sidebar__section--long sidebar__section--visible">
+    <ul class="sidebar__section-list">
+      <li class="sidebar__section-list-item sidebar__section-title">
+        тэмы
+      </li>
+      
+        <li class="sidebar__section-list-item">
+          <a class="wir-link 
+  
+  "
+  
+   >
+  <span>Архітэктура</span>
+  
+</a>
+
+        </li>
+      
+        <li class="sidebar__section-list-item">
+          <a class="wir-link 
+  
+  "
+  
+   >
+  <span>Гісторыя</span>
+  
+</a>
+
+        </li>
+      
+        <li class="sidebar__section-list-item">
+          <a class="wir-link 
+  
+  "
+  
+   >
+  <span>Кіно</span>
+  
+</a>
+
+        </li>
+      
+        <li class="sidebar__section-list-item">
+          <a class="wir-link 
+  
+  "
+  
+   >
+  <span>Лінгвістыка</span>
+  
+</a>
+
+        </li>
+      
+        <li class="sidebar__section-list-item">
+          <a class="wir-link 
+  
+  "
+  
+   >
+  <span>Літаратура</span>
+  
+</a>
+
+        </li>
+      
+        <li class="sidebar__section-list-item">
+          <a class="wir-link 
+  
+  "
+  
+   >
+  <span>Мастацтва</span>
+  
+</a>
+
+        </li>
+      
+        <li class="sidebar__section-list-item">
+          <a class="wir-link 
+  
+  "
+  
+   >
+  <span>Міфалогія</span>
+  
+</a>
+
+        </li>
+      
+        <li class="sidebar__section-list-item">
+          <a class="wir-link 
+  
+  "
+  
+   >
+  <span>Музыка</span>
+  
+</a>
+
+        </li>
+      
+        <li class="sidebar__section-list-item">
+          <a class="wir-link 
+  
+  "
+  
+   >
+  <span>Тэатр</span>
+  
+</a>
+
+        </li>
+      
+        <li class="sidebar__section-list-item">
+          <a class="wir-link 
+  
+  "
+  
+   >
+  <span>Філасофія</span>
+  
+</a>
+
+        </li>
+      
+    </ul>
+  </section>
+
+  <section class="sidebar__section sidebar__section--long sidebar__section--visible">
+    <ul class="sidebar__section-list">
+      <li class="sidebar__section-list-item sidebar__section-title">
+        асноўныя асобы
+      </li>
+      
+        <li class="sidebar__section-list-item">
+          <a class="wir-link 
+  
+  "
+  
+   >
+  <span>Янка Купала</span>
+  
+</a>
+
+        </li>
+      
+        <li class="sidebar__section-list-item">
+          <a class="wir-link 
+  
+  "
+  
+   >
+  <span>Уладзімір Караткевіч</span>
+  
+</a>
+
+        </li>
+      
+        <li class="sidebar__section-list-item">
+          <a class="wir-link 
+  
+  "
+  
+   >
+  <span>Адам Міцкевіч</span>
+  
+</a>
+
+        </li>
+      
+        <li class="sidebar__section-list-item">
+          <a class="wir-link 
+  
+  "
+  
+   >
+  <span>Якуб Колас</span>
+  
+</a>
+
+        </li>
+      
+        <li class="sidebar__section-list-item">
+          <a class="wir-link 
+  
+  "
+  
+   >
+  <span>Ян Баршчэўскі</span>
+  
+</a>
+
+        </li>
+      
+    </ul>
+    <span class="sidebar__section-link-to-all">
+      <a class="wir-link 
+  
+  "
+  
+   >
+  <span>усе асобы</span>
+  
+</a>
+
+    </span>
+  </section>
+
+  <section class="sidebar__section sidebar__section--long sidebar__section--visible">
+    <ul class="sidebar__section-list">
+      <li class="sidebar__section-list-item sidebar__section-title">
+        асноўныя часы
+      </li>
+      
+        <li class="sidebar__section-list-item">
+          <a class="wir-link 
+  
+  "
+  
+   >
+  <span>1956 год</span>
+  
+</a>
+
+        </li>
+      
+        <li class="sidebar__section-list-item">
+          <a class="wir-link 
+  
+  "
+  
+   >
+  <span>Сёння</span>
+  
+</a>
+
+        </li>
+      
+        <li class="sidebar__section-list-item">
+          <a class="wir-link 
+  
+  "
+  
+   >
+  <span>У будучыні</span>
+  
+</a>
+
+        </li>
+      
+        <li class="sidebar__section-list-item">
+          <a class="wir-link 
+  
+  "
+  
+   >
+  <span>1863 год</span>
+  
+</a>
+
+        </li>
+      
+        <li class="sidebar__section-list-item">
+          <a class="wir-link 
+  
+  "
+  
+   >
+  <span>XX стагоддзе</span>
+  
+</a>
+
+        </li>
+      
+    </ul>
+    <span class="sidebar__section-link-to-all">
+      <a class="wir-link 
+  
+  "
+  
+   >
+  <span>уся храналогія</span>
+  
+</a>
+
+    </span>
+  </section>
+
+  <section class="sidebar__section sidebar__section--long sidebar__section--visible">
+    <ul class="sidebar__section-list">
+      <li class="sidebar__section-list-item sidebar__section-title">
+        асноўныя лакацыі
+      </li>
+      
+        <li class="sidebar__section-list-item">
+          <a class="wir-link 
+  
+  "
+  
+   >
+  <span>Мінск</span>
+  
+</a>
+
+        </li>
+      
+        <li class="sidebar__section-list-item">
+          <a class="wir-link 
+  
+  "
+  
+   >
+  <span>ВКЛ</span>
+  
+</a>
+
+        </li>
+      
+        <li class="sidebar__section-list-item">
+          <a class="wir-link 
+  
+  "
+  
+   >
+  <span>Беларусь</span>
+  
+</a>
+
+        </li>
+      
+        <li class="sidebar__section-list-item">
+          <a class="wir-link 
+  
+  "
+  
+   >
+  <span>Лондан</span>
+  
+</a>
+
+        </li>
+      
+        <li class="sidebar__section-list-item">
+          <a class="wir-link 
+  
+  "
+  
+   >
+  <span>Еўропа</span>
+  
+</a>
+
+        </li>
+      
+    </ul>
+    <span class="sidebar__section-link-to-all">
+      <a class="wir-link 
+  
+  "
+  
+   >
+  <span>усе лакацыі</span>
+  
+</a>
+
+    </span>
+  </section>
+
+  <section class="sidebar__section sidebar__section--long sidebar__section--visible">
+    <ul class="sidebar__section-list">
+      <li class="sidebar__section-list-item sidebar__section-title">
+        матэрыялы партнёраў
+      </li>
+      
+        <li class="sidebar__section-list-item">
+          <a class="wir-link 
+  
+  "
+  
+   >
+  <span>Нацыянальны мастацкі музей</span>
+  
+</a>
+
+        </li>
+      
+        <li class="sidebar__section-list-item">
+          <a class="wir-link 
+  
+  "
+  
+   >
+  <span>Кніжная шафа</span>
+  
+</a>
+
+        </li>
+      
+        <li class="sidebar__section-list-item">
+          <a class="wir-link 
+  
+  "
+  
+   >
+  <span>Літаратурны музей Петруся Броўкі</span>
+  
+</a>
+
+        </li>
+      
+        <li class="sidebar__section-list-item">
+          <a class="wir-link 
+  
+  "
+  
+   >
+  <span>Мінскі фестываль моў</span>
+  
+</a>
+
+        </li>
+      
+    </ul>
+  </section>
+
+  <section class="sidebar__section sidebar__section--long sidebar__section--visible">
+    <ul class="sidebar__section-list">
+      <li class="sidebar__section-list-item sidebar__section-title">
+        папулярныя аўтары
+      </li>
+      
+        <li class="sidebar__section-list-item">
+          <a class="wir-link 
+  
+  "
+  
+   >
+  <span>Марыя Бадзей</span>
+  
+</a>
+
+        </li>
+      
+        <li class="sidebar__section-list-item">
+          <a class="wir-link 
+  
+  "
+  
+   >
+  <span>Марына Анісімава</span>
+  
+</a>
+
+        </li>
+      
+        <li class="sidebar__section-list-item">
+          <a class="wir-link 
+  
+  "
+  
+   >
+  <span>Аляксей Барысевіч</span>
+  
+</a>
+
+        </li>
+      
+        <li class="sidebar__section-list-item">
+          <a class="wir-link 
+  
+  "
+  
+   >
+  <span>Ірына Галухіна</span>
+  
+</a>
+
+        </li>
+      
+        <li class="sidebar__section-list-item">
+          <a class="wir-link 
+  
+  "
+  
+   >
+  <span>Вікторыя Міхнюк</span>
+  
+</a>
+
+        </li>
+      
+    </ul>
+    <span class="sidebar__section-link-to-all">
+      <a class="wir-link 
+  
+  "
+  
+   >
+  <span>уся каманда wir.by</span>
+  
+</a>
+
+    </span>
+  </section>
+</aside>
+
+    </div>
+
+    <div class="wir-up">
+      <a class="wir-link 
+  
+  "
+   href="#"
+   >
+  <span><span><i class="far fa-arrow-alt-circle-up"></i></span></span>
+  
+</a>
+
+    </div>
+
+  </div>
+
+</body>
+
+</html>
+
