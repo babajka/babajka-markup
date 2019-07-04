@@ -2,20 +2,20 @@
 @import '../variables';
 
 .topic {
-  margin: 3rem 6rem 3rem 3rem;
+  padding: 3rem 6rem 3rem 3rem;
 
   &__other {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    margin-bottom: 2rem;
+    padding-bottom: 2rem;
   }
 
   &__headline {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    margin-bottom: 5rem;
+    padding-bottom: 5rem;
   }
 
   &__text {
@@ -29,17 +29,14 @@
     font-size: 48px;
     font-weight: bold;
     line-height: 60px;
-    margin-bottom: 20px;
+    padding-bottom: 20px;
   }
 }
 
 .screen-desktop {
   .topic {
-    &__card {
-      &--second {
-        margin-left: 2px;
-      }
-    }
+    padding-left: calc((100% - 1020px) / 3);
+    padding-right: calc((100% - 1020px) * 2 / 3);
   }
 }
 
@@ -50,33 +47,33 @@
   .topic {
     &__other,
     &__headline {
-      margin-bottom: 0;
+      padding-bottom: 0;
     }
 
     &__card {
-      margin-bottom: 25px;
+      padding-bottom: 25px;
     }
   }
 }
 
 .screen-touch {
   .topic {
-    margin-left: calc((100% - 480px) / 3);
-    margin-right: calc((100% - 480px) * 2 / 3);
+    padding-left: calc((100% - 480px) / 3);
+    padding-right: calc((100% - 480px) * 2 / 3);
   }
 }
 
 .screen-mobile {
   .topic {
-    margin-left: calc((100% - 300px) / 3);
-    margin-right: calc((100% - 300px) * 2 / 3);
+    padding-left: calc((100% - 300px) / 3);
+    padding-right: calc((100% - 300px) * 2 / 3);
   }
 }
 
 .screen-tablet,
 .screen-tablet-large {
   .topic {
-    margin-left: calc((100% - 624px) / 3);
-    margin-right: calc((100% - 624px) * 2 / 3);
+    padding-left: calc((100% - 624px) / 3);
+    padding-right: calc((100% - 624px) * 2 / 3);
   }
 }
