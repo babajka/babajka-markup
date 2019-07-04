@@ -9,16 +9,18 @@
       </div>
     </div>
     <div class="topic__headline">
-      <div class="topic__card">
-        <%- include('../cards/person.ejs', {
-          ...defaultCardsData.person,
-          size: 'l',
+      <!-- ejs hacks -->
+      <div class="topic__card topic__card--first">
+        <%- include(`../cards/collection.ejs`, {
+          ...defaultCardsData.collectionArticle,
+          size: { desktop: 'l', 'tablet-large': 'l', tablet: 'l', touch: 'm', mobile: 'square-s'}[locals.screen],
         }) %>
       </div>
-      <div class="topic__card">
-        <%- include('../cards/article.ejs', {
-          ...defaultCardsData.article,
-          size: 'square-m',
+
+      <div class="topic__card topic__card--second">
+        <%- include(`../cards/collection.ejs`, {
+          ...defaultCardsData.collectionArticle,
+          size: { desktop: 'square-m', 'tablet-large': 'l', tablet: 'l', touch: 'm', mobile: 'square-s'}[locals.screen],
         }) %>
       </div>
     </div>
@@ -26,19 +28,19 @@
       <div class="topic__card">
         <%- include('../cards/collection.ejs', {
           ...defaultCardsData.collectionArticle,
-          size: 'square-s',
+          size: { desktop: 'square-s', 'tablet-large': 'l', tablet: 'l', touch: 'm', mobile: 'square-s'}[locals.screen],
         }) %>
       </div>
       <div class="topic__card">
         <%- include('../cards/article.ejs', {
           ...defaultCardsData.article,
-          size: 'square-s',
+          size: { desktop: 'square-s', 'tablet-large': 'l', tablet: 'l', touch: 'm', mobile: 'square-s'}[locals.screen],
         }) %>
       </div>
       <div class="topic__card">
-        <%- include('../cards/person.ejs', {
-          ...defaultCardsData.person,
-          size: 'square-s',
+        <%- include('../cards/video.ejs', {
+          ...defaultCardsData.video,
+          size: { desktop: 'square-s', 'tablet-large': 'l', tablet: 'l', touch: 'm', mobile: 'square-s'}[locals.screen],
         }) %>
       </div>
     </div>
